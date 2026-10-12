@@ -11,6 +11,7 @@ import android.bluetooth.BluetoothManager
 import android.bluetooth.BluetoothProfile
 import android.bluetooth.BluetoothStatusCodes
 import android.bluetooth.le.ScanCallback
+import android.bluetooth.le.ScanFilter
 import android.bluetooth.le.ScanResult
 import android.bluetooth.le.ScanSettings
 import android.content.Context
@@ -69,12 +70,16 @@ class CameraLink(
         val WRITE_UUID: UUID = uuid16(0xFFF5)
         val CCCD_UUID: UUID = uuid16(0x2902)
 
+        /** Reklam paketindeki üretici verisinin ilk iki baytı (AA 08), little-endian şirket kimliği. */
+        private const val DJI_COMPANY_ID = 0x08AA
+
         private const val REQUESTED_MTU = 500
         private const val SCAN_PICK_DELAY_MS = 4_000L
         private const val SCAN_TIMEOUT_MS = 20_000L
         private const val CONNECT_TIMEOUT_MS = 15_000L
         private const val HANDSHAKE_TIMEOUT_MS = 45_000L
         private const val WRITE_TIMEOUT_MS = 1_500L
+        private const val NO_RESPONSE_WRITE_TIMEOUT_MS = 250L
 
         private fun uuid16(v: Int): UUID = UUID.fromString("0000%04x-0000-1000-8000-00805f9b34fb".format(v))
     }
@@ -93,6 +98,7 @@ class CameraLink(
     private var scanning = false
     private val candidates = LinkedHashMap<String, ScanResult>()
     private var scanStartedAt = 0L
+    private var scanAttempt = 0
 
     // GATT
     private var gatt: BluetoothGatt? = null
@@ -120,6 +126,7 @@ class CameraLink(
 
     private val queue = ArrayDeque<PendingWrite>()
     private var writeInFlight = false
+    private var inFlightWithResponse = false
     private var writeStartedAt = 0L
     private var warnedMtu = false
     var writeFailures = 0L
@@ -182,9 +189,9 @@ class CameraLink(
             return
         }
         if (!a.isEnabled) {
-            setState(State.IDLE, "Bluetooth kapalı")
-            AppLog.w("Bluetooth kapalı, tarama yapılamıyor")
-            wantConnected = false
+            AppLog.w("Bluetooth kapalı, açılması bekleniyor")
+            setState(State.RECONNECTING, "Bluetooth kapalı. Açıldığında otomatik bağlanılacak.")
+            main.postDelayed({ startScan() }, 5_000)
             return
         }
         val scanner = a.bluetoothLeScanner
@@ -196,8 +203,25 @@ class CameraLink(
         val settings = ScanSettings.Builder()
             .setScanMode(ScanSettings.SCAN_MODE_LOW_LATENCY)
             .build()
+        // Android ekran kapalıyken filtresiz taramayı engeller. Bu yüzden önce DJI üretici kimliği
+        // (ve biliniyorsa kameranın adresi) ile filtreli tarama yapılır; bulunamazsa sonraki denemede
+        // filtresiz taramaya geçilir (bazı telefonlar boş veri filtresini desteklemiyor).
+        scanAttempt++
+        val useFilters = scanAttempt % 2 == 1
+        val filters: List<ScanFilter>? = if (useFilters) {
+            buildList {
+                add(ScanFilter.Builder().setManufacturerData(DJI_COMPANY_ID, ByteArray(0)).build())
+                preferredAddress?.let { addr ->
+                    if (BluetoothAdapter.checkBluetoothAddress(addr)) {
+                        add(ScanFilter.Builder().setDeviceAddress(addr).build())
+                    }
+                }
+            }
+        } else {
+            null
+        }
         try {
-            scanner.startScan(null, settings, scanCallback)
+            scanner.startScan(filters, settings, scanCallback)
         } catch (e: SecurityException) {
             AppLog.w("Bluetooth tarama izni yok", e)
             setState(State.IDLE, "Bluetooth izni verilmemiş")
@@ -207,7 +231,10 @@ class CameraLink(
         scanning = true
         scanStartedAt = SystemClock.elapsedRealtime()
         setState(State.SCANNING, "Kamera aranıyor… Kamera açık olmalı ve DJI Mimo bağlı olmamalı.")
-        AppLog.i("Tarama başladı" + (preferredAddress?.let { " (öncelikli: $it)" } ?: ""))
+        AppLog.i(
+            "Tarama başladı (" + (if (useFilters) "filtreli" else "filtresiz") + ")" +
+                (preferredAddress?.let { ", öncelikli: $it" } ?: ""),
+        )
         main.postDelayed(scanTick, SCAN_PICK_DELAY_MS)
     }
 
@@ -288,23 +315,27 @@ class CameraLink(
 
     // ---------------------------------------------------------------- GATT bağlantısı
 
-    private fun connectTo(device: BluetoothDevice, name: String?) {
+    private fun connectTo(device: BluetoothDevice, name: String?, autoConnect: Boolean = false) {
         closeGatt()
         currentDevice = device
         currentName = name ?: currentName
         servicesRequested = false
         mtu = 23
-        setState(State.CONNECTING, "Bağlanılıyor: ${currentName ?: device.address}")
+        if (autoConnect) {
+            setState(State.RECONNECTING, "Kamera bekleniyor. Kamera açılınca ya da yaklaşınca otomatik bağlanılacak.")
+        } else {
+            setState(State.CONNECTING, "Bağlanılıyor: ${currentName ?: device.address}")
+        }
         AppLog.i("GATT bağlantısı açılıyor: ${device.address}")
         try {
-            gatt = device.connectGatt(context, false, gattCallback, BluetoothDevice.TRANSPORT_LE)
+            gatt = device.connectGatt(context, autoConnect, gattCallback, BluetoothDevice.TRANSPORT_LE)
         } catch (e: SecurityException) {
             AppLog.w("Bluetooth bağlantı izni yok", e)
             wantConnected = false
             setState(State.IDLE, "Bluetooth izni verilmemiş")
             return
         }
-        main.postDelayed(connectTimeout, CONNECT_TIMEOUT_MS)
+        if (!autoConnect) main.postDelayed(connectTimeout, CONNECT_TIMEOUT_MS)
     }
 
     private val connectTimeout = Runnable {
@@ -350,6 +381,7 @@ class CameraLink(
                 if (newState == BluetoothProfile.STATE_CONNECTED && status == BluetoothGatt.GATT_SUCCESS) {
                     main.removeCallbacks(connectTimeout)
                     AppLog.i("Bluetooth bağlandı, MTU isteniyor")
+                    setState(State.CONNECTING, "Bağlandı, hazırlanıyor…")
                     if (!g.requestMtu(REQUESTED_MTU)) {
                         AppLog.w("MTU isteği gönderilemedi")
                         discoverServices(g)
@@ -508,11 +540,19 @@ class CameraLink(
         main.postDelayed({
             if (!wantConnected) return@postDelayed
             val a = adapter
-            if (address != null && a != null && a.isEnabled && reconnectAttempts <= 3) {
-                connectTo(a.getRemoteDevice(address), currentName)
-            } else {
-                reconnectAttempts = 0
-                startScan()
+            when {
+                a == null || !a.isEnabled -> startScan()
+                address == null -> {
+                    reconnectAttempts = 0
+                    startScan()
+                }
+                reconnectAttempts <= 3 -> connectTo(a.getRemoteDevice(address), currentName)
+                else -> {
+                    // Kamera kapalı ya da uzakta olabilir: Android'in otomatik bağlanmasıyla
+                    // kamera tekrar görünür olana kadar bekle. Ekran kapalıyken de çalışır.
+                    AppLog.i("Kamera görünür olunca otomatik bağlanılacak")
+                    connectTo(a.getRemoteDevice(address), currentName, autoConnect = true)
+                }
             }
         }, delay)
     }
@@ -607,8 +647,9 @@ class CameraLink(
         if (req.verifyData != 0) {
             AppLog.w("Kamera bağlantıyı reddetti")
             wantConnected = false
-            setState(State.HANDSHAKE, "Kamera bağlantıyı reddetti")
-            gatt?.disconnect()
+            closeGatt()
+            resetLinkState()
+            setState(State.IDLE, "Kamera bağlantıyı reddetti. Kamerada kablosuz bağlantıyı sıfırlayıp tekrar deneyin.")
             return
         }
         cameraDeviceId = req.deviceId
@@ -675,7 +716,8 @@ class CameraLink(
 
     private fun pump() {
         if (writeInFlight) {
-            if (SystemClock.elapsedRealtime() - writeStartedAt < WRITE_TIMEOUT_MS) return
+            val limit = if (inFlightWithResponse) WRITE_TIMEOUT_MS else NO_RESPONSE_WRITE_TIMEOUT_MS
+            if (SystemClock.elapsedRealtime() - writeStartedAt < limit) return
             AppLog.w("Yazma yanıtı gecikti, devam ediliyor")
             writeInFlight = false
         }
@@ -704,6 +746,7 @@ class CameraLink(
         }
         if (ok) {
             writeInFlight = true
+            inFlightWithResponse = next.withResponse
             writeStartedAt = SystemClock.elapsedRealtime()
         } else {
             writeFailures++
