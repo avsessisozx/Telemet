@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Uygulama simgesi: hız göstergesi yayı ve ibre (108dp adaptif simge, güvenli alan ortadaki 66dp) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Gösterge yayı -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFF7A1A"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:pathData="M33,70 A24,24 0 1,1 75,70" />
+    <!-- İbre -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFEDEDED"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:pathData="M54,58 L68,42" />
+    <!-- Merkez -->
+    <path
+        android:fillColor="#FFEDEDED"
+        android:pathData="M54,58 m-5,0 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0" />
+    <!-- GPS noktası -->
+    <path
+        android:fillColor="#FF4CAF50"
+        android:pathData="M54,76 m-3.5,0 a3.5,3.5 0 1,0 7,0 a3.5,3.5 0 1,0 -7,0" />
+</vector>
