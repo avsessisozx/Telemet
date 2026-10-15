@@ -158,12 +158,29 @@ class GpsTracker(context: Context, private val onFix: (Fix) -> Unit) : LocationL
             horizontalAccuracyM = if (location.hasAccuracy()) location.accuracy.toDouble() else 10.0,
             verticalAccuracyM = if (location.hasVerticalAccuracy()) location.verticalAccuracyMeters.toDouble() else 15.0,
             speedAccuracyMs = if (location.hasSpeedAccuracy()) location.speedAccuracyMetersPerSecond.toDouble() else 0.5,
-            satellites = satellitesUsed.takeIf { it > 0 }
-                ?: location.extras?.getInt("satellites", 0)?.takeIf { it > 0 }
-                ?: 0,
+            satellites = satelliteCountFor(location),
         )
         lastFix = fix
         onFix(fix)
+    }
+
+    private var mockLogged = false
+
+    /**
+     * Kameraya gidecek uydu sayısı. Konum varsa en az 4 uydu kullanılmış demektir; sayı henüz
+     * bilinmiyorsa 0 göndermek kameranın veriyi "sinyal yok" diye atmasına yol açabilir.
+     * Sahte konum (test) uygulamaları uydu bildirmez; o durumda iyi bir sinyal varsayılır.
+     */
+    private fun satelliteCountFor(location: Location): Int {
+        val known = satellitesUsed.takeIf { it > 0 }
+            ?: location.extras?.getInt("satellites", 0)?.takeIf { it > 0 }
+            ?: 0
+        val mock = if (android.os.Build.VERSION.SDK_INT >= 31) location.isMock else @Suppress("DEPRECATION") location.isFromMockProvider
+        if (mock && !mockLogged) {
+            mockLogged = true
+            AppLog.w("Sahte konum algılandı (test modu). Veriler sahte konum uygulamasından geliyor.")
+        }
+        return if (mock) maxOf(known, 10) else maxOf(known, 4)
     }
 
     /** Son ölçümün yaşı (ms). */
