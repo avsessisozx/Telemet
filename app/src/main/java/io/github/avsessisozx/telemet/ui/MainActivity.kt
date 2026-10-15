@@ -2,6 +2,8 @@ package io.github.avsessisozx.telemet.ui
 
 import android.Manifest
 import android.app.Activity
+import android.app.AlertDialog
+import android.content.ComponentName
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothManager
 import android.content.Intent
@@ -18,6 +20,7 @@ import android.provider.Settings
 import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
+import android.view.WindowManager
 import android.view.WindowInsets
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
@@ -69,8 +72,11 @@ class MainActivity : Activity() {
 
     private lateinit var startButton: Button
     private lateinit var recordButton: Button
-    private lateinit var batteryButton: Button
     private lateinit var logView: TextView
+
+    private lateinit var setupCard: LinearLayout
+    private lateinit var setupList: TextView
+    private lateinit var distValue: TextView
 
     private val stateListener: () -> Unit = { render() }
     private val logListener: () -> Unit = { renderLog() }
@@ -85,8 +91,23 @@ class MainActivity : Activity() {
         super.onStart()
         TelemetState.addListener(stateListener)
         AppLog.addListener(logListener)
+        // Durdur'a basılmadan kapanmış bir sürüş varsa kaldığı yerden devam et.
+        if (prefs.shouldRun && !TelemetState.serviceRunning && requiredPermissionsMissing().isEmpty()) {
+            AppLog.i("Yarım kalan sürüşe devam ediliyor")
+            TelemetService.resume(this)
+        }
         render()
         renderLog()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        render()
+        if (awaitingSetupReturn) {
+            awaitingSetupReturn = false
+            // Ayar ekranından ya da izin penceresinden dönüldü: kuruluma kaldığı yerden devam et.
+            window.decorView.postDelayed({ if (startFlowActive) continueStartFlow() }, 300)
+        }
     }
 
     override fun onStop() {
@@ -169,6 +190,19 @@ class MainActivity : Activity() {
             setPadding(0, 0, 0, dp(16))
         })
 
+        // Kurulum kartı: her şey tamamsa gizlenir
+        setupList = text(14f).apply { setPadding(0, dp(8), 0, dp(8)) }
+        setupCard = card().apply {
+            addView(text(18f, YELLOW, bold = true).apply { text = "Kurulum" })
+            addView(text(13f, MUTED).apply {
+                text = "Sürüş boyunca ekran kapansa ya da başka uygulama açılsa bile kaydın durmaması için bunlar gerekli. Bir kez yapılır."
+                setPadding(0, dp(4), 0, 0)
+            })
+            addView(setupList)
+            addView(button("Kurulumu tamamla", ACCENT) { startFlow(thenStart = false) })
+        }
+        root.addView(setupCard)
+
         // Kamera kartı
         camDot = dot()
         camTitle = text(18f, bold = true)
@@ -192,6 +226,8 @@ class MainActivity : Activity() {
         val (speedBox, sv) = metric("km/sa")
         val (altBox, av) = metric("yükseklik (m)")
         val (satBox, satv) = metric("uydu")
+        val (distBox, dv) = metric("km")
+        distValue = dv
         speedValue = sv
         altValue = av
         satValue = satv
@@ -203,6 +239,7 @@ class MainActivity : Activity() {
                 setPadding(0, dp(12), 0, 0)
                 addView(speedBox)
                 addView(altBox)
+                addView(distBox)
                 addView(satBox)
             })
             addView(gpsInfo)
@@ -221,18 +258,21 @@ class MainActivity : Activity() {
                 prefs.smoothGps = it
                 AppLog.i(if (it) "Akıcı GPS açık (10 Hz)" else "Akıcı GPS kapalı (yalnızca gerçek ölçümler)")
             })
-            addView(toggle("Sürüşü GPX olarak da kaydet", prefs.gpxEnabled) {
-                prefs.gpxEnabled = it
+            addView(toggle("Her sürüşü ayrıca FIT + GPX olarak kaydet", prefs.backupEnabled) {
+                prefs.backupEnabled = it
                 if (TelemetState.serviceRunning) {
                     Toast.makeText(this@MainActivity, "Bir sonraki başlatmada geçerli olur", Toast.LENGTH_SHORT).show()
                 }
             })
             addView(text(12f, MUTED).apply {
-                text = "GPX dosyaları İndirilenler/Telemet klasörüne kaydedilir."
+                text = "Dosyalar Durdur'a basınca İndirilenler/Telemet klasörüne çıkar. FIT dosyası DJI Studio'da " +
+                    "Pano → Veri kaynağı → FIT Dosyasını İçe Aktar ile kullanılabilir."
                 setPadding(0, 0, 0, dp(8))
             })
-            batteryButton = button("Pil kısıtlamasını kaldır (önerilir)", 0xFF37474F.toInt()) { requestBatteryExemption() }
-            addView(batteryButton)
+            addView(toggle("Telemet açıkken ekranı açık tut", prefs.keepScreenOn) {
+                prefs.keepScreenOn = it
+                render()
+            })
             addView(button("Kamera eşleşmesini unut", 0xFF37474F.toInt()) {
                 prefs.forgetCamera()
                 AppLog.i("Kayıtlı kamera unutuldu. Bir sonraki bağlantıda en yakın kamera seçilecek.")
@@ -328,6 +368,19 @@ class MainActivity : Activity() {
         camInfo.text = info.joinToString("\n")
         camInfo.visibility = if (info.isEmpty()) View.GONE else View.VISIBLE
 
+        // Kurulum
+        val steps = setupSteps()
+        setupList.text = steps.joinToString("\n") { (if (it.done()) "✓ " else "✗ ") + it.label }
+        setupCard.visibility = if (steps.all { it.done() }) View.GONE else View.VISIBLE
+
+        // Ekranı açık tut (video oynatıcı ve navigasyon uygulamaları gibi)
+        if (prefs.keepScreenOn && s.serviceRunning) {
+            window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        } else {
+            window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        }
+        distValue.text = if (s.serviceRunning && s.rideFile != null) "%.1f".format(s.distanceKm) else "–"
+
         // GPS
         when {
             !s.serviceRunning -> {
@@ -349,7 +402,7 @@ class MainActivity : Activity() {
             satValue.text = "${s.satellitesUsed}"
             gpsInfo.text = "Doğruluk ±%.0f m • Kameraya %.1f paket/sn • Toplam %d".format(
                 s.horizontalAccuracyM, s.gpsPacketsPerSecond, s.gpsPacketsSent,
-            ) + (s.gpxFile?.let { "\nGPX: $it" } ?: "")
+            ) + (s.rideFile?.let { "\nYedek kayıt: $it" } ?: "")
         } else {
             speedValue.text = "–"
             altValue.text = "–"
@@ -367,30 +420,111 @@ class MainActivity : Activity() {
             st?.isRecording == true -> "■ Kaydı durdur"
             else -> "● Kaydı başlat"
         }
-        batteryButton.visibility = if (isIgnoringBatteryOptimizations()) View.GONE else View.VISIBLE
     }
 
     private fun renderLog() {
         logView.text = AppLog.snapshot(80).asReversed().joinToString("\n").ifEmpty { "Henüz kayıt yok." }
     }
 
-    // ---------------------------------------------------------------- Başlat / durdur
+    // ---------------------------------------------------------------- Başlat / durdur ve kurulum
 
-    private var askedPermissions = false
+    /** Bir kurulum adımı. [required] olmayanlar atlanabilir ama kesintisiz kayıt için önerilir. */
+    private class Step(val key: String, val label: String, val required: Boolean, val done: () -> Boolean, val action: () -> Unit)
+
+    private val isXiaomi: Boolean
+        get() = Build.MANUFACTURER.lowercase().let { it.contains("xiaomi") || it.contains("redmi") || it.contains("poco") }
+
+    private fun setupSteps(): List<Step> = buildList {
+        add(Step("perm", "Konum, Bluetooth ve bildirim izinleri", true, { requiredPermissionsMissing().isEmpty() }) {
+            askPermissions(allPermissionsMissing())
+        })
+        add(Step("bgloc", "Konum izni: \"Her zaman izin ver\"", false, { hasBackgroundLocation() }) {
+            explain(
+                "Konum: Her zaman izin ver",
+                "Navigasyon açıkken ya da ekran kapalıyken de GPS'in kesilmemesi için açılacak ekranda " +
+                    "\"Her zaman izin ver\" seçeneğini seçin.",
+            ) { askPermissions(listOf(Manifest.permission.ACCESS_BACKGROUND_LOCATION)) }
+        })
+        add(Step("battery", "Pil kısıtlaması kaldırıldı", false, { isIgnoringBatteryOptimizations() }) {
+            requestBatteryExemption()
+        })
+        if (isXiaomi) {
+            add(Step("autostart", "Xiaomi: Otomatik başlatma açık", false, { prefs.setupAutostartDone }) {
+                explain(
+                    "Otomatik başlatma",
+                    "Açılacak listede Telemet'i bulup anahtarını açın. Bu, telefon uygulamayı kapatsa bile " +
+                        "kaydın kendiliğinden devam etmesini sağlar.",
+                ) {
+                    prefs.setupAutostartDone = true
+                    openFirst(
+                        Intent().setComponent(ComponentName("com.miui.securitycenter", "com.miui.permcenter.autostart.AutoStartManagementActivity")),
+                        appDetails(),
+                    )
+                }
+            })
+            add(Step("saver", "Xiaomi: Pil tasarrufu \"Kısıtlama yok\"", false, { prefs.setupBatterySaverDone }) {
+                explain(
+                    "Pil tasarrufu",
+                    "Açılacak ekranda \"Kısıtlama yok\" seçeneğini seçin. Varsayılan ayarda MIUI, başka uygulama " +
+                        "öndeyken Telemet'in GPS'ini kesiyor; son sürüşte veri kaybının sebebi buydu.",
+                ) {
+                    prefs.setupBatterySaverDone = true
+                    openFirst(
+                        Intent().setComponent(ComponentName("com.miui.powerkeeper", "com.miui.powerkeeper.ui.HiddenAppsConfigActivity"))
+                            .putExtra("package_name", packageName)
+                            .putExtra("package_label", "Telemet"),
+                        appDetails(),
+                    )
+                }
+            })
+        }
+    }
+
+    private var startFlowActive = false
+    private var startAfterSetup = false
+    private var awaitingSetupReturn = false
+    private val attemptedSteps = mutableSetOf<String>()
 
     private fun onStartStop() {
         if (TelemetState.serviceRunning) {
             TelemetService.stop(this)
             return
         }
-        val missing = missingPermissions()
-        val requiredMissing = missing.filter { it != Manifest.permission.POST_NOTIFICATIONS }
-        // Bildirim izni isteğe bağlı: bir kez sorulur, reddedilse de devam edilir.
-        if (requiredMissing.isNotEmpty() || (missing.isNotEmpty() && !askedPermissions)) {
-            askedPermissions = true
-            requestPermissions(missing.toTypedArray(), REQ_PERMISSIONS)
+        startFlow(thenStart = true)
+    }
+
+    /** Eksik kurulum adımlarını sırayla yürütür, sonra (istenirse) sürüşü başlatır. */
+    private fun startFlow(thenStart: Boolean) {
+        startFlowActive = true
+        startAfterSetup = thenStart
+        attemptedSteps.clear()
+        continueStartFlow()
+    }
+
+    private fun continueStartFlow() {
+        val steps = setupSteps()
+        val next = steps.firstOrNull { !it.done() && it.key !in attemptedSteps }
+        if (next != null) {
+            attemptedSteps += next.key
+            next.action()
             return
         }
+        startFlowActive = false
+        render()
+        val missingRequired = steps.filter { it.required && !it.done() }
+        if (missingRequired.isNotEmpty()) {
+            AppLog.w("Gerekli izinler verilmedi: " + requiredPermissionsMissing().joinToString { it.substringAfterLast('.') })
+            Toast.makeText(this, "Konum ve Bluetooth izinleri olmadan çalışamaz", Toast.LENGTH_LONG).show()
+            startActivity(appDetails())
+            return
+        }
+        val skipped = steps.filter { !it.done() }
+        if (skipped.isNotEmpty()) AppLog.w("Kurulum eksik: " + skipped.joinToString { it.label } + ". Kayıt arka planda kesilebilir.")
+        if (startAfterSetup) launchService()
+    }
+
+    /** Kurulum bitti; Bluetooth ve konum açık mı bakıp servisi başlatır. */
+    private fun launchService() {
         val adapter = getSystemService(BluetoothManager::class.java)?.adapter
         if (adapter == null) {
             Toast.makeText(this, "Bu telefonda Bluetooth yok", Toast.LENGTH_LONG).show()
@@ -414,7 +548,7 @@ class MainActivity : Activity() {
         TelemetService.start(this)
     }
 
-    private fun missingPermissions(): List<String> {
+    private fun allPermissionsMissing(): List<String> {
         val needed = mutableListOf(
             Manifest.permission.ACCESS_FINE_LOCATION,
             Manifest.permission.ACCESS_COARSE_LOCATION,
@@ -429,19 +563,28 @@ class MainActivity : Activity() {
         return needed.filter { checkSelfPermission(it) != PackageManager.PERMISSION_GRANTED }
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode != REQ_PERMISSIONS) return
-        val stillMissing = missingPermissions().filter { it != Manifest.permission.POST_NOTIFICATIONS }
-        if (stillMissing.isEmpty()) {
-            onStartStop()
+    /** Bildirim izni isteğe bağlı; diğerleri olmadan çalışılamaz. */
+    private fun requiredPermissionsMissing(): List<String> =
+        allPermissionsMissing().filter { it != Manifest.permission.POST_NOTIFICATIONS }
+
+    private fun hasBackgroundLocation(): Boolean =
+        checkSelfPermission(Manifest.permission.ACCESS_BACKGROUND_LOCATION) == PackageManager.PERMISSION_GRANTED
+
+    private fun askPermissions(perms: List<String>) {
+        if (perms.isEmpty()) {
+            continueStartFlow()
             return
         }
-        AppLog.w("Gerekli izinler verilmedi: " + stillMissing.joinToString { it.substringAfterLast('.') })
-        Toast.makeText(this, "Konum ve Bluetooth izinleri olmadan çalışamaz", Toast.LENGTH_LONG).show()
-        if (stillMissing.any { !shouldShowRequestPermissionRationale(it) }) {
-            // "Bir daha sorma" seçildiyse ayarlara yönlendir.
-            startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:$packageName")))
+        awaitingSetupReturn = true
+        requestPermissions(perms.toTypedArray(), REQ_PERMISSIONS)
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        // Akış onResume'da sürer. Bazı telefonlar izin penceresinde onResume çağırmıyor; bu yüzden burada da tetikle.
+        if (requestCode == REQ_PERMISSIONS && awaitingSetupReturn) {
+            awaitingSetupReturn = false
+            window.decorView.postDelayed({ if (startFlowActive) continueStartFlow() }, 300)
         }
     }
 
@@ -449,8 +592,40 @@ class MainActivity : Activity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         @Suppress("DEPRECATION")
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == REQ_ENABLE_BT && resultCode == RESULT_OK) onStartStop()
+        if (requestCode == REQ_ENABLE_BT && resultCode == RESULT_OK) launchService()
     }
+
+    /** Açıklama gösterir; Tamam'a basılırsa [then] çalışır, vazgeçilirse sonraki adıma geçilir. */
+    private fun explain(title: String, message: String, then: () -> Unit) {
+        var accepted = false
+        AlertDialog.Builder(this)
+            .setTitle(title)
+            .setMessage(message)
+            .setPositiveButton("Tamam") { _, _ ->
+                accepted = true
+                then()
+            }
+            .setNegativeButton("Atla", null)
+            .setOnDismissListener { if (!accepted && startFlowActive) continueStartFlow() }
+            .show()
+    }
+
+    /** Verilen ekranlardan açılabilen ilkini açar. */
+    private fun openFirst(vararg intents: Intent) {
+        for (i in intents) {
+            try {
+                awaitingSetupReturn = true
+                startActivity(i)
+                return
+            } catch (e: Exception) {
+                awaitingSetupReturn = false
+            }
+        }
+        if (startFlowActive) continueStartFlow()
+    }
+
+    private fun appDetails(): Intent =
+        Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:$packageName"))
 
     // ---------------------------------------------------------------- Diğer
 
@@ -458,13 +633,10 @@ class MainActivity : Activity() {
         getSystemService(PowerManager::class.java)?.isIgnoringBatteryOptimizations(packageName) == true
 
     private fun requestBatteryExemption() {
-        try {
-            startActivity(
-                Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS, Uri.parse("package:$packageName")),
-            )
-        } catch (e: Exception) {
-            startActivity(Intent(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS))
-        }
+        openFirst(
+            Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS, Uri.parse("package:$packageName")),
+            Intent(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS),
+        )
     }
 
     private fun shareLog() {

@@ -6,7 +6,8 @@ Telefon, **DJI Osmo Action GPS Bluetooth kumandası** gibi davranarak kameraya a
 
 - Ek donanım gerekmez, sadece telefon ve kamera
 - Google Play Hizmetleri kullanmaz, ek kütüphane yok
-- İsteğe bağlı olarak sürüşü GPX dosyası olarak da kaydeder
+- Her sürüşü telefonda ayrıca **FIT + GPX** olarak kaydeder (yedek; DJI Studio'ya içe aktarılabilir)
+- Navigasyon uygulamaları gibi kesintisiz çalışır: Başlat'tan sonra ekran kapansa ya da başka uygulama açılsa da Durdur'a basana kadar sürer
 
 ## Kurulum
 
@@ -43,8 +44,17 @@ Videoyu DJI Mimo'ya aktardıktan sonra düzenleme ekranında **gösterge paneli 
 | Ayar | Açıklama |
 |---|---|
 | Akıcı GPS (10 Hz) | Gerçek DJI kumandası saniyede 10 kez veri gönderir. Telefon GPS'i genelde saniyede 1 ölçüm verdiği için ara değerler son ölçümün hız ve yönüne göre tahmin edilir. Göstergede tuhaflık görürseniz kapatıp deneyin. |
-| GPX olarak da kaydet | Sürüşü ayrıca **İndirilenler/Telemet** klasörüne GPX dosyası olarak kaydeder. |
+| FIT + GPX olarak kaydet | Varsayılan açık. Durdur'a basınca **İndirilenler/Telemet** klasörüne `.fit` ve `.gpx` çıkar. Uygulama sürüş ortasında kapanırsa kayıt kaldığı yerden sürer. |
+| Ekranı açık tut | Telemet öndeyken ve sürüş sürerken ekran kararmaz. |
 | Kamera eşleşmesini unut | Başka bir kameraya bağlanmak için. |
+
+## Kamera veriyi videoya yazmadıysa (FIT ile kurtarma)
+
+1. Sürüş bitince telefonda **İndirilenler/Telemet** klasöründeki `.fit` dosyasını bilgisayara aktarın.
+2. DJI Studio'da videoyu açın → **Pano** → **Veri kaynağı** → **FIT Dosyasını İçe Aktar**.
+3. Gerekirse **Süre Hizalama** ile zamanı videoya oturtun.
+
+FIT dosyasında konum, hız, yükseklik, mesafe ve eğim bulunur. Nabız, pedal, güç, tork için ayrı sensör gerekir; telefon bunları ölçemez.
 
 ## Sorun giderme
 
@@ -73,7 +83,7 @@ Kod yapısı:
 app/src/main/java/io/github/avsessisozx/telemet/
 ├── protocol/   DJI çerçeve yapısı, CRC, komutlar (Android'den bağımsız, testli)
 ├── ble/        Bluetooth tarama, bağlantı ve el sıkışma
-├── service/    Arka plan servisi, GPS okuma, GPX kaydı
+├── service/    Arka plan servisi, GPS okuma, FIT/GPX yedek kaydı
 ├── ui/         Ana ekran
 └── util/       Günlük ve ayarlar
 ```

@@ -22,10 +22,37 @@ class Prefs(context: Context) {
         get() = sp.getBoolean("smooth_gps", true)
         set(v) = sp.edit().putBoolean("smooth_gps", v).apply()
 
-    /** Sürüşü yedek olarak GPX dosyasına kaydet. */
-    var gpxEnabled: Boolean
-        get() = sp.getBoolean("gpx_enabled", false)
-        set(v) = sp.edit().putBoolean("gpx_enabled", v).apply()
+    /** Her sürüşü telefonda ayrıca FIT ve GPX olarak kaydet. Varsayılan: açık. */
+    var backupEnabled: Boolean
+        get() = sp.getBoolean("backup_enabled", true)
+        set(v) = sp.edit().putBoolean("backup_enabled", v).apply()
+
+    /** Telemet ekrandayken ve sürüş sürerken ekran kararmasın. */
+    var keepScreenOn: Boolean
+        get() = sp.getBoolean("keep_screen_on", true)
+        set(v) = sp.edit().putBoolean("keep_screen_on", v).apply()
+
+    /**
+     * Kullanıcı Başlat'a bastı ve henüz Durdur'a basmadı. Sistem uygulamayı kapatırsa
+     * servis bu bilgiyle kendini yeniden başlatır ve sürüşe kaldığı yerden devam eder.
+     */
+    var shouldRun: Boolean
+        get() = sp.getBoolean("should_run", false)
+        set(v) { sp.edit().putBoolean("should_run", v).commit() }
+
+    /** Süren sürüşün kayıt kimliği (yeniden başlatmada aynı dosyaya devam etmek için). */
+    var activeRideId: String?
+        get() = sp.getString("active_ride_id", null)
+        set(v) { sp.edit().putString("active_ride_id", v).commit() }
+
+    /** Xiaomi'deki elle yapılan kurulum adımları (sistem bunları uygulamaya bildirmiyor). */
+    var setupAutostartDone: Boolean
+        get() = sp.getBoolean("setup_autostart", false)
+        set(v) = sp.edit().putBoolean("setup_autostart", v).apply()
+
+    var setupBatterySaverDone: Boolean
+        get() = sp.getBoolean("setup_battery_saver", false)
+        set(v) = sp.edit().putBoolean("setup_battery_saver", v).apply()
 
     /**
      * Kameraya kendimizi tanıtırken kullandığımız sabit, uydurma MAC adresi.

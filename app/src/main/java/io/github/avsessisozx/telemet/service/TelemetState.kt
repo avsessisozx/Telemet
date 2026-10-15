@@ -25,7 +25,9 @@ object TelemetState {
     var gpsPacketsSent = 0L
     var gpsPacketsPerSecond = 0.0
     var mtu = 23
-    var gpxFile: String? = null
+    /** Süren yedek kaydın adı (FIT + GPX). */
+    var rideFile: String? = null
+    var distanceKm = 0.0
 
     private val listeners = mutableSetOf<() -> Unit>()
     private val main = Handler(Looper.getMainLooper())

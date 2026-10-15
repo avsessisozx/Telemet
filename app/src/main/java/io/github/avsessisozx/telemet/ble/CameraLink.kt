@@ -78,6 +78,9 @@ class CameraLink(
         private const val SCAN_TIMEOUT_MS = 20_000L
         private const val CONNECT_TIMEOUT_MS = 15_000L
         private const val HANDSHAKE_TIMEOUT_MS = 45_000L
+        private const val SETUP_TIMEOUT_MS = 12_000L
+        /** Kamera kayıt durumunu değiştirirken art arda gelen basışlar yok sayılır. */
+        private const val RECORD_DEBOUNCE_MS = 1_500L
         private const val WRITE_TIMEOUT_MS = 1_500L
         private const val NO_RESPONSE_WRITE_TIMEOUT_MS = 250L
 
@@ -107,7 +110,9 @@ class CameraLink(
     private var writeChar: BluetoothGattCharacteristic? = null
     private var mtu = 23
     private var servicesRequested = false
+    private var discoveryRetried = false
     private var reconnectAttempts = 0
+    private var lastRecordPressAt = 0L
 
     // Protokol
     private val assembler = FrameAssembler()
@@ -171,6 +176,12 @@ class CameraLink(
     /** Kameranın kayıt tuşuna kısa basmakla aynı: kaydı başlatır ya da durdurur. */
     fun pressRecord(): Boolean {
         if (state != State.READY) return false
+        val now = SystemClock.elapsedRealtime()
+        if (now - lastRecordPressAt < RECORD_DEBOUNCE_MS) {
+            AppLog.i("Kayıt tuşuna art arda basıldı, ikinci basış yok sayıldı")
+            return true
+        }
+        lastRecordPressAt = now
         AppLog.i("Kayıt tuşu gönderiliyor")
         sendFrame(
             CmdType.RESPONSE_OR_NOT, nextSeq(), Cmd.SET_GENERAL, Cmd.ID_KEY_REPORT,
@@ -320,6 +331,7 @@ class CameraLink(
         currentDevice = device
         currentName = name ?: currentName
         servicesRequested = false
+        discoveryRetried = false
         mtu = 23
         if (autoConnect) {
             setState(State.RECONNECTING, "Kamera bekleniyor. Kamera açılınca ya da yaklaşınca otomatik bağlanılacak.")
@@ -347,6 +359,9 @@ class CameraLink(
 
     private fun closeGatt() {
         main.removeCallbacks(connectTimeout)
+        main.removeCallbacks(setupTimeout)
+        main.removeCallbacks(discoverAfterMtu)
+        main.removeCallbacks(discoveryTimeout)
         main.removeCallbacks(mtuTimeout)
         main.removeCallbacks(notifyTimeout)
         main.removeCallbacks(handshakeTimeout)
@@ -380,6 +395,8 @@ class CameraLink(
                 }
                 if (newState == BluetoothProfile.STATE_CONNECTED && status == BluetoothGatt.GATT_SUCCESS) {
                     main.removeCallbacks(connectTimeout)
+                    main.removeCallbacks(setupTimeout)
+                    main.postDelayed(setupTimeout, SETUP_TIMEOUT_MS)
                     AppLog.i("Bluetooth bağlandı, MTU isteniyor")
                     setState(State.CONNECTING, "Bağlandı, hazırlanıyor…")
                     if (!g.requestMtu(REQUESTED_MTU)) {
@@ -401,13 +418,20 @@ class CameraLink(
                 if (status == BluetoothGatt.GATT_SUCCESS) mtu = newMtu
                 AppLog.i("MTU: $mtu")
                 listener.onMtu(mtu)
-                discoverServices(g)
+                if (servicesRequested) return@post
+                // Yeniden bağlanırken MTU yanıtı iki kez gelebiliyor (önce kameranın, sonra bizim isteğimiz).
+                // Servis keşfini ikinci yanıt gelene kadar kısa süre erteliyoruz; aksi halde Android
+                // aynı anda iki işlemi kaldıramayıp keşfi sessizce düşürüyor ve bağlantı takılıyor.
+                main.removeCallbacks(discoverAfterMtu)
+                main.postDelayed(discoverAfterMtu, 600)
             }
         }
 
         override fun onServicesDiscovered(g: BluetoothGatt, status: Int) {
             main.post {
                 if (g != gatt) return@post
+                main.removeCallbacks(discoveryTimeout)
+                if (writeChar != null) return@post // tekrar denemenin geç gelen yanıtı
                 if (status != BluetoothGatt.GATT_SUCCESS) {
                     AppLog.w("Servis keşfi başarısız (durum $status)")
                     g.disconnect()
@@ -470,6 +494,31 @@ class CameraLink(
         }
     }
 
+    private val discoverAfterMtu = Runnable { gatt?.let { discoverServices(it) } }
+
+    /** Servis keşfi yanıtı gelmezse bir kez daha dener. */
+    private val discoveryTimeout = Runnable {
+        val g = gatt ?: return@Runnable
+        if (writeChar != null) return@Runnable
+        if (!discoveryRetried) {
+            discoveryRetried = true
+            AppLog.w("Servis keşfi yanıt vermedi, tekrar deneniyor")
+            servicesRequested = false
+            discoverServices(g)
+        }
+    }
+
+    /**
+     * Bluetooth bağlandıktan sonra kurulum (MTU, servis keşfi, bildirimler) belirli sürede
+     * tamamlanmazsa bağlantıyı tamamen kapatıp baştan kurar. Takılı kalmayı önler.
+     */
+    private val setupTimeout = Runnable {
+        if (gatt != null && state == State.CONNECTING) {
+            AppLog.w("Bağlantı kurulumu ${SETUP_TIMEOUT_MS / 1000} sn içinde tamamlanmadı, baştan kuruluyor")
+            handleDisconnect(-3)
+        }
+    }
+
     private val notifyTimeout = Runnable {
         if (gatt != null && state == State.CONNECTING) {
             AppLog.w("Bildirim açma yanıtı gelmedi, yine de devam ediliyor")
@@ -480,10 +529,14 @@ class CameraLink(
     private fun discoverServices(g: BluetoothGatt) {
         if (servicesRequested) return
         servicesRequested = true
+        main.removeCallbacks(discoverAfterMtu)
         if (!g.discoverServices()) {
             AppLog.w("Servis keşfi başlatılamadı")
             g.disconnect()
+            return
         }
+        main.removeCallbacks(discoveryTimeout)
+        main.postDelayed(discoveryTimeout, 5_000)
     }
 
     private fun setupCharacteristics(g: BluetoothGatt) {
@@ -569,6 +622,7 @@ class CameraLink(
         if (gatt == null || writeChar == null) return
         if (state == State.HANDSHAKE || state == State.READY) return
         main.removeCallbacks(notifyTimeout)
+        main.removeCallbacks(setupTimeout)
         val code = Random.nextInt(1000, 10000)
         listener.onVerifyCode(code)
         setState(State.HANDSHAKE, "Kamerada çıkan bağlantı isteğini onaylayın (kod: $code)")

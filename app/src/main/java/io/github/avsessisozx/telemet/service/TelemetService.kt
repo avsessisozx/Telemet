@@ -31,15 +31,24 @@ class TelemetService : Service(), CameraLink.Listener {
         private const val ACTION_START = "io.github.avsessisozx.telemet.START"
         private const val ACTION_STOP = "io.github.avsessisozx.telemet.STOP"
         private const val ACTION_RECORD = "io.github.avsessisozx.telemet.RECORD"
+        private const val ACTION_RESUME = "io.github.avsessisozx.telemet.RESUME"
         private const val CHANNEL_ID = "telemet"
         private const val NOTIFICATION_ID = 1
         /** DJI kumandası 10 Hz gönderiyor. */
         private const val PUSH_INTERVAL_MS = 100L
         /** Bundan eski ölçümler gönderilmez. */
         private const val MAX_FIX_AGE_MS = 2_500L
+        /** GPS bu kadar süre sessiz kalırsa konum güncellemeleri yeniden kaydedilir. */
+        private const val GPS_RESTART_AFTER_MS = 8_000L
+        private const val SUMMARY_INTERVAL_MS = 60_000L
 
         fun start(context: Context) {
             context.startForegroundService(Intent(context, TelemetService::class.java).setAction(ACTION_START))
+        }
+
+        /** Yarım kalmış sürüşe kaldığı yerden devam eder (uygulama yeniden açıldığında). */
+        fun resume(context: Context) {
+            context.startForegroundService(Intent(context, TelemetService::class.java).setAction(ACTION_RESUME))
         }
 
         fun stop(context: Context) {
@@ -55,7 +64,7 @@ class TelemetService : Service(), CameraLink.Listener {
     private lateinit var prefs: Prefs
     private lateinit var link: CameraLink
     private lateinit var gps: GpsTracker
-    private lateinit var gpx: GpxRecorder
+    private lateinit var ride: RideRecorder
     private var wakeLock: PowerManager.WakeLock? = null
     private var started = false
 
@@ -64,6 +73,14 @@ class TelemetService : Service(), CameraLink.Listener {
     private var lastPushedFixTime = 0L
     private var lastNotificationText = ""
 
+    // GPS bekçisi ve dakikalık özet
+    private var gpsLostAt = 0L
+    private var lastGpsRestartAt = 0L
+    private var gpsRestarts = 0
+    private var fixesInSummary = 0
+    private var packetsInSummary = 0
+    private var summaryStart = 0L
+
     override fun onBind(intent: Intent?): IBinder? = null
 
     override fun onCreate() {
@@ -71,30 +88,55 @@ class TelemetService : Service(), CameraLink.Listener {
         prefs = Prefs(this)
         link = CameraLink(this, prefs.remoteMac, this)
         gps = GpsTracker(this) { fix -> onFix(fix) }
-        gpx = GpxRecorder(this)
+        ride = RideRecorder(this)
         createChannel()
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         when (intent?.action) {
-            ACTION_START -> startTelemetry()
+            ACTION_START -> {
+                prefs.shouldRun = true
+                startTelemetry(resume = false)
+            }
+            ACTION_RESUME -> {
+                prefs.shouldRun = true
+                startTelemetry(resume = true)
+            }
             ACTION_STOP -> {
+                prefs.shouldRun = false
                 stopTelemetry()
                 stopSelf()
+            }
+            null -> {
+                // Sistem servisi kapatıp yeniden başlattı: kullanıcı Durdur'a basmadıysa kaldığı yerden devam et.
+                if (prefs.shouldRun) {
+                    AppLog.w("Telemet sistem tarafından kapatılmıştı, kaldığı yerden devam ediyor")
+                    startTelemetry(resume = true)
+                } else {
+                    stopSelf()
+                }
             }
             ACTION_RECORD -> {
                 if (!link.pressRecord()) AppLog.w("Kamera bağlı değil, kayıt komutu gönderilemedi")
             }
         }
-        return START_NOT_STICKY
+        // Sistem kapatırsa yeniden başlat (navigasyon uygulamaları gibi).
+        return START_STICKY
     }
 
-    private fun startTelemetry() {
-        startForeground(
-            NOTIFICATION_ID,
-            buildNotification("Başlatılıyor…"),
-            ServiceInfo.FOREGROUND_SERVICE_TYPE_LOCATION or ServiceInfo.FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE,
-        )
+    private fun startTelemetry(resume: Boolean) {
+        try {
+            startForeground(
+                NOTIFICATION_ID,
+                buildNotification("Başlatılıyor…"),
+                ServiceInfo.FOREGROUND_SERVICE_TYPE_LOCATION or ServiceInfo.FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE,
+            )
+        } catch (e: Exception) {
+            // Android bazı durumlarda arka plandan ön plan servisine izin vermez (izinler eksikse).
+            AppLog.w("Arka planda başlatılamadı; Telemet'i açıp Başlat'a basın", e)
+            stopSelf()
+            return
+        }
         if (started) return
         started = true
         TelemetState.serviceRunning = true
@@ -107,12 +149,16 @@ class TelemetService : Service(), CameraLink.Listener {
 
         if (!gps.isGpsEnabled()) AppLog.w("Telefonun konumu kapalı. Ayarlardan açın.")
         gps.start()
-        if (prefs.gpxEnabled) {
-            gpx.start()
-            TelemetState.gpxFile = gpx.fileName
+        if (prefs.backupEnabled) {
+            val id = ride.start(if (resume) prefs.activeRideId else null)
+            prefs.activeRideId = id
+            TelemetState.rideFile = id
         }
         link.connect(prefs.lastCameraAddress)
         windowStart = SystemClock.elapsedRealtime()
+        summaryStart = windowStart
+        gpsLostAt = 0L
+        gpsRestarts = 0
         main.post(pushLoop)
         TelemetState.changed()
     }
@@ -123,8 +169,10 @@ class TelemetService : Service(), CameraLink.Listener {
         main.removeCallbacks(pushLoop)
         link.disconnect()
         gps.stop()
-        gpx.stop()
-        TelemetState.gpxFile = null
+        ride.stop()
+        prefs.activeRideId = null
+        TelemetState.rideFile = null
+        TelemetState.distanceKm = 0.0
         wakeLock?.let { if (it.isHeld) it.release() }
         wakeLock = null
         TelemetState.serviceRunning = false
@@ -136,8 +184,25 @@ class TelemetService : Service(), CameraLink.Listener {
     }
 
     override fun onDestroy() {
-        stopTelemetry()
+        if (prefs.shouldRun && started) {
+            // Kullanıcı durdurmadı; sistem kapatıyor. Kaydı bitirmeden kapat ki yeniden başlayınca devam edilsin.
+            AppLog.w("Telemet sistem tarafından kapatılıyor")
+            main.removeCallbacksAndMessages(null)
+            link.disconnect()
+            gps.stop()
+            started = false
+            TelemetState.serviceRunning = false
+            TelemetState.changed()
+        } else {
+            stopTelemetry()
+        }
         super.onDestroy()
+    }
+
+    override fun onTaskRemoved(rootIntent: Intent?) {
+        // Uygulama son kullanılanlardan kaydırılıp kapatıldı; sürüş arka planda sürüyor.
+        if (started) AppLog.i("Uygulama ekranı kapatıldı, kayıt arka planda sürüyor")
+        super.onTaskRemoved(rootIntent)
     }
 
     // ---------------------------------------------------------------- GPS
@@ -149,7 +214,16 @@ class TelemetService : Service(), CameraLink.Listener {
         TelemetState.horizontalAccuracyM = fix.horizontalAccuracyM
         TelemetState.satellitesUsed = gps.satellitesUsed
         TelemetState.satellitesVisible = gps.satellitesVisible
-        if (gpx.isRecording) gpx.add(fix)
+        fixesInSummary++
+        if (gpsLostAt != 0L) {
+            val gap = (SystemClock.elapsedRealtime() - gpsLostAt) / 1000
+            AppLog.i("GPS sinyali geri geldi ($gap sn kesinti)")
+            gpsLostAt = 0L
+        }
+        if (ride.isRecording) {
+            ride.add(fix)
+            TelemetState.distanceKm = ride.distanceM / 1000
+        }
         if (!prefs.smoothGps) push(fix)
         TelemetState.changed()
     }
@@ -159,10 +233,32 @@ class TelemetService : Service(), CameraLink.Listener {
             if (!started) return
             val age = gps.fixAgeMs()
             TelemetState.fixAgeMs = age
+            val now = SystemClock.elapsedRealtime()
             if (age > MAX_FIX_AGE_MS && TelemetState.hasFix) {
                 TelemetState.hasFix = false
+                gpsLostAt = now
                 AppLog.w("GPS sinyali kayboldu")
                 TelemetState.changed()
+            }
+            // GPS bekçisi: sinyal vardı ama uzun süre ölçüm gelmiyorsa güncellemeleri yeniden kaydet.
+            // (İlk sinyal aranırken dokunulmaz; yeniden başlatmak ilk sinyali geciktirebilir.)
+            val silentFor = age
+            if (gps.lastFix != null && silentFor > GPS_RESTART_AFTER_MS && now - lastGpsRestartAt > GPS_RESTART_AFTER_MS * 2) {
+                lastGpsRestartAt = now
+                gpsRestarts++
+                if (gpsRestarts <= 3 || gpsRestarts % 10 == 0) {
+                    AppLog.w("GPS ${silentFor / 1000} sn sessiz, yeniden başlatılıyor (deneme $gpsRestarts)")
+                }
+                gps.restart()
+            }
+            if (now - summaryStart >= SUMMARY_INTERVAL_MS) {
+                AppLog.i(
+                    "Son 1 dk: $fixesInSummary GPS ölçümü, kameraya $packetsInSummary paket" +
+                        (if (ride.isRecording) ", toplam %.1f km".format(ride.distanceM / 1000) else ""),
+                )
+                fixesInSummary = 0
+                packetsInSummary = 0
+                summaryStart = now
             }
             if (prefs.smoothGps) {
                 val fix = gps.lastFix
@@ -194,6 +290,7 @@ class TelemetService : Service(), CameraLink.Listener {
         if (link.sendGps(payload)) {
             TelemetState.gpsPacketsSent++
             sentInWindow++
+            packetsInSummary++
         }
     }
 
@@ -260,7 +357,8 @@ class TelemetService : Service(), CameraLink.Listener {
         }
         val rec = if (TelemetState.cameraStatus?.isRecording == true) " • ● KAYIT" else ""
         val gpsText = if (TelemetState.hasFix) "GPS %d uydu".format(TelemetState.satellitesUsed) else "GPS aranıyor"
-        return "$cam$rec • $gpsText"
+        val dist = if (TelemetState.rideFile != null) " • %.1f km".format(TelemetState.distanceKm) else ""
+        return "$cam$rec • $gpsText$dist"
     }
 
     private fun refreshNotification() {

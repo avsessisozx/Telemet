@@ -84,6 +84,21 @@ class GpsTracker(context: Context, private val onFix: (Fix) -> Unit) : LocationL
         }
     }
 
+    /**
+     * Konum güncellemelerini yeniden kaydeder. Bazı telefonlar (özellikle MIUI) uygulama arka plandayken
+     * güncellemeleri sessizce kesebiliyor; yeniden kayıt çoğu zaman akışı geri getiriyor.
+     */
+    fun restart() {
+        if (!running) return
+        val manager = lm ?: return
+        try {
+            manager.removeUpdates(this)
+            manager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 100L, 0f, this, Looper.getMainLooper())
+        } catch (e: Exception) {
+            AppLog.w("GPS yeniden başlatılamadı", e)
+        }
+    }
+
     fun stop() {
         if (!running) return
         running = false

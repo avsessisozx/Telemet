@@ -5,6 +5,8 @@
     <!-- Konum: kameraya gönderilecek GPS verisi -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- "Her zaman izin ver": ekran kapalıyken ya da başka uygulama öndeyken de konum alabilmek için -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
     <!-- Bluetooth: Android 11 ve öncesi -->
     <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
