@@ -1,0 +1,38 @@
+name: Repository settings
+
+# Applies the About description, website and topics from .github/repo-settings.json.
+# Needs a repository secret named REPO_ADMIN_TOKEN: a fine-grained personal access token
+# for this repository only, with "Administration: Read and write" permission.
+# Without the secret this workflow does nothing.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/repo-settings.json
+      - .github/workflows/repo-settings.yml
+  workflow_dispatch:
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply description, website and topics
+        env:
+          TOKEN: ${{ secrets.REPO_ADMIN_TOKEN }}
+          REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo "::notice title=Skipped::REPO_ADMIN_TOKEN secret is not set; settings must be entered by hand."
+            exit 0
+          fi
+          api() { curl -sS -f -X "$1" "https://api.github.com/repos/$REPO$2" \
+            -H "Authorization: Bearer $TOKEN" -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" -d "$3"; }
+          api PATCH "" "$(jq '{description, homepage}' .github/repo-settings.json)" > /dev/null
+          api PUT "/topics" "$(jq '{names: .topics}' .github/repo-settings.json)" > /dev/null
+          echo "### Repository settings applied" >> "$GITHUB_STEP_SUMMARY"
+          jq -r '"- " + .description, "- " + .homepage, "- topics: " + (.topics | join(", "))' .github/repo-settings.json >> "$GITHUB_STEP_SUMMARY"

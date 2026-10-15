@@ -54,7 +54,7 @@ object GpsWarmup : LocationListener {
             running = true
             ready = false
         } catch (e: Exception) {
-            AppLog.w("GPS ön ısıtma başlatılamadı", e)
+            AppLog.w("Could not start GPS warm-up", e)
         }
     }
 

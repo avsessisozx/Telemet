@@ -244,26 +244,26 @@ data class CameraStatus(
 
     val modeName: String
         get() = when (mode) {
-            0x00 -> "Ağır çekim"
+            0x00 -> "Slow motion"
             0x01 -> "Video"
-            0x02 -> "Zaman atlamalı"
-            0x05 -> "Fotoğraf"
-            0x0A -> "Hiperlapse"
-            0x1A -> "Canlı yayın"
-            0x23 -> "UVC yayın"
-            0x28 -> "Gece videosu"
-            0x34 -> "Kişi takibi"
-            else -> "Mod 0x%02X".format(mode)
+            0x02 -> "Timelapse"
+            0x05 -> "Photo"
+            0x0A -> "Hyperlapse"
+            0x1A -> "Live stream"
+            0x23 -> "UVC stream"
+            0x28 -> "Night video"
+            0x34 -> "Subject tracking"
+            else -> "Mode 0x%02X".format(mode)
         }
 
     val statusName: String
         get() = when (status) {
-            0x00 -> "Ekran kapalı"
-            0x01 -> "Hazır"
-            0x02 -> "Oynatma"
-            STATUS_RECORDING -> "Kayıtta"
-            STATUS_PRE_RECORDING -> "Ön kayıt"
-            else -> "Durum 0x%02X".format(status)
+            0x00 -> "Screen off"
+            0x01 -> "Ready"
+            0x02 -> "Playback"
+            STATUS_RECORDING -> "Recording"
+            STATUS_PRE_RECORDING -> "Pre-recording"
+            else -> "Status 0x%02X".format(status)
         }
 
     companion object {

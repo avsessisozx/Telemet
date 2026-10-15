@@ -1,0 +1,9 @@
+{
+  "description": "Free open-source Android app that turns your phone into a DJI Osmo Action GPS remote: speed, route & altitude dashboards in DJI Mimo / DJI Studio, lean angle, G-force and FIT/GPX export.",
+  "homepage": "https://github.com/avsessisozx/Telemet/releases/latest",
+  "topics": [
+    "dji", "osmo-action", "osmo-action-4", "osmo-action-5-pro", "dji-mimo", "dji-studio",
+    "gps", "telemetry", "gps-telemetry", "action-camera", "motorcycle", "motorbike",
+    "lean-angle", "g-force", "fit-file", "gpx", "android", "android-app", "kotlin", "bluetooth-low-energy"
+  ]
+}

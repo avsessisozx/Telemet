@@ -78,11 +78,11 @@ class SensorHub(context: Context) : SensorEventListener {
         (gravitySensor ?: accel)?.let { sm.registerListener(this, it, SensorManager.SENSOR_DELAY_GAME, h) }
         baro?.let { sm.registerListener(this, it, SensorManager.SENSOR_DELAY_UI, h) }
         AppLog.i(
-            "Sensörler: jiroskop " + (if (gyro != null) "var" else "YOK") +
-                ", yerçekimi " + (if (gravitySensor != null) "var" else if (accel != null) "ivmeölçerden" else "YOK") +
-                ", barometre " + (if (baro != null) "var" else "yok (yükseklik GPS'ten)"),
+            "Sensors: gyroscope " + (if (gyro != null) "yes" else "NO") +
+                ", gravity " + (if (gravitySensor != null) "yes" else if (accel != null) "from accelerometer" else "NO") +
+                ", barometer " + (if (baro != null) "yes" else "no (altitude from GPS)"),
         )
-        if (gyro == null) AppLog.w("Jiroskop olmadığı için yatış açısı ve viraj G'si hesaplanamayacak")
+        if (gyro == null) AppLog.w("No gyroscope: lean angle and cornering G cannot be calculated")
     }
 
     fun stop() {

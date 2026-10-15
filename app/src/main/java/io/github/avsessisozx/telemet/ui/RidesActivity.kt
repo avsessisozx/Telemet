@@ -21,6 +21,7 @@ import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
+import io.github.avsessisozx.telemet.R
 import io.github.avsessisozx.telemet.service.RideStore
 import io.github.avsessisozx.telemet.service.TelemetState
 import java.text.SimpleDateFormat
@@ -41,9 +42,16 @@ class RidesActivity : Activity() {
         const val RED = 0xFFB71C1C.toInt()
     }
 
-    private val tr = Locale("tr", "TR")
-    private val dayFormat = SimpleDateFormat("d MMMM yyyy, EEEE", tr)
-    private val timeFormat = SimpleDateFormat("HH:mm", tr)
+    // Tarih ve saat, seçili dilin biçiminde
+    private val locale: Locale by lazy { resources.configuration.locales[0] }
+    private val dayFormat by lazy {
+        SimpleDateFormat(android.text.format.DateFormat.getBestDateTimePattern(locale, "EEEEdMMMMyyyy"), locale)
+    }
+    private val timeFormat by lazy { android.text.format.DateFormat.getTimeFormat(this) }
+
+    override fun attachBaseContext(newBase: android.content.Context) {
+        super.attachBaseContext(io.github.avsessisozx.telemet.util.LocaleHelper.wrap(newBase))
+    }
 
     private lateinit var list: LinearLayout
     private lateinit var ongoing: TextView
@@ -111,14 +119,13 @@ class RidesActivity : Activity() {
             orientation = LinearLayout.HORIZONTAL
             gravity = Gravity.CENTER_VERTICAL
             addView(text(26f, ACCENT, bold = true).apply {
-                text = "Sürüşlerim"
+                text = getString(R.string.rides_title)
                 layoutParams = LinearLayout.LayoutParams(0, WRAP_CONTENT, 1f)
             })
-            addView(smallButton("Geri", GREY_BTN) { finish() })
+            addView(smallButton(getString(R.string.back), GREY_BTN) { finish() })
         })
         root.addView(text(13f, MUTED).apply {
-            text = "Her Başlat → Durdur bir sürüştür. Dosyalar İndirilenler/Telemet klasöründe; " +
-                "FIT dosyasını DJI Studio'da Pano → Veri kaynağı → FIT Dosyasını İçe Aktar ile kullanabilirsiniz."
+            text = getString(R.string.rides_desc)
             setPadding(0, dp(4), 0, dp(12))
         })
         ongoing = text(15f, GREEN, bold = true).apply {
@@ -158,7 +165,7 @@ class RidesActivity : Activity() {
         val s = TelemetState
         if (s.serviceRunning && s.rideFile != null) {
             ongoing.visibility = View.VISIBLE
-            ongoing.text = "● Şu an kayıtta: %.1f km\nDurdur'a basınca bu sürüş listeye eklenir.".format(s.distanceKm)
+            ongoing.text = getString(R.string.rides_ongoing, s.distanceKm)
         } else {
             ongoing.visibility = View.GONE
         }
@@ -170,7 +177,7 @@ class RidesActivity : Activity() {
         val rides = RideStore.list(this)
         if (rides.isEmpty()) {
             list.addView(text(15f, MUTED).apply {
-                text = "Henüz kayıtlı sürüş yok.\nBaşlat'a basıp sürüşü bitirince Durdur'a basın; sürüş burada görünür."
+                text = getString(R.string.rides_empty)
                 setPadding(0, dp(24), 0, 0)
                 gravity = Gravity.CENTER
             })
@@ -180,7 +187,7 @@ class RidesActivity : Activity() {
         rides.groupBy { dayFormat.format(Date(it.startUtcMillis)) }.forEach { (day, dayRides) ->
             val km = dayRides.sumOf { it.distanceM } / 1000
             list.addView(text(15f, ACCENT, bold = true).apply {
-                text = "$day  •  ${dayRides.size} sürüş, %.1f km".format(km)
+                text = getString(R.string.rides_day_header, day, dayRides.size, km)
                 setPadding(0, dp(8), 0, dp(8))
             })
             dayRides.forEach { list.addView(rideCard(it)) }
@@ -197,18 +204,17 @@ class RidesActivity : Activity() {
             text = "${timeFormat.format(Date(r.startUtcMillis))} – ${timeFormat.format(Date(r.endUtcMillis))}   ${duration(r.durationS)}"
         })
         addView(text(22f, TEXT, bold = true).apply {
-            text = "%.1f km".format(r.distanceM / 1000)
+            text = "%.1f %s".format(r.distanceM / 1000, getString(R.string.metric_km))
             setPadding(0, dp(4), 0, 0)
         })
         addView(text(14f, MUTED).apply {
-            text = "En yüksek %.0f km/sa  •  Ortalama %.0f km/sa  •  Tırmanış %.0f m".format(
-                r.maxSpeedMs * 3.6, r.avgSpeedMs * 3.6, r.ascentM,
-            )
+            text = getString(R.string.ride_stats, r.maxSpeedMs * 3.6, r.avgSpeedMs * 3.6, r.ascentM)
             setPadding(0, dp(2), 0, if (r.maxLeanLeftDeg + r.maxLeanRightDeg + r.maxBrakeG > 0) 0 else dp(10))
         })
         if (r.maxLeanLeftDeg + r.maxLeanRightDeg + r.maxBrakeG + r.maxAccelG > 0) {
             addView(text(14f, MUTED).apply {
-                text = "Yatış: sol %.0f° / sağ %.0f°  •  Viraj %.2f g  •  Fren %.2f g  •  Hızlanma %.2f g".format(
+                text = getString(
+                    R.string.ride_dynamics,
                     r.maxLeanLeftDeg, r.maxLeanRightDeg, r.maxLateralG, r.maxBrakeG, r.maxAccelG,
                 )
                 setPadding(0, dp(2), 0, dp(10))
@@ -216,8 +222,8 @@ class RidesActivity : Activity() {
         }
         addView(LinearLayout(this@RidesActivity).apply {
             orientation = LinearLayout.HORIZONTAL
-            addView(smallButton("Paylaş (FIT + GPX)", ACCENT) { share(r) })
-            addView(smallButton("Sil", RED) { confirmDelete(r) })
+            addView(smallButton(getString(R.string.ride_share), ACCENT) { share(r) })
+            addView(smallButton(getString(R.string.ride_delete), RED) { confirmDelete(r) })
         })
     }
 
@@ -225,9 +231,9 @@ class RidesActivity : Activity() {
         val h = seconds / 3600
         val m = (seconds % 3600) / 60
         return when {
-            h > 0 -> "$h sa $m dk"
-            m > 0 -> "$m dk"
-            else -> "$seconds sn"
+            h > 0 -> getString(R.string.dur_h, h.toInt(), m.toInt())
+            m > 0 -> getString(R.string.dur_m, m.toInt())
+            else -> getString(R.string.dur_s, seconds.toInt())
         }
     }
 
@@ -238,35 +244,37 @@ class RidesActivity : Activity() {
         r.fitUri?.let { uris += it }
         r.gpxUri?.let { uris += it }
         if (uris.isEmpty()) {
-            Toast.makeText(this, "Bu sürüşün dosyaları bulunamadı", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, R.string.share_files_missing, Toast.LENGTH_LONG).show()
             return
         }
         val send = Intent(Intent.ACTION_SEND_MULTIPLE).apply {
             type = "application/octet-stream"
             putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris)
-            putExtra(Intent.EXTRA_SUBJECT, "Telemet sürüşü ${r.id}")
+            putExtra(Intent.EXTRA_SUBJECT, getString(R.string.share_subject, r.id))
             clipData = ClipData.newRawUri(r.id, uris[0]).also { c -> uris.drop(1).forEach { c.addItem(ClipData.Item(it)) } }
             addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         }
         try {
-            startActivity(Intent.createChooser(send, "Sürüşü paylaş"))
+            startActivity(Intent.createChooser(send, getString(R.string.share_chooser)))
         } catch (e: Exception) {
-            Toast.makeText(this, "Paylaşılamadı: dosya silinmiş olabilir", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, R.string.share_failed, Toast.LENGTH_LONG).show()
         }
     }
 
     private fun confirmDelete(r: RideStore.Ride) {
         AlertDialog.Builder(this)
-            .setTitle("Sürüş silinsin mi?")
+            .setTitle(R.string.delete_title)
             .setMessage(
-                "${dayFormat.format(Date(r.startUtcMillis))} ${timeFormat.format(Date(r.startUtcMillis))} sürüşü " +
-                    "ve İndirilenler/Telemet'teki FIT ve GPX dosyaları silinecek. Bu geri alınamaz.",
+                getString(
+                    R.string.delete_msg,
+                    "${dayFormat.format(Date(r.startUtcMillis))} ${timeFormat.format(Date(r.startUtcMillis))}",
+                ),
             )
-            .setPositiveButton("Sil") { _, _ ->
+            .setPositiveButton(R.string.ride_delete) { _, _ ->
                 RideStore.delete(this, r)
                 reload()
             }
-            .setNegativeButton("Vazgeç", null)
+            .setNegativeButton(R.string.cancel, null)
             .show()
     }
 }

@@ -20,6 +20,7 @@ import io.github.avsessisozx.telemet.protocol.GpsPush
 import io.github.avsessisozx.telemet.sensors.SensorHub
 import io.github.avsessisozx.telemet.ui.MainActivity
 import io.github.avsessisozx.telemet.util.AppLog
+import io.github.avsessisozx.telemet.util.LocaleHelper
 import io.github.avsessisozx.telemet.util.Prefs
 
 /**
@@ -85,6 +86,10 @@ class TelemetService : Service(), CameraLink.Listener {
 
     override fun onBind(intent: Intent?): IBinder? = null
 
+    override fun attachBaseContext(base: Context) {
+        super.attachBaseContext(LocaleHelper.wrap(base))
+    }
+
     override fun onCreate() {
         super.onCreate()
         prefs = Prefs(this)
@@ -113,7 +118,7 @@ class TelemetService : Service(), CameraLink.Listener {
             null -> {
                 // Sistem servisi kapatıp yeniden başlattı: kullanıcı Durdur'a basmadıysa kaldığı yerden devam et.
                 if (prefs.shouldRun) {
-                    AppLog.w("Telemet sistem tarafından kapatılmıştı, kaldığı yerden devam ediyor")
+                    AppLog.w("Telemet was closed by the system, resuming where it left off")
                     startTelemetry(resume = true)
                 } else {
                     stopSelf()
@@ -129,12 +134,12 @@ class TelemetService : Service(), CameraLink.Listener {
         try {
             startForeground(
                 NOTIFICATION_ID,
-                buildNotification("Başlatılıyor…"),
+                buildNotification(getString(R.string.notif_starting)),
                 ServiceInfo.FOREGROUND_SERVICE_TYPE_LOCATION or ServiceInfo.FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE,
             )
         } catch (e: Exception) {
             // Android bazı durumlarda arka plandan ön plan servisine izin vermez (izinler eksikse).
-            AppLog.w("Arka planda başlatılamadı; Telemet'i açıp Başlat'a basın", e)
+            AppLog.w("Could not start in background; open Telemet and tap Start", e)
             stopSelf()
             return
         }
@@ -142,13 +147,13 @@ class TelemetService : Service(), CameraLink.Listener {
         started = true
         TelemetState.serviceRunning = true
         TelemetState.cameraName = prefs.lastCameraName
-        AppLog.i("Telemet başlatıldı (sürüm ${appVersion()})")
+        AppLog.i("Telemet started (version ${appVersion()})")
 
         wakeLock = getSystemService(PowerManager::class.java)
             ?.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "Telemet:ride")
             ?.apply { setReferenceCounted(false); acquire(12 * 60 * 60 * 1000L) }
 
-        if (!gps.isGpsEnabled()) AppLog.w("Telefonun konumu kapalı. Ayarlardan açın.")
+        if (!gps.isGpsEnabled()) AppLog.w("Phone location is off. Turn it on in settings.")
         gps.start()
         sensors.start()
         TelemetState.hasGyro = sensors.hasGyro
@@ -186,14 +191,14 @@ class TelemetService : Service(), CameraLink.Listener {
         TelemetState.recordPending = false
         TelemetState.resetCamera()
         TelemetState.changed()
-        AppLog.i("Telemet durduruldu")
+        AppLog.i("Telemet stopped")
         stopForeground(STOP_FOREGROUND_REMOVE)
     }
 
     override fun onDestroy() {
         if (prefs.shouldRun && started) {
             // Kullanıcı durdurmadı; sistem kapatıyor. Kaydı bitirmeden kapat ki yeniden başlayınca devam edilsin.
-            AppLog.w("Telemet sistem tarafından kapatılıyor")
+            AppLog.w("Telemet is being closed by the system")
             main.removeCallbacksAndMessages(null)
             link.disconnect()
             gps.stop()
@@ -209,7 +214,7 @@ class TelemetService : Service(), CameraLink.Listener {
 
     override fun onTaskRemoved(rootIntent: Intent?) {
         // Uygulama son kullanılanlardan kaydırılıp kapatıldı; sürüş arka planda sürüyor.
-        if (started) AppLog.i("Uygulama ekranı kapatıldı, kayıt arka planda sürüyor")
+        if (started) AppLog.i("App screen closed, recording continues in the background")
         super.onTaskRemoved(rootIntent)
     }
 
@@ -223,18 +228,18 @@ class TelemetService : Service(), CameraLink.Listener {
         val recording = TelemetState.cameraStatus?.isRecording == true
         if (TelemetState.recordPending) {
             TelemetState.recordPending = false
-            AppLog.i("GPS beklenmeden kayıt başlatılıyor")
-            if (!link.pressRecord()) AppLog.w("Kamera bağlı değil, kayıt komutu gönderilemedi")
+            AppLog.i("Starting recording without waiting for GPS")
+            if (!link.pressRecord()) AppLog.w("Camera not connected, record command not sent")
             TelemetState.changed()
             return
         }
         if (!recording && !TelemetState.hasFix) {
             TelemetState.recordPending = true
-            AppLog.i("GPS sinyali bekleniyor; sinyal gelince kayıt otomatik başlayacak (hemen başlatmak için tekrar basın)")
+            AppLog.i("Waiting for GPS; recording starts automatically when the signal arrives (press again to start now)")
             TelemetState.changed()
             return
         }
-        if (!link.pressRecord()) AppLog.w("Kamera bağlı değil, kayıt komutu gönderilemedi")
+        if (!link.pressRecord()) AppLog.w("Camera not connected, record command not sent")
     }
 
     /** Bekleyen kayıt varsa GPS ve kamera hazır olunca başlatır. */
@@ -242,7 +247,7 @@ class TelemetService : Service(), CameraLink.Listener {
         if (!TelemetState.recordPending || !TelemetState.hasFix) return
         if (link.state != CameraLink.State.READY) return
         TelemetState.recordPending = false
-        AppLog.i("GPS hazır, kayıt başlatılıyor")
+        AppLog.i("GPS ready, starting recording")
         link.pressRecord()
         TelemetState.changed()
     }
@@ -269,7 +274,7 @@ class TelemetService : Service(), CameraLink.Listener {
         fixesInSummary++
         if (gpsLostAt != 0L) {
             val gap = (SystemClock.elapsedRealtime() - gpsLostAt) / 1000
-            AppLog.i("GPS sinyali geri geldi ($gap sn kesinti)")
+            AppLog.i("GPS signal is back ($gap s gap)")
             gpsLostAt = 0L
         }
         if (ride.isRecording) {
@@ -289,7 +294,7 @@ class TelemetService : Service(), CameraLink.Listener {
             if (age > MAX_FIX_AGE_MS && TelemetState.hasFix) {
                 TelemetState.hasFix = false
                 gpsLostAt = now
-                AppLog.w("GPS sinyali kayboldu")
+                AppLog.w("GPS signal lost")
                 TelemetState.changed()
             }
             // GPS bekçisi: sinyal vardı ama uzun süre ölçüm gelmiyorsa güncellemeleri yeniden kaydet.
@@ -299,14 +304,14 @@ class TelemetService : Service(), CameraLink.Listener {
                 lastGpsRestartAt = now
                 gpsRestarts++
                 if (gpsRestarts <= 3 || gpsRestarts % 10 == 0) {
-                    AppLog.w("GPS ${silentFor / 1000} sn sessiz, yeniden başlatılıyor (deneme $gpsRestarts)")
+                    AppLog.w("GPS silent for ${silentFor / 1000} s, restarting (attempt $gpsRestarts)")
                 }
                 gps.restart()
             }
             if (now - summaryStart >= SUMMARY_INTERVAL_MS) {
                 AppLog.i(
-                    "Son 1 dk: $fixesInSummary GPS ölçümü, kameraya $packetsInSummary paket" +
-                        (if (ride.isRecording) ", toplam %.1f km".format(ride.distanceM / 1000) else ""),
+                    "Last 1 min: $fixesInSummary GPS fixes, $packetsInSummary packets to camera" +
+                        (if (ride.isRecording) ", total %.1f km".format(java.util.Locale.US, ride.distanceM / 1000) else ""),
                 )
                 fixesInSummary = 0
                 packetsInSummary = 0
@@ -398,22 +403,22 @@ class TelemetService : Service(), CameraLink.Listener {
 
     private fun createChannel() {
         val nm = getSystemService(NotificationManager::class.java) ?: return
-        val channel = NotificationChannel(CHANNEL_ID, "Sürüş telemetrisi", NotificationManager.IMPORTANCE_LOW)
-        channel.description = "Kameraya GPS gönderilirken gösterilir"
+        val channel = NotificationChannel(CHANNEL_ID, getString(R.string.notif_channel), NotificationManager.IMPORTANCE_LOW)
+        channel.description = getString(R.string.notif_channel_desc)
         nm.createNotificationChannel(channel)
     }
 
     private fun notificationText(): String {
         val cam = when (TelemetState.linkState) {
-            CameraLink.State.READY -> "Kamera bağlı"
-            CameraLink.State.HANDSHAKE -> "Kamerada onay bekleniyor"
-            CameraLink.State.SCANNING -> "Kamera aranıyor"
-            CameraLink.State.CONNECTING -> "Bağlanılıyor"
-            CameraLink.State.RECONNECTING -> "Yeniden bağlanılıyor"
-            CameraLink.State.IDLE -> "Kamera bağlı değil"
+            CameraLink.State.READY -> getString(R.string.cam_ready)
+            CameraLink.State.HANDSHAKE -> getString(R.string.cam_handshake)
+            CameraLink.State.SCANNING -> getString(R.string.cam_scanning)
+            CameraLink.State.CONNECTING -> getString(R.string.cam_connecting)
+            CameraLink.State.RECONNECTING -> getString(R.string.cam_reconnecting)
+            CameraLink.State.IDLE -> getString(R.string.cam_idle)
         }
-        val rec = if (TelemetState.cameraStatus?.isRecording == true) " • ● KAYIT" else ""
-        val gpsText = if (TelemetState.hasFix) "GPS %d uydu".format(TelemetState.satellitesUsed) else "GPS aranıyor"
+        val rec = if (TelemetState.cameraStatus?.isRecording == true) " • " + getString(R.string.notif_rec) else ""
+        val gpsText = if (TelemetState.hasFix) getString(R.string.notif_gps_sats, TelemetState.satellitesUsed) else getString(R.string.notif_gps_searching)
         val dist = if (TelemetState.rideFile != null) " • %.1f km".format(TelemetState.distanceKm) else ""
         return "$cam$rec • $gpsText$dist"
     }
@@ -446,8 +451,8 @@ class TelemetService : Service(), CameraLink.Listener {
             .setContentIntent(open)
             .setOngoing(true)
             .setOnlyAlertOnce(true)
-            .addAction(Notification.Action.Builder(null, "Kayıt", record).build())
-            .addAction(Notification.Action.Builder(null, "Durdur", stop).build())
+            .addAction(Notification.Action.Builder(null, getString(R.string.notif_record), record).build())
+            .addAction(Notification.Action.Builder(null, getString(R.string.btn_stop), stop).build())
             .build()
     }
 

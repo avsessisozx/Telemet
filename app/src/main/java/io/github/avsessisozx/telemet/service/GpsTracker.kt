@@ -74,13 +74,13 @@ class GpsTracker(context: Context, private val onFix: (Fix) -> Unit) : LocationL
             @Suppress("DEPRECATION")
             manager.registerGnssStatusCallback(gnssCallback, main)
             running = true
-            AppLog.i("GPS başlatıldı")
+            AppLog.i("GPS started")
             true
         } catch (e: SecurityException) {
-            AppLog.w("Konum izni yok", e)
+            AppLog.w("No location permission", e)
             false
         } catch (e: IllegalArgumentException) {
-            AppLog.w("GPS sağlayıcısı yok", e)
+            AppLog.w("No GPS provider", e)
             false
         }
     }
@@ -109,7 +109,7 @@ class GpsTracker(context: Context, private val onFix: (Fix) -> Unit) : LocationL
             manager.removeUpdates(this)
             manager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 100L, 0f, this, Looper.getMainLooper())
         } catch (e: Exception) {
-            AppLog.w("GPS yeniden başlatılamadı", e)
+            AppLog.w("Could not restart GPS", e)
         }
     }
 
@@ -120,7 +120,7 @@ class GpsTracker(context: Context, private val onFix: (Fix) -> Unit) : LocationL
         lm?.unregisterGnssStatusCallback(gnssCallback)
         previous = null
         lastFix = null
-        AppLog.i("GPS durduruldu")
+        AppLog.i("GPS stopped")
     }
 
     override fun onLocationChanged(location: Location) {
@@ -178,7 +178,7 @@ class GpsTracker(context: Context, private val onFix: (Fix) -> Unit) : LocationL
         val mock = if (android.os.Build.VERSION.SDK_INT >= 31) location.isMock else @Suppress("DEPRECATION") location.isFromMockProvider
         if (mock && !mockLogged) {
             mockLogged = true
-            AppLog.w("Sahte konum algılandı (test modu). Veriler sahte konum uygulamasından geliyor.")
+            AppLog.w("Mock location detected (test mode). Data is coming from a mock location app.")
         }
         return if (mock) maxOf(known, 10) else maxOf(known, 4)
     }
@@ -194,11 +194,11 @@ class GpsTracker(context: Context, private val onFix: (Fix) -> Unit) : LocationL
     override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) = Unit
 
     override fun onProviderEnabled(provider: String) {
-        AppLog.i("Konum açıldı")
+        AppLog.i("Location turned on")
     }
 
     override fun onProviderDisabled(provider: String) {
-        AppLog.w("Konum kapatıldı! GPS verisi gelmeyecek.")
+        AppLog.w("Location turned off! No GPS data will arrive.")
     }
 
     companion object {

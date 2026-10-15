@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Uygulama simgesi: hız göstergesi yayı ve ibre (108dp adaptif simge, güvenli alan ortadaki 66dp) -->
+<!-- Uygulama simgesi: içinde hız göstergesi olan konum iğnesi (108dp adaptif simge, güvenli alan ortadaki 66dp) -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
+    <!-- Konum iğnesi -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M54,84 C46,73 33,63 33,48 A21,21 0 0,1 75,48 C75,63 62,73 54,84 Z" />
     <!-- Gösterge yayı -->
     <path
         android:fillColor="#00000000"
         android:strokeColor="#FFFF7A1A"
-        android:strokeWidth="6"
+        android:strokeWidth="4.5"
         android:strokeLineCap="round"
-        android:pathData="M33,70 A24,24 0 1,1 75,70" />
+        android:pathData="M42,51 A12,12 0 0,1 66,51" />
     <!-- İbre -->
     <path
         android:fillColor="#00000000"
-        android:strokeColor="#FFEDEDED"
-        android:strokeWidth="5"
+        android:strokeColor="#FF16181D"
+        android:strokeWidth="4"
         android:strokeLineCap="round"
-        android:pathData="M54,58 L68,42" />
+        android:pathData="M54,51 L61.5,42" />
     <!-- Merkez -->
     <path
-        android:fillColor="#FFEDEDED"
-        android:pathData="M54,58 m-5,0 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0" />
-    <!-- GPS noktası -->
-    <path
-        android:fillColor="#FF4CAF50"
-        android:pathData="M54,76 m-3.5,0 a3.5,3.5 0 1,0 7,0 a3.5,3.5 0 1,0 -7,0" />
+        android:fillColor="#FF16181D"
+        android:pathData="M54,51 m-3.5,0 a3.5,3.5 0 1,0 7,0 a3.5,3.5 0 1,0 -7,0" />
 </vector>

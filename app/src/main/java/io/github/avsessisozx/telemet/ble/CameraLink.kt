@@ -19,6 +19,7 @@ import android.os.Build
 import android.os.Handler
 import android.os.Looper
 import android.os.SystemClock
+import io.github.avsessisozx.telemet.R
 import io.github.avsessisozx.telemet.protocol.CameraStatus
 import io.github.avsessisozx.telemet.protocol.Cmd
 import io.github.avsessisozx.telemet.protocol.CmdType
@@ -152,17 +153,17 @@ class CameraLink(
         stopScan()
         val g = gatt
         if (g != null) {
-            AppLog.i("Bağlantı kapatılıyor")
+            AppLog.i("Closing connection")
             try {
                 g.disconnect()
             } catch (e: Exception) {
-                AppLog.w("disconnect hatası", e)
+                AppLog.w("disconnect error", e)
             }
             g.close()
         }
         gatt = null
         resetLinkState()
-        setState(State.IDLE, "Bağlı değil")
+        setState(State.IDLE, str(R.string.link_not_connected))
     }
 
     /** GPS paketini kameraya gönderir. Kamera hazır değilse false döner. */
@@ -178,11 +179,11 @@ class CameraLink(
         if (state != State.READY) return false
         val now = SystemClock.elapsedRealtime()
         if (now - lastRecordPressAt < RECORD_DEBOUNCE_MS) {
-            AppLog.i("Kayıt tuşuna art arda basıldı, ikinci basış yok sayıldı")
+            AppLog.i("Record pressed twice in a row, second press ignored")
             return true
         }
         lastRecordPressAt = now
-        AppLog.i("Kayıt tuşu gönderiliyor")
+        AppLog.i("Sending record key")
         sendFrame(
             CmdType.RESPONSE_OR_NOT, nextSeq(), Cmd.SET_GENERAL, Cmd.ID_KEY_REPORT,
             KeyReport.payload(KeyReport.KEY_RECORD), withResponse = true,
@@ -196,18 +197,18 @@ class CameraLink(
         if (!wantConnected) return
         val a = adapter
         if (a == null) {
-            setState(State.IDLE, "Bu telefonda Bluetooth yok")
+            setState(State.IDLE, str(R.string.toast_no_bt))
             return
         }
         if (!a.isEnabled) {
-            AppLog.w("Bluetooth kapalı, açılması bekleniyor")
-            setState(State.RECONNECTING, "Bluetooth kapalı. Açıldığında otomatik bağlanılacak.")
+            AppLog.w("Bluetooth is off, waiting for it to be turned on")
+            setState(State.RECONNECTING, str(R.string.link_bt_off))
             main.postDelayed({ startScan() }, 5_000)
             return
         }
         val scanner = a.bluetoothLeScanner
         if (scanner == null) {
-            scheduleRetryScan("Tarayıcı hazır değil")
+            scheduleRetryScan("Scanner not ready", str(R.string.link_retry_scanner))
             return
         }
         candidates.clear()
@@ -234,17 +235,17 @@ class CameraLink(
         try {
             scanner.startScan(filters, settings, scanCallback)
         } catch (e: SecurityException) {
-            AppLog.w("Bluetooth tarama izni yok", e)
-            setState(State.IDLE, "Bluetooth izni verilmemiş")
+            AppLog.w("No Bluetooth scan permission", e)
+            setState(State.IDLE, str(R.string.link_no_bt_perm))
             wantConnected = false
             return
         }
         scanning = true
         scanStartedAt = SystemClock.elapsedRealtime()
-        setState(State.SCANNING, "Kamera aranıyor… Kamera açık olmalı ve DJI Mimo bağlı olmamalı.")
+        setState(State.SCANNING, str(R.string.link_scanning))
         AppLog.i(
-            "Tarama başladı (" + (if (useFilters) "filtreli" else "filtresiz") + ")" +
-                (preferredAddress?.let { ", öncelikli: $it" } ?: ""),
+            "Scan started (" + (if (useFilters) "filtered" else "unfiltered") + ")" +
+                (preferredAddress?.let { ", preferred: $it" } ?: ""),
         )
         main.postDelayed(scanTick, SCAN_PICK_DELAY_MS)
     }
@@ -256,7 +257,7 @@ class CameraLink(
         try {
             adapter?.bluetoothLeScanner?.stopScan(scanCallback)
         } catch (e: Exception) {
-            AppLog.w("Tarama durdurulamadı", e)
+            AppLog.w("Could not stop scan", e)
         }
     }
 
@@ -271,17 +272,17 @@ class CameraLink(
             }
             if (SystemClock.elapsedRealtime() - scanStartedAt > SCAN_TIMEOUT_MS) {
                 stopScan()
-                scheduleRetryScan("Kamera bulunamadı")
+                scheduleRetryScan("Camera not found", str(R.string.link_retry_not_found))
                 return
             }
             main.postDelayed(this, 1_000)
         }
     }
 
-    private fun scheduleRetryScan(reason: String) {
+    private fun scheduleRetryScan(reason: String, detail: String) {
         if (!wantConnected) return
-        AppLog.i("$reason, 3 sn sonra tekrar aranacak")
-        setState(State.SCANNING, "$reason. Tekrar aranıyor…")
+        AppLog.i("$reason, scanning again in 3 s")
+        setState(State.SCANNING, detail)
         main.postDelayed({ startScan() }, 3_000)
     }
 
@@ -297,8 +298,8 @@ class CameraLink(
         override fun onScanFailed(errorCode: Int) {
             main.post {
                 scanning = false
-                AppLog.w("Tarama başarısız (kod $errorCode)")
-                scheduleRetryScan("Tarama hatası $errorCode")
+                AppLog.w("Scan failed (code $errorCode)")
+                scheduleRetryScan("Scan error $errorCode", str(R.string.link_retry_error, errorCode))
             }
         }
     }
@@ -309,7 +310,7 @@ class CameraLink(
         val address = result.device.address
         val name = result.scanRecord?.deviceName ?: safeName(result.device)
         if (!candidates.containsKey(address)) {
-            AppLog.i("Kamera bulundu: ${name ?: "isimsiz"} [$address] sinyal ${result.rssi} dBm")
+            AppLog.i("Camera found: ${name ?: "unnamed"} [$address] signal ${result.rssi} dBm")
         }
         candidates[address] = result
         if (address == preferredAddress) {
@@ -334,17 +335,17 @@ class CameraLink(
         discoveryRetried = false
         mtu = 23
         if (autoConnect) {
-            setState(State.RECONNECTING, "Kamera bekleniyor. Kamera açılınca ya da yaklaşınca otomatik bağlanılacak.")
+            setState(State.RECONNECTING, str(R.string.link_waiting_camera))
         } else {
-            setState(State.CONNECTING, "Bağlanılıyor: ${currentName ?: device.address}")
+            setState(State.CONNECTING, str(R.string.link_connecting_to, currentName ?: device.address))
         }
-        AppLog.i("GATT bağlantısı açılıyor: ${device.address}")
+        AppLog.i("Opening GATT connection: ${device.address}")
         try {
             gatt = device.connectGatt(context, autoConnect, gattCallback, BluetoothDevice.TRANSPORT_LE)
         } catch (e: SecurityException) {
-            AppLog.w("Bluetooth bağlantı izni yok", e)
+            AppLog.w("No Bluetooth connect permission", e)
             wantConnected = false
-            setState(State.IDLE, "Bluetooth izni verilmemiş")
+            setState(State.IDLE, str(R.string.link_no_bt_perm))
             return
         }
         if (!autoConnect) main.postDelayed(connectTimeout, CONNECT_TIMEOUT_MS)
@@ -352,7 +353,7 @@ class CameraLink(
 
     private val connectTimeout = Runnable {
         if (state == State.CONNECTING) {
-            AppLog.w("Bağlantı zaman aşımı")
+            AppLog.w("Connection timed out")
             handleDisconnect(-1)
         }
     }
@@ -397,10 +398,10 @@ class CameraLink(
                     main.removeCallbacks(connectTimeout)
                     main.removeCallbacks(setupTimeout)
                     main.postDelayed(setupTimeout, SETUP_TIMEOUT_MS)
-                    AppLog.i("Bluetooth bağlandı, MTU isteniyor")
-                    setState(State.CONNECTING, "Bağlandı, hazırlanıyor…")
+                    AppLog.i("Bluetooth connected, requesting MTU")
+                    setState(State.CONNECTING, str(R.string.link_preparing))
                     if (!g.requestMtu(REQUESTED_MTU)) {
-                        AppLog.w("MTU isteği gönderilemedi")
+                        AppLog.w("Could not send MTU request")
                         discoverServices(g)
                     } else {
                         main.postDelayed(mtuTimeout, 3_000)
@@ -433,7 +434,7 @@ class CameraLink(
                 main.removeCallbacks(discoveryTimeout)
                 if (writeChar != null) return@post // tekrar denemenin geç gelen yanıtı
                 if (status != BluetoothGatt.GATT_SUCCESS) {
-                    AppLog.w("Servis keşfi başarısız (durum $status)")
+                    AppLog.w("Service discovery failed (status $status)")
                     g.disconnect()
                     return@post
                 }
@@ -445,8 +446,8 @@ class CameraLink(
             main.post {
                 if (g != gatt) return@post
                 main.removeCallbacks(notifyTimeout)
-                if (status != BluetoothGatt.GATT_SUCCESS) AppLog.w("Bildirim açma yanıtı: durum $status")
-                else AppLog.i("Kamera bildirimleri açıldı")
+                if (status != BluetoothGatt.GATT_SUCCESS) AppLog.w("Notification enable response: status $status")
+                else AppLog.i("Camera notifications enabled")
                 main.postDelayed({ if (gatt == g) startHandshake() }, 500)
             }
         }
@@ -461,7 +462,7 @@ class CameraLink(
                 writeInFlight = false
                 if (status != BluetoothGatt.GATT_SUCCESS) {
                     writeFailures++
-                    AppLog.w("Yazma başarısız (durum $status)")
+                    AppLog.w("Write failed (status $status)")
                 }
                 pump()
             }
@@ -489,7 +490,7 @@ class CameraLink(
 
     private val mtuTimeout = Runnable {
         gatt?.let {
-            AppLog.w("MTU yanıtı gelmedi, varsayılanla devam")
+            AppLog.w("No MTU response, continuing with default")
             discoverServices(it)
         }
     }
@@ -502,7 +503,7 @@ class CameraLink(
         if (writeChar != null) return@Runnable
         if (!discoveryRetried) {
             discoveryRetried = true
-            AppLog.w("Servis keşfi yanıt vermedi, tekrar deneniyor")
+            AppLog.w("Service discovery did not respond, retrying")
             servicesRequested = false
             discoverServices(g)
         }
@@ -514,14 +515,14 @@ class CameraLink(
      */
     private val setupTimeout = Runnable {
         if (gatt != null && state == State.CONNECTING) {
-            AppLog.w("Bağlantı kurulumu ${SETUP_TIMEOUT_MS / 1000} sn içinde tamamlanmadı, baştan kuruluyor")
+            AppLog.w("Connection setup not finished within ${SETUP_TIMEOUT_MS / 1000} s, starting over")
             handleDisconnect(-3)
         }
     }
 
     private val notifyTimeout = Runnable {
         if (gatt != null && state == State.CONNECTING) {
-            AppLog.w("Bildirim açma yanıtı gelmedi, yine de devam ediliyor")
+            AppLog.w("No notification enable response, continuing anyway")
             startHandshake()
         }
     }
@@ -531,7 +532,7 @@ class CameraLink(
         servicesRequested = true
         main.removeCallbacks(discoverAfterMtu)
         if (!g.discoverServices()) {
-            AppLog.w("Servis keşfi başlatılamadı")
+            AppLog.w("Could not start service discovery")
             g.disconnect()
             return
         }
@@ -542,22 +543,22 @@ class CameraLink(
     private fun setupCharacteristics(g: BluetoothGatt) {
         val service = g.getService(SERVICE_UUID)
         if (service == null) {
-            AppLog.w("FFF0 servisi bulunamadı. Bulunan servisler: " + g.services.joinToString { it.uuid.toString().substring(4, 8) })
+            AppLog.w("FFF0 service not found. Services found: " + g.services.joinToString { it.uuid.toString().substring(4, 8) })
             g.disconnect()
             return
         }
         val notify = service.getCharacteristic(NOTIFY_UUID)
         val write = service.getCharacteristic(WRITE_UUID)
         if (notify == null || write == null) {
-            AppLog.w("FFF4/FFF5 karakteristikleri bulunamadı")
+            AppLog.w("FFF4/FFF5 characteristics not found")
             g.disconnect()
             return
         }
         writeChar = write
-        if (!g.setCharacteristicNotification(notify, true)) AppLog.w("Bildirim kaydı başarısız")
+        if (!g.setCharacteristicNotification(notify, true)) AppLog.w("Notification registration failed")
         val cccd = notify.getDescriptor(CCCD_UUID)
         if (cccd == null) {
-            AppLog.w("CCCD yok, doğrudan el sıkışmaya geçiliyor")
+            AppLog.w("No CCCD, going straight to handshake")
             main.postDelayed({ startHandshake() }, 500)
             return
         }
@@ -574,7 +575,7 @@ class CameraLink(
             @Suppress("DEPRECATION")
             g.writeDescriptor(cccd)
         }
-        if (!started) AppLog.w("Bildirim açma isteği gönderilemedi")
+        if (!started) AppLog.w("Could not send notification enable request")
         main.postDelayed(notifyTimeout, 3_000)
     }
 
@@ -583,13 +584,13 @@ class CameraLink(
         closeGatt()
         resetLinkState()
         if (!wantConnected) {
-            setState(State.IDLE, "Bağlı değil")
+            setState(State.IDLE, str(R.string.link_not_connected))
             return
         }
         reconnectAttempts++
         val delay = (1_000L * reconnectAttempts).coerceAtMost(5_000L)
-        AppLog.w("Bağlantı koptu (durum $status). ${delay / 1000} sn sonra yeniden denenecek (deneme $reconnectAttempts)")
-        setState(State.RECONNECTING, "Bağlantı koptu, yeniden bağlanılıyor… (deneme $reconnectAttempts)")
+        AppLog.w("Connection lost (status $status). Retrying in ${delay / 1000} s (attempt $reconnectAttempts)")
+        setState(State.RECONNECTING, str(R.string.link_reconnecting, reconnectAttempts))
         main.postDelayed({
             if (!wantConnected) return@postDelayed
             val a = adapter
@@ -603,7 +604,7 @@ class CameraLink(
                 else -> {
                     // Kamera kapalı ya da uzakta olabilir: Android'in otomatik bağlanmasıyla
                     // kamera tekrar görünür olana kadar bekle. Ekran kapalıyken de çalışır.
-                    AppLog.i("Kamera görünür olunca otomatik bağlanılacak")
+                    AppLog.i("Will connect automatically when the camera becomes visible")
                     connectTo(a.getRemoteDevice(address), currentName, autoConnect = true)
                 }
             }
@@ -625,7 +626,7 @@ class CameraLink(
         main.removeCallbacks(setupTimeout)
         val code = Random.nextInt(1000, 10000)
         listener.onVerifyCode(code)
-        setState(State.HANDSHAKE, "Kamerada çıkan bağlantı isteğini onaylayın (kod: $code)")
+        setState(State.HANDSHAKE, str(R.string.link_approve, code))
         val request = ConnectionRequest(
             deviceId = REMOTE_DEVICE_ID,
             mac = remoteMac,
@@ -634,14 +635,14 @@ class CameraLink(
             verifyData = code,
         )
         handshakeSeq = nextSeq()
-        AppLog.i("Bağlantı isteği gönderildi (kod $code)")
+        AppLog.i("Connection request sent (code $code)")
         sendFrame(CmdType.WAIT_RESULT, handshakeSeq, Cmd.SET_GENERAL, Cmd.ID_CONNECT, request.toPayload(), withResponse = true)
         main.postDelayed(handshakeTimeout, HANDSHAKE_TIMEOUT_MS)
     }
 
     private val handshakeTimeout = Runnable {
         if (state == State.HANDSHAKE) {
-            AppLog.w("Kamera ${HANDSHAKE_TIMEOUT_MS / 1000} sn içinde bağlantıyı onaylamadı")
+            AppLog.w("Camera did not approve the connection within ${HANDSHAKE_TIMEOUT_MS / 1000} s")
             gatt?.disconnect() ?: handleDisconnect(-2)
         }
     }
@@ -656,21 +657,21 @@ class CameraLink(
             f.matches(Cmd.SET_CAMERA, Cmd.ID_STATUS_PUSH) && !f.isResponse -> handleStatus(f)
             f.matches(Cmd.SET_GENERAL, Cmd.ID_KEY_REPORT) && f.isResponse -> {
                 val ret = f.payload.firstOrNull()?.toInt() ?: -1
-                AppLog.i(if (ret == 0) "Kamera tuş komutunu kabul etti" else "Kamera tuş komutunu reddetti (kod $ret)")
+                AppLog.i(if (ret == 0) "Camera accepted key command" else "Camera rejected key command (code $ret)")
             }
             f.matches(Cmd.SET_GENERAL, Cmd.ID_GPS_PUSH) && f.isResponse -> {
                 val ret = f.payload.firstOrNull()?.toInt() ?: 0
-                if (ret != 0) AppLog.w("Kamera GPS paketini reddetti (kod $ret)")
+                if (ret != 0) AppLog.w("Camera rejected GPS packet (code $ret)")
             }
             f.matches(Cmd.SET_GENERAL, Cmd.ID_VERSION) && f.isResponse -> {
                 if (f.payload.size > 2) {
                     val text = String(f.payload, 2, f.payload.size - 2, Charsets.US_ASCII)
                         .replace(Regex("[^\\x20-\\x7E]+"), " ").trim()
-                    AppLog.i("Kamera sürümü: $text")
+                    AppLog.i("Camera version: $text")
                 }
             }
             f.matches(Cmd.SET_CAMERA, Cmd.ID_NEW_STATUS_PUSH) -> Unit
-            else -> AppLog.i("Kameradan: $f")
+            else -> AppLog.i("From camera: $f")
         }
     }
 
@@ -678,32 +679,32 @@ class CameraLink(
         if (f.isResponse) {
             val resp = ConnectionResponse.parse(f.payload)
             if (resp == null) {
-                AppLog.w("Bağlantı yanıtı okunamadı")
+                AppLog.w("Could not parse connection response")
                 return
             }
             if (resp.retCode != 0) {
-                AppLog.w("Kamera bağlantı isteğini reddetti (kod ${resp.retCode})")
-                setState(State.HANDSHAKE, "Kamera isteği reddetti (kod ${resp.retCode}). Kamerada kablosuz bağlantıyı sıfırlayıp tekrar deneyin.")
+                AppLog.w("Camera rejected the connection request (code ${resp.retCode})")
+                setState(State.HANDSHAKE, str(R.string.link_rejected_code, resp.retCode))
             } else {
-                AppLog.i("Kamera isteği aldı, onay bekleniyor")
+                AppLog.i("Camera received the request, waiting for approval")
             }
             return
         }
         val req = ConnectionRequest.parse(f.payload)
         if (req == null) {
-            AppLog.w("Kameranın bağlantı isteği okunamadı")
+            AppLog.w("Could not parse camera connection request")
             return
         }
         if (req.verifyMode != 2) {
-            AppLog.w("Beklenmeyen doğrulama modu: ${req.verifyMode}")
+            AppLog.w("Unexpected verify mode: ${req.verifyMode}")
             return
         }
         if (req.verifyData != 0) {
-            AppLog.w("Kamera bağlantıyı reddetti")
+            AppLog.w("Camera rejected the connection")
             wantConnected = false
             closeGatt()
             resetLinkState()
-            setState(State.IDLE, "Kamera bağlantıyı reddetti. Kamerada kablosuz bağlantıyı sıfırlayıp tekrar deneyin.")
+            setState(State.IDLE, str(R.string.link_rejected))
             return
         }
         cameraDeviceId = req.deviceId
@@ -716,12 +717,12 @@ class CameraLink(
         main.removeCallbacks(handshakeTimeout)
         reconnectAttempts = 0
         val model = DjiCamera.modelName(cameraDeviceId)
-        AppLog.i("Kamera bağlandı: ${model ?: "bilinmeyen model"} (kimlik 0x%08X)".format(cameraDeviceId))
+        AppLog.i("Camera connected: ${model ?: "unknown model"} (id 0x%08X)".format(cameraDeviceId))
         listener.onVerifyCode(null)
-        setState(State.READY, "Bağlı" + (model?.let { ": $it" } ?: ""))
+        setState(State.READY, if (model != null) str(R.string.link_ready_model, model) else str(R.string.link_ready))
         currentDevice?.let { listener.onCameraReady(it.address, currentName, model) }
         if (mtu < DjiFrame.OVERHEAD + 48 + 3) {
-            AppLog.w("MTU küçük ($mtu). GPS paketleri gönderilemeyebilir.")
+            AppLog.w("MTU is small ($mtu). GPS packets may not be sent.")
         }
         main.postDelayed({
             if (state != State.READY) return@postDelayed
@@ -738,13 +739,13 @@ class CameraLink(
         val wasSleeping = cameraSleeping
         cameraSleeping = status.isSleeping
         if (cameraSleeping && !wasSleeping) {
-            AppLog.i("Kamera uyku moduna geçti, GPS gönderimi duraklatıldı")
+            AppLog.i("Camera went to sleep, GPS sending paused")
             queue.removeAll { it.isGps }
         } else if (!cameraSleeping && wasSleeping) {
-            AppLog.i("Kamera uyandı")
+            AppLog.i("Camera woke up")
         }
         if (previous == null || previous.isRecording != status.isRecording || previous.mode != status.mode) {
-            AppLog.i("Kamera: ${status.modeName}, ${status.statusName}, pil %${status.batteryPercent}")
+            AppLog.i("Camera: ${status.modeName}, ${status.statusName}, battery ${status.batteryPercent}%")
         }
         listener.onCameraStatus(status)
     }
@@ -762,7 +763,7 @@ class CameraLink(
         }
         if (!warnedMtu && data.size > mtu - 3) {
             warnedMtu = true
-            AppLog.w("Paket (${data.size} bayt) MTU'dan ($mtu) büyük")
+            AppLog.w("Packet (${data.size} bytes) larger than MTU ($mtu)")
         }
         queue.addLast(PendingWrite(data, withResponse, isGps))
         pump()
@@ -772,7 +773,7 @@ class CameraLink(
         if (writeInFlight) {
             val limit = if (inFlightWithResponse) WRITE_TIMEOUT_MS else NO_RESPONSE_WRITE_TIMEOUT_MS
             if (SystemClock.elapsedRealtime() - writeStartedAt < limit) return
-            AppLog.w("Yazma yanıtı gecikti, devam ediliyor")
+            AppLog.w("Write response late, continuing")
             writeInFlight = false
         }
         val g = gatt ?: return
@@ -795,7 +796,7 @@ class CameraLink(
                 g.writeCharacteristic(c)
             }
         } catch (e: Exception) {
-            AppLog.w("Yazma hatası", e)
+            AppLog.w("Write error", e)
             false
         }
         if (ok) {
@@ -809,11 +810,13 @@ class CameraLink(
             if (!next.isGps && next.attempts < 20) {
                 queue.addFirst(next)
             } else if (!next.isGps) {
-                AppLog.w("Komut gönderilemedi, vazgeçildi")
+                AppLog.w("Command could not be sent, giving up")
             }
             main.postDelayed({ pump() }, 30)
         }
     }
+
+    private fun str(id: Int, vararg args: Any): String = context.getString(id, *args)
 
     private fun setState(newState: State, detail: String) {
         state = newState

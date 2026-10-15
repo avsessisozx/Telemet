@@ -1,118 +1,158 @@
-# Telemet
+<p align="center">
+  <img src="docs/icon.png" width="120" alt="Telemet icon">
+</p>
 
-DJI Osmo Action 4 için açık kaynak Android uygulaması.
+<h1 align="center">Telemet</h1>
 
-Telefon, **DJI Osmo Action GPS Bluetooth kumandası** gibi davranarak kameraya anlık konum, hız ve yükseklik verisi gönderir. Veri doğrudan videonun içine yazılır; böylece DJI Mimo'da gösterge paneli (hız, rota, yükseklik) FIT dosyası ya da dönüştürme olmadan çalışır. Motosiklet, bisiklet, araba fark etmez.
+<p align="center">
+  <b>Free GPS telemetry for DJI Osmo Action cameras — use your Android phone instead of the DJI GPS Bluetooth Remote.</b><br>
+  Speed, route, altitude and distance dashboards in DJI Mimo / DJI Studio, plus lean angle and G-force from your phone's sensors.
+</p>
 
-- Ek donanım gerekmez, sadece telefon ve kamera
-- Google Play Hizmetleri kullanmaz, ek kütüphane yok
-- Her sürüşü telefonda ayrıca **FIT + GPX** olarak kaydeder (yedek; DJI Studio'ya içe aktarılabilir)
-- Navigasyon uygulamaları gibi kesintisiz çalışır: Başlat'tan sonra ekran kapansa ya da başka uygulama açılsa da Durdur'a basana kadar sürer
+<p align="center">
+  <a href="https://github.com/avsessisozx/Telemet/releases/latest"><img src="https://img.shields.io/github/v/release/avsessisozx/Telemet?label=download&color=FF7A1A" alt="Latest release"></a>
+  <img src="https://img.shields.io/badge/Android-10%2B-3DDC84?logo=android&logoColor=white" alt="Android 10+">
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/avsessisozx/Telemet" alt="MIT license"></a>
+  <img src="https://img.shields.io/github/downloads/avsessisozx/Telemet/total?color=555" alt="Downloads">
+</p>
 
-## Kurulum
+<p align="center">
+  <b>English</b> ·
+  <a href="docs/README.tr.md">Türkçe</a> ·
+  <a href="docs/README.es.md">Español</a> ·
+  <a href="docs/README.fr.md">Français</a> ·
+  <a href="docs/README.it.md">Italiano</a> ·
+  <a href="docs/README.de.md">Deutsch</a> ·
+  <a href="docs/README.pt-BR.md">Português</a> ·
+  <a href="docs/README.zh-CN.md">简体中文</a> ·
+  <a href="docs/README.ja.md">日本語</a> ·
+  <a href="docs/README.ko.md">한국어</a> ·
+  <a href="docs/README.ru.md">Русский</a> ·
+  <a href="docs/README.ar.md">العربية</a>
+</p>
 
-1. Telefonda bu sayfadaki **Releases** bölümüne gidin (sağ tarafta ya da en altta).
-2. En üstteki sürümde **Telemet-x.y.z.apk** dosyasına dokunup indirin.
-3. İndirilen dosyayı açın. Telefon "bilinmeyen kaynak" uyarısı verirse, tarayıcıya ya da dosya yöneticisine kurulum izni verin.
-4. Yeni sürümler eskisinin üzerine kurulur; silmenize gerek yoktur.
+---
 
-> Android 10 ve üzeri gerekir.
+## What it does
 
-## İlk bağlantı
+DJI Osmo Action cameras can embed GPS data (speed, route, altitude) into their videos, but only when DJI's **GPS Bluetooth Remote Controller** is connected. Telemet turns your Android phone into that remote: it connects to the camera over Bluetooth, sends the phone's GPS 10 times per second, and the camera writes it straight into the video file. Open the video in **DJI Mimo** or **DJI Studio** and add the speed / route / altitude dashboard — no FIT conversion, no extra hardware.
 
-1. **Kamerada:** Ekranı aşağı kaydırın → Ayarlar → Kablosuz bağlantı açık olsun.
-2. **Telefonda DJI Mimo kapalı olsun.** Kamera aynı anda yalnızca bir Bluetooth kumandayla konuşur.
-3. Telemet'i açın, **Başlat**'a basın ve istenen izinleri verin (Konum, Yakındaki cihazlar, Bildirim).
-4. Uygulama kamerayı bulur ve bağlanır. **Kamera ekranında bağlantı onayı çıkarsa onaylayın.** Uygulamada büyük harflerle görünen kod, kamerada görünenle aynı olmalı.
-5. "Kamera bağlı" yazınca hazırsınız. Kameranın ekranında kumanda ya da GPS simgesi görünebilir.
-6. Açık havada GPS sinyalinin gelmesini bekleyin (ilk seferde 30–60 saniye).
+Built for motorcycle riders, but works the same on a bicycle, in a car or on foot.
 
-Sonraki bağlantılarda onay çıkmaz; uygulama kamerayı hatırlar.
+## Features
 
-## Sürüşte kullanım
+- 📍 **GPS remote emulation** — the phone acts as the DJI GPS Bluetooth Remote; data is embedded in the video
+- 🎬 **Camera control** — start/stop recording from the app or the notification, see mode, recording state and battery
+- 🗂️ **Every ride saved separately** — "My rides" lists each ride grouped by day with distance, duration, max/avg speed and climb
+- 💾 **FIT + GPX backup of every ride** — import the FIT file in DJI Studio (Dashboard → Data source → Import FIT file) if the camera missed data
+- 🏍️ **Lean angle and G-force** — calculated from the phone's gyroscope and GPS, independent of how the phone is mounted; written to the FIT file
+- 📈 **Barometric altitude** — on phones with a barometer, much steadier altitude and grade than GPS alone
+- 🔋 **Runs like a navigation app** — keeps recording with the screen off or another app (e.g. maps) in front, restarts itself if the system kills it
+- ⚡ **Fast first fix** — GPS warms up as soon as the app opens; gaps before the first fix and during tunnels are filled so the FIT file covers the whole video
+- 🌍 **12 languages** — English, Türkçe, Español, Français, Italiano, Deutsch, Português, 简体中文, 日本語, 한국어, Русский, العربية
+- 🔓 **Free and open source** — no ads, no account, no Google Play Services, no internet required
 
-- Kaydı kameradan ya da uygulamadaki **Kayıt** düğmesinden başlatabilirsiniz. Bildirimdeki **Kayıt** düğmesi de çalışır.
-- Ekranı kapatabilirsiniz; uygulama arka planda çalışmaya devam eder.
-- Uzun sürüşler için **Pil kısıtlamasını kaldır** düğmesine bir kez basın. Özellikle Xiaomi, Huawei, Samsung gibi telefonlar arka plandaki uygulamaları kapatabiliyor.
-- Bağlantı koparsa uygulama kendiliğinden yeniden bağlanır.
-- Bitince **Durdur**'a basın.
+## Supported cameras
 
-Videoyu DJI Mimo'ya aktardıktan sonra düzenleme ekranında **gösterge paneli (dashboard)** seçeneğinden hız, rota ve yükseklik göstergelerini ekleyebilirsiniz.
-
-## Ayarlar
-
-| Ayar | Açıklama |
+| Camera | Status |
 |---|---|
-| Akıcı GPS (10 Hz) | Gerçek DJI kumandası saniyede 10 kez veri gönderir. Telefon GPS'i genelde saniyede 1 ölçüm verdiği için ara değerler son ölçümün hız ve yönüne göre tahmin edilir. Göstergede tuhaflık görürseniz kapatıp deneyin. |
-| FIT + GPX olarak kaydet | Varsayılan açık. Durdur'a basınca **İndirilenler/Telemet** klasörüne `.fit` ve `.gpx` çıkar. Uygulama sürüş ortasında kapanırsa kayıt kaldığı yerden sürer. |
-| Ekranı açık tut | Telemet öndeyken ve sürüş sürerken ekran kararmaz. |
-| Kamera eşleşmesini unut | Başka bir kameraya bağlanmak için. |
+| DJI Osmo Action 4 | ✅ Developed and tested on this camera |
+| DJI Osmo Action 5 Pro, Osmo Action 6, Osmo 360 | Should work (same protocol per DJI's documentation), not yet tested — reports welcome |
 
-## Kamera veriyi videoya yazmadıysa (FIT ile kurtarma)
+Phone: Android 10 or newer with Bluetooth LE and GPS.
 
-1. Sürüş bitince telefonda **İndirilenler/Telemet** klasöründeki `.fit` dosyasını bilgisayara aktarın.
-2. DJI Studio'da videoyu açın → **Pano** → **Veri kaynağı** → **FIT Dosyasını İçe Aktar**.
-3. Gerekirse **Süre Hizalama** ile zamanı videoya oturtun.
+## Download and install
 
-FIT dosyasında konum, hız, yükseklik, mesafe ve eğim bulunur. Telefon sensörlerinden gelen **yatış açısı, viraj G'si, fren/hızlanma G'si ve toplam G** de FIT'e geliştirici alanı olarak yazılır. Nabız, pedal, güç, tork için ayrı sensör gerekir; telefon bunları ölçemez.
+1. On your phone, open the **[latest release](https://github.com/avsessisozx/Telemet/releases/latest)**.
+2. Tap **Telemet-x.y.z.apk** to download it, then open it.
+3. If Android warns about unknown sources, allow installs from your browser or file manager.
+4. New versions install over the old one; your rides are kept.
 
-## Kullanılan telefon sensörleri
+## Quick start
 
-| Sensör | Ne için |
+1. **On the camera:** make sure wireless connection is enabled. **Close DJI Mimo** on your phone — the camera talks to only one remote at a time.
+2. Open Telemet. The **Setup** card walks you through the permissions it needs (location "Allow all the time", Bluetooth, notifications, battery exemption; on Xiaomi also Autostart and Battery saver).
+3. Tap **Start**. Approve the connection on the camera screen the first time (the code shown in the app must match).
+4. Wait for the green GPS dot, then start recording from the camera or from Telemet.
+5. Tap **Stop** when you're done. The ride appears in **My rides** and its FIT/GPX files are saved to `Downloads/Telemet`.
+
+In DJI Mimo or DJI Studio, open the video and enable the **dashboard** to show speed, route and altitude.
+
+## Using the FIT backup in DJI Studio
+
+If a video has no GPS data (for example the camera was started before the phone had a fix):
+
+1. Share the ride from **My rides** (or copy `Downloads/Telemet/*.fit`) to your computer.
+2. In DJI Studio open the video → **Dashboard** → **Data source** → **Import FIT file**.
+3. Use **Time alignment** if needed.
+
+The FIT file contains position, speed, altitude, distance and grade, plus lean angle, lateral G, longitudinal G and total G as developer fields.
+
+## Phone sensors used
+
+| Sensor | Used for |
 |---|---|
-| GPS | Konum, hız, rota, mesafe (kameraya da gider) |
-| Jiroskop + yerçekimi | Yatış açısı ve viraj G'si. Yatış, tan(yatış) = hız × dönüş hızı / g ile hesaplanır; telefonun gidona nasıl takıldığından bağımsızdır |
-| Barometre (varsa) | GPS'ten çok daha kararlı yükseklik ve eğim; kameraya giden yükseklik de bundan alınır |
-| GPS hız değişimi | Fren ve hızlanma G'si |
+| GPS | Position, speed, route, distance (also sent to the camera) |
+| Gyroscope + gravity | Lean angle and cornering G: tan(lean) = speed × yaw rate / g |
+| Barometer (if present) | Steadier altitude and grade |
+| GPS speed changes | Braking and acceleration G |
 
-Pusula kullanılmıyor: gidonda motor ve çelik aksam pusulayı saptırıyor, hareket halindeki yönü GPS zaten doğru veriyor.
+Heart rate, cadence, power and torque need external sensors and are not supported.
 
-## Sorun giderme
+## FAQ
 
-Her şey uygulamanın altındaki **Günlük** bölümüne yazılır. Bir sorun olursa **Paylaş** düğmesiyle günlüğü gönderin; sorunun nerede olduğu oradan anlaşılır.
+**Does it need internet?** No. GPS works offline. With internet, the first GPS fix is faster (assisted GPS).
 
-| Sorun | Çözüm |
+**Can I use it together with DJI Mimo?** Not at the same time — the camera accepts one Bluetooth remote. Close Mimo while riding; use it afterwards to edit.
+
+**Is this the same as the official DJI GPS remote?** It uses the same Bluetooth protocol that DJI published for its GPS remote ([dji-sdk/Osmo-GPS-Controller-Demo](https://github.com/dji-sdk/Osmo-GPS-Controller-Demo)), implemented on the phone instead of an ESP32 board with a GPS module.
+
+**Recording stops in the background on my Xiaomi / Samsung / Huawei phone.** Finish the Setup card in the app. On Xiaomi set Autostart on and Battery saver to "No restrictions".
+
+**DJI Studio says the duration doesn't match.** The FIT file must cover the video's time range. Make sure the phone clock and camera clock agree, or use Time alignment.
+
+## Troubleshooting
+
+Everything is written to the **Log** section at the bottom of the app. If something goes wrong, tap **Share** and attach the log to a [GitHub issue](https://github.com/avsessisozx/Telemet/issues).
+
+| Problem | What to try |
 |---|---|
-| "Kamera aranıyor" bitmiyor | Kamera açık mı? DJI Mimo telefonda ya da başka bir telefonda bağlı mı? Kamerada Ayarlar → Kablosuz bağlantı → bağlantıyı sıfırla. |
-| Kamera bağlantıyı reddetti | Kamerada kablosuz bağlantıyı sıfırlayıp tekrar deneyin, onay ekranında kabul edin. |
-| Bağlı ama göstergede veri yok | GPS sinyali var mı (yeşil nokta)? "Kameraya … paket/sn" değeri 0'dan büyük mü? Günlüğü paylaşın. |
-| Arka planda kopuyor | Pil kısıtlamasını kaldırın; telefon ayarlarında uygulamanın arka plan kullanımına izin verin. |
+| "Searching for camera" never ends | Is the camera on? Is DJI Mimo connected to it (on this or another phone)? Reset wireless connections on the camera. |
+| Camera rejected the connection | Reset wireless connections on the camera and approve the request on its screen. |
+| Connected but no data in the dashboard | Is the GPS dot green? Is "packets/s to camera" above 0? Share the log. |
+| Stops in the background | Complete the Setup card; allow background usage in the phone's settings. |
 
-## Nasıl çalışıyor?
+## How it works
 
-DJI, GPS kumandasının Bluetooth protokolünü açık kaynak olarak yayınladı: [dji-sdk/Osmo-GPS-Controller-Demo](https://github.com/dji-sdk/Osmo-GPS-Controller-Demo). O proje ESP32 kartı ve ayrı bir GPS modülüyle çalışıyor; Telemet aynı protokolü telefonun kendi Bluetooth'u ve GPS'iyle uyguluyor.
-
-1. Kamera, üretici verisi `AA 08 .. .. FA` olan Bluetooth reklamlarından bulunur.
-2. `FFF0` servisine bağlanılır; `FFF4` kameradan gelen, `FFF5` kameraya giden veridir.
-3. `0x0019` bağlantı isteği gönderilir; kamera onay verince bağlantı kurulur.
-4. `0x1D05` ile kamera durumu (mod, kayıt, pil) istenir.
-5. `0x0017` ile saniyede 10 kez GPS verisi gönderilir.
-
-Kod yapısı:
+1. The camera is found by its Bluetooth advertisement (manufacturer data `AA 08 … FA`).
+2. Telemet connects to service `FFF0` (`FFF4` notifications from the camera, `FFF5` writes to it).
+3. Sends a `0x0019` connection request; the camera asks the user to approve once.
+4. Subscribes to camera status with `0x1D05` (mode, recording, battery).
+5. Pushes GPS with `0x0017` ten times per second.
 
 ```
 app/src/main/java/io/github/avsessisozx/telemet/
-├── protocol/   DJI çerçeve yapısı, CRC, komutlar (Android'den bağımsız, testli)
-├── ble/        Bluetooth tarama, bağlantı ve el sıkışma
-├── service/    Arka plan servisi, GPS okuma, FIT/GPX yedek kaydı
-├── ui/         Ana ekran
-└── util/       Günlük ve ayarlar
+├── protocol/   DJI frame format, CRC, commands (pure Kotlin, unit-tested)
+├── ble/        Bluetooth scan, connection and handshake
+├── sensors/    Gyroscope, gravity, barometer; lean angle and G-force math
+├── fit/        FIT encoder and gap filling (unit-tested, validated with fitdecode)
+├── service/    Background service, GPS, ride recording and ride list
+├── ui/         Screens
+└── util/       Log, settings, language
 ```
 
-Protokol kodu, DJI'nin örnek projesindeki gerçek kamera paketleriyle birim testlerinde doğrulanır.
+## Building
 
-## Derleme
+Every push to `main` builds the APK with GitHub Actions and publishes it under **Releases**. Locally: open in Android Studio or run `./gradlew assembleDebug` (JDK 17).
 
-Her `main` dalına gönderimde GitHub Actions APK'yı derler ve **Releases** bölümüne yükler.
+`keystore/telemet-debug.jks` is a public signing key so new versions install over old ones. It provides no security.
 
-Bilgisayarda derlemek için: Android Studio ile projeyi açın ya da `./gradlew assembleDebug` çalıştırın (JDK 17 gerekir).
+## Translations
 
-`keystore/telemet-debug.jks` herkese açık bir imzalama anahtarıdır. Sadece yeni sürümlerin eskisinin üzerine kurulabilmesi içindir; güvenlik sağlamaz.
+App texts live in `app/src/main/res/values-*/strings.xml`. Corrections from native speakers are very welcome — open a pull request or an issue.
 
-## Desteklenen kameralar
+## License
 
-DJI protokol belgesine göre: Osmo Action 4, Osmo Action 5 Pro, Osmo Action 6, Osmo 360. Yalnızca Osmo Action 4 hedeflenerek geliştirildi.
+MIT. The DJI R SDK protocol is subject to DJI's [end user license agreement](https://developer.dji.com/policies/eula/). This project is not affiliated with or endorsed by DJI. DJI, Osmo and Osmo Action are trademarks of SZ DJI Technology Co., Ltd.
 
-## Lisans
-
-MIT. DJI R SDK protokolü DJI'nin [son kullanıcı lisans sözleşmesine](https://developer.dji.com/policies/eula/) tabidir. Bu proje DJI ile bağlantılı değildir.
+<sub>Keywords: DJI Osmo Action 4 GPS, Osmo Action 5 Pro GPS, DJI GPS Bluetooth Remote alternative, DJI Mimo dashboard, DJI Studio telemetry, GPS overlay, speed overlay, motorcycle telemetry, lean angle app, FIT file, GPX, action camera telemetry, Android</sub>

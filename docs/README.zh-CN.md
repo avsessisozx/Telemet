@@ -1,0 +1,48 @@
+<p align="center"><img src="icon.png" width="100" alt="Telemet"></p>
+
+<h1 align="center">Telemet</h1>
+
+<p align="center"><b>为 DJI Osmo Action 相机提供免费的 GPS 数据。用安卓手机代替 DJI GPS 蓝牙遥控器。</b></p>
+
+<p align="center">[English](../README.md) · [Türkçe](README.tr.md) · [Español](README.es.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Deutsch](README.de.md) · [Português](README.pt-BR.md) · **简体中文** · [日本語](README.ja.md) · [한국어](README.ko.md) · [Русский](README.ru.md) · [العربية](README.ar.md)</p>
+
+---
+
+DJI Osmo Action 相机只有在连接 DJI **GPS 蓝牙遥控器**时，才会把速度、轨迹和海拔写入视频。Telemet 把你的手机变成这个遥控器：通过蓝牙连接相机，每秒向相机发送 10 次手机 GPS 数据，相机直接把数据写入视频文件。在 **DJI Mimo** 或 **DJI Studio** 中打开视频，添加速度/轨迹/海拔仪表盘即可。无需转换 FIT 文件，也无需额外硬件。专为摩托车骑行设计，骑自行车、开车或步行同样适用。
+
+## 功能
+
+- 📍 **模拟 DJI GPS 遥控器**：数据直接嵌入视频
+- 🎬 **控制相机**：在应用或通知中开始/停止录像；查看模式、录像状态和电量
+- 🗂️ **每次骑行单独保存**：“我的骑行”按日期分组，显示距离、时长、最高/平均速度和爬升
+- 💾 **每次骑行的 FIT + GPX 备份**：相机漏记数据时，可将 FIT 导入 DJI Studio
+- 🏍️ **压弯角度和 G 值**：由陀螺仪和 GPS 计算，与手机安装方式无关
+- 📈 **气压高度**：有气压计的手机海拔和坡度更稳定
+- 🔋 **像导航应用一样运行**：屏幕关闭或其他应用在前台时也继续记录
+- ⚡ **快速定位**：打开应用即开始预热 GPS；定位前和隧道中的空缺会被补齐
+- 🌍 **12 种语言** · 🔓 **免费开源**：无广告、无需账号、无需联网
+
+## 下载与安装
+
+1. 在手机上打开 **[最新版本](https://github.com/avsessisozx/Telemet/releases/latest)**。
+2. 点击 **Telemet-x.y.z.apk** 下载并打开。
+3. 如果安卓提示未知来源，请允许浏览器或文件管理器安装应用。
+4. 新版本可直接覆盖安装，骑行记录会保留。
+
+## 快速开始
+
+1. 在**相机**上开启无线连接。**关闭手机上的 DJI Mimo**：相机一次只能连接一个遥控器。
+2. 打开 Telemet。**设置**卡片会引导你授予所需权限（位置“始终允许”、蓝牙、通知、电池；小米手机还需自启动和省电策略）。
+3. 点击**开始**。首次连接时在相机屏幕上确认（代码需与应用中一致）。
+4. GPS 点变绿后，在相机或 Telemet 中开始录像。
+5. 结束时点击**停止**。骑行会出现在**我的骑行**中，FIT/GPX 文件保存在 `下载/Telemet`。
+
+## 在 DJI Studio 中使用 FIT 备份
+
+从**我的骑行**把骑行分享到电脑 → 在 DJI Studio 中打开视频 → **仪表盘** → **数据来源** → **导入 FIT 文件** → 如有需要，使用**时间对齐**。
+
+---
+
+支持的相机、传感器、常见问题和技术细节请见[英文主页](../README.md)。
+
+MIT 许可证。本项目与 DJI 无关。DJI、Osmo 和 Osmo Action 是深圳市大疆创新科技有限公司的商标。

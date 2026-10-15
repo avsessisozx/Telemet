@@ -30,6 +30,10 @@ jobs:
           chmod +x gradlew
           ./gradlew --no-daemon --stacktrace testDebugUnitTest assembleDebug 2>&1 | tee build.log
 
+      - name: Çevirileri kontrol et
+        shell: bash
+        run: python3 tools/check_strings.py
+
       - name: FIT dosyasını bağımsız okuyucuyla doğrula
         shell: bash
         run: |
@@ -87,6 +91,12 @@ jobs:
           make_latest: true
           files: out/*.apk
           body: |
-            Telefondan indirip kurmak için aşağıdaki **Telemet-${{ steps.apk.outputs.version }}.apk** dosyasına dokunun.
+            ## What's new
 
-            Değişiklik: ${{ github.event.head_commit.message }}
+            ${{ github.event.head_commit.message }}
+
+            ## Install
+
+            On your Android phone, tap **Telemet-${{ steps.apk.outputs.version }}.apk** below to download it, then open it. It installs over older versions and keeps your rides.
+
+            Turns your phone into a GPS remote for DJI Osmo Action cameras: speed, route and altitude dashboards in DJI Mimo / DJI Studio, plus lean angle, G-force and FIT/GPX export. [Read more](https://github.com/avsessisozx/Telemet#readme)

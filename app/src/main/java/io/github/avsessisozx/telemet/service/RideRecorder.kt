@@ -92,10 +92,10 @@ class RideRecorder(private val context: Context) {
             fitOut = FileOutputStream(fitFile, true)
             gpxOut = BufferedWriter(OutputStreamWriter(FileOutputStream(gpxFile, true), Charsets.UTF_8))
             rideId = id
-            AppLog.i(if (resuming) "Yedek kayıt sürüyor: $id ($points nokta, %.1f km)".format(distanceM / 1000) else "Yedek kayıt başladı: $id")
+            AppLog.i(if (resuming) "Backup recording resumed: $id ($points points, %.1f km)".format(Locale.US, distanceM / 1000) else "Backup recording started: $id")
             return id
         } catch (e: Exception) {
-            AppLog.w("Yedek kayıt dosyası açılamadı", e)
+            AppLog.w("Could not open backup file", e)
             closeStreams()
             return null
         }
@@ -136,9 +136,9 @@ class RideRecorder(private val context: Context) {
         val toWrite = GapFiller.pointsFor(lastPoint, point, rideStartSecond)
         if (toWrite.size > 1) {
             if (lastPoint == null) {
-                AppLog.i("İlk GPS sinyaline kadar geçen ${toWrite.size - 1} sn kayıtta ilk konumla dolduruldu")
+                AppLog.i("Filled ${toWrite.size - 1} s before the first GPS fix with the first position")
             } else {
-                AppLog.i("GPS kesintisindeki ${toWrite.size - 1} sn kayıtta ara değerlerle dolduruldu")
+                AppLog.i("Filled a ${toWrite.size - 1} s GPS gap with interpolated values")
             }
         }
         rideStartSecond = null
@@ -163,7 +163,7 @@ class RideRecorder(private val context: Context) {
                 gpxOut?.flush()
             }
         } catch (e: Exception) {
-            AppLog.w("Yedek kayda yazılamadı", e)
+            AppLog.w("Could not write backup", e)
         }
     }
 
@@ -194,13 +194,13 @@ class RideRecorder(private val context: Context) {
                 File(dir, old.name + "2").writeBytes(out.toByteArray())
                 old.delete()
             } catch (e: Exception) {
-                AppLog.w("Eski kayıt çevrilemedi: ${old.name}", e)
+                AppLog.w("Could not convert old recording: ${old.name}", e)
             }
         }
         dir.listFiles { f -> f.name.endsWith(".fitraw2") }?.forEach { f ->
             val id = f.name.removeSuffix(".fitraw2")
             if (id != except) {
-                AppLog.i("Yarım kalmış sürüş kaydı tamamlanıyor: $id")
+                AppLog.i("Finishing an interrupted ride: $id")
                 finish(id)
             }
         }
@@ -213,7 +213,7 @@ class RideRecorder(private val context: Context) {
             val raw = if (fitRaw.exists()) fitRaw.readBytes() else ByteArray(0)
             val fit = FitEncoder.buildFile(raw, fileTime(id))
             if (fit == null) {
-                AppLog.i("Sürüşte GPS noktası yok, yedek dosya oluşturulmadı")
+                AppLog.i("Ride has no GPS points, no backup file created")
                 fitRaw.delete()
                 gpxPart.delete()
                 return
@@ -234,12 +234,12 @@ class RideRecorder(private val context: Context) {
                 if (summary != null) RideStore.save(context, id, summary, fitUri, gpxUri)
                 fitRaw.delete()
                 gpxPart.delete()
-                AppLog.i("Sürüş kaydedildi: İndirilenler/$FOLDER/$id.fit ve .gpx ($count nokta, %.1f km)".format(km))
+                AppLog.i("Ride saved: Downloads/$FOLDER/$id.fit and .gpx ($count points, %.1f km)".format(Locale.US, km))
             } else {
-                AppLog.w("Sürüş dosyaları tam kaydedilemedi; bir sonraki açılışta tekrar denenecek")
+                AppLog.w("Ride files could not be fully saved; will retry on next start")
             }
         } catch (e: Exception) {
-            AppLog.w("Sürüş dosyası oluşturulamadı ($id)", e)
+            AppLog.w("Could not create ride file ($id)", e)
         }
     }
 
@@ -257,14 +257,14 @@ class RideRecorder(private val context: Context) {
         }
         val uri = context.contentResolver.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, values)
         if (uri == null) {
-            AppLog.w("İndirilenler klasörüne yazılamadı: $name")
+            AppLog.w("Could not write to Downloads: $name")
             null
         } else {
             context.contentResolver.openOutputStream(uri)?.use { it.write(bytes) }
             uri
         }
     } catch (e: Exception) {
-        AppLog.w("Dosya kaydedilemedi: $name", e)
+        AppLog.w("Could not save file: $name", e)
         null
     }
 

@@ -35,7 +35,9 @@ import io.github.avsessisozx.telemet.service.GpsWarmup
 import io.github.avsessisozx.telemet.service.TelemetService
 import io.github.avsessisozx.telemet.service.TelemetState
 import io.github.avsessisozx.telemet.util.AppLog
+import io.github.avsessisozx.telemet.util.LocaleHelper
 import io.github.avsessisozx.telemet.util.Prefs
+import io.github.avsessisozx.telemet.R
 
 /**
  * Ana ekran. Arayüz kodla kuruldu; hiçbir ek kütüphane kullanılmıyor.
@@ -86,6 +88,10 @@ class MainActivity : Activity() {
     private val stateListener: () -> Unit = { render() }
     private val logListener: () -> Unit = { renderLog() }
 
+    override fun attachBaseContext(newBase: android.content.Context) {
+        super.attachBaseContext(LocaleHelper.wrap(newBase))
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         prefs = Prefs(this)
@@ -98,7 +104,7 @@ class MainActivity : Activity() {
         AppLog.addListener(logListener)
         // Durdur'a basılmadan kapanmış bir sürüş varsa kaldığı yerden devam et.
         if (prefs.shouldRun && !TelemetState.serviceRunning && requiredPermissionsMissing().isEmpty()) {
-            AppLog.i("Yarım kalan sürüşe devam ediliyor")
+            AppLog.i("Resuming an unfinished ride")
             TelemetService.resume(this)
         }
         // Başlat'a basılmadan önce GPS uydu aramaya başlasın.
@@ -194,20 +200,20 @@ class MainActivity : Activity() {
 
         root.addView(text(28f, ACCENT, bold = true).apply { text = "Telemet" })
         root.addView(text(13f, MUTED).apply {
-            text = "Telefonun GPS'ini DJI kameraya, GPS kumandası gibi gönderir."
+            text = getString(R.string.tagline)
             setPadding(0, 0, 0, dp(16))
         })
 
         // Kurulum kartı: her şey tamamsa gizlenir
         setupList = text(14f).apply { setPadding(0, dp(8), 0, dp(8)) }
         setupCard = card().apply {
-            addView(text(18f, YELLOW, bold = true).apply { text = "Kurulum" })
+            addView(text(18f, YELLOW, bold = true).apply { text = getString(R.string.setup_title) })
             addView(text(13f, MUTED).apply {
-                text = "Sürüş boyunca ekran kapansa ya da başka uygulama açılsa bile kaydın durmaması için bunlar gerekli. Bir kez yapılır."
+                text = getString(R.string.setup_desc)
                 setPadding(0, dp(4), 0, 0)
             })
             addView(setupList)
-            addView(button("Kurulumu tamamla", ACCENT) { startFlow(thenStart = false) })
+            addView(button(getString(R.string.setup_finish), ACCENT) { startFlow(thenStart = false) })
         }
         root.addView(setupCard)
 
@@ -231,10 +237,10 @@ class MainActivity : Activity() {
         // GPS kartı
         gpsDot = dot()
         gpsTitle = text(18f, bold = true)
-        val (speedBox, sv) = metric("km/sa")
-        val (altBox, av) = metric("yükseklik (m)")
-        val (satBox, satv) = metric("uydu")
-        val (distBox, dv) = metric("km")
+        val (speedBox, sv) = metric(getString(R.string.metric_kmh))
+        val (altBox, av) = metric(getString(R.string.metric_altitude))
+        val (satBox, satv) = metric(getString(R.string.metric_satellites))
+        val (distBox, dv) = metric(getString(R.string.metric_km))
         distValue = dv
         speedValue = sv
         altValue = av
@@ -250,9 +256,9 @@ class MainActivity : Activity() {
                 addView(distBox)
                 addView(satBox)
             })
-            val (leanBox, lv) = metric("yatış")
-            val (gBox, gv) = metric("G")
-            val (maxLeanBox, mlv) = metric("en çok yatış")
+            val (leanBox, lv) = metric(getString(R.string.metric_lean))
+            val (gBox, gv) = metric(getString(R.string.metric_g))
+            val (maxLeanBox, mlv) = metric(getString(R.string.metric_max_lean))
             leanValue = lv
             gValue = gv
             maxLeanValue = mlv
@@ -269,39 +275,41 @@ class MainActivity : Activity() {
         })
 
         // Düğmeler
-        startButton = button("Başlat", ACCENT) { onStartStop() }
-        recordButton = button("● Kaydı başlat / durdur", RED) { TelemetService.toggleRecord(this) }
+        startButton = button(getString(R.string.btn_start), ACCENT) { onStartStop() }
+        recordButton = button(getString(R.string.btn_record_start), RED) { TelemetService.toggleRecord(this) }
         root.addView(startButton)
         root.addView(recordButton)
-        root.addView(button("Sürüşlerim", 0xFF2E7D32.toInt()) {
+        root.addView(button(getString(R.string.btn_rides), 0xFF2E7D32.toInt()) {
             startActivity(Intent(this, RidesActivity::class.java))
         })
 
         // Ayarlar
         root.addView(card().apply {
-            addView(text(16f, bold = true).apply { text = "Ayarlar" })
-            addView(toggle("Akıcı GPS (10 Hz, DJI kumandası gibi)", prefs.smoothGps) {
+            addView(text(16f, bold = true).apply { text = getString(R.string.settings_title) })
+            addView(toggle(getString(R.string.setting_smooth_gps), prefs.smoothGps) {
                 prefs.smoothGps = it
-                AppLog.i(if (it) "Akıcı GPS açık (10 Hz)" else "Akıcı GPS kapalı (yalnızca gerçek ölçümler)")
+                AppLog.i(if (it) "Smooth GPS on (10 Hz)" else "Smooth GPS off (real fixes only)")
             })
-            addView(toggle("Her sürüşü ayrıca FIT + GPX olarak kaydet", prefs.backupEnabled) {
+            addView(toggle(getString(R.string.setting_backup), prefs.backupEnabled) {
                 prefs.backupEnabled = it
                 if (TelemetState.serviceRunning) {
-                    Toast.makeText(this@MainActivity, "Bir sonraki başlatmada geçerli olur", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, R.string.toast_next_start, Toast.LENGTH_SHORT).show()
                 }
             })
             addView(text(12f, MUTED).apply {
-                text = "Dosyalar Durdur'a basınca İndirilenler/Telemet klasörüne çıkar. FIT dosyası DJI Studio'da " +
-                    "Pano → Veri kaynağı → FIT Dosyasını İçe Aktar ile kullanılabilir."
+                text = getString(R.string.backup_hint)
                 setPadding(0, 0, 0, dp(8))
             })
-            addView(toggle("Telemet açıkken ekranı açık tut", prefs.keepScreenOn) {
+            addView(toggle(getString(R.string.setting_keep_screen), prefs.keepScreenOn) {
                 prefs.keepScreenOn = it
                 render()
             })
-            addView(button("Kamera eşleşmesini unut", 0xFF37474F.toInt()) {
+            addView(button(getString(R.string.setting_language, LocaleHelper.displayName(this@MainActivity, LocaleHelper.current(this@MainActivity), getString(R.string.language_system))), 0xFF37474F.toInt()) {
+                chooseLanguage()
+            })
+            addView(button(getString(R.string.btn_forget_camera), 0xFF37474F.toInt()) {
                 prefs.forgetCamera()
-                AppLog.i("Kayıtlı kamera unutuldu. Bir sonraki bağlantıda en yakın kamera seçilecek.")
+                AppLog.i("Saved camera forgotten. The nearest camera will be chosen next time.")
             })
         })
 
@@ -311,11 +319,11 @@ class MainActivity : Activity() {
                 orientation = LinearLayout.HORIZONTAL
                 gravity = Gravity.CENTER_VERTICAL
                 addView(text(16f, bold = true).apply {
-                    text = "Günlük"
+                    text = getString(R.string.log_title)
                     layoutParams = LinearLayout.LayoutParams(0, WRAP_CONTENT, 1f)
                 })
                 addView(Button(this@MainActivity).apply {
-                    text = "Paylaş"
+                    text = getString(R.string.btn_share)
                     isAllCaps = false
                     setOnClickListener { shareLog() }
                 })
@@ -363,16 +371,16 @@ class MainActivity : Activity() {
 
         // Kamera
         val (title, color) = when (s.linkState) {
-            CameraLink.State.READY -> "Kamera bağlı" to GREEN
-            CameraLink.State.HANDSHAKE -> "Kamerada onay bekleniyor" to YELLOW
-            CameraLink.State.SCANNING -> "Kamera aranıyor" to YELLOW
-            CameraLink.State.CONNECTING -> "Bağlanılıyor" to YELLOW
-            CameraLink.State.RECONNECTING -> "Yeniden bağlanılıyor" to YELLOW
-            CameraLink.State.IDLE -> "Kamera bağlı değil" to MUTED
+            CameraLink.State.READY -> getString(R.string.cam_ready) to GREEN
+            CameraLink.State.HANDSHAKE -> getString(R.string.cam_handshake) to YELLOW
+            CameraLink.State.SCANNING -> getString(R.string.cam_scanning) to YELLOW
+            CameraLink.State.CONNECTING -> getString(R.string.cam_connecting) to YELLOW
+            CameraLink.State.RECONNECTING -> getString(R.string.cam_reconnecting) to YELLOW
+            CameraLink.State.IDLE -> getString(R.string.cam_idle) to MUTED
         }
         camTitle.text = title
         setDot(camDot, color)
-        camDetail.text = s.linkDetail.ifEmpty { if (s.serviceRunning) "" else "Başlat'a basın." }
+        camDetail.text = s.linkDetail.ifEmpty { if (s.serviceRunning) "" else getString(R.string.press_start) }
         val code = s.verifyCode
         if (code != null && s.linkState == CameraLink.State.HANDSHAKE) {
             camCode.visibility = View.VISIBLE
@@ -385,10 +393,10 @@ class MainActivity : Activity() {
             val name = listOfNotNull(s.cameraModel, s.cameraName).distinct().joinToString(" • ")
             if (name.isNotEmpty()) add(name)
             if (st != null && s.linkState == CameraLink.State.READY) {
-                add("${st.modeName} • ${st.statusName}" + if (st.isRecording) " ●" else "")
-                if (st.batteryPercent >= 0) add("Pil: %${st.batteryPercent}")
-                if (st.isSleeping) add("Kamera uykuda — GPS gönderimi duraklatıldı")
-                if (st.tempWarning >= 1) add("⚠ Kamera ısınıyor")
+                add("${CameraLabels.mode(this@MainActivity, st)} • ${CameraLabels.status(this@MainActivity, st)}" + if (st.isRecording) " ●" else "")
+                if (st.batteryPercent >= 0) add(getString(R.string.cam_battery, st.batteryPercent))
+                if (st.isSleeping) add(getString(R.string.cam_sleeping))
+                if (st.tempWarning >= 1) add(getString(R.string.cam_hot))
             }
         }
         camInfo.text = info.joinToString("\n")
@@ -416,8 +424,11 @@ class MainActivity : Activity() {
             maxLeanValue.text = "–"
         }
         sensorInfo.text = if (s.serviceRunning) {
-            "Sensörler: GPS ✓  •  jiroskop " + (if (s.hasGyro) "✓" else "✗") +
-                "  •  barometre " + (if (s.hasBarometer) "✓ (yükseklik barometreden)" else "✗ (yükseklik GPS'ten)")
+            getString(
+                R.string.sensors_line,
+                if (s.hasGyro) "✓" else "✗",
+                getString(if (s.hasBarometer) R.string.baro_yes else R.string.baro_no),
+            )
         } else {
             ""
         }
@@ -425,15 +436,15 @@ class MainActivity : Activity() {
         // GPS
         when {
             !s.serviceRunning -> {
-                gpsTitle.text = if (GpsWarmup.ready) "GPS hazır, Başlat'a basabilirsiniz" else "GPS uydu arıyor (${GpsWarmup.satellites} uydu)"
+                gpsTitle.text = if (GpsWarmup.ready) getString(R.string.gps_ready_idle) else getString(R.string.gps_searching_idle, GpsWarmup.satellites)
                 setDot(gpsDot, if (GpsWarmup.ready) GREEN else YELLOW)
             }
             s.hasFix -> {
-                gpsTitle.text = "GPS sinyali var"
+                gpsTitle.text = getString(R.string.gps_fix)
                 setDot(gpsDot, GREEN)
             }
             else -> {
-                gpsTitle.text = "GPS sinyali aranıyor"
+                gpsTitle.text = getString(R.string.gps_searching)
                 setDot(gpsDot, YELLOW)
             }
         }
@@ -441,26 +452,25 @@ class MainActivity : Activity() {
             speedValue.text = "%.0f".format(s.speedKmh)
             altValue.text = "%.0f".format(s.altitudeM)
             satValue.text = "${s.satellitesUsed}"
-            gpsInfo.text = "Doğruluk ±%.0f m • Kameraya %.1f paket/sn • Toplam %d".format(
-                s.horizontalAccuracyM, s.gpsPacketsPerSecond, s.gpsPacketsSent,
-            ) + (s.rideFile?.let { "\nYedek kayıt: $it" } ?: "")
+            gpsInfo.text = getString(R.string.gps_info, s.horizontalAccuracyM, s.gpsPacketsPerSecond, s.gpsPacketsSent) +
+                (s.rideFile?.let { "\n" + getString(R.string.gps_backup_file, it) } ?: "")
         } else {
             speedValue.text = "–"
             altValue.text = "–"
             satValue.text = if (s.serviceRunning && s.satellitesVisible > 0) "0/${s.satellitesVisible}" else "–"
-            gpsInfo.text = if (s.serviceRunning) "Açık havada bekleyin; ilk sinyal 30–60 sn sürebilir." else ""
+            gpsInfo.text = if (s.serviceRunning) getString(R.string.gps_wait_hint) else ""
         }
 
         // Düğmeler
-        startButton.text = if (s.serviceRunning) "Durdur" else "Başlat"
+        startButton.text = getString(if (s.serviceRunning) R.string.btn_stop else R.string.btn_start)
         (startButton.background as GradientDrawable).setColor(if (s.serviceRunning) 0xFF455A64.toInt() else ACCENT)
         val ready = s.linkState == CameraLink.State.READY
         recordButton.isEnabled = ready
         recordButton.alpha = if (ready) 1f else 0.4f
         recordButton.text = when {
-            st?.isRecording == true -> "■ Kaydı durdur"
-            s.recordPending -> "GPS bekleniyor, sinyal gelince kayıt başlayacak\n(hemen başlatmak için tekrar bas)"
-            else -> "● Kaydı başlat"
+            st?.isRecording == true -> getString(R.string.btn_record_stop)
+            s.recordPending -> getString(R.string.btn_record_pending)
+            else -> getString(R.string.btn_record_start)
         }
     }
 
@@ -472,7 +482,7 @@ class MainActivity : Activity() {
     }
 
     private fun renderLog() {
-        logView.text = AppLog.snapshot(80).asReversed().joinToString("\n").ifEmpty { "Henüz kayıt yok." }
+        logView.text = AppLog.snapshot(80).asReversed().joinToString("\n").ifEmpty { getString(R.string.log_empty) }
     }
 
     // ---------------------------------------------------------------- Başlat / durdur ve kurulum
@@ -484,25 +494,23 @@ class MainActivity : Activity() {
         get() = Build.MANUFACTURER.lowercase().let { it.contains("xiaomi") || it.contains("redmi") || it.contains("poco") }
 
     private fun setupSteps(): List<Step> = buildList {
-        add(Step("perm", "Konum, Bluetooth ve bildirim izinleri", true, { requiredPermissionsMissing().isEmpty() }) {
+        add(Step("perm", getString(R.string.step_perm), true, { requiredPermissionsMissing().isEmpty() }) {
             askPermissions(allPermissionsMissing())
         })
-        add(Step("bgloc", "Konum izni: \"Her zaman izin ver\"", false, { hasBackgroundLocation() }) {
+        add(Step("bgloc", getString(R.string.step_bgloc), false, { hasBackgroundLocation() }) {
             explain(
-                "Konum: Her zaman izin ver",
-                "Navigasyon açıkken ya da ekran kapalıyken de GPS'in kesilmemesi için açılacak ekranda " +
-                    "\"Her zaman izin ver\" seçeneğini seçin.",
+                getString(R.string.dlg_bgloc_title),
+                getString(R.string.dlg_bgloc_msg),
             ) { askPermissions(listOf(Manifest.permission.ACCESS_BACKGROUND_LOCATION)) }
         })
-        add(Step("battery", "Pil kısıtlaması kaldırıldı", false, { isIgnoringBatteryOptimizations() }) {
+        add(Step("battery", getString(R.string.step_battery), false, { isIgnoringBatteryOptimizations() }) {
             requestBatteryExemption()
         })
         if (isXiaomi) {
-            add(Step("autostart", "Xiaomi: Otomatik başlatma açık", false, { prefs.setupAutostartDone }) {
+            add(Step("autostart", getString(R.string.step_autostart), false, { prefs.setupAutostartDone }) {
                 explain(
-                    "Otomatik başlatma",
-                    "Açılacak listede Telemet'i bulup anahtarını açın. Bu, telefon uygulamayı kapatsa bile " +
-                        "kaydın kendiliğinden devam etmesini sağlar.",
+                    getString(R.string.dlg_autostart_title),
+                    getString(R.string.dlg_autostart_msg),
                 ) {
                     prefs.setupAutostartDone = true
                     openFirst(
@@ -511,11 +519,10 @@ class MainActivity : Activity() {
                     )
                 }
             })
-            add(Step("saver", "Xiaomi: Pil tasarrufu \"Kısıtlama yok\"", false, { prefs.setupBatterySaverDone }) {
+            add(Step("saver", getString(R.string.step_saver), false, { prefs.setupBatterySaverDone }) {
                 explain(
-                    "Pil tasarrufu",
-                    "Açılacak ekranda \"Kısıtlama yok\" seçeneğini seçin. Varsayılan ayarda MIUI, başka uygulama " +
-                        "öndeyken Telemet'in GPS'ini kesiyor; son sürüşte veri kaybının sebebi buydu.",
+                    getString(R.string.dlg_saver_title),
+                    getString(R.string.dlg_saver_msg),
                 ) {
                     prefs.setupBatterySaverDone = true
                     openFirst(
@@ -562,13 +569,13 @@ class MainActivity : Activity() {
         render()
         val missingRequired = steps.filter { it.required && !it.done() }
         if (missingRequired.isNotEmpty()) {
-            AppLog.w("Gerekli izinler verilmedi: " + requiredPermissionsMissing().joinToString { it.substringAfterLast('.') })
-            Toast.makeText(this, "Konum ve Bluetooth izinleri olmadan çalışamaz", Toast.LENGTH_LONG).show()
+            AppLog.w("Required permissions not granted: " + requiredPermissionsMissing().joinToString { it.substringAfterLast('.') })
+            Toast.makeText(this, R.string.toast_need_perms, Toast.LENGTH_LONG).show()
             startActivity(appDetails())
             return
         }
         val skipped = steps.filter { !it.done() }
-        if (skipped.isNotEmpty()) AppLog.w("Kurulum eksik: " + skipped.joinToString { it.label } + ". Kayıt arka planda kesilebilir.")
+        if (skipped.isNotEmpty()) AppLog.w("Setup incomplete: " + skipped.joinToString { it.key } + ". Recording may be cut in the background.")
         if (startAfterSetup) launchService()
     }
 
@@ -576,7 +583,7 @@ class MainActivity : Activity() {
     private fun launchService() {
         val adapter = getSystemService(BluetoothManager::class.java)?.adapter
         if (adapter == null) {
-            Toast.makeText(this, "Bu telefonda Bluetooth yok", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, R.string.toast_no_bt, Toast.LENGTH_LONG).show()
             return
         }
         if (!adapter.isEnabled) {
@@ -584,13 +591,13 @@ class MainActivity : Activity() {
                 @Suppress("DEPRECATION")
                 startActivityForResult(Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE), REQ_ENABLE_BT)
             } catch (e: SecurityException) {
-                Toast.makeText(this, "Lütfen Bluetooth'u açın", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, R.string.toast_enable_bt, Toast.LENGTH_LONG).show()
             }
             return
         }
         val lm = getSystemService(LocationManager::class.java)
         if (lm?.isProviderEnabled(LocationManager.GPS_PROVIDER) != true) {
-            Toast.makeText(this, "Lütfen telefonun konumunu (GPS) açın", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, R.string.toast_enable_gps, Toast.LENGTH_LONG).show()
             startActivity(Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS))
             return
         }
@@ -650,11 +657,11 @@ class MainActivity : Activity() {
         AlertDialog.Builder(this)
             .setTitle(title)
             .setMessage(message)
-            .setPositiveButton("Tamam") { _, _ ->
+            .setPositiveButton(R.string.ok) { _, _ ->
                 accepted = true
                 then()
             }
-            .setNegativeButton("Atla", null)
+            .setNegativeButton(R.string.skip, null)
             .setOnDismissListener { if (!accepted && startFlowActive) continueStartFlow() }
             .show()
     }
@@ -688,19 +695,39 @@ class MainActivity : Activity() {
         )
     }
 
+    /** Uygulama dilini seçtirir; seçimden sonra ekran yeni dille yeniden açılır. */
+    private fun chooseLanguage() {
+        val current = LocaleHelper.current(this)
+        val tags = LocaleHelper.LANGUAGES.map { it.first }
+        val names = LocaleHelper.LANGUAGES.map { it.second.ifEmpty { getString(R.string.language_system) } }.toTypedArray()
+        AlertDialog.Builder(this)
+            .setTitle(R.string.language_dialog_title)
+            .setSingleChoiceItems(names, tags.indexOf(current).coerceAtLeast(0)) { dialog, which ->
+                dialog.dismiss()
+                val tag = tags[which]
+                if (tag == current) return@setSingleChoiceItems
+                LocaleHelper.set(this, tag)
+                AppLog.i("App language: " + tag.ifEmpty { "phone default" })
+                // Android 13+ dili sistem uygular ve ekranı kendisi yeniler; eski sürümlerde biz yeniliyoruz.
+                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) recreate()
+            }
+            .setNegativeButton(R.string.cancel, null)
+            .show()
+    }
+
     private fun shareLog() {
         val body = buildString {
-            appendLine("Telemet günlüğü")
-            appendLine("Telefon: ${Build.MANUFACTURER} ${Build.MODEL}, Android ${Build.VERSION.RELEASE} (API ${Build.VERSION.SDK_INT})")
+            appendLine("Telemet log")
+            appendLine("Phone: ${Build.MANUFACTURER} ${Build.MODEL}, Android ${Build.VERSION.RELEASE} (API ${Build.VERSION.SDK_INT})")
             appendLine("MTU: ${TelemetState.mtu}")
             appendLine()
             AppLog.snapshot().forEach { appendLine(it) }
         }
         val send = Intent(Intent.ACTION_SEND).apply {
             type = "text/plain"
-            putExtra(Intent.EXTRA_SUBJECT, "Telemet günlüğü")
+            putExtra(Intent.EXTRA_SUBJECT, "Telemet log")
             putExtra(Intent.EXTRA_TEXT, body)
         }
-        startActivity(Intent.createChooser(send, "Günlüğü paylaş"))
+        startActivity(Intent.createChooser(send, getString(R.string.share_log_chooser)))
     }
 }

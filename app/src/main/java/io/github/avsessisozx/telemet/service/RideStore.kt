@@ -55,7 +55,7 @@ object RideStore {
         try {
             File(dir(context), "$id.json").writeText(json.toString(), Charsets.UTF_8)
         } catch (e: Exception) {
-            AppLog.w("Sürüş listeye eklenemedi", e)
+            AppLog.w("Could not add ride to the list", e)
         }
     }
 
@@ -93,10 +93,10 @@ object RideStore {
             try {
                 context.contentResolver.delete(uri, null, null)
             } catch (e: Exception) {
-                AppLog.w("Dosya silinemedi: $uri", e)
+                AppLog.w("Could not delete file: $uri", e)
             }
         }
         File(dir(context), "${ride.id}.json").delete()
-        AppLog.i("Sürüş silindi: ${ride.id}")
+        AppLog.i("Ride deleted: ${ride.id}")
     }
 }

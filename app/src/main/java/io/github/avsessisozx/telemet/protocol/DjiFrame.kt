@@ -32,7 +32,7 @@ class DjiFrame(
 
     override fun toString(): String =
         "DjiFrame(%s cmd=%02X%02X seq=%d len=%d)".format(
-            if (isResponse) "yanıt" else "komut", cmdSet, cmdId, seq, payload.size,
+            if (isResponse) "response" else "command", cmdSet, cmdId, seq, payload.size,
         )
 
     companion object {
@@ -44,7 +44,7 @@ class DjiFrame(
 
         fun encode(cmdType: Int, seq: Int, cmdSet: Int, cmdId: Int, payload: ByteArray): ByteArray {
             val total = OVERHEAD + payload.size
-            require(total <= MAX_LEN) { "Çerçeve çok uzun: $total" }
+            require(total <= MAX_LEN) { "Frame too long: $total" }
             val b = ByteArray(total)
             b[0] = SOF.toByte()
             b[1] = (total and 0xFF).toByte()
