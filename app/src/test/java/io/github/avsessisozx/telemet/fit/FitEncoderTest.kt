@@ -65,6 +65,20 @@ class FitEncoderTest {
     }
 
     @Test
+    fun summaryOfRide() {
+        val sum = FitEncoder.summarize(sampleRaw())
+        assertNotNull(sum)
+        sum!!
+        assertEquals(600, sum.points)
+        assertEquals(599L, sum.durationS)
+        assertEquals(35.0, sum.maxSpeedMs, 0.001)
+        assertEquals(16_480.0, sum.distanceM, 0.01)
+        assertEquals(1_791_000_000_000L, sum.startUtcMillis)
+        assertTrue(sum.ascentM > 100)
+        assertNull(FitEncoder.summarize(ByteArray(0)))
+    }
+
+    @Test
     fun emptyRideGivesNoFile() {
         assertNull(FitEncoder.buildFile(ByteArray(0), 1_791_000_000_000L))
     }

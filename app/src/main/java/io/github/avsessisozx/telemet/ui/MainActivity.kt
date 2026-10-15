@@ -250,6 +250,9 @@ class MainActivity : Activity() {
         recordButton = button("● Kaydı başlat / durdur", RED) { TelemetService.toggleRecord(this) }
         root.addView(startButton)
         root.addView(recordButton)
+        root.addView(button("Sürüşlerim", 0xFF2E7D32.toInt()) {
+            startActivity(Intent(this, RidesActivity::class.java))
+        })
 
         // Ayarlar
         root.addView(card().apply {

@@ -46,6 +46,11 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".ui.RidesActivity"
+            android:exported="false"
+            android:label="Sürüşlerim" />
+
         <service
             android:name=".service.TelemetService"
             android:exported="false"

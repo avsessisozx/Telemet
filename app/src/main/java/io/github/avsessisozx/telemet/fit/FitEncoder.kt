@@ -130,6 +130,41 @@ object FitEncoder {
     )
 
     /** Ham noktalardan kaç tanesi geçerli (bozuk kuyruk hariç). */
+    /** Sürüş özeti (Sürüşlerim listesi için). */
+    data class Summary(
+        val startUtcMillis: Long,
+        val endUtcMillis: Long,
+        val distanceM: Double,
+        val maxSpeedMs: Double,
+        val ascentM: Double,
+        val points: Int,
+    ) {
+        val durationS: Long get() = (endUtcMillis - startUtcMillis) / 1000
+        val avgSpeedMs: Double get() = if (durationS > 0) distanceM / durationS else 0.0
+    }
+
+    fun summarize(raw: ByteArray): Summary? {
+        val points = decodeRecords(raw)
+        if (points.isEmpty()) return null
+        var ascent = 0.0
+        var ref = points.first().enhancedAltitudeM
+        for (p in points) {
+            val d = p.enhancedAltitudeM - ref
+            if (abs(d) >= 3.0) {
+                if (d > 0) ascent += d
+                ref = p.enhancedAltitudeM
+            }
+        }
+        return Summary(
+            startUtcMillis = (points.first().fitTime + FIT_EPOCH_S) * 1000,
+            endUtcMillis = (points.last().fitTime + FIT_EPOCH_S) * 1000,
+            distanceM = points.last().distanceM,
+            maxSpeedMs = points.maxOf { it.enhancedSpeedMs },
+            ascentM = ascent,
+            points = points.size,
+        )
+    }
+
     fun validLength(raw: ByteArray): Int = decodeRecords(raw).size * RECORD_SIZE
 
     /**

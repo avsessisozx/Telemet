@@ -2,6 +2,7 @@ package io.github.avsessisozx.telemet.service
 
 import android.content.ContentValues
 import android.content.Context
+import android.net.Uri
 import android.os.Environment
 import android.provider.MediaStore
 import io.github.avsessisozx.telemet.fit.FitEncoder
@@ -168,9 +169,10 @@ class RideRecorder(private val context: Context) {
                 gpxPart.delete()
                 return
             }
-            val count = raw.size / FitEncoder.RECORD_SIZE
-            val km = FitEncoder.decodeRecords(raw).lastOrNull()?.distanceM?.div(1000) ?: 0.0
-            val fitOk = saveToDownloads("$id.fit", "application/vnd.ant.fit", fit)
+            val summary = FitEncoder.summarize(raw)
+            val count = summary?.points ?: 0
+            val km = (summary?.distanceM ?: 0.0) / 1000
+            val fitUri = saveToDownloads("$id.fit", "application/vnd.ant.fit", fit)
             val gpx = buildString {
                 append("""<?xml version="1.0" encoding="UTF-8"?>""").append('\n')
                 append("""<gpx version="1.1" creator="Telemet" xmlns="http://www.topografix.com/GPX/1/1">""").append('\n')
@@ -178,8 +180,9 @@ class RideRecorder(private val context: Context) {
                 if (gpxPart.exists()) append(completeLines(gpxPart.readText(Charsets.UTF_8)))
                 append("</trkseg></trk>\n</gpx>\n")
             }
-            val gpxOk = saveToDownloads("$id.gpx", "application/gpx+xml", gpx.toByteArray(Charsets.UTF_8))
-            if (fitOk && gpxOk) {
+            val gpxUri = saveToDownloads("$id.gpx", "application/gpx+xml", gpx.toByteArray(Charsets.UTF_8))
+            if (fitUri != null && gpxUri != null) {
+                if (summary != null) RideStore.save(context, id, summary, fitUri, gpxUri)
                 fitRaw.delete()
                 gpxPart.delete()
                 AppLog.i("Sürüş kaydedildi: İndirilenler/$FOLDER/$id.fit ve .gpx ($count nokta, %.1f km)".format(km))
@@ -197,7 +200,7 @@ class RideRecorder(private val context: Context) {
         return if (end < 0) "" else text.substring(0, end + 1)
     }
 
-    private fun saveToDownloads(name: String, mime: String, bytes: ByteArray): Boolean = try {
+    private fun saveToDownloads(name: String, mime: String, bytes: ByteArray): Uri? = try {
         val values = ContentValues().apply {
             put(MediaStore.Downloads.DISPLAY_NAME, name)
             put(MediaStore.Downloads.MIME_TYPE, mime)
@@ -206,14 +209,14 @@ class RideRecorder(private val context: Context) {
         val uri = context.contentResolver.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, values)
         if (uri == null) {
             AppLog.w("İndirilenler klasörüne yazılamadı: $name")
-            false
+            null
         } else {
             context.contentResolver.openOutputStream(uri)?.use { it.write(bytes) }
-            true
+            uri
         }
     } catch (e: Exception) {
         AppLog.w("Dosya kaydedilemedi: $name", e)
-        false
+        null
     }
 
     private fun fileTime(id: String): Long = try {
