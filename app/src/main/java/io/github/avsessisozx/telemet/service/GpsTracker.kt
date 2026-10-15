@@ -67,6 +67,7 @@ class GpsTracker(context: Context, private val onFix: (Fix) -> Unit) : LocationL
     fun start(): Boolean {
         if (running) return true
         val manager = lm ?: return false
+        injectAssistData(manager)
         return try {
             // 100 ms istiyoruz; çoğu telefon 1 Hz verir, bazıları daha sık.
             manager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 100L, 0f, this, Looper.getMainLooper())
@@ -81,6 +82,19 @@ class GpsTracker(context: Context, private val onFix: (Fix) -> Unit) : LocationL
         } catch (e: IllegalArgumentException) {
             AppLog.w("GPS sağlayıcısı yok", e)
             false
+        }
+    }
+
+    /**
+     * İnternet varsa uyduların yörünge bilgisini ve saati indirip GPS'e verir (A-GPS).
+     * İlk sinyal süresini 30–60 sn'den birkaç saniyeye indirir. İnternet yoksa sessizce atlanır.
+     */
+    private fun injectAssistData(manager: LocationManager) {
+        for (cmd in listOf("force_time_injection", "force_psds_injection", "force_xtra_injection")) {
+            try {
+                manager.sendExtraCommand(LocationManager.GPS_PROVIDER, cmd, null)
+            } catch (_: Exception) {
+            }
         }
     }
 

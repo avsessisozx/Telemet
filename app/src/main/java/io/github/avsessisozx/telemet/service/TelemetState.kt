@@ -30,6 +30,9 @@ object TelemetState {
     var distanceKm = 0.0
 
     // Telefon sensörleri
+    /** Kayıt tuşuna GPS hazır olmadan basıldı; sinyal gelince kayıt başlayacak. */
+    var recordPending = false
+
     var hasGyro = false
     var hasBarometer = false
     /** Anlık yatış açısı (sola pozitif) ve toplam G. */

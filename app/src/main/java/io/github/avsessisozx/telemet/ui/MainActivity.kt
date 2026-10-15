@@ -31,6 +31,7 @@ import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
 import io.github.avsessisozx.telemet.ble.CameraLink
+import io.github.avsessisozx.telemet.service.GpsWarmup
 import io.github.avsessisozx.telemet.service.TelemetService
 import io.github.avsessisozx.telemet.service.TelemetState
 import io.github.avsessisozx.telemet.util.AppLog
@@ -100,6 +101,8 @@ class MainActivity : Activity() {
             AppLog.i("Yarım kalan sürüşe devam ediliyor")
             TelemetService.resume(this)
         }
+        // Başlat'a basılmadan önce GPS uydu aramaya başlasın.
+        GpsWarmup.start(this)
         render()
         renderLog()
     }
@@ -115,6 +118,7 @@ class MainActivity : Activity() {
     }
 
     override fun onStop() {
+        GpsWarmup.stop()
         TelemetState.removeListener(stateListener)
         AppLog.removeListener(logListener)
         super.onStop()
@@ -421,8 +425,8 @@ class MainActivity : Activity() {
         // GPS
         when {
             !s.serviceRunning -> {
-                gpsTitle.text = "GPS kapalı"
-                setDot(gpsDot, MUTED)
+                gpsTitle.text = if (GpsWarmup.ready) "GPS hazır, Başlat'a basabilirsiniz" else "GPS uydu arıyor (${GpsWarmup.satellites} uydu)"
+                setDot(gpsDot, if (GpsWarmup.ready) GREEN else YELLOW)
             }
             s.hasFix -> {
                 gpsTitle.text = "GPS sinyali var"
@@ -455,6 +459,7 @@ class MainActivity : Activity() {
         recordButton.alpha = if (ready) 1f else 0.4f
         recordButton.text = when {
             st?.isRecording == true -> "■ Kaydı durdur"
+            s.recordPending -> "GPS bekleniyor, sinyal gelince kayıt başlayacak\n(hemen başlatmak için tekrar bas)"
             else -> "● Kaydı başlat"
         }
     }

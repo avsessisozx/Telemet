@@ -119,9 +119,7 @@ class TelemetService : Service(), CameraLink.Listener {
                     stopSelf()
                 }
             }
-            ACTION_RECORD -> {
-                if (!link.pressRecord()) AppLog.w("Kamera bağlı değil, kayıt komutu gönderilemedi")
-            }
+            ACTION_RECORD -> onRecordPressed()
         }
         // Sistem kapatırsa yeniden başlat (navigasyon uygulamaları gibi).
         return START_STICKY
@@ -185,6 +183,7 @@ class TelemetService : Service(), CameraLink.Listener {
         wakeLock = null
         TelemetState.serviceRunning = false
         TelemetState.hasFix = false
+        TelemetState.recordPending = false
         TelemetState.resetCamera()
         TelemetState.changed()
         AppLog.i("Telemet durduruldu")
@@ -212,6 +211,40 @@ class TelemetService : Service(), CameraLink.Listener {
         // Uygulama son kullanılanlardan kaydırılıp kapatıldı; sürüş arka planda sürüyor.
         if (started) AppLog.i("Uygulama ekranı kapatıldı, kayıt arka planda sürüyor")
         super.onTaskRemoved(rootIntent)
+    }
+
+    // ---------------------------------------------------------------- Kayıt tuşu
+
+    /**
+     * GPS hazır değilken kayda basılırsa kayıt bekletilir ve sinyal gelir gelmez başlar;
+     * böylece videonun ilk saniyelerinde de konum verisi olur. İkinci basış beklemeden başlatır.
+     */
+    private fun onRecordPressed() {
+        val recording = TelemetState.cameraStatus?.isRecording == true
+        if (TelemetState.recordPending) {
+            TelemetState.recordPending = false
+            AppLog.i("GPS beklenmeden kayıt başlatılıyor")
+            if (!link.pressRecord()) AppLog.w("Kamera bağlı değil, kayıt komutu gönderilemedi")
+            TelemetState.changed()
+            return
+        }
+        if (!recording && !TelemetState.hasFix) {
+            TelemetState.recordPending = true
+            AppLog.i("GPS sinyali bekleniyor; sinyal gelince kayıt otomatik başlayacak (hemen başlatmak için tekrar basın)")
+            TelemetState.changed()
+            return
+        }
+        if (!link.pressRecord()) AppLog.w("Kamera bağlı değil, kayıt komutu gönderilemedi")
+    }
+
+    /** Bekleyen kayıt varsa GPS ve kamera hazır olunca başlatır. */
+    private fun startPendingRecord() {
+        if (!TelemetState.recordPending || !TelemetState.hasFix) return
+        if (link.state != CameraLink.State.READY) return
+        TelemetState.recordPending = false
+        AppLog.i("GPS hazır, kayıt başlatılıyor")
+        link.pressRecord()
+        TelemetState.changed()
     }
 
     // ---------------------------------------------------------------- GPS
@@ -289,6 +322,7 @@ class TelemetService : Service(), CameraLink.Listener {
             TelemetState.leanDeg = snap.leanDeg
             TelemetState.gForce = snap.totalG
             if (kotlin.math.abs(snap.leanDeg) > kotlin.math.abs(TelemetState.maxLeanDeg)) TelemetState.maxLeanDeg = snap.leanDeg
+            startPendingRecord()
             updateRate()
             main.postDelayed(this, PUSH_INTERVAL_MS)
         }

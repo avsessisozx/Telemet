@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Environment
 import android.provider.MediaStore
 import io.github.avsessisozx.telemet.fit.FitEncoder
+import io.github.avsessisozx.telemet.fit.GapFiller
 import io.github.avsessisozx.telemet.sensors.SensorHub
 import io.github.avsessisozx.telemet.util.AppLog
 import java.io.BufferedWriter
@@ -58,6 +59,10 @@ class RideRecorder(private val context: Context) {
     private var lastLon = 0.0
     private var lastUtc = 0L
     private var hasLast = false
+    /** Son yazılan nokta (boşluk doldurma için). */
+    private var lastPoint: FitEncoder.Point? = null
+    /** Yeni sürüşte Başlat'a basılan an (Unix saniyesi); ilk sinyale kadar olan süre doldurulur. */
+    private var rideStartSecond: Long? = null
 
     // Eğim: son ~60 m içindeki yükseklik farkından hesaplanır.
     private val gradeWindow = ArrayDeque<Pair<Double, Double>>() // (mesafe, yükseklik)
@@ -78,7 +83,12 @@ class RideRecorder(private val context: Context) {
         val gpxFile = File(dir, "$id.gpxpart")
         val resuming = fitFile.exists() && fitFile.length() > 0
         try {
-            if (resuming) restoreFrom(fitFile) else resetCounters()
+            if (resuming) {
+                restoreFrom(fitFile)
+            } else {
+                resetCounters()
+                rideStartSecond = System.currentTimeMillis() / 1000
+            }
             fitOut = FileOutputStream(fitFile, true)
             gpxOut = BufferedWriter(OutputStreamWriter(FileOutputStream(gpxFile, true), Charsets.UTF_8))
             rideId = id
@@ -93,7 +103,7 @@ class RideRecorder(private val context: Context) {
 
     /** Saniyede en fazla bir nokta yazar. */
     fun add(fix: GpsTracker.Fix, sensors: SensorHub.Snapshot?) {
-        val fit = fitOut ?: return
+        if (fitOut == null) return
         val second = fix.utcMillis / 1000
         if (second <= lastSecond) return
         lastSecond = second
@@ -123,14 +133,29 @@ class RideRecorder(private val context: Context) {
             lateralG = sensors?.peakLateralG ?: 0.0,
             longitudinalG = sensors?.peakLongitudinalG ?: 0.0,
         )
+        val toWrite = GapFiller.pointsFor(lastPoint, point, rideStartSecond)
+        if (toWrite.size > 1) {
+            if (lastPoint == null) {
+                AppLog.i("İlk GPS sinyaline kadar geçen ${toWrite.size - 1} sn kayıtta ilk konumla dolduruldu")
+            } else {
+                AppLog.i("GPS kesintisindeki ${toWrite.size - 1} sn kayıtta ara değerlerle dolduruldu")
+            }
+        }
+        rideStartSecond = null
+        toWrite.forEach { writePoint(it) }
+    }
+
+    private fun writePoint(p: FitEncoder.Point) {
+        val fit = fitOut ?: return
         try {
-            fit.write(FitEncoder.encodeRecord(point))
+            fit.write(FitEncoder.encodeRecord(p))
             gpxOut?.write(
                 "<trkpt lat=\"%.7f\" lon=\"%.7f\"><ele>%.1f</ele><time>%s</time></trkpt>\n".format(
-                    Locale.US, fix.latitude, fix.longitude, fix.altitudeM, iso.format(Date(fix.utcMillis)),
+                    Locale.US, p.latitude, p.longitude, p.altitudeM, iso.format(Date(p.utcMillis)),
                 ),
             )
             points++
+            lastPoint = p
             // Her 10 noktada bir diske zorla; telefon aniden kapansa bile en fazla ~10 sn kaybolur.
             if (points % 10 == 0) {
                 fit.flush()
@@ -145,6 +170,8 @@ class RideRecorder(private val context: Context) {
     /** Kaydı bitirir; FIT ve GPX dosyalarını İndirilenler/Telemet klasörüne çıkarır. */
     fun stop() {
         val id = rideId ?: return
+        // Son sinyalden durdurma anına kadar boşluk kalmasın.
+        lastPoint?.let { last -> GapFiller.padUntil(last, System.currentTimeMillis() / 1000).forEach { writePoint(it) } }
         closeStreams()
         rideId = null
         finish(id)
@@ -270,6 +297,15 @@ class RideRecorder(private val context: Context) {
             lastLon = FitEncoder.degrees(it.lonSemi)
             lastUtc = lastSecond * 1000
             hasLast = true
+            lastPoint = FitEncoder.Point(
+                utcMillis = lastUtc,
+                latitude = lastLat,
+                longitude = lastLon,
+                altitudeM = it.enhancedAltitudeM,
+                speedMs = it.enhancedSpeedMs,
+                distanceM = it.distanceM,
+                gradePercent = it.gradePercent,
+            )
         }
     }
 
@@ -278,6 +314,8 @@ class RideRecorder(private val context: Context) {
         distanceM = 0.0
         lastSecond = 0
         hasLast = false
+        lastPoint = null
+        rideStartSecond = null
         gradeWindow.clear()
         grade = 0.0
     }
