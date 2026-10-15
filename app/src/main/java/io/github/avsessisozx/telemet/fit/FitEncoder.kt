@@ -26,6 +26,9 @@ object FitEncoder {
     private const val SINT32 = 0x85
     private const val UINT32 = 0x86
     private const val UINT32Z = 0x8C
+    private const val FLOAT32 = 0x88
+    private const val STRING = 0x07
+    private const val BYTE = 0x0D
 
     // Genel mesaj numaraları
     private const val MSG_FILE_ID = 0
@@ -34,6 +37,8 @@ object FitEncoder {
     private const val MSG_RECORD = 20
     private const val MSG_EVENT = 21
     private const val MSG_ACTIVITY = 34
+    private const val MSG_FIELD_DESCRIPTION = 206
+    private const val MSG_DEVELOPER_DATA_ID = 207
 
     // Yerel mesaj tipleri
     private const val L_FILE_ID = 0
@@ -42,6 +47,25 @@ object FitEncoder {
     private const val L_LAP = 3
     private const val L_SESSION = 4
     private const val L_ACTIVITY = 5
+    private const val L_DEV_ID = 6
+    private const val L_FIELD_DESC = 7
+
+    /**
+     * Telefon sensörlerinden gelen değerler FIT'in "geliştirici alanları" olarak yazılır
+     * (standart record mesajında yatış açısı ve G alanı yok). Bunları okuyan programlar
+     * (ör. Garmin Connect IQ uyumlu araçlar) gösterir; okumayanlar yok sayar, dosya bozulmaz.
+     */
+    private class DevField(val num: Int, val name: String, val units: String)
+
+    private val DEV_FIELDS = listOf(
+        DevField(0, "lean_angle", "deg"),
+        DevField(1, "lateral_g", "g"),
+        DevField(2, "longitudinal_g", "g"),
+        DevField(3, "g_force", "g"),
+    )
+
+    /** Uygulamaya özgü sabit kimlik (16 bayt). */
+    private val APP_ID = "Telemet-moto-fit".toByteArray(Charsets.US_ASCII).copyOf(16)
 
     private class Field(val num: Int, val size: Int, val type: Int)
 
@@ -58,7 +82,7 @@ object FitEncoder {
     )
 
     /** Bir record mesajının diskteki uzunluğu (başlık baytı dahil). */
-    val RECORD_SIZE: Int = 1 + RECORD_FIELDS.sumOf { it.size }
+    val RECORD_SIZE: Int = 1 + RECORD_FIELDS.sumOf { it.size } + DEV_FIELDS.size * 4
 
     /** Tek bir GPS noktası, FIT birimlerine çevrilmeden önce. */
     data class Point(
@@ -69,6 +93,12 @@ object FitEncoder {
         val speedMs: Double,
         val distanceM: Double,
         val gradePercent: Double,
+        /** Yatış açısı, derece (sola pozitif). */
+        val leanDeg: Double = 0.0,
+        /** Yanal (viraj) ivmesi, g. */
+        val lateralG: Double = 0.0,
+        /** Boyuna ivme, g (hızlanma +, fren −). */
+        val longitudinalG: Double = 0.0,
     )
 
     fun fitTime(utcMillis: Long): Long = utcMillis / 1000 - FIT_EPOCH_S
@@ -91,6 +121,10 @@ object FitEncoder {
         b.u16(((p.altitudeM + 500).coerceIn(0.0, 13_106.0) * 5).roundToLong().toInt())
         b.u32(((p.altitudeM + 500).coerceAtLeast(0.0) * 5).roundToLong())
         b.s16((p.gradePercent.coerceIn(-300.0, 300.0) * 100).roundToLong().toInt())
+        b.f32(p.leanDeg)
+        b.f32(p.lateralG)
+        b.f32(p.longitudinalG)
+        b.f32(kotlin.math.sqrt(p.lateralG * p.lateralG + p.longitudinalG * p.longitudinalG))
         return b.bytes()
     }
 
@@ -111,6 +145,10 @@ object FitEncoder {
                 altitudeM = r.u16() / 5.0 - 500,
                 enhancedAltitudeM = r.u32() / 5.0 - 500,
                 gradePercent = r.s16() / 100.0,
+                leanDeg = r.f32(),
+                lateralG = r.f32(),
+                longitudinalG = r.f32(),
+                gForce = r.f32(),
             )
             i += RECORD_SIZE
         }
@@ -127,6 +165,10 @@ object FitEncoder {
         val altitudeM: Double,
         val enhancedAltitudeM: Double,
         val gradePercent: Double,
+        val leanDeg: Double,
+        val lateralG: Double,
+        val longitudinalG: Double,
+        val gForce: Double,
     )
 
     /** Ham noktalardan kaç tanesi geçerli (bozuk kuyruk hariç). */
@@ -138,6 +180,11 @@ object FitEncoder {
         val maxSpeedMs: Double,
         val ascentM: Double,
         val points: Int,
+        val maxLeanLeftDeg: Double = 0.0,
+        val maxLeanRightDeg: Double = 0.0,
+        val maxLateralG: Double = 0.0,
+        val maxBrakeG: Double = 0.0,
+        val maxAccelG: Double = 0.0,
     ) {
         val durationS: Long get() = (endUtcMillis - startUtcMillis) / 1000
         val avgSpeedMs: Double get() = if (durationS > 0) distanceM / durationS else 0.0
@@ -162,6 +209,11 @@ object FitEncoder {
             maxSpeedMs = points.maxOf { it.enhancedSpeedMs },
             ascentM = ascent,
             points = points.size,
+            maxLeanLeftDeg = points.maxOf { it.leanDeg }.coerceAtLeast(0.0),
+            maxLeanRightDeg = (-points.minOf { it.leanDeg }).coerceAtLeast(0.0),
+            maxLateralG = points.maxOf { abs(it.lateralG) },
+            maxBrakeG = (-points.minOf { it.longitudinalG }).coerceAtLeast(0.0),
+            maxAccelG = points.maxOf { it.longitudinalG }.coerceAtLeast(0.0),
         )
     }
 
@@ -212,8 +264,24 @@ object FitEncoder {
         body.define(L_EVENT, MSG_EVENT, listOf(Field(253, 4, UINT32), Field(0, 1, ENUM), Field(1, 1, ENUM), Field(4, 1, UINT8)))
         body.u8(L_EVENT); body.u32(first.fitTime); body.u8(0); body.u8(0); body.u8(0)
 
+        // Geliştirici alanlarının tanımı (yatış açısı, G)
+        body.define(L_DEV_ID, MSG_DEVELOPER_DATA_ID, listOf(Field(1, 16, BYTE), Field(3, 1, UINT8)))
+        body.u8(L_DEV_ID); body.raw(APP_ID); body.u8(0)
+        for (f in DEV_FIELDS) {
+            val name = fixedString(f.name, 16)
+            val units = fixedString(f.units, 8)
+            body.define(L_FIELD_DESC, MSG_FIELD_DESCRIPTION, listOf(
+                Field(0, 1, UINT8), Field(1, 1, UINT8), Field(2, 1, UINT8),
+                Field(3, name.size, STRING), Field(8, units.size, STRING), Field(14, 2, UINT16),
+            ))
+            body.u8(L_FIELD_DESC)
+            body.u8(0); body.u8(f.num); body.u8(FLOAT32)
+            body.raw(name); body.raw(units)
+            body.u16(MSG_RECORD)
+        }
+
         // record'lar
-        body.define(L_RECORD, MSG_RECORD, RECORD_FIELDS)
+        body.define(L_RECORD, MSG_RECORD, RECORD_FIELDS, DEV_FIELDS.map { it.num })
         body.raw(recordBytes)
 
         // event: kronometre durdu
@@ -319,15 +387,21 @@ object FitEncoder {
         fun u32(v: Long) { u8(v.toInt()); u8((v ushr 8).toInt()); u8((v ushr 16).toInt()); u8((v ushr 24).toInt()) }
         fun s32(v: Int) = u32(v.toLong())
         fun raw(b: ByteArray) = out.write(b)
+        fun f32(v: Double) = u32(java.lang.Float.floatToRawIntBits(v.toFloat()).toLong() and 0xFFFFFFFFL)
         fun bytes(): ByteArray = out.toByteArray()
 
-        fun define(local: Int, global: Int, fields: List<Field>) {
-            u8(0x40 or local)
+        /** [devFields]: bu mesajdaki 4 baytlık geliştirici alanı numaraları (geliştirici 0). */
+        fun define(local: Int, global: Int, fields: List<Field>, devFields: List<Int> = emptyList()) {
+            u8(0x40 or (if (devFields.isNotEmpty()) 0x20 else 0) or local)
             u8(0)     // ayrılmış
             u8(0)     // little-endian
             u16(global)
             u8(fields.size)
             for (f in fields) { u8(f.num); u8(f.size); u8(f.type) }
+            if (devFields.isNotEmpty()) {
+                u8(devFields.size)
+                for (n in devFields) { u8(n); u8(4); u8(0) }
+            }
         }
     }
 
@@ -337,5 +411,12 @@ object FitEncoder {
         fun s16(): Int = u16().toShort().toInt()
         fun u32(): Long = (u8().toLong()) or (u8().toLong() shl 8) or (u8().toLong() shl 16) or (u8().toLong() shl 24)
         fun s32(): Int = u32().toInt()
+        fun f32(): Double = java.lang.Float.intBitsToFloat(u32().toInt()).toDouble()
+    }
+
+    /** Sonu sıfırla biten, sabit uzunlukta FIT dizgesi. */
+    private fun fixedString(text: String, size: Int): ByteArray {
+        val b = text.toByteArray(Charsets.UTF_8)
+        return b.copyOf(size).also { if (b.size >= size) it[size - 1] = 0 }
     }
 }

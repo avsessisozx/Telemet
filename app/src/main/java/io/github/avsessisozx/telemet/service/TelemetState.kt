@@ -29,6 +29,15 @@ object TelemetState {
     var rideFile: String? = null
     var distanceKm = 0.0
 
+    // Telefon sensörleri
+    var hasGyro = false
+    var hasBarometer = false
+    /** Anlık yatış açısı (sola pozitif) ve toplam G. */
+    var leanDeg = 0.0
+    var gForce = 0.0
+    /** Bu çalıştırmadaki en büyük yatış (işaretli). */
+    var maxLeanDeg = 0.0
+
     private val listeners = mutableSetOf<() -> Unit>()
     private val main = Handler(Looper.getMainLooper())
     private var notifyPending = false

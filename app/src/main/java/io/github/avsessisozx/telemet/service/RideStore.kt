@@ -21,6 +21,11 @@ object RideStore {
         val maxSpeedMs: Double,
         val ascentM: Double,
         val points: Int,
+        val maxLeanLeftDeg: Double,
+        val maxLeanRightDeg: Double,
+        val maxLateralG: Double,
+        val maxBrakeG: Double,
+        val maxAccelG: Double,
         val fitUri: Uri?,
         val gpxUri: Uri?,
     ) {
@@ -40,6 +45,11 @@ object RideStore {
             .put("maxSpeed", s.maxSpeedMs)
             .put("ascent", s.ascentM)
             .put("points", s.points)
+            .put("leanLeft", s.maxLeanLeftDeg)
+            .put("leanRight", s.maxLeanRightDeg)
+            .put("latG", s.maxLateralG)
+            .put("brakeG", s.maxBrakeG)
+            .put("accelG", s.maxAccelG)
             .put("fit", fitUri?.toString() ?: "")
             .put("gpx", gpxUri?.toString() ?: "")
         try {
@@ -63,6 +73,11 @@ object RideStore {
                     maxSpeedMs = j.optDouble("maxSpeed", 0.0),
                     ascentM = j.optDouble("ascent", 0.0),
                     points = j.optInt("points", 0),
+                    maxLeanLeftDeg = j.optDouble("leanLeft", 0.0),
+                    maxLeanRightDeg = j.optDouble("leanRight", 0.0),
+                    maxLateralG = j.optDouble("latG", 0.0),
+                    maxBrakeG = j.optDouble("brakeG", 0.0),
+                    maxAccelG = j.optDouble("accelG", 0.0),
                     fitUri = j.optString("fit").takeIf { it.isNotEmpty() }?.let(Uri::parse),
                     gpxUri = j.optString("gpx").takeIf { it.isNotEmpty() }?.let(Uri::parse),
                 )

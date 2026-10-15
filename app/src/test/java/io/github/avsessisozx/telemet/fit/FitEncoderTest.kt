@@ -28,6 +28,10 @@ class FitEncoderTest {
                         speedMs = speed,
                         distanceM = dist,
                         gradePercent = 1.5,
+                        // Sırayla sola 30°, sağa 25° yatan virajlar
+                        leanDeg = if (i % 20 < 10) 30.0 else -25.0,
+                        lateralG = if (i % 20 < 10) 0.55 else -0.45,
+                        longitudinalG = if (i == 450) -0.8 else 0.1,
                     ),
                 ),
             )
@@ -54,6 +58,10 @@ class FitEncoderTest {
         assertEquals(51.0, d[5].enhancedAltitudeM, 0.21)
         assertEquals(180.0, d[9].distanceM, 0.01)
         assertEquals(1.5, d[9].gradePercent, 0.01)
+        assertEquals(30.0, d[0].leanDeg, 1e-4)
+        assertEquals(0.55, d[0].lateralG, 1e-6)
+        assertEquals(0.1, d[0].longitudinalG, 1e-6)
+        assertEquals(kotlin.math.sqrt(0.55 * 0.55 + 0.1 * 0.1), d[0].gForce, 1e-6)
     }
 
     @Test
@@ -75,6 +83,11 @@ class FitEncoderTest {
         assertEquals(16_480.0, sum.distanceM, 0.01)
         assertEquals(1_791_000_000_000L, sum.startUtcMillis)
         assertTrue(sum.ascentM > 100)
+        assertEquals(30.0, sum.maxLeanLeftDeg, 1e-4)
+        assertEquals(25.0, sum.maxLeanRightDeg, 1e-4)
+        assertEquals(0.55, sum.maxLateralG, 1e-6)
+        assertEquals(0.8, sum.maxBrakeG, 1e-6)
+        assertEquals(0.1, sum.maxAccelG, 1e-6)
         assertNull(FitEncoder.summarize(ByteArray(0)))
     }
 

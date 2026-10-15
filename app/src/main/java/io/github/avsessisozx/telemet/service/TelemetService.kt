@@ -17,6 +17,7 @@ import io.github.avsessisozx.telemet.R
 import io.github.avsessisozx.telemet.ble.CameraLink
 import io.github.avsessisozx.telemet.protocol.CameraStatus
 import io.github.avsessisozx.telemet.protocol.GpsPush
+import io.github.avsessisozx.telemet.sensors.SensorHub
 import io.github.avsessisozx.telemet.ui.MainActivity
 import io.github.avsessisozx.telemet.util.AppLog
 import io.github.avsessisozx.telemet.util.Prefs
@@ -65,6 +66,7 @@ class TelemetService : Service(), CameraLink.Listener {
     private lateinit var link: CameraLink
     private lateinit var gps: GpsTracker
     private lateinit var ride: RideRecorder
+    private lateinit var sensors: SensorHub
     private var wakeLock: PowerManager.WakeLock? = null
     private var started = false
 
@@ -89,6 +91,7 @@ class TelemetService : Service(), CameraLink.Listener {
         link = CameraLink(this, prefs.remoteMac, this)
         gps = GpsTracker(this) { fix -> onFix(fix) }
         ride = RideRecorder(this)
+        sensors = SensorHub(this)
         createChannel()
     }
 
@@ -149,6 +152,10 @@ class TelemetService : Service(), CameraLink.Listener {
 
         if (!gps.isGpsEnabled()) AppLog.w("Telefonun konumu kapalı. Ayarlardan açın.")
         gps.start()
+        sensors.start()
+        TelemetState.hasGyro = sensors.hasGyro
+        TelemetState.hasBarometer = sensors.hasBarometer
+        TelemetState.maxLeanDeg = 0.0
         if (prefs.backupEnabled) {
             val id = ride.start(if (resume) prefs.activeRideId else null)
             prefs.activeRideId = id
@@ -169,6 +176,7 @@ class TelemetService : Service(), CameraLink.Listener {
         main.removeCallbacks(pushLoop)
         link.disconnect()
         gps.stop()
+        sensors.stop()
         ride.stop()
         prefs.activeRideId = null
         TelemetState.rideFile = null
@@ -190,6 +198,7 @@ class TelemetService : Service(), CameraLink.Listener {
             main.removeCallbacksAndMessages(null)
             link.disconnect()
             gps.stop()
+        sensors.stop()
             started = false
             TelemetState.serviceRunning = false
             TelemetState.changed()
@@ -207,7 +216,17 @@ class TelemetService : Service(), CameraLink.Listener {
 
     // ---------------------------------------------------------------- GPS
 
-    private fun onFix(fix: GpsTracker.Fix) {
+    /** Barometre varsa yüksekliği ve düşey hızı ondan alır (GPS yüksekliği gürültülü). */
+    private fun withSensors(fix: GpsTracker.Fix): GpsTracker.Fix =
+        fix.copy(
+            altitudeM = sensors.altitude(fix.altitudeM),
+            velocityDownMs = sensors.baroVelocityDown() ?: fix.velocityDownMs,
+        )
+
+    private fun onFix(rawFix: GpsTracker.Fix) {
+        sensors.onGpsSpeed(rawFix.speedMs, rawFix.elapsedMillis)
+        sensors.calibrateAltitude(rawFix.altitudeM, rawFix.verticalAccuracyM)
+        val fix = withSensors(rawFix)
         TelemetState.hasFix = true
         TelemetState.speedKmh = fix.speedMs * 3.6
         TelemetState.altitudeM = fix.altitudeM
@@ -221,7 +240,7 @@ class TelemetService : Service(), CameraLink.Listener {
             gpsLostAt = 0L
         }
         if (ride.isRecording) {
-            ride.add(fix)
+            ride.add(fix, sensors.snapshot(resetPeaks = true))
             TelemetState.distanceKm = ride.distanceM / 1000
         }
         if (!prefs.smoothGps) push(fix)
@@ -263,9 +282,13 @@ class TelemetService : Service(), CameraLink.Listener {
             if (prefs.smoothGps) {
                 val fix = gps.lastFix
                 if (fix != null && age <= MAX_FIX_AGE_MS) {
-                    push(GpsTracker.extrapolate(fix, age / 1000.0))
+                    push(withSensors(GpsTracker.extrapolate(fix, age / 1000.0)))
                 }
             }
+            val snap = sensors.snapshot(resetPeaks = false)
+            TelemetState.leanDeg = snap.leanDeg
+            TelemetState.gForce = snap.totalG
+            if (kotlin.math.abs(snap.leanDeg) > kotlin.math.abs(TelemetState.maxLeanDeg)) TelemetState.maxLeanDeg = snap.leanDeg
             updateRate()
             main.postDelayed(this, PUSH_INTERVAL_MS)
         }

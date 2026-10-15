@@ -54,7 +54,18 @@ Videoyu DJI Mimo'ya aktardıktan sonra düzenleme ekranında **gösterge paneli 
 2. DJI Studio'da videoyu açın → **Pano** → **Veri kaynağı** → **FIT Dosyasını İçe Aktar**.
 3. Gerekirse **Süre Hizalama** ile zamanı videoya oturtun.
 
-FIT dosyasında konum, hız, yükseklik, mesafe ve eğim bulunur. Nabız, pedal, güç, tork için ayrı sensör gerekir; telefon bunları ölçemez.
+FIT dosyasında konum, hız, yükseklik, mesafe ve eğim bulunur. Telefon sensörlerinden gelen **yatış açısı, viraj G'si, fren/hızlanma G'si ve toplam G** de FIT'e geliştirici alanı olarak yazılır. Nabız, pedal, güç, tork için ayrı sensör gerekir; telefon bunları ölçemez.
+
+## Kullanılan telefon sensörleri
+
+| Sensör | Ne için |
+|---|---|
+| GPS | Konum, hız, rota, mesafe (kameraya da gider) |
+| Jiroskop + yerçekimi | Yatış açısı ve viraj G'si. Yatış, tan(yatış) = hız × dönüş hızı / g ile hesaplanır; telefonun gidona nasıl takıldığından bağımsızdır |
+| Barometre (varsa) | GPS'ten çok daha kararlı yükseklik ve eğim; kameraya giden yükseklik de bundan alınır |
+| GPS hız değişimi | Fren ve hızlanma G'si |
+
+Pusula kullanılmıyor: gidonda motor ve çelik aksam pusulayı saptırıyor, hareket halindeki yönü GPS zaten doğru veriyor.
 
 ## Sorun giderme
 

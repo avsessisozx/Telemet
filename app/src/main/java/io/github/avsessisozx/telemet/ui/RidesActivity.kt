@@ -204,8 +204,16 @@ class RidesActivity : Activity() {
             text = "En yüksek %.0f km/sa  •  Ortalama %.0f km/sa  •  Tırmanış %.0f m".format(
                 r.maxSpeedMs * 3.6, r.avgSpeedMs * 3.6, r.ascentM,
             )
-            setPadding(0, dp(2), 0, dp(10))
+            setPadding(0, dp(2), 0, if (r.maxLeanLeftDeg + r.maxLeanRightDeg + r.maxBrakeG > 0) 0 else dp(10))
         })
+        if (r.maxLeanLeftDeg + r.maxLeanRightDeg + r.maxBrakeG + r.maxAccelG > 0) {
+            addView(text(14f, MUTED).apply {
+                text = "Yatış: sol %.0f° / sağ %.0f°  •  Viraj %.2f g  •  Fren %.2f g  •  Hızlanma %.2f g".format(
+                    r.maxLeanLeftDeg, r.maxLeanRightDeg, r.maxLateralG, r.maxBrakeG, r.maxAccelG,
+                )
+                setPadding(0, dp(2), 0, dp(10))
+            })
+        }
         addView(LinearLayout(this@RidesActivity).apply {
             orientation = LinearLayout.HORIZONTAL
             addView(smallButton("Paylaş (FIT + GPX)", ACCENT) { share(r) })

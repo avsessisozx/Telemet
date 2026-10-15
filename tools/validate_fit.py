@@ -36,6 +36,11 @@ else:
         errors.append(f"yükseklik yanlış: {r['enhanced_altitude']}")
     if r.get("distance") is None or r["distance"] <= 0:
         errors.append("mesafe yok")
+    for name in ("lean_angle", "lateral_g", "longitudinal_g", "g_force"):
+        if r.get(name) is None:
+            errors.append(f"sensör alanı yok: {name}")
+    if r.get("lean_angle") is not None and abs(abs(r["lean_angle"]) - 30.0) > 0.01 and abs(abs(r["lean_angle"]) - 25.0) > 0.01:
+        errors.append(f"yatış açısı yanlış: {r['lean_angle']}")
 
 if errors:
     print("HATA:", "; ".join(errors))

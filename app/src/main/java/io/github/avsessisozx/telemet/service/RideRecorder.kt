@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Environment
 import android.provider.MediaStore
 import io.github.avsessisozx.telemet.fit.FitEncoder
+import io.github.avsessisozx.telemet.sensors.SensorHub
 import io.github.avsessisozx.telemet.util.AppLog
 import java.io.BufferedWriter
 import java.io.File
@@ -71,9 +72,9 @@ class RideRecorder(private val context: Context) {
     fun start(resumeId: String?): String? {
         if (isRecording) return rideId
         finishOrphans(except = resumeId)
-        val id = resumeId?.takeIf { File(dir, "$it.fitraw").exists() }
+        val id = resumeId?.takeIf { File(dir, "$it.fitraw2").exists() }
             ?: ("surus_" + SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(Date()))
-        val fitFile = File(dir, "$id.fitraw")
+        val fitFile = File(dir, "$id.fitraw2")
         val gpxFile = File(dir, "$id.gpxpart")
         val resuming = fitFile.exists() && fitFile.length() > 0
         try {
@@ -91,7 +92,7 @@ class RideRecorder(private val context: Context) {
     }
 
     /** Saniyede en fazla bir nokta yazar. */
-    fun add(fix: GpsTracker.Fix) {
+    fun add(fix: GpsTracker.Fix, sensors: SensorHub.Snapshot?) {
         val fit = fitOut ?: return
         val second = fix.utcMillis / 1000
         if (second <= lastSecond) return
@@ -118,6 +119,9 @@ class RideRecorder(private val context: Context) {
             speedMs = fix.speedMs,
             distanceM = distanceM,
             gradePercent = grade,
+            leanDeg = sensors?.peakLeanDeg ?: 0.0,
+            lateralG = sensors?.peakLateralG ?: 0.0,
+            longitudinalG = sensors?.peakLongitudinalG ?: 0.0,
         )
         try {
             fit.write(FitEncoder.encodeRecord(point))
@@ -148,8 +152,26 @@ class RideRecorder(private val context: Context) {
 
     /** Sürüş bitmeden kapanmış eski kayıtları tamamlar. */
     private fun finishOrphans(except: String?) {
-        dir.listFiles { f -> f.name.endsWith(".fitraw") }?.forEach { f ->
-            val id = f.name.removeSuffix(".fitraw")
+        // 0.1.3–0.1.4 sürümünden kalan yarım kayıtları yeni biçime çevir (sensör alanları sıfır).
+        dir.listFiles { f -> f.name.endsWith(".fitraw") }?.forEach { old ->
+            try {
+                val oldSize = FitEncoder.RECORD_SIZE - 16
+                val bytes = old.readBytes()
+                val out = java.io.ByteArrayOutputStream()
+                var i = 0
+                while (i + oldSize <= bytes.size && bytes[i].toInt() == 1) {
+                    out.write(bytes, i, oldSize)
+                    out.write(ByteArray(16))
+                    i += oldSize
+                }
+                File(dir, old.name + "2").writeBytes(out.toByteArray())
+                old.delete()
+            } catch (e: Exception) {
+                AppLog.w("Eski kayıt çevrilemedi: ${old.name}", e)
+            }
+        }
+        dir.listFiles { f -> f.name.endsWith(".fitraw2") }?.forEach { f ->
+            val id = f.name.removeSuffix(".fitraw2")
             if (id != except) {
                 AppLog.i("Yarım kalmış sürüş kaydı tamamlanıyor: $id")
                 finish(id)
@@ -158,7 +180,7 @@ class RideRecorder(private val context: Context) {
     }
 
     private fun finish(id: String) {
-        val fitRaw = File(dir, "$id.fitraw")
+        val fitRaw = File(dir, "$id.fitraw2")
         val gpxPart = File(dir, "$id.gpxpart")
         try {
             val raw = if (fitRaw.exists()) fitRaw.readBytes() else ByteArray(0)
@@ -233,7 +255,7 @@ class RideRecorder(private val context: Context) {
             // Yarım yazılmış son noktayı kes.
             RandomAccessFile(fitFile, "rw").use { it.setLength(valid.toLong()) }
         }
-        val gpxPart = File(dir, fitFile.name.removeSuffix(".fitraw") + ".gpxpart")
+        val gpxPart = File(dir, fitFile.name.removeSuffix(".fitraw2") + ".gpxpart")
         if (gpxPart.exists()) {
             val text = gpxPart.readText(Charsets.UTF_8)
             val keep = completeLines(text)

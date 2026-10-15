@@ -77,6 +77,10 @@ class MainActivity : Activity() {
     private lateinit var setupCard: LinearLayout
     private lateinit var setupList: TextView
     private lateinit var distValue: TextView
+    private lateinit var leanValue: TextView
+    private lateinit var gValue: TextView
+    private lateinit var maxLeanValue: TextView
+    private lateinit var sensorInfo: TextView
 
     private val stateListener: () -> Unit = { render() }
     private val logListener: () -> Unit = { renderLog() }
@@ -242,6 +246,21 @@ class MainActivity : Activity() {
                 addView(distBox)
                 addView(satBox)
             })
+            val (leanBox, lv) = metric("yatış")
+            val (gBox, gv) = metric("G")
+            val (maxLeanBox, mlv) = metric("en çok yatış")
+            leanValue = lv
+            gValue = gv
+            maxLeanValue = mlv
+            addView(LinearLayout(this@MainActivity).apply {
+                orientation = LinearLayout.HORIZONTAL
+                setPadding(0, dp(12), 0, 0)
+                addView(leanBox)
+                addView(gBox)
+                addView(maxLeanBox)
+            })
+            sensorInfo = text(12f, MUTED).apply { setPadding(0, dp(8), 0, 0) }
+            addView(sensorInfo)
             addView(gpsInfo)
         })
 
@@ -383,6 +402,21 @@ class MainActivity : Activity() {
             window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         }
         distValue.text = if (s.serviceRunning && s.rideFile != null) "%.1f".format(s.distanceKm) else "–"
+        if (s.serviceRunning && s.hasGyro) {
+            leanValue.text = leanText(s.leanDeg)
+            gValue.text = "%.2f".format(s.gForce)
+            maxLeanValue.text = leanText(s.maxLeanDeg)
+        } else {
+            leanValue.text = "–"
+            gValue.text = "–"
+            maxLeanValue.text = "–"
+        }
+        sensorInfo.text = if (s.serviceRunning) {
+            "Sensörler: GPS ✓  •  jiroskop " + (if (s.hasGyro) "✓" else "✗") +
+                "  •  barometre " + (if (s.hasBarometer) "✓ (yükseklik barometreden)" else "✗ (yükseklik GPS'ten)")
+        } else {
+            ""
+        }
 
         // GPS
         when {
@@ -423,6 +457,13 @@ class MainActivity : Activity() {
             st?.isRecording == true -> "■ Kaydı durdur"
             else -> "● Kaydı başlat"
         }
+    }
+
+    /** Sola yatış ◀, sağa yatış ▶ ile gösterilir. */
+    private fun leanText(deg: Double): String = when {
+        deg > 1 -> "◀%.0f°".format(deg)
+        deg < -1 -> "%.0f°▶".format(-deg)
+        else -> "0°"
     }
 
     private fun renderLog() {
