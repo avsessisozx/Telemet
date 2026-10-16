@@ -2,7 +2,7 @@ name: APK derle
 
 on:
   push:
-    branches: [main]
+    branches-ignore: [ci-screenshots]
   pull_request:
   workflow_dispatch:
 
@@ -12,6 +12,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.apk.outputs.version }}
     steps:
       - uses: actions/checkout@v4
 
@@ -29,6 +31,7 @@ jobs:
         run: |
           chmod +x gradlew
           ./gradlew --no-daemon --stacktrace testDebugUnitTest assembleDebug 2>&1 | tee build.log
+          test ${PIPESTATUS[0]} -eq 0
 
       - name: Çevirileri kontrol et
         shell: bash
@@ -43,16 +46,9 @@ jobs:
       - name: Hataları özetle
         if: failure()
         run: |
-          # Derleme hatalarını herkese açık "annotation" olarak yaz; böylece günlüğü indirmeden görülebilir.
           if [ -f build.log ]; then
             errors=$(grep -E "^e: |error:|What went wrong|Could not|FAILED|Exception" -A4 build.log | head -80 | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}')
             echo "::error title=Derleme hatası::${errors}"
-            {
-              echo '### Derleme hatası'
-              echo '```'
-              grep -E "^e: |error:|What went wrong|Could not|FAILED" -A4 build.log | head -80
-              echo '```'
-            } >> "$GITHUB_STEP_SUMMARY"
           fi
 
       - name: Test sonuçlarını özetle
@@ -63,7 +59,6 @@ jobs:
           if [ ${#files[@]} -gt 0 ]; then
             total=$(grep -ho 'tests="[0-9]*"' "${files[@]}" | grep -o '[0-9]*' | awk '{s+=$1} END {print s+0}')
             failed=$(grep -ho 'failures="[0-9]*"' "${files[@]}" | grep -o '[0-9]*' | awk '{s+=$1} END {print s+0}')
-            echo "### Testler: $total çalıştı, $failed başarısız" >> "$GITHUB_STEP_SUMMARY"
             echo "::notice title=Testler::$total test çalıştı, $failed başarısız"
           fi
 
@@ -74,20 +69,86 @@ jobs:
           mkdir -p out
           cp app/build/outputs/apk/debug/app-debug.apk "out/Telemet-${version}.apk"
           echo "version=${version}" >> "$GITHUB_OUTPUT"
-          echo "### APK hazır: Telemet-${version}.apk" >> "$GITHUB_STEP_SUMMARY"
 
       - name: APK'yı yükle (Actions)
         uses: actions/upload-artifact@v4
         with:
-          name: Telemet-${{ steps.apk.outputs.version }}
+          name: apk
           path: out/*.apk
 
+  # Uygulamayı gerçek bir Android emülatöründe açıp kullanan arayüz testleri.
+  # Ekran görüntüleri ve raporlar "ci-screenshots" dalına yazılır.
+  ui-test:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: KVM'yi etkinleştir
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Emülatörde arayüz testleri
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -camera-front none
+          script: |
+            chmod +x gradlew
+            ./gradlew --no-daemon connectedDebugAndroidTest > ui-test.log 2>&1 || touch ui-failed
+            mkdir -p pub && adb pull /sdcard/Android/data/io.github.avsessisozx.telemet.test/files/screens pub/ || true
+            adb logcat -d -v time AndroidRuntime:E TestRunner:I Telemet:I System.err:W *:S > pub/logcat.txt || true
+
+      - name: Sonuçları yayınla
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p pub
+          cp ui-test.log pub/ 2>/dev/null || true
+          cp -r app/build/outputs/androidTest-results pub/results 2>/dev/null || true
+          [ -f ui-failed ] && echo "FAILED" > pub/STATUS || echo "PASSED" > pub/STATUS
+          echo "${GITHUB_SHA}" > pub/COMMIT
+          cd pub
+          git init -q
+          git checkout -q -b ci-screenshots
+          git add -A
+          git -c user.name=ci -c user.email=ci@users.noreply.github.com commit -qm "UI test results ${GITHUB_SHA::7}"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" HEAD:ci-screenshots
+
+      - name: Arayüz testleri geçti mi
+        run: test ! -f ui-failed
+
+  release:
+    needs: [build, ui-test]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: apk
+          path: out
+
       - name: Sürüm yayınla (Releases)
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v${{ steps.apk.outputs.version }}
-          name: Telemet ${{ steps.apk.outputs.version }}
+          tag_name: v${{ needs.build.outputs.version }}
+          name: Telemet ${{ needs.build.outputs.version }}
           make_latest: true
           files: out/*.apk
           body: |
@@ -97,6 +158,6 @@ jobs:
 
             ## Install
 
-            On your Android phone, tap **Telemet-${{ steps.apk.outputs.version }}.apk** below to download it, then open it. It installs over older versions and keeps your rides.
+            On your Android phone, tap **Telemet-${{ needs.build.outputs.version }}.apk** below to download it, then open it. It installs over older versions and keeps your rides.
 
             Turns your phone into a GPS remote for DJI Osmo Action cameras: speed, route and altitude dashboards in DJI Mimo / DJI Studio, plus lean angle, G-force and FIT/GPX export. [Read more](https://github.com/avsessisozx/Telemet#readme)

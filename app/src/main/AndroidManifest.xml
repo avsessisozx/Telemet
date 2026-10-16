@@ -23,10 +23,14 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 
+    <!-- Yalnızca kullanıcı "Güncellemeleri denetle"ye bastığında ve A-GPS için -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-feature android:name="android.hardware.bluetooth_le" android:required="true" />
     <uses-feature android:name="android.hardware.location.gps" android:required="true" />
 
     <application
+        android:name=".TelemetApp"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher"
@@ -48,9 +52,22 @@
         </activity>
 
         <activity
-            android:name=".ui.RidesActivity"
+            android:name=".ui.OnboardingActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.RideDetailActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.LogActivity"
+            android:exported="false" />
+
+        <provider
+            android:name=".util.ShareProvider"
+            android:authorities="${applicationId}.share"
             android:exported="false"
-            android:label="Sürüşlerim" />
+            android:grantUriPermissions="true" />
 
         <service
             android:name=".service.TelemetService"

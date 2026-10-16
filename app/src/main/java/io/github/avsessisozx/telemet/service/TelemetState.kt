@@ -63,6 +63,28 @@ object TelemetState {
         }, 200)
     }
 
+    /** "Tüm verileri temizle" sonrası: bellekteki her şeyi başlangıç değerlerine döndürür. */
+    fun resetAll() {
+        serviceRunning = false
+        hasFix = false
+        fixAgeMs = Long.MAX_VALUE
+        satellitesUsed = 0
+        satellitesVisible = 0
+        speedKmh = 0.0
+        altitudeM = 0.0
+        gpsPacketsSent = 0
+        gpsPacketsPerSecond = 0.0
+        rideFile = null
+        distanceKm = 0.0
+        recordPending = false
+        leanDeg = 0.0
+        gForce = 0.0
+        maxLeanDeg = 0.0
+        cameraName = null
+        resetCamera()
+        changed()
+    }
+
     fun resetCamera() {
         linkState = CameraLink.State.IDLE
         linkDetail = ""

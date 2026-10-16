@@ -72,7 +72,66 @@ class Prefs(context: Context) {
             return mac
         }
 
+    /** İlk açılıştaki kurulum sihirbazı tamamlandı mı. */
+    var onboardingDone: Boolean
+        get() = sp.getBoolean("onboarding_done", false)
+        set(v) { sp.edit().putBoolean("onboarding_done", v).commit() }
+
+    /** Mil, mil/sa ve feet ile göster (yalnızca ekranda; dosyalar her zaman metrik). */
+    var imperial: Boolean
+        get() = sp.getBoolean("units_imperial", false)
+        set(v) = sp.edit().putBoolean("units_imperial", v).apply()
+
+    /** Sürüş ekranındaki sensör kartı açık mı. */
+    var sensorsExpanded: Boolean
+        get() = sp.getBoolean("sensors_expanded", false)
+        set(v) = sp.edit().putBoolean("sensors_expanded", v).apply()
+
     fun forgetCamera() {
         sp.edit().remove("last_camera_address").remove("last_camera_name").apply()
+    }
+
+    /**
+     * Kamera eşleşmesini tamamen sıfırlar: kayıtlı kamera unutulur ve kameraya kendimizi tanıttığımız
+     * kimlik yenilenir. Kamera bir sonraki bağlantıda yeniden onay ister; takılan eşleşmeleri çözer.
+     */
+    fun resetPairing() {
+        sp.edit().remove("last_camera_address").remove("last_camera_name").remove("remote_mac").commit()
+    }
+
+    /** Ayarları varsayılana döndürür. Sürüşler, kamera eşleşmesi, dil ve kurulum durumu korunur. */
+    fun resetSettings() {
+        sp.edit()
+            .remove("smooth_gps").remove("backup_enabled").remove("keep_screen_on")
+            .remove("units_imperial").remove("sensors_expanded")
+            .commit()
+    }
+
+    /** Yedekleme için tüm değerler. */
+    fun export(): Map<String, *> = sp.all
+
+    /** Yedekten geri yüklerken değerleri yazar. Sürüş durumuyla ilgili anahtarlar atlanır. */
+    fun import(values: Map<String, Any?>) {
+        val e = sp.edit()
+        for ((k, v) in values) {
+            if (k in TRANSIENT_KEYS) continue
+            when (v) {
+                is Boolean -> e.putBoolean(k, v)
+                is Int -> e.putInt(k, v)
+                is Long -> e.putLong(k, v)
+                is Float -> e.putFloat(k, v)
+                is String -> e.putString(k, v)
+            }
+        }
+        e.commit()
+    }
+
+    fun clearAll() {
+        sp.edit().clear().commit()
+    }
+
+    companion object {
+        /** Yedekten geri yüklenmeyen, o anki sürüşe ait anahtarlar. */
+        val TRANSIENT_KEYS = setOf("should_run", "active_ride_id")
     }
 }
