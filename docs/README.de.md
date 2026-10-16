@@ -17,6 +17,10 @@ DJI Osmo Action Kameras speichern Geschwindigkeit, Route und Höhe nur dann im V
 - 🗂️ **Jede Fahrt einzeln**: „Meine Fahrten“ nach Tagen gruppiert mit Strecke, Dauer, Max./Ø-Geschwindigkeit und Anstieg
 - 💾 **FIT + GPX-Sicherung jeder Fahrt**: FIT in DJI Studio importieren, falls die Kamera Daten verpasst hat
 - 🏍️ **Schräglage und G-Kräfte** aus Gyroskop und GPS, unabhängig davon, wie das Handy montiert ist
+- 🎞️ **Abgleich mit Videos**: Die Kamera teilt lange Aufnahmen in Teile; wähle die Teile (oder teile sie aus der Galerie mit Telemet) und erhalte pro Teil eine FIT + GPX oder eine zusammengefasste Datei
+- 🟩 **Anzeige-Video**: Tempo, Schräglage, G, Höhe, Strecke und Mini-Karte auf grünem Hintergrund, in Größe und Länge jedes Videoteils; per Chroma Key über dein Video legen
+- 🎛️ **Schräglage und G in DJI Mimo** (optional): zusätzlich in die Felder Trittfrequenz und Leistung geschrieben
+- 🤖 **Automatische Aufnahme** (optional): Die Kamera startet beim Losfahren und stoppt nach 3 Minuten Stillstand
 - 📈 **Barometrische Höhe** auf Handys mit Barometer
 - 🔋 **Läuft wie eine Navi-App**: zeichnet auch bei ausgeschaltetem Bildschirm oder anderer App im Vordergrund weiter auf
 - ⚡ **Schneller erster Fix**: GPS wärmt beim Öffnen der App vor; Lücken vor dem Fix und in Tunneln werden gefüllt

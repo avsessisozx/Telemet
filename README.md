@@ -49,6 +49,10 @@ Built for motorcycle riders, but works the same on a bicycle, in a car or on foo
 - 🛟 **Safe reset** — "Clear all data" backs up first and can be restored in one tap; ride files are never deleted
 - 💾 **FIT + GPX backup of every ride** — import the FIT file in DJI Studio (Dashboard → Data source → Import FIT file) if the camera missed data
 - 🏍️ **Lean angle and G-force** — calculated from the phone's gyroscope and GPS, independent of how the phone is mounted; written to the FIT file
+- 🎞️ **Match with camera videos** — the camera splits long recordings into parts; pick the parts (or share them to Telemet from your gallery) and get a FIT + GPX for each part, or one merged file. Start times are matched automatically, with a seconds offset if needed
+- 🟩 **Gauge video** — speed, lean angle, G, altitude, distance and a mini route map on a green background, sized and timed for each video part; lay it over your video in CapCut or any editor with chroma key
+- 🎛️ **Lean angle and G in DJI Mimo** (optional) — also written into the cadence and power fields, which Mimo can show as gauges
+- 🤖 **Automatic recording** (optional) — the camera starts recording when you ride off and stops after 3 minutes standing still
 - 📈 **Barometric altitude** — on phones with a barometer, much steadier altitude and grade than GPS alone
 - 🔋 **Runs like a navigation app** — keeps recording with the screen off or another app (e.g. maps) in front, restarts itself if the system kills it
 - ⚡ **Fast first fix** — GPS warms up as soon as the app opens; gaps before the first fix and during tunnels are filled so the FIT file covers the whole video

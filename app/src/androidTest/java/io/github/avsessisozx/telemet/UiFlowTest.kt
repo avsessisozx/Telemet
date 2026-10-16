@@ -121,6 +121,9 @@ class UiFlowTest {
     }
 
     private fun launch(cls: Class<*>, extras: Intent.() -> Unit = {}) {
+        // Emülatörde ara sıra "Pixel Launcher yanıt vermiyor" penceresi çıkıp odağı çalıyor; gizle ve kapat.
+        shell("settings put global hide_error_dialogs 1")
+        shell("am broadcast -a android.intent.action.CLOSE_SYSTEM_DIALOGS")
         app.startActivity(Intent(app, cls).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK).apply(extras))
         Thread.sleep(1200)
     }

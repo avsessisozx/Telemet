@@ -17,6 +17,10 @@ Las cámaras DJI Osmo Action solo graban velocidad, ruta y altitud en el vídeo 
 - 🗂️ **Cada ruta por separado:** "Mis rutas" agrupadas por día con distancia, duración, velocidad máx./media y desnivel
 - 💾 **Copia FIT + GPX de cada ruta:** importa el FIT en DJI Studio si la cámara no recibió datos
 - 🏍️ **Ángulo de inclinación y fuerza G** a partir del giroscopio y el GPS, sin importar cómo esté montado el teléfono
+- 🎞️ **Sincronizar con vídeos**: la cámara divide las grabaciones largas en partes; elígelas (o compártelas con Telemet desde la galería) y obtén un FIT + GPX por parte o un único archivo unido
+- 🟩 **Vídeo de indicadores**: velocidad, inclinación, G, altitud, distancia y minimapa sobre fondo verde, con el tamaño y la duración de cada parte; colócalo sobre tu vídeo con chroma key
+- 🎛️ **Inclinación y G en DJI Mimo** (opcional): también se escriben en los campos de cadencia y potencia
+- 🤖 **Grabación automática** (opcional): la cámara graba al arrancar y se detiene tras 3 minutos parado
 - 📈 **Altitud barométrica** en teléfonos con barómetro
 - 🔋 **Funciona como una app de navegación:** sigue grabando con la pantalla apagada u otra app delante
 - ⚡ **Primera señal rápida:** el GPS se prepara al abrir la app; se rellenan los huecos antes de la señal y en túneles
