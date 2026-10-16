@@ -1,0 +1,48 @@
+10-16 19:10:59.033  5081  5101 I TestRunner: started: t07_logScreen(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:10:59.068   521  2234 W InputManager-JNI: Input channel object '4546ba4 io.github.avsessisozx.telemet/io.github.avsessisozx.telemet.ui.OnboardingActivity (client)' was disposed without first being removed with the input manager!
+10-16 19:10:59.181   521  2234 I ActivityManager: Broadcasting: Intent { act=android.intent.action.CLOSE_SYSTEM_DIALOGS flg=0x400000 }
+10-16 19:10:59.184   834   834 I vol.VolumeDialogImpl: mDialog.dismiss() reason: volume_controller from: com.android.systemui.volume.VolumeDialogImpl$7.onDismissRequested:3
+10-16 19:10:59.185   521   538 I ActivityManager: Broadcast completed: result=0
+10-16 19:10:59.201   834   889 D SplashScreenView: Build android.window.SplashScreenView{1147946 V.E...... ......ID 0,0-0,0}
+10-16 19:10:59.201   834   889 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-16 19:10:59.201   834   889 D SplashScreenView: Branding: view: android.view.View{4cf2707 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-16 19:10:59.242  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.LogActivity@940d1d2 in: PRE_ON_CREATE
+10-16 19:10:59.264   400   400 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+10-16 19:10:59.289  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.LogActivity@940d1d2 in: CREATED
+10-16 19:10:59.300  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.LogActivity@940d1d2 in: STARTED
+10-16 19:10:59.310  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.LogActivity@940d1d2 in: RESUMED
+10-16 19:10:59.436  1099  2028 D EGL_emulation: app_time_stats: avg=123.70ms min=26.65ms max=318.79ms count=10
+10-16 19:10:59.475   834   834 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-16 19:10:59.656   521   538 W ziparchive: Unable to open '/data/app/~~jgbdf2cyX9WAGB4Ms6p9ww==/io.github.avsessisozx.telemet-_aznyiADPet489_QVpKCxw==/base.dm': No such file or directory
+10-16 19:10:59.658   521   538 I ActivityTaskManager: Displayed io.github.avsessisozx.telemet/.ui.LogActivity for user 0: +468ms
+10-16 19:10:59.694  1024  1241 D BtGatt.ScanManager: uid 10131 isForeground true scanMode -1
+10-16 19:10:59.694  1024  1241 D BtGatt.ScanManager: uid 10131 isForeground true scanMode 1
+10-16 19:10:59.695  1024  1241 D BtGatt.ScanManager: uid 10131 isForeground true scanMode -1
+10-16 19:10:59.696   521  2198 I ImeTracker: io.github.avsessisozx.telemet:9626464e: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-16 19:10:59.696   521  2198 I ImeTracker: io.github.avsessisozx.telemet:9626464e: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-16 19:10:59.698  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+10-16 19:10:59.699  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-16 19:10:59.699  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.avsessisozx.telemet fieldId=0 fieldName=null extras=null}, false)
+10-16 19:10:59.699  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-16 19:10:59.708   834   885 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@1d36b1e
+10-16 19:10:59.710   521  2311 W InputManager-JNI: Input channel object '2b0091e Splash Screen io.github.avsessisozx.telemet (client)' was disposed without first being removed with the input manager!
+10-16 19:10:59.720  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-16 19:10:59.801  1099  1148 I ImeTracker: com.google.android.apps.nexuslauncher:88f0d722: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+10-16 19:10:59.801  1099  1148 I ImeTracker: com.google.android.apps.nexuslauncher:88f0d722: onFailed at PHASE_CLIENT_VIEW_SERVED
+10-16 19:10:59.826  1099  2278 D OneSearchSuggestProvider: Shut down the binder channel
+10-16 19:10:59.842  1099  1404 I IPCThreadState: oneway function results for code 2 on binder at 0x70c7c9a714f0 will be dropped but finished with status UNKNOWN_TRANSACTION
+10-16 19:10:59.851  1714  2646 W SearchServiceCore: Abort, client detached.
+10-16 19:10:59.883  1714  3109 I PBSessionCacheImpl: Deleted sessionId[7540043897676336] from persistence.
+10-16 19:11:00.034  1632  1907 I AiAiEcho: Predicting[0]:
+10-16 19:11:00.035  1632  1907 I AiAiEcho: EchoTargets:
+10-16 19:11:00.035  1632  1907 I AiAiEcho: Filtered by AiAi flag check:
+10-16 19:11:00.035  1632  1907 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+10-16 19:11:00.036  1632  1907 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+10-16 19:11:00.037   834   899 D EGL_emulation: app_time_stats: avg=2351.95ms min=5.60ms max=6756.03ms count=3
+10-16 19:11:00.047   834   834 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-16 19:11:00.412  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view view.getTag() is "log_text"
+10-16 19:11:00.916   834   834 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+10-16 19:11:01.001  5081  5221 D EGL_emulation: app_time_stats: avg=336.86ms min=44.96ms max=1145.14ms count=4
+10-16 19:11:01.360  5081  5090 I ssisozx.telemet: NativeAlloc concurrent copying GC freed 58864(3455KB) AllocSpace objects, 64(4200KB) LOS objects, 49% free, 5737KB/11MB, paused 41us,11us total 118.697ms
+10-16 19:11:01.431  1665  5278 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:01.435  5081  5101 I TestRunner: finished: t07_logScreen(io.github.avsessisozx.telemet.UiFlowTest)

@@ -1,0 +1,70 @@
+10-16 19:11:06.346  5081  5101 I TestRunner: started: t09_freshInstallShowsWizard(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:11:06.452   834   899 D EGL_emulation: app_time_stats: avg=1576.61ms min=1.61ms max=3151.60ms count=2
+10-16 19:11:06.460   521  2198 W InputManager-JNI: Input channel object '26f7d7f io.github.avsessisozx.telemet/io.github.avsessisozx.telemet.ui.MainActivity (client)' was disposed without first being removed with the input manager!
+10-16 19:11:06.557   521  2198 I ActivityManager: Broadcasting: Intent { act=android.intent.action.CLOSE_SYSTEM_DIALOGS flg=0x400000 }
+10-16 19:11:06.570  6023  6979 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.droidguard.DroidGuardGcmTaskService started execution. cause:7 exec_start_elapsed_seconds: 265 [CONTEXT service_id=218 ]
+10-16 19:11:06.572   834   834 I vol.VolumeDialogImpl: mDialog.dismiss() reason: volume_controller from: com.android.systemui.volume.VolumeDialogImpl$7.onDismissRequested:3
+10-16 19:11:06.573   521   538 I ActivityManager: Broadcast completed: result=0
+10-16 19:11:06.591   834   889 D SplashScreenView: Build android.window.SplashScreenView{2a62008 V.E...... ......ID 0,0-0,0}
+10-16 19:11:06.591   834   889 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-16 19:11:06.591   834   889 D SplashScreenView: Branding: view: android.view.View{cae43a1 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-16 19:11:06.649  6023  6875 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.droidguard.DroidGuardGcmTaskService finished executing. cause:7 result: 1 elapsed_millis: 88 uptime_millis: 88 exec_start_elapsed_seconds: 265 [CONTEXT service_id=218 ]
+10-16 19:11:06.656  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@e518620 in: PRE_ON_CREATE
+10-16 19:11:06.664   400   400 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+10-16 19:11:06.670  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@e518620 in: CREATED
+10-16 19:11:06.782  1099  2028 D EGL_emulation: app_time_stats: avg=94.12ms min=29.41ms max=296.48ms count=12
+10-16 19:11:06.899   335  7068 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10131 0}
+10-16 19:11:06.899   335  7070 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-16 19:11:06.899   335  7070 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x71926aecc430
+10-16 19:11:06.899   335  7070 I resolv  : doQuery: rcode=0, ancount=8, return value=164
+10-16 19:11:06.902   335  7069 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-16 19:11:06.923   335  7069 I resolv  : res_nsend: used send_dg 260 terrno: 0
+10-16 19:11:06.923   335  7069 I resolv  : doQuery: rcode=0, ancount=8, return value=260
+10-16 19:11:06.928  3391  3574 D TrafficStats: tagSocket(114) with statsTag=0x1803, statsUid=10131
+10-16 19:11:06.930  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.OnboardingActivity@b9a5d11 in: PRE_ON_CREATE
+10-16 19:11:06.953   834   834 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+10-16 19:11:07.104  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.OnboardingActivity@b9a5d11 in: CREATED
+10-16 19:11:07.104  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.OnboardingActivity@b9a5d11 in: STARTED
+10-16 19:11:07.105  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.OnboardingActivity@b9a5d11 in: RESUMED
+10-16 19:11:07.112   521  1789 I RemoteProvisionSysSvc: getRegistration(android.hardware.security.keymint.IRemotelyProvisionedComponent/default)
+10-16 19:11:07.160   521   521 I RegistrationProxy: onServiceConnected: com.android.rkpdapp.service.RemoteProvisioningService
+10-16 19:11:07.226   521  2311 I RegistrationProxy: IGetRegistrationCallback.onSuccess
+10-16 19:11:07.227   521  2236 I RemoteProvisionSysSvc: Fetching key 10131 for client 202185612
+10-16 19:11:07.227   521  2236 I RegistrationProxy: getKeyAsync operation started with callback 172069589
+10-16 19:11:07.228  3776  3868 I RkpdRegistrationBinder: Key requested for : android.hardware.security.keymint.IRemotelyProvisionedComponent/default, clientUid: 1017, keyId: 10131, callback: 155111814
+10-16 19:11:07.234  3776  3868 I RkpdRegistrationBinder: Key successfully assigned to client
+10-16 19:11:07.235   521   521 I RemoteProvisionSysSvc: Successfully fetched key for client 202185612
+10-16 19:11:07.306   521   538 W ziparchive: Unable to open '/data/app/~~jgbdf2cyX9WAGB4Ms6p9ww==/io.github.avsessisozx.telemet-_aznyiADPet489_QVpKCxw==/base.dm': No such file or directory
+10-16 19:11:07.307   521   538 I ActivityTaskManager: Displayed io.github.avsessisozx.telemet/.ui.OnboardingActivity for user 0: +729ms
+10-16 19:11:07.356   521  1789 I ImeTracker: io.github.avsessisozx.telemet:18274886: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-16 19:11:07.356   521  1789 I ImeTracker: io.github.avsessisozx.telemet:18274886: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-16 19:11:07.359  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+10-16 19:11:07.360  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-16 19:11:07.361  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.avsessisozx.telemet fieldId=0 fieldName=null extras=null}, false)
+10-16 19:11:07.361  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-16 19:11:07.362  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-16 19:11:07.404   834   885 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@956e820
+10-16 19:11:07.405   521  2198 W InputManager-JNI: Input channel object 'c47cb00 Splash Screen io.github.avsessisozx.telemet (client)' was disposed without first being removed with the input manager!
+10-16 19:11:07.457  1714  3109 I PBSessionCacheImpl: Deleted sessionId[7540043897676338] from persistence.
+10-16 19:11:07.463  1099  2278 D OneSearchSuggestProvider: Shut down the binder channel
+10-16 19:11:07.464  1099  2107 I IPCThreadState: oneway function results for code 2 on binder at 0x70c7c9a6c870 will be dropped but finished with status UNKNOWN_TRANSACTION
+10-16 19:11:07.466  1099  1148 I ImeTracker: com.google.android.apps.nexuslauncher:de57d05d: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+10-16 19:11:07.466  1099  1148 I ImeTracker: com.google.android.apps.nexuslauncher:de57d05d: onFailed at PHASE_CLIENT_VIEW_SERVED
+10-16 19:11:07.532  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@e518620 in: DESTROYED
+10-16 19:11:07.545  1024  1241 D BtGatt.ScanManager: uid 10131 isForeground true scanMode -1
+10-16 19:11:07.545  1024  1241 D BtGatt.ScanManager: uid 10131 isForeground true scanMode 1
+10-16 19:11:07.545  1024  1241 D BtGatt.ScanManager: uid 10131 isForeground true scanMode -1
+10-16 19:11:07.579  1714  2646 W SearchServiceCore: Abort, client detached.
+10-16 19:11:07.581  6062  6141 E WakeLock: DG:service ** IS FORCE-RELEASED ON TIMEOUT **
+10-16 19:11:07.700  3391  7062 W libc    : Access denied finding property "persist.adb.tls_server.enable"
+10-16 19:11:07.700  3391  7062 W libc    : Access denied finding property "service.adb.tls.port"
+10-16 19:11:07.705   335  7074 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10131 0}
+10-16 19:11:07.697  3391  3391 W IntentService[D: type=1400 audit(0.0:201): avc:  denied  { read } for  name="u:object_r:system_adbd_prop:s0" dev="tmpfs" ino=292 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:system_adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+10-16 19:11:07.705  3391  7062 D TrafficStats: tagSocket(120) with statsTag=0x1809, statsUid=-1
+10-16 19:11:07.706  3391  7062 D TrafficStats: tagSocket(120) with statsTag=0x1809, statsUid=-1
+10-16 19:11:07.707  3391  7062 D TrafficStats: tagSocket(120) with statsTag=0x1809, statsUid=-1
+10-16 19:11:07.697  3391  3391 W IntentService[D: type=1400 audit(0.0:202): avc:  denied  { read } for  name="u:object_r:adbd_prop:s0" dev="tmpfs" ino=60 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+10-16 19:11:07.712  3391  7062 W SystemServiceRegistry: No service published for: persistent_data_block
+10-16 19:11:07.793  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Welcome to Telemet"
+10-16 19:11:08.641  1665  2850 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:08.649  5081  5101 I TestRunner: finished: t09_freshInstallShowsWizard(io.github.avsessisozx.telemet.UiFlowTest)

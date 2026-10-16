@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="io.github.avsessisozx.telemet.UiFlowTest" tests="12" failures="0" errors="0" skipped="0" time="177.346" timestamp="2026-10-16T19:11:47" hostname="localhost">
+  <properties>
+    <property name="device" value="emulator-5554 - 14" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="t01_firstLaunchSkipEverything" classname="io.github.avsessisozx.telemet.UiFlowTest" time="19.819" />
+  <testcase name="t02_permissionsGrantedNoOnboardingAgain" classname="io.github.avsessisozx.telemet.UiFlowTest" time="6.15" />
+  <testcase name="t03_ridesListAndDetail" classname="io.github.avsessisozx.telemet.UiFlowTest" time="23.644" />
+  <testcase name="t04_settingsAndUnits" classname="io.github.avsessisozx.telemet.UiFlowTest" time="8.451" />
+  <testcase name="t05_clearDataWithBackupAndRestore" classname="io.github.avsessisozx.telemet.UiFlowTest" time="22.449" />
+  <testcase name="t06_languages" classname="io.github.avsessisozx.telemet.UiFlowTest" time="39.462" />
+  <testcase name="t07_logScreen" classname="io.github.avsessisozx.telemet.UiFlowTest" time="2.398" />
+  <testcase name="t08_upgradeWithPermissionsSkipsWizard" classname="io.github.avsessisozx.telemet.UiFlowTest" time="2.668" />
+  <testcase name="t09_freshInstallShowsWizard" classname="io.github.avsessisozx.telemet.UiFlowTest" time="2.304" />
+  <testcase name="t10_overlayFrameAndEncoder" classname="io.github.avsessisozx.telemet.UiFlowTest" time="2.448" />
+  <testcase name="t11_videoMatch" classname="io.github.avsessisozx.telemet.UiFlowTest" time="21.8" />
+  <testcase name="t12_newSettings" classname="io.github.avsessisozx.telemet.UiFlowTest" time="5.893" />
+</testsuite>

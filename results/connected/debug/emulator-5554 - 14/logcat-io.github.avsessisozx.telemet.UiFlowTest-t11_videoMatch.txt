@@ -1,0 +1,991 @@
+10-16 19:11:12.204  5081  5101 I TestRunner: started: t11_videoMatch(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:11:12.255   521  1789 I ActivityManager: Broadcasting: Intent { act=android.intent.action.CLOSE_SYSTEM_DIALOGS flg=0x400000 }
+10-16 19:11:12.258   834   834 I vol.VolumeDialogImpl: mDialog.dismiss() reason: volume_controller from: com.android.systemui.volume.VolumeDialogImpl$7.onDismissRequested:3
+10-16 19:11:12.259   521   538 I ActivityManager: Broadcast completed: result=0
+10-16 19:11:12.271   834   889 D SplashScreenView: Build android.window.SplashScreenView{b55b37b V.E...... ......ID 0,0-0,0}
+10-16 19:11:12.271   834   889 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-16 19:11:12.271   834   889 D SplashScreenView: Branding: view: android.view.View{c4f1598 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-16 19:11:12.283   400   400 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+10-16 19:11:12.320  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.VideoSyncActivity@e5fd3ca in: PRE_ON_CREATE
+10-16 19:11:12.382  1099  2028 D EGL_emulation: app_time_stats: avg=439.10ms min=34.95ms max=2627.96ms count=8
+10-16 19:11:12.646  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.VideoSyncActivity@e5fd3ca in: CREATED
+10-16 19:11:12.648  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.VideoSyncActivity@e5fd3ca in: STARTED
+10-16 19:11:12.691  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.VideoSyncActivity@e5fd3ca in: RESUMED
+10-16 19:11:12.985   521   538 W ziparchive: Unable to open '/data/app/~~jgbdf2cyX9WAGB4Ms6p9ww==/io.github.avsessisozx.telemet-_aznyiADPet489_QVpKCxw==/base.dm': No such file or directory
+10-16 19:11:12.987   521   538 I ActivityTaskManager: Displayed io.github.avsessisozx.telemet/.ui.VideoSyncActivity for user 0: +723ms
+10-16 19:11:12.990  5081  5081 I Telemet : Video match: 3 video(s) read
+10-16 19:11:12.996  5081  5081 I Telemet : Video match: time source FILE_UTC, offset 0 s, DJI_A_0001_D.MP4 100%, DJI_A_0002_D.MP4 100%, other.mp4 0%
+10-16 19:11:13.010   834   885 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@a020c57
+10-16 19:11:13.011   521   888 W InputManager-JNI: Input channel object 'b3d8410 Splash Screen io.github.avsessisozx.telemet (client)' was disposed without first being removed with the input manager!
+10-16 19:11:13.028  1099  2278 D OneSearchSuggestProvider: Shut down the binder channel
+10-16 19:11:13.028  1099  1148 I ImeTracker: com.google.android.apps.nexuslauncher:ea361b76: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+10-16 19:11:13.028  1099  2801 I IPCThreadState: oneway function results for code 2 on binder at 0x70c7c9a6e340 will be dropped but finished with status UNKNOWN_TRANSACTION
+10-16 19:11:13.029   521  2236 I ImeTracker: com.google.android.apps.nexuslauncher:ea361b76: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-16 19:11:13.029  1714  3109 I PBSessionCacheImpl: Deleted sessionId[7540043897676339] from persistence.
+10-16 19:11:13.042  1024  1241 D BtGatt.ScanManager: uid 10131 isForeground true scanMode -1
+10-16 19:11:13.042  1024  1241 D BtGatt.ScanManager: uid 10131 isForeground true scanMode 1
+10-16 19:11:13.042  1024  1241 D BtGatt.ScanManager: uid 10131 isForeground true scanMode -1
+10-16 19:11:13.055  1714  2646 W SearchServiceCore: Abort, client detached.
+10-16 19:11:13.085   521  2270 I ImeTracker: io.github.avsessisozx.telemet:1d56691a: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-16 19:11:13.085   521  2270 I ImeTracker: io.github.avsessisozx.telemet:1d56691a: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-16 19:11:13.088  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+10-16 19:11:13.089  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-16 19:11:13.089  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.avsessisozx.telemet fieldId=0 fieldName=null extras=null}, false)
+10-16 19:11:13.090  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-16 19:11:13.090  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-16 19:11:13.362  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.clearcut.uploader.QosUploaderService finished executing. cause:5 result: 1 elapsed_millis: 4156 uptime_millis: 4156 exec_start_elapsed_seconds: 268 [CONTEXT service_id=218 ]
+10-16 19:11:13.514  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view view.getTag() is "vs_clip_2"
+10-16 19:11:13.519  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view is an instance of android.view.ViewGroup and has descendant matching an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "100")}' assertion on view view.getTag() is "vs_clip_0"
+10-16 19:11:13.523  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view is an instance of android.view.ViewGroup and has descendant matching an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "no matching ride")}' assertion on view view.getTag() is "vs_clip_2"
+10-16 19:11:14.246  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:14.246  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:14.246  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:14.246  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:14.246  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:14.246  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:14.246  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:14.246  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:14.246  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:14.246  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:14.388  1665  5415 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:14.391  5081  5221 D EGL_emulation: app_time_stats: avg=280.58ms min=29.95ms max=1189.26ms count=5
+10-16 19:11:14.586  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 273 [CONTEXT service_id=218 ]
+10-16 19:11:14.614  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 117 uptime_millis: 117 exec_start_elapsed_seconds: 273 [CONTEXT service_id=218 ]
+10-16 19:11:14.686  5081  5081 I ViewInteraction: Performing 'scroll to' action on view view.getTag() is "vs_offset_1"
+10-16 19:11:14.705  5081  5081 I ScrollToAction: View is already displayed. Returning.
+10-16 19:11:14.715  5081  5081 I ViewInteraction: Performing 'single click' action on view view.getTag() is "vs_offset_1"
+10-16 19:11:14.727  1099  1099 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=655.5, y[0]=1488.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=273840, downTime=273840, deviceId=-1, source=0x1002, displayId=0, eventId=-750804713 }
+10-16 19:11:14.729  5081  5081 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-16 19:11:14.768  1099  1099 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=655.5, y[0]=1488.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=273881, downTime=273840, deviceId=-1, source=0x1002, displayId=0, eventId=-1024510423 }
+10-16 19:11:14.784   397  1100 D audioserver: FGS Logger Transaction failed
+10-16 19:11:14.784   397  1100 D audioserver: -129
+10-16 19:11:14.790  5081  5081 I Telemet : Video match: time source FILE_UTC, offset 1 s, DJI_A_0001_D.MP4 100%, DJI_A_0002_D.MP4 100%, other.mp4 0%
+10-16 19:11:14.840   397   500 D AudioFlinger: mixer(0x7edec5299930) throttle end: throttle time(33)
+10-16 19:11:14.952   397   500 D audioserver: FGS Logger Transaction failed
+10-16 19:11:14.952   397   500 D audioserver: -129
+10-16 19:11:15.089  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Time offset: +1 s"}' assertion on view view.getTag() is "vs_offset_text"
+10-16 19:11:15.099  5081  5081 I ViewInteraction: Performing 'scroll to' action on view view.getTag() is "vs_offset_-1"
+10-16 19:11:15.103  5081  5081 I ScrollToAction: View is already displayed. Returning.
+10-16 19:11:15.105  5081  5081 I ViewInteraction: Performing 'single click' action on view view.getTag() is "vs_offset_-1"
+10-16 19:11:15.112  1099  1099 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=422.5, y[0]=1488.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=274224, downTime=274224, deviceId=-1, source=0x1002, displayId=0, eventId=-452019908 }
+10-16 19:11:15.151  1099  1099 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=422.5, y[0]=1488.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=274265, downTime=274224, deviceId=-1, source=0x1002, displayId=0, eventId=-272942692 }
+10-16 19:11:15.166   397  1100 D audioserver: FGS Logger Transaction failed
+10-16 19:11:15.166   397  1100 D audioserver: -129
+10-16 19:11:15.167  5081  5081 I Telemet : Video match: time source FILE_UTC, offset 0 s, DJI_A_0001_D.MP4 100%, DJI_A_0002_D.MP4 100%, other.mp4 0%
+10-16 19:11:15.260   470  4937 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 0
+10-16 19:11:15.383   397   500 D audioserver: FGS Logger Transaction failed
+10-16 19:11:15.383   397   500 D audioserver: -129
+10-16 19:11:15.414  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Time offset: 0 s"}' assertion on view view.getTag() is "vs_offset_text"
+10-16 19:11:16.272  1665  2360 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:16.279  5081  5081 I ViewInteraction: Performing 'scroll to' action on view view.getTag() is "vs_save_each"
+10-16 19:11:16.283  5081  5081 I ScrollToAction: View is already displayed. Returning.
+10-16 19:11:16.286  5081  5081 I ViewInteraction: Performing 'single click' action on view view.getTag() is "vs_save_each"
+10-16 19:11:16.289  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 275 [CONTEXT service_id=218 ]
+10-16 19:11:16.290  1099  1099 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=539.5, y[0]=1783.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=275403, downTime=275403, deviceId=-1, source=0x1002, displayId=0, eventId=-159514351 }
+10-16 19:11:16.293  6023  6875 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 11 uptime_millis: 11 exec_start_elapsed_seconds: 275 [CONTEXT service_id=218 ]
+10-16 19:11:16.331  1099  1099 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=539.5, y[0]=1783.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=275444, downTime=275403, deviceId=-1, source=0x1002, displayId=0, eventId=-749085726 }
+10-16 19:11:16.354   397  1100 D audioserver: FGS Logger Transaction failed
+10-16 19:11:16.354   397  1100 D audioserver: -129
+10-16 19:11:16.359  5081  5221 D EGL_emulation: app_time_stats: avg=108.46ms min=18.51ms max=1100.33ms count=18
+10-16 19:11:16.389  1665  1755 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:16.460  1665  1755 I MediaProvider: Open with lower FS for /storage/emulated/0/Download/Telemet/DJI_A_0001_D.fit. Uid: 10192
+10-16 19:11:16.489   397   500 D AudioFlinger: mixer(0x7edec5299930) throttle end: throttle time(1)
+10-16 19:11:16.510  1665  1755 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:16.515  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 275 [CONTEXT service_id=218 ]
+10-16 19:11:16.517  1665  1756 I MediaProvider: Open with lower FS for /storage/emulated/0/Download/Telemet/DJI_A_0001_D.gpx. Uid: 10192
+10-16 19:11:16.541  1665  1756 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:16.544  6023  6875 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 41 uptime_millis: 41 exec_start_elapsed_seconds: 275 [CONTEXT service_id=218 ]
+10-16 19:11:16.554  1665  1756 I MediaProvider: Open with lower FS for /storage/emulated/0/Download/Telemet/DJI_A_0002_D.fit. Uid: 10192
+10-16 19:11:16.561  1665  1756 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:16.566  1665  1755 I MediaProvider: Open with lower FS for /storage/emulated/0/Download/Telemet/DJI_A_0002_D.gpx. Uid: 10192
+10-16 19:11:16.572  5081  5081 I Telemet : Video match: saved 4 file(s)
+10-16 19:11:16.584   397   500 D audioserver: FGS Logger Transaction failed
+10-16 19:11:16.585   397   500 D audioserver: -129
+10-16 19:11:16.603  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:5 exec_start_elapsed_seconds: 275 [CONTEXT service_id=218 ]
+10-16 19:11:16.606  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:5 result: 1 elapsed_millis: 10 uptime_millis: 10 exec_start_elapsed_seconds: 275 [CONTEXT service_id=218 ]
+10-16 19:11:16.689  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view view.getTag() is "vs_share"
+10-16 19:11:17.260   476   832 D BufferPoolAccessor2.0: bufferpool2 0x7147c6ec42e8 : 0(0 size) total buffers - 0(0 size) used buffers - 119/121 (recycle/alloc) - 1/120 (fetch/transfer)
+10-16 19:11:17.260   476   832 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+10-16 19:11:17.417  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:17.417  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:17.417  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:17.417  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:17.417  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:17.417  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:17.417  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:17.417  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:17.417  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:17.417  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:17.550  1665  2850 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:17.568  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 276 [CONTEXT service_id=218 ]
+10-16 19:11:17.571  5081  5081 I ViewInteraction: Performing 'scroll to' action on view view.getTag() is "vs_save_merged"
+10-16 19:11:17.571  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 8 uptime_millis: 8 exec_start_elapsed_seconds: 276 [CONTEXT service_id=218 ]
+10-16 19:11:17.578  5081  5081 I ScrollToAction: View is already displayed. Returning.
+10-16 19:11:17.580  5081  5081 I ViewInteraction: Performing 'single click' action on view view.getTag() is "vs_save_merged"
+10-16 19:11:17.584  1099  1099 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=539.5, y[0]=2117.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=276698, downTime=276698, deviceId=-1, source=0x1002, displayId=0, eventId=-454456271 }
+10-16 19:11:17.625  1099  1099 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=539.5, y[0]=2117.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=276739, downTime=276698, deviceId=-1, source=0x1002, displayId=0, eventId=-862851036 }
+10-16 19:11:17.633   397  5739 D audioserver: FGS Logger Transaction failed
+10-16 19:11:17.633   397  5739 D audioserver: -129
+10-16 19:11:17.644  5081  5221 D EGL_emulation: app_time_stats: avg=182.28ms min=16.96ms max=1006.81ms count=7
+10-16 19:11:17.659  1665  1755 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:17.662  1665  1756 I MediaProvider: Open with lower FS for /storage/emulated/0/Download/Telemet/DJI_A_0001_D_+1.fit. Uid: 10192
+10-16 19:11:17.680  1665  1755 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:17.702   397   500 D AudioFlinger: mixer(0x7edec5299930) throttle end: throttle time(11)
+10-16 19:11:17.708  1665  1755 I MediaProvider: Open with lower FS for /storage/emulated/0/Download/Telemet/DJI_A_0001_D_+1.gpx. Uid: 10192
+10-16 19:11:17.746  5081  5081 I Telemet : Video match: saved 2 file(s)
+10-16 19:11:17.800  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 276 [CONTEXT service_id=218 ]
+10-16 19:11:17.825  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 51 uptime_millis: 51 exec_start_elapsed_seconds: 276 [CONTEXT service_id=218 ]
+10-16 19:11:17.853   397   500 D audioserver: FGS Logger Transaction failed
+10-16 19:11:17.857   397   500 D audioserver: -129
+10-16 19:11:18.044  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view view.getTag() is "vs_share"
+10-16 19:11:18.050  5081  5081 I ViewInteraction: Performing 'scroll to' action on view view.getTag() is "vs_overlay"
+10-16 19:11:18.056  5081  5081 I ViewInteraction: Performing 'single click' action on view view.getTag() is "vs_overlay"
+10-16 19:11:18.060  1099  1099 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=539.5, y[0]=2266.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=277174, downTime=277174, deviceId=-1, source=0x1002, displayId=0, eventId=-863331989 }
+10-16 19:11:18.102  1099  1099 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=539.5, y[0]=2266.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=277215, downTime=277174, deviceId=-1, source=0x1002, displayId=0, eventId=-2525832 }
+10-16 19:11:18.116   397  1100 D audioserver: FGS Logger Transaction failed
+10-16 19:11:18.116   397  1100 D audioserver: -129
+10-16 19:11:18.127  5081  7255 I Telemet : Overlay video: DJI_A_0001_D_overlay.mp4 1920x1080, 6 s
+10-16 19:11:18.132  1665  1755 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:18.132  1665  1755 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:18.159  1665  1755 I MediaProvider: Open with lower FS for /storage/emulated/0/Movies/Telemet/.pending-1792782678-DJI_A_0001_D_overlay.mp4. Uid: 10192
+10-16 19:11:18.163  5081  7255 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-16 19:11:18.209  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 277 [CONTEXT service_id=218 ]
+10-16 19:11:18.235  6023  6979 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 43 uptime_millis: 43 exec_start_elapsed_seconds: 277 [CONTEXT service_id=218 ]
+10-16 19:11:18.237  5081  7284 D CCodec  : allocate(c2.android.avc.encoder)
+10-16 19:11:18.244  5081  7284 I CCodec  : setting up 'default' as default (vendor) store
+10-16 19:11:18.245   476   906 I mediaswcodec: missing struct descriptor #Param::CoreIndex(--004) for field values of struct #Param::CoreIndex(F-12004)
+10-16 19:11:18.245   476   906 I mediaswcodec: missing struct descriptor #Param::CoreIndex(--1812) for field values of struct #Param::CoreIndex(F-11812)
+10-16 19:11:18.245   476   906 I mediaswcodec: missing struct descriptor #Param::CoreIndex(--004) for field values of struct #Param::CoreIndex(F-12004)
+10-16 19:11:18.245   476   906 I mediaswcodec: missing struct descriptor #Param::CoreIndex(--1812) for field values of struct #Param::CoreIndex(F-11812)
+10-16 19:11:18.257  5081  7284 I CCodec  : Created component [c2.android.avc.encoder]
+10-16 19:11:18.257  5081  7284 D CCodecConfig: read media type: video/avc
+10-16 19:11:18.258  5081  7284 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-16 19:11:18.258  5081  7284 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-16 19:11:18.258  5081  7284 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-16 19:11:18.258  5081  7284 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-16 19:11:18.258  5081  7284 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-16 19:11:18.258  5081  7284 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-16 19:11:18.258  5081  7284 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-16 19:11:18.259  5081  7284 D ReflectedParamUpdater: ignored struct field coding.gop.values
+10-16 19:11:18.259  5081  7284 D ReflectedParamUpdater: ignored struct field coding.qp.values
+10-16 19:11:18.259  5081  7284 D CCodecConfig: ignoring local param raw.color (0xc2001809) as it is already supported
+10-16 19:11:18.260  5081  7284 I CCodecConfig: query failed after returning 12 values (BAD_INDEX)
+10-16 19:11:18.260  5081  7284 D CCodecConfig: c2 config diff is Dict {
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   c2::i32 coded.average-qp.value = 0
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   c2::float coded.frame-rate.value = 1
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   c2::u32 coded.picture-type.value = 0
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   c2::u32 coded.pl.level = 20492
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   c2::u32 coded.pl.profile = 20481
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   c2::u32 coded.vui.color.matrix = 0
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   c2::u32 coded.vui.color.primaries = 0
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   c2::u32 coded.vui.color.range = 0
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   c2::u32 coded.vui.color.transfer = 0
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   c2::u32 coding.intra-refresh.mode = 0
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   c2::float coding.intra-refresh.period = 0
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   c2::u32 coding.request-sync-frame.value = 0
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   c2::i64 coding.sync-frame-interval.value = 1000000
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   string input.media-type.value = "video/raw"
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   string output.media-type.value = "video/avc"
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   c2::u32 raw.color.matrix = 0
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   c2::u32 raw.color.primaries = 0
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   c2::u32 raw.color.range = 0
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   c2::u32 raw.color.transfer = 0
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   c2::u32 raw.size.height = 16
+10-16 19:11:18.260  5081  7284 D CCodecConfig:   c2::u32 raw.size.width = 16
+10-16 19:11:18.260  5081  7284 D CCodecConfig: }
+10-16 19:11:18.260  5081  7284 W ColorUtils: expected specified color aspects (0:0:0:0)
+10-16 19:11:18.272  5081  7255 D VQApply : minquality by QP: inject video-qp-max=45
+10-16 19:11:18.272  5081  7255 D MediaCodec: shapeMediaFormat: deltas(5): AMessage(what = 0x00000000) = {
+10-16 19:11:18.272  5081  7255 D MediaCodec:     int32_t android._encoding-quality-level = 0
+10-16 19:11:18.272  5081  7255 D MediaCodec:     int32_t video-qp-max = 45
+10-16 19:11:18.272  5081  7255 D MediaCodec:     int32_t video-qp-i-max = 45
+10-16 19:11:18.272  5081  7255 D MediaCodec:     int32_t video-qp-p-max = 48
+10-16 19:11:18.272  5081  7255 D MediaCodec:     int32_t video-qp-b-max = 51
+10-16 19:11:18.272  5081  7255 D MediaCodec:   }
+10-16 19:11:18.272  5081  7283 D MediaCodec: flushMediametrics
+10-16 19:11:18.277  5081  7284 D CCodec  : [c2.android.avc.encoder] buffers are bound to CCodec for this session
+10-16 19:11:18.277  5081  7284 D CCodecConfig: no c2 equivalents for color-format
+10-16 19:11:18.277  5081  7284 D CCodecConfig: no c2 equivalents for video-qp-max
+10-16 19:11:18.278  5081  7284 D CCodecConfig: no c2 equivalents for video-qp-i-max
+10-16 19:11:18.278  5081  7284 D CCodecConfig: no c2 equivalents for video-qp-p-max
+10-16 19:11:18.278  5081  7284 D CCodecConfig: no c2 equivalents for video-qp-b-max
+10-16 19:11:18.278  5081  7284 D CCodecConfig: no c2 equivalents for flags
+10-16 19:11:18.278  5081  7284 D CCodecConfig: no c2 equivalents for encoder
+10-16 19:11:18.278  5081  7284 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 4147200
+10-16 19:11:18.278  5081  7284 D CCodecConfig:   c2::float coded.frame-rate.value = 30
+10-16 19:11:18.278  5081  7284 D CCodecConfig:   c2::i64 coding.sync-frame-interval.value = 2000000
+10-16 19:11:18.278  5081  7284 D CCodecConfig:   c2::u32 raw.size.height = 1080
+10-16 19:11:18.278  5081  7284 D CCodecConfig:   c2::u32 raw.size.width = 1920
+10-16 19:11:18.278  5081  7284 W ColorUtils: expected specified color aspects (0:0:0:0)
+10-16 19:11:18.279  5081  7284 D CCodec  : encoding statistics level = 0
+10-16 19:11:18.279  5081  7284 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-16 19:11:18.279  5081  7284 D CCodec  :   Rect crop(0, 0, 1919, 1079)
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t color-standard = 0
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t color-range = 0
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t color-transfer = 0
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t frame-rate = 30
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t height = 1080
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t intra-refresh-period = 0
+10-16 19:11:18.279  5081  7284 D CCodec  :   string mime = "video/raw"
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t video-qp-average = 0
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t width = 1920
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t android._dataspace = 0
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t using-sw-read-often = 1
+10-16 19:11:18.279  5081  7284 D CCodec  :   int64_t android._C2MemoryUsage = 1
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t color-format = 2130708361
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t android._color-format = 2130708361
+10-16 19:11:18.279  5081  7284 D CCodec  : }
+10-16 19:11:18.279  5081  7284 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t bitrate = 4147200
+10-16 19:11:18.279  5081  7284 D CCodec  :   Rect crop(0, 0, 1919, 1079)
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t color-standard = 0
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t color-range = 0
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t color-transfer = 0
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t frame-rate = 30
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t height = 1080
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t intra-refresh-period = 0
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t level = 4096
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t max-bitrate = 4147200
+10-16 19:11:18.279  5081  7284 D CCodec  :   string mime = "video/avc"
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t profile = 65536
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t video-qp-average = 0
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t width = 1920
+10-16 19:11:18.279  5081  7284 D CCodec  : }
+10-16 19:11:18.279  5081  7284 I CCodecConfig: query failed after returning 13 values (BAD_INDEX)
+10-16 19:11:18.279  5081  7284 D CCodec  : input format changed to AMessage(what = 0x00000000) = {
+10-16 19:11:18.279  5081  7284 D CCodec  :   Rect crop(0, 0, 1919, 1079)
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t color-standard = 1
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t color-range = 2
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t color-transfer = 3
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t frame-rate = 30
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t height = 1080
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t intra-refresh-period = 0
+10-16 19:11:18.279  5081  7284 D CCodec  :   string mime = "video/raw"
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t video-qp-average = 0
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t width = 1920
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t android._dataspace = 260
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t using-sw-read-often = 1
+10-16 19:11:18.279  5081  7284 D CCodec  :   int64_t android._C2MemoryUsage = 1
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t color-format = 2130708361
+10-16 19:11:18.279  5081  7284 D CCodec  :   int32_t android._color-format = 2130708361
+10-16 19:11:18.279  5081  7284 D CCodec  : }
+10-16 19:11:18.280  5081  7284 D GraphicBufferSource: setting dataspace: 0x104, acquired=0
+10-16 19:11:18.280  5081  7284 D CCodec  : ISConfig not changed
+10-16 19:11:18.280  5081  7284 W Codec2Client: query -- param skipped: index = 1342179345.
+10-16 19:11:18.280  5081  7284 W Codec2Client: query -- param skipped: index = 2415921170.
+10-16 19:11:18.280  5081  7284 D CCodecBufferChannel: [c2.android.avc.encoder#953] Using basic input block pool with poolID 1 => got 1 - OK (0)
+10-16 19:11:18.281  5081  7284 I CCodecBufferChannel: [c2.android.avc.encoder#953] Created output block pool with allocatorID 16 => poolID 28 - OK
+10-16 19:11:18.281  5081  7284 D CCodecBufferChannel: [c2.android.avc.encoder#953] Configured output block pool ids 28 => OK
+10-16 19:11:18.282   470  3307 W ResourceManagerService: Ignoring request to add new resource entry with value <= 0
+10-16 19:11:18.283  5081  7255 D MPEG4Writer: PreAllocation enabled
+10-16 19:11:18.352   397   500 D audioserver: FGS Logger Transaction failed
+10-16 19:11:18.352   397   500 D audioserver: -129
+10-16 19:11:18.451  5081  7255 D GraphicBufferSource: got buffer with new dataSpace #104
+10-16 19:11:18.451  5081  7255 D C2OMXNode: dataspace changed to 0x104 pixel format: 0x2
+10-16 19:11:18.454   476  7286 D SimpleC2Component: Using output block pool with poolID 28 => got 28 - 0
+10-16 19:11:18.454   476  7286 D SimpleC2Component: applied 2 configUpdates => BAD_INDEX (6)
+10-16 19:11:18.454   476  7286 D C2SoftAvcEnc: Params width 1920 height 1080 level 41 colorFormat 0 bframes 0
+10-16 19:11:18.468   476  7286 E C2SoftAvcEnc: Unable to set air params = 0x1ad
+10-16 19:11:18.497  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Ready in Movies/Telemet: 2"
+10-16 19:11:18.498  5081  5081 D DeviceCapture: Found 1 global views to redraw
+10-16 19:11:18.503   476   906 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x7147c6ec42e8 cached: 0/0M, 0/0% in use; allocs: 121, 98% recycled; transfers: 120, 99% unfetched
+10-16 19:11:18.504  5081  7284 D CCodecConfig: c2 config diff is   Buffer coded.init-data.value = {
+10-16 19:11:18.504  5081  7284 D CCodecConfig:     00000000:  00 00 00 01 67 42 c0 29  8d 68 07 80 22 7e 59 08  ....gB.).h.."~Y.
+10-16 19:11:18.504  5081  7284 D CCodecConfig:     00000010:  08 08 08 3c 22 11 a8 00  00 00 01 68 ce 01 a8 35  ...<"......h...5
+10-16 19:11:18.504  5081  7284 D CCodecConfig:     00000020:  c8                                                .
+10-16 19:11:18.504  5081  7284 D CCodecConfig:   }
+10-16 19:11:18.513  5081  7255 D MPEG4Writer: fpathconf _PC_FILESIZEBITS:64
+10-16 19:11:18.513  5081  7255 D MPEG4Writer: File size limit set to 4503599627370495 bytes implicitly
+10-16 19:11:18.513  5081  7255 D MPEG4Writer: MP4WtrCtrlHlpLooper Started
+10-16 19:11:18.513  5081  7255 I MPEG4Writer: limits: 4503599627370495/0 bytes/us, bit rate: -1 bps and the estimated moov size 3192 bytes
+10-16 19:11:18.514  5081  7292 I MPEG4Writer: setStartTimestampUs: 0
+10-16 19:11:18.514  5081  7292 I MPEG4Writer: Earliest track starting time: 0
+10-16 19:11:18.538  5081  5081 I forceRedraw: FrameCommitCallback complete
+10-16 19:11:18.675  2804  4215 I DialerOmtpVvmCarrierConfigHelper: com.android.voicemail.impl.OmtpVvmCarrierConfigHelper.handleEvent:527 OmtpEvent:CONFIG_STATUS_SMS_TIME_OUT PhoneAccountHandle: [ComponentName: com.android.phone/com.android.services.telephony.TelephonyConnectionService subId: 1] [CONTEXT enable_persistent_logger=true ]
+10-16 19:11:18.677  2804  2804 I DialerRetryPolicy: com.android.voicemail.impl.scheduling.RetryPolicy.onCompleted:118 discarding deferred status [CONTEXT enable_persistent_logger=true ]
+10-16 19:11:18.678  2804  2804 I DialerTaskExecutor: com.android.voicemail.impl.scheduling.TaskExecutor.prepareStop:371 no more tasks, stopping service if no task are added in 5000 millis [CONTEXT enable_persistent_logger=true ]
+10-16 19:11:18.679  2804  2804 I DialerLogcatLoggingBindings: com.android.dialer.logging.logcat.LogcatLoggingBindings.logImpression:41 Impression: VVM_AUTO_RETRY_ACTIVATION
+10-16 19:11:18.679  2804  2804 I DialerTaskReceiver: com.android.voicemail.impl.scheduling.TaskReceiver.onReceive:68 task received [CONTEXT enable_persistent_logger=true ]
+10-16 19:11:18.679  2804  2804 I DialerTaskReceiver: com.android.voicemail.impl.scheduling.TaskReceiver.onReceive:73 TaskExecutor already running [CONTEXT enable_persistent_logger=true ]
+10-16 19:11:18.679  2804  2804 I DialerTasks: com.android.voicemail.impl.scheduling.Tasks.createTask:59 Task.createTask create task:com.android.voicemail.impl.ActivationTask [CONTEXT enable_persistent_logger=true ]
+10-16 19:11:18.679  2804  2804 I DialerRetryPolicy: com.android.voicemail.impl.scheduling.RetryPolicy.onCreate:81 retry #3 for com.android.voicemail.impl.ActivationTask@88de1fe queued, executing in 5000 [CONTEXT enable_persistent_logger=true ]
+10-16 19:11:18.684  2804  2804 I DialerTaskExecutor: com.android.voicemail.impl.scheduling.TaskExecutor.addTask:299 com.android.voicemail.impl.ActivationTask@88de1fe added [CONTEXT enable_persistent_logger=true ]
+10-16 19:11:18.684  2804  2804 I DialerTaskExecutor: com.android.voicemail.impl.scheduling.TaskExecutor.runNextTask:345 minimal wait time:4996 [CONTEXT enable_persistent_logger=true ]
+10-16 19:11:18.684  2804  2804 I DialerTaskExecutor: com.android.voicemail.impl.scheduling.TaskExecutor.sleep:355 sleep for 4996 millis [CONTEXT enable_persistent_logger=true ]
+10-16 19:11:18.686  5081  5081 I DeviceCapture: got bitmap, returning
+10-16 19:11:18.687  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-12.png
+10-16 19:11:18.689  1665  5278 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:18.730  6023  6979 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 277 [CONTEXT service_id=218 ]
+10-16 19:11:18.758  6023  6979 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 32 uptime_millis: 32 exec_start_elapsed_seconds: 277 [CONTEXT service_id=218 ]
+10-16 19:11:18.853  5081  5221 D EGL_emulation: app_time_stats: avg=78.60ms min=10.09ms max=273.79ms count=15
+10-16 19:11:18.994   834   834 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+10-16 19:11:19.336   834   834 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-16 19:11:19.368  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-12.txt
+10-16 19:11:19.370  1665  2363 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:19.379  5081  5101 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-12.txt'.
+10-16 19:11:19.516  5081  7255 D EGL_emulation: app_time_stats: avg=44.07ms min=12.31ms max=264.52ms count=23
+10-16 19:11:19.543  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 278 [CONTEXT service_id=218 ]
+10-16 19:11:19.563  6023  6875 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 40 uptime_millis: 40 exec_start_elapsed_seconds: 278 [CONTEXT service_id=218 ]
+10-16 19:11:19.810  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Ready in Movies/Telemet: 2"
+10-16 19:11:19.813  5081  5081 D DeviceCapture: Found 1 global views to redraw
+10-16 19:11:19.869  5081  5221 D EGL_emulation: app_time_stats: avg=95.89ms min=17.70ms max=503.92ms count=10
+10-16 19:11:19.869  5081  5081 I forceRedraw: FrameCommitCallback complete
+10-16 19:11:19.913  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:19.913  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:19.913  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:19.913  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:19.913  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:19.913  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:19.913  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:19.913  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:19.913  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:19.913  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:19.947  5081  5081 I DeviceCapture: got bitmap, returning
+10-16 19:11:19.947  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-13.png
+10-16 19:11:19.950  1665  5415 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:19.993  6023  6979 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 279 [CONTEXT service_id=218 ]
+10-16 19:11:20.001  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 17 uptime_millis: 17 exec_start_elapsed_seconds: 279 [CONTEXT service_id=218 ]
+10-16 19:11:20.174  6023  6032 I .gms.persistent: Background concurrent copying GC freed 351186(14MB) AllocSpace objects, 6(300KB) LOS objects, 49% free, 12MB/24MB, paused 35us,20us total 194.325ms
+10-16 19:11:20.199  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-13.txt
+10-16 19:11:20.207  1665  5278 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:20.218  5081  5101 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-13.txt'.
+10-16 19:11:20.275  6023  6979 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 279 [CONTEXT service_id=218 ]
+10-16 19:11:20.280  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 24 uptime_millis: 24 exec_start_elapsed_seconds: 279 [CONTEXT service_id=218 ]
+10-16 19:11:20.552  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Ready in Movies/Telemet: 2"
+10-16 19:11:20.555  5081  5081 D DeviceCapture: Found 1 global views to redraw
+10-16 19:11:20.564  5081  7255 D EGL_emulation: app_time_stats: avg=20.15ms min=10.07ms max=36.76ms count=24
+10-16 19:11:20.584  5081  5081 I forceRedraw: FrameCommitCallback complete
+10-16 19:11:20.697  5081  5081 I DeviceCapture: got bitmap, returning
+10-16 19:11:20.698  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-14.png
+10-16 19:11:20.700  1665  5415 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:20.846  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 279 [CONTEXT service_id=218 ]
+10-16 19:11:20.859   521   932 D ConnectivityService: requestNetwork for uid/pid:10128/2804 activeRequest: null callbackRequest: 161 [NetworkRequest [ REQUEST id=162, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10128 RequestorUid: 10128 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+10-16 19:11:20.861   521   763 D ConnectivityService: NetReassign [162 : null → 100] [c 0] [a 0] [i 1]
+10-16 19:11:20.862   521   756 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=162, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10128 RequestorUid: 10128 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]
+10-16 19:11:20.862   521   756 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=162, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10128 RequestorUid: 10128 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]
+10-16 19:11:20.862   521   756 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=162, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10128 RequestorUid: 10128 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]
+10-16 19:11:20.862   521   756 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=162, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10128 RequestorUid: 10128 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]
+10-16 19:11:20.863  2804  2804 I DialerConstellationSyncWorker: com.android.dialer.businessvoice.control.worker.ConstellationSyncWorker.startWork:66 starting work
+10-16 19:11:20.863  2804  2932 I DialerCountryCodeProvider: com.android.dialer.businessvoice.verifiedcall.impl.i18n.CountryCodeProvider.getSimCountryCodeInternal:85 returning Redacted-2-chars
+10-16 19:11:20.864  2804  2932 I DialerCachedVerifiedNumberProvider: com.android.dialer.businessvoice.verifiedcall.impl.constellation.CachedVerifiedNumberProvider.refreshConstellationInfo:190 Retrieving constellation info and refreshing the cache.
+10-16 19:11:20.868  6062  6062 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.constellation.service.START pkg=com.google.android.gms }
+10-16 19:11:20.873  6062  6062 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.constellation.service.START pkg=com.google.android.gms }
+10-16 19:11:20.878  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 138 uptime_millis: 138 exec_start_elapsed_seconds: 279 [CONTEXT service_id=218 ]
+10-16 19:11:20.937  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-14.txt
+10-16 19:11:20.949  1665  2850 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:20.982  5081  5101 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-14.txt'.
+10-16 19:11:21.137  5081  5221 D EGL_emulation: app_time_stats: avg=633.83ms min=553.04ms max=714.63ms count=2
+10-16 19:11:21.140  6062  6062 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-16 19:11:21.140  6062  6062 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-16 19:11:21.177  6062  6062 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-16 19:11:21.191  6062  6116 E constellation: [api_verify_phone_operation] Failed to generate Client Signature
+10-16 19:11:21.191  6062  6116 E constellation: acwp: Stored private key deleted
+10-16 19:11:21.191  6062  6116 E constellation: 	at acos.e(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+10-16 19:11:21.191  6062  6116 E constellation: 	at acos.d(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-16 19:11:21.191  6062  6116 E constellation: 	at acoa.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):22)
+10-16 19:11:21.191  6062  6116 E constellation: 	at acoa.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):12)
+10-16 19:11:21.191  6062  6116 E constellation: 	at avsy.eo(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-16 19:11:21.191  6062  6116 E constellation: 	at avtf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):14)
+10-16 19:11:21.191  6062  6116 E constellation: 	at dfhf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-16 19:11:21.191  6062  6116 E constellation: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-16 19:11:21.191  6062  6116 E constellation: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-16 19:11:21.191  6062  6116 E constellation: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-16 19:11:21.191  6062  6116 E constellation: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-16 19:11:21.191  6062  6116 E constellation: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-16 19:11:21.191  6062  6116 E constellation: 	at java.lang.Thread.run(Thread.java:1012)
+10-16 19:11:21.191  2804  2970 W DialerVerifiedNumberProvider: com.android.dialer.businessvoice.verifiedcall.impl.constellation.VerifiedNumberProvider.lambda$getConstellationResponse$1:155 Failed to get constellation token.
+10-16 19:11:21.191  2804  2970 W DialerVerifiedNumberProvider: nkq: 5004:
+10-16 19:11:21.191  2804  2970 W DialerVerifiedNumberProvider: 	at nov.au(PG:1)
+10-16 19:11:21.191  2804  2970 W DialerVerifiedNumberProvider: 	at nnf.g(PG:2)
+10-16 19:11:21.191  2804  2970 W DialerVerifiedNumberProvider: 	at npo.a(Unknown Source:2)
+10-16 19:11:21.191  2804  2970 W DialerVerifiedNumberProvider: 	at npy.dm(PG:9)
+10-16 19:11:21.191  2804  2970 W DialerVerifiedNumberProvider: 	at ncz.onTransact(PG:4)
+10-16 19:11:21.191  2804  2970 W DialerVerifiedNumberProvider: 	at android.os.Binder.execTransactInternal(Binder.java:1344)
+10-16 19:11:21.191  2804  2970 W DialerVerifiedNumberProvider: 	at android.os.Binder.execTransact(Binder.java:1275)
+10-16 19:11:21.197  2804  2932 W DialerConstellationSyncWorker: com.android.dialer.businessvoice.control.worker.ConstellationSyncWorker.lambda$syncConstellation$2:110 Constellation api request failed, status code: 5004
+10-16 19:11:21.197  2804  2931 I WM-WorkerWrapper: Worker result RETRY for Work [ id=1994b5c5-741d-4752-8fca-6a134935cf49, tags={ com.google.apps.tiktok.contrib.work.TikTokListenableWorker, TikTokWorker#com.android.dialer.businessvoice.control.worker.ConstellationSyncWorker } ]
+10-16 19:11:21.242   338  1667 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 2933248
+10-16 19:11:21.322  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Ready in Movies/Telemet: 2"
+10-16 19:11:21.323  5081  5081 D DeviceCapture: Found 1 global views to redraw
+10-16 19:11:21.362  5081  5081 I forceRedraw: FrameCommitCallback complete
+10-16 19:11:21.437  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:21.437  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:21.437  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:21.437  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:21.437  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:21.437  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:21.437  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:21.437  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:21.437  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:21.437  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:21.489  5081  5081 I DeviceCapture: got bitmap, returning
+10-16 19:11:21.489  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-15.png
+10-16 19:11:21.492  1665  5278 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:21.596  5081  7255 D EGL_emulation: app_time_stats: avg=35.75ms min=10.11ms max=88.54ms count=22
+10-16 19:11:21.679  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-15.txt
+10-16 19:11:21.692  1665  2850 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:21.702  5081  5101 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-15.txt'.
+10-16 19:11:21.769  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 280 [CONTEXT service_id=218 ]
+10-16 19:11:21.856  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 119 uptime_millis: 119 exec_start_elapsed_seconds: 280 [CONTEXT service_id=218 ]
+10-16 19:11:21.995   834   834 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+10-16 19:11:22.036  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Ready in Movies/Telemet: 2"
+10-16 19:11:22.038  5081  5081 D DeviceCapture: Found 1 global views to redraw
+10-16 19:11:22.060  5081  5081 I forceRedraw: FrameCommitCallback complete
+10-16 19:11:22.149  5081  5081 I DeviceCapture: got bitmap, returning
+10-16 19:11:22.151  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-16.png
+10-16 19:11:22.163  1665  2363 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:22.329  6023  6979 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 281 [CONTEXT service_id=218 ]
+10-16 19:11:22.352  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-16.txt
+10-16 19:11:22.354  1665  5278 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:22.361  5081  5101 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-16.txt'.
+10-16 19:11:22.437  5081  5221 D EGL_emulation: app_time_stats: avg=433.09ms min=223.90ms max=697.99ms count=3
+10-16 19:11:22.526  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 222 uptime_millis: 222 exec_start_elapsed_seconds: 281 [CONTEXT service_id=218 ]
+10-16 19:11:22.606  5081  7255 D EGL_emulation: app_time_stats: avg=34.39ms min=13.22ms max=110.70ms count=28
+10-16 19:11:22.706  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Ready in Movies/Telemet: 2"
+10-16 19:11:22.713  5081  5081 D DeviceCapture: Found 1 global views to redraw
+10-16 19:11:22.758  5081  5081 I forceRedraw: FrameCommitCallback complete
+10-16 19:11:22.838  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:22.838  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:22.838  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:22.838  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:22.838  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:22.838  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:22.839  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:22.839  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:22.839  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:22.839  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:22.855  5081  5081 I DeviceCapture: got bitmap, returning
+10-16 19:11:22.856  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-17.png
+10-16 19:11:22.858  1665  2360 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:23.053  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-17.txt
+10-16 19:11:23.055  1714  2646 I WorkerManager: dispose()
+10-16 19:11:23.055  1714  2646 W A       : Queue length for executor EventBus is now 11. Perhaps some tasks are too long, or the pool is too small.
+10-16 19:11:23.062  1665  5415 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:23.077  5081  5101 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-17.txt'.
+10-16 19:11:23.150  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 282 [CONTEXT service_id=218 ]
+10-16 19:11:23.174  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 73 uptime_millis: 73 exec_start_elapsed_seconds: 282 [CONTEXT service_id=218 ]
+10-16 19:11:23.429  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Ready in Movies/Telemet: 2"
+10-16 19:11:23.430  5081  5081 D DeviceCapture: Found 1 global views to redraw
+10-16 19:11:23.463  5081  5221 D EGL_emulation: app_time_stats: avg=512.69ms min=320.59ms max=704.79ms count=2
+10-16 19:11:23.470  5081  5081 I forceRedraw: FrameCommitCallback complete
+10-16 19:11:23.562  5081  5081 I DeviceCapture: got bitmap, returning
+10-16 19:11:23.563  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-18.png
+10-16 19:11:23.567   476  7286 D BufferPoolAccessor2.0: bufferpool2 0x7147c6ec50c8 : 2(6220800 size) total buffers - 1(3110400 size) used buffers - 103/105 (recycle/alloc) - 2/105 (fetch/transfer)
+10-16 19:11:23.571  1665  5278 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:23.634  5081  7255 D EGL_emulation: app_time_stats: avg=31.88ms min=14.95ms max=94.50ms count=25
+10-16 19:11:23.682  2804  4215 I DialerTaskExecutor: com.android.voicemail.impl.scheduling.TaskExecutor$WorkerThreadHandler.handleMessage:221 executing task com.android.voicemail.impl.ActivationTask@88de1fe [CONTEXT enable_persistent_logger=true ]
+10-16 19:11:23.683  2804  2804 I DialerLogcatLoggingBindings: com.android.dialer.logging.logcat.LogcatLoggingBindings.logImpression:41 Impression: VVM_ACTIVATION_STARTED
+10-16 19:11:23.685  2804  4215 I DialerPreOMigrationHandler: com.android.voicemail.impl.PreOMigrationHandler.migrate:76 ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} already migrated [CONTEXT enable_persistent_logger=true ]
+10-16 19:11:23.695  2804  4215 I DialerOmtpVvmCarrierConfigHelper: com.android.voicemail.impl.OmtpVvmCarrierConfigHelper.isCarrierAppInstalled:637 carrier app not installed in this device [CONTEXT ratelimit_period="1 MINUTES [skipped: 4]" ]
+10-16 19:11:23.695  2804  4215 I DialerVoicemailStatus: com.android.voicemail.impl.VoicemailStatus$Editor.apply:112 enter
+10-16 19:11:23.709  2804  4215 I DialerVoicemailStatusDataServiceImpl: com.android.dialer.voicemailstatus.dataservice.impl.VoicemailStatusDataServiceImpl.insertOrUpdateVoicemailStatus:196 enter
+10-16 19:11:23.710  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 282 [CONTEXT service_id=218 ]
+10-16 19:11:23.724  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 41 uptime_millis: 41 exec_start_elapsed_seconds: 282 [CONTEXT service_id=218 ]
+10-16 19:11:23.746  2804  7400 I DialerRestVoicemailEnabledFn: com.android.dialer.voicemail.service.impl.vvmclients.rest.RestVoicemailEnabledFn.isEnabled:51 disabled by flag [CONTEXT ratelimit_period="1 MINUTES [skipped: 23]" ]
+10-16 19:11:23.746  2804  7400 I DialerCvvmEnabledFn: com.android.dialer.voicemail.service.impl.vvmclients.omtp.protocol.cvvm.CvvmEnabledFn.isEnabled:37 disabled by flag [CONTEXT ratelimit_period="1 MINUTES [skipped: 11]" ]
+10-16 19:11:23.842  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-18.txt
+10-16 19:11:23.842  2804  7400 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-16 19:11:23.843  2804  7400 I DialerVoicemailStatusDataServiceImpl: com.android.dialer.voicemailstatus.dataservice.impl.VoicemailStatusDataServiceImpl.lambda$insertOrUpdateVoicemailStatus$5:213 merged status: # kee@6600c263
+10-16 19:11:23.848  1665  5415 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:23.852  5081  5101 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-18.txt'.
+10-16 19:11:23.865  2804  4215 I DialerActivationTask: com.android.voicemail.impl.ActivationTask.onExecuteInBackgroundThread:292 VVM content provider configured - vvm_type_cvvm PhoneAccountHandle: [ComponentName: com.android.phone/com.android.services.telephony.TelephonyConnectionService subId: 1] [CONTEXT enable_persistent_logger=true ]
+10-16 19:11:23.866  2804  4215 I DialerActivationTask: com.android.voicemail.impl.ActivationTask.updateVoicemailsWithIccId:477 conversion disabled [CONTEXT enable_persistent_logger=true ]
+10-16 19:11:23.868  2804  4215 I DialerOmtpVvmCarrierConfigHelper: com.android.voicemail.impl.OmtpVvmCarrierConfigHelper.handleEvent:527 OmtpEvent:CONFIG_ACTIVATING PhoneAccountHandle: [ComponentName: com.android.phone/com.android.services.telephony.TelephonyConnectionService subId: 1] [CONTEXT enable_persistent_logger=true ]
+10-16 19:11:23.868  2804  4215 I DialerVoicemailStatus: com.android.voicemail.impl.VoicemailStatus$Editor.apply:112 enter
+10-16 19:11:23.869  2804  4215 I DialerVoicemailStatusDataServiceImpl: com.android.dialer.voicemailstatus.dataservice.impl.VoicemailStatusDataServiceImpl.insertOrUpdateVoicemailStatus:196 enter
+10-16 19:11:23.996  2804  7400 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-16 19:11:23.996  2804  7400 I DialerVoicemailStatusDataServiceImpl: com.android.dialer.voicemailstatus.dataservice.impl.VoicemailStatusDataServiceImpl.lambda$insertOrUpdateVoicemailStatus$5:213 merged status: # kee@6600c263
+10-16 19:11:23.998  2804  4215 I DialerActivationTask: com.android.voicemail.impl.ActivationTask.onExecuteInBackgroundThread:339 sending an activation request [CONTEXT enable_persistent_logger=true ]
+10-16 19:11:24.000  1051  1545 D SmsNumberUtils: enter filterDestAddr. destAddr="[BajqU4K5_YhSYbs-7QUn0dOwcmI]"
+10-16 19:11:24.001  1051  1545 D SmsNumberUtils: destAddr is not formatted.
+10-16 19:11:24.001  1051  1545 D SmsNumberUtils: leave filterDestAddr, new destAddr="[BajqU4K5_YhSYbs-7QUn0dOwcmI]"
+10-16 19:11:24.010  2804  4215 I DialerLogcatLoggingBindings: com.android.dialer.logging.logcat.LogcatLoggingBindings.logImpression:46 Impression: CVVM_SEND_VVM_SMS
+10-16 19:11:24.014  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:5 exec_start_elapsed_seconds: 283 [CONTEXT service_id=218 ]
+10-16 19:11:24.016  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:5 result: 1 elapsed_millis: 26 uptime_millis: 26 exec_start_elapsed_seconds: 283 [CONTEXT service_id=218 ]
+10-16 19:11:24.176  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Ready in Movies/Telemet: 2"
+10-16 19:11:24.178  5081  5081 D DeviceCapture: Found 1 global views to redraw
+10-16 19:11:24.222  5081  5081 I forceRedraw: FrameCommitCallback complete
+10-16 19:11:24.299  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:24.299  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:24.299  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:24.299  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:24.299  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:24.299  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:24.299  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:24.299  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:24.299  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:24.299  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:24.309   476   832 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 0
+10-16 19:11:24.333  5081  5081 I DeviceCapture: got bitmap, returning
+10-16 19:11:24.334  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-19.png
+10-16 19:11:24.337  1665  5278 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:24.372  6023  6875 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 283 [CONTEXT service_id=218 ]
+10-16 19:11:24.375  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 20 uptime_millis: 20 exec_start_elapsed_seconds: 283 [CONTEXT service_id=218 ]
+10-16 19:11:24.507  2804  2804 I DialerStatusSmsFetcher: com.android.voicemail.impl.sms.StatusSmsFetcher.onReceive:106 Request SMS successfully sent [CONTEXT enable_persistent_logger=true ]
+10-16 19:11:24.556  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-19.txt
+10-16 19:11:24.564  1665  2363 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:24.594  5081  5101 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-19.txt'.
+10-16 19:11:24.642  5081  7255 D EGL_emulation: app_time_stats: avg=24.56ms min=8.92ms max=60.88ms count=25
+10-16 19:11:24.672  6023  6875 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 283 [CONTEXT service_id=218 ]
+10-16 19:11:24.687  6023  6875 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 18 uptime_millis: 18 exec_start_elapsed_seconds: 283 [CONTEXT service_id=218 ]
+10-16 19:11:24.769  5081  5221 D EGL_emulation: app_time_stats: avg=435.32ms min=130.07ms max=627.54ms count=3
+10-16 19:11:24.924  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Ready in Movies/Telemet: 2"
+10-16 19:11:24.925  5081  5081 D DeviceCapture: Found 1 global views to redraw
+10-16 19:11:24.943  5081  5081 I forceRedraw: FrameCommitCallback complete
+10-16 19:11:25.010   834   834 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+10-16 19:11:25.038  5081  5081 I DeviceCapture: got bitmap, returning
+10-16 19:11:25.039  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-20.png
+10-16 19:11:25.050  1665  2850 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:25.102  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 284 [CONTEXT service_id=218 ]
+10-16 19:11:25.115  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 26 uptime_millis: 26 exec_start_elapsed_seconds: 284 [CONTEXT service_id=218 ]
+10-16 19:11:25.237  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-20.txt
+10-16 19:11:25.239  1665  2360 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:25.242  5081  5101 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-20.txt'.
+10-16 19:11:25.306  6023  6875 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 284 [CONTEXT service_id=218 ]
+10-16 19:11:25.309  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 7 uptime_millis: 7 exec_start_elapsed_seconds: 284 [CONTEXT service_id=218 ]
+10-16 19:11:25.575  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Ready in Movies/Telemet: 2"
+10-16 19:11:25.577  5081  5081 D DeviceCapture: Found 1 global views to redraw
+10-16 19:11:25.611  5081  5081 I forceRedraw: FrameCommitCallback complete
+10-16 19:11:25.649  5081  7255 D EGL_emulation: app_time_stats: avg=24.52ms min=9.42ms max=92.70ms count=26
+10-16 19:11:25.668  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:25.668  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:25.668  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:25.668  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:25.668  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:25.668  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:25.668  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:25.668  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:25.668  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:25.668  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:25.705  5081  5081 I DeviceCapture: got bitmap, returning
+10-16 19:11:25.706  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-21.png
+10-16 19:11:25.714  1665  2850 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:25.892  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-21.txt
+10-16 19:11:25.895  1665  2360 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:25.900  5081  5101 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-21.txt'.
+10-16 19:11:25.918  6023  6875 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 284 [CONTEXT service_id=218 ]
+10-16 19:11:25.946  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 100 uptime_millis: 100 exec_start_elapsed_seconds: 284 [CONTEXT service_id=218 ]
+10-16 19:11:26.219  5081  7255 E BufferQueueProducer: [GraphicBufferSource](id:13d900000026,api:1,p:5081,c:5081) cancelBuffer: BufferQueue has been abandoned
+10-16 19:11:26.222  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Ready in Movies/Telemet: 2"
+10-16 19:11:26.226   476  4941 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-16 19:11:26.226   476  4941 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-16 19:11:26.226  5081  7292 V MediaWriter: Track event err/info msg:101, trackId:1, type:1000,val:-1011
+10-16 19:11:26.226  5081  7292 I MPEG4Writer: Received total/0-length (180/0) buffers and encoded 180 frames. - Video
+10-16 19:11:26.226  5081  7255 D MPEG4Writer: reset()
+10-16 19:11:26.226  5081  7255 D MPEG4Writer: Video track stopping. Stop source
+10-16 19:11:26.226  5081  7255 D MPEG4Writer: Video track source stopping
+10-16 19:11:26.226  5081  7255 D MPEG4Writer: Video track source stopped
+10-16 19:11:26.226  5081  7255 D MPEG4Writer: Video track stopped. Status:0. Stop source
+10-16 19:11:26.226  5081  7290 D MPEG4Writer: 0 chunks are written in the last batch
+10-16 19:11:26.226  5081  7255 D MPEG4Writer: WriterThread stopped. Status:0
+10-16 19:11:26.226  5081  7255 I MPEG4Writer: Adjust the moov start time from 0 us -> 0 us
+10-16 19:11:26.226  5081  7255 I MPEG4Writer: MOOV atom was written to the file
+10-16 19:11:26.226  5081  7255 D MPEG4Writer: release()
+10-16 19:11:26.226  5081  7255 D MPEG4Writer: ftruncate mPreAllocateFileEndOffset:416760 mOffset:1531 mMdatEndOffset:414596 diff:2164
+10-16 19:11:26.228  5081  7284 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-16 19:11:26.228  5081  7255 D MPEG4Writer: final fsync() takes 2 ms, file size 414596
+10-16 19:11:26.229  5081  7283 D MediaCodec: flushMediametrics
+10-16 19:11:26.230  5081  7283 D MediaCodec: flushMediametrics
+10-16 19:11:26.230  5081  7283 W MediaCodec: no metrics handle found
+10-16 19:11:26.231  5081  5081 D DeviceCapture: Found 1 global views to redraw
+10-16 19:11:26.233  5081  5221 D EGL_emulation: app_time_stats: avg=488.03ms min=173.53ms max=667.97ms count=3
+10-16 19:11:26.233  5081  7255 D MPEG4Writer: MP4WtrCtrlHlpLooper stopped
+10-16 19:11:26.233  5081  7255 D MPEG4Writer: Top 5 write durations(microseconds): #1:41 #2:47 #3:155 #4:315 #5:8067
+10-16 19:11:26.233  5081  7255 D MPEG4Writer: reset()
+10-16 19:11:26.233  5081  7255 D MPEG4Writer: Video track stopping. Stop source
+10-16 19:11:26.233  5081  7255 E MPEG4Writer: Stop() called but track is not started or stopped
+10-16 19:11:26.247  1665  1755 D MediaProvider: Moving /storage/emulated/0/Movies/Telemet/.pending-1792782678-DJI_A_0001_D_overlay.mp4 to /storage/emulated/0/Movies/Telemet/DJI_A_0001_D_overlay.mp4
+10-16 19:11:26.278  5081  5081 I forceRedraw: FrameCommitCallback complete
+10-16 19:11:26.314  5081  7255 I Telemet : Overlay video ready in 8 s: Movies/Telemet/DJI_A_0001_D_overlay.mp4
+10-16 19:11:26.322  5081  7255 I Telemet : Overlay video: DJI_A_0002_D_overlay.mp4 1920x1080, 5 s
+10-16 19:11:26.325  1665  1755 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:26.346  1665  1756 I MediaProvider: Open with lower FS for /storage/emulated/0/Movies/Telemet/.pending-1792782686-DJI_A_0002_D_overlay.mp4. Uid: 10192
+10-16 19:11:26.348  5081  7255 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-16 19:11:26.349  5081  7475 D CCodec  : allocate(c2.android.avc.encoder)
+10-16 19:11:26.351  5081  7475 I CCodec  : setting up 'default' as default (vendor) store
+10-16 19:11:26.352   476  4941 I mediaswcodec: missing struct descriptor #Param::CoreIndex(--004) for field values of struct #Param::CoreIndex(F-12004)
+10-16 19:11:26.353   476  4941 I mediaswcodec: missing struct descriptor #Param::CoreIndex(--1812) for field values of struct #Param::CoreIndex(F-11812)
+10-16 19:11:26.353   476  4941 I mediaswcodec: missing struct descriptor #Param::CoreIndex(--004) for field values of struct #Param::CoreIndex(F-12004)
+10-16 19:11:26.354   476  4941 I mediaswcodec: missing struct descriptor #Param::CoreIndex(--1812) for field values of struct #Param::CoreIndex(F-11812)
+10-16 19:11:26.355  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 285 [CONTEXT service_id=218 ]
+10-16 19:11:26.358  5081  7475 I CCodec  : Created component [c2.android.avc.encoder]
+10-16 19:11:26.358  5081  7475 D CCodecConfig: read media type: video/avc
+10-16 19:11:26.359  5081  7475 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-16 19:11:26.360  5081  7475 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-16 19:11:26.360  5081  7475 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-16 19:11:26.360  5081  7475 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-16 19:11:26.360  5081  7475 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-16 19:11:26.360  5081  7475 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-16 19:11:26.360  5081  7475 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-16 19:11:26.361  5081  7475 D ReflectedParamUpdater: ignored struct field coding.gop.values
+10-16 19:11:26.361  5081  7475 D ReflectedParamUpdater: ignored struct field coding.qp.values
+10-16 19:11:26.361  5081  7475 D CCodecConfig: ignoring local param raw.color (0xc2001809) as it is already supported
+10-16 19:11:26.362  5081  7475 I CCodecConfig: query failed after returning 12 values (BAD_INDEX)
+10-16 19:11:26.362  5081  7475 D CCodecConfig: c2 config diff is Dict {
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   c2::i32 coded.average-qp.value = 0
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   c2::float coded.frame-rate.value = 1
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   c2::u32 coded.picture-type.value = 0
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   c2::u32 coded.pl.level = 20492
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   c2::u32 coded.pl.profile = 20481
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   c2::u32 coded.vui.color.matrix = 0
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   c2::u32 coded.vui.color.primaries = 0
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   c2::u32 coded.vui.color.range = 0
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   c2::u32 coded.vui.color.transfer = 0
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   c2::u32 coding.intra-refresh.mode = 0
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   c2::float coding.intra-refresh.period = 0
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   c2::u32 coding.request-sync-frame.value = 0
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   c2::i64 coding.sync-frame-interval.value = 1000000
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   string input.media-type.value = "video/raw"
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   string output.media-type.value = "video/avc"
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   c2::u32 raw.color.matrix = 0
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   c2::u32 raw.color.primaries = 0
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   c2::u32 raw.color.range = 0
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   c2::u32 raw.color.transfer = 0
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   c2::u32 raw.size.height = 16
+10-16 19:11:26.362  5081  7475 D CCodecConfig:   c2::u32 raw.size.width = 16
+10-16 19:11:26.362  5081  7475 D CCodecConfig: }
+10-16 19:11:26.362  5081  7475 W ColorUtils: expected specified color aspects (0:0:0:0)
+10-16 19:11:26.363  5081  5081 I DeviceCapture: got bitmap, returning
+10-16 19:11:26.364  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-22.png
+10-16 19:11:26.364  5081  7255 D VQApply : minquality by QP: inject video-qp-max=45
+10-16 19:11:26.364  5081  7255 D MediaCodec: shapeMediaFormat: deltas(5): AMessage(what = 0x00000000) = {
+10-16 19:11:26.364  5081  7255 D MediaCodec:     int32_t android._encoding-quality-level = 0
+10-16 19:11:26.364  5081  7255 D MediaCodec:     int32_t video-qp-max = 45
+10-16 19:11:26.364  5081  7255 D MediaCodec:     int32_t video-qp-i-max = 45
+10-16 19:11:26.364  5081  7255 D MediaCodec:     int32_t video-qp-p-max = 48
+10-16 19:11:26.364  5081  7255 D MediaCodec:     int32_t video-qp-b-max = 51
+10-16 19:11:26.364  5081  7255 D MediaCodec:   }
+10-16 19:11:26.364  5081  7474 D MediaCodec: flushMediametrics
+10-16 19:11:26.365  5081  7475 D CCodec  : [c2.android.avc.encoder] buffers are bound to CCodec for this session
+10-16 19:11:26.365  5081  7475 D CCodecConfig: no c2 equivalents for color-format
+10-16 19:11:26.365  5081  7475 D CCodecConfig: no c2 equivalents for video-qp-max
+10-16 19:11:26.365  5081  7475 D CCodecConfig: no c2 equivalents for video-qp-i-max
+10-16 19:11:26.365  5081  7475 D CCodecConfig: no c2 equivalents for video-qp-p-max
+10-16 19:11:26.365  5081  7475 D CCodecConfig: no c2 equivalents for video-qp-b-max
+10-16 19:11:26.365  5081  7475 D CCodecConfig: no c2 equivalents for flags
+10-16 19:11:26.365  5081  7475 D CCodecConfig: no c2 equivalents for encoder
+10-16 19:11:26.367  5081  7475 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 4147200
+10-16 19:11:26.367  5081  7475 D CCodecConfig:   c2::float coded.frame-rate.value = 30
+10-16 19:11:26.367  5081  7475 D CCodecConfig:   c2::i64 coding.sync-frame-interval.value = 2000000
+10-16 19:11:26.367  5081  7475 D CCodecConfig:   c2::u32 raw.size.height = 1080
+10-16 19:11:26.367  5081  7475 D CCodecConfig:   c2::u32 raw.size.width = 1920
+10-16 19:11:26.367  5081  7475 W ColorUtils: expected specified color aspects (0:0:0:0)
+10-16 19:11:26.367  5081  7475 D CCodec  : encoding statistics level = 0
+10-16 19:11:26.367  5081  7475 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-16 19:11:26.367  5081  7475 D CCodec  :   Rect crop(0, 0, 1919, 1079)
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t color-standard = 0
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t color-range = 0
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t color-transfer = 0
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t frame-rate = 30
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t height = 1080
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t intra-refresh-period = 0
+10-16 19:11:26.367  5081  7475 D CCodec  :   string mime = "video/raw"
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t video-qp-average = 0
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t width = 1920
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t android._dataspace = 0
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t using-sw-read-often = 1
+10-16 19:11:26.367  5081  7475 D CCodec  :   int64_t android._C2MemoryUsage = 1
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t color-format = 2130708361
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t android._color-format = 2130708361
+10-16 19:11:26.367  5081  7475 D CCodec  : }
+10-16 19:11:26.367  5081  7475 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t bitrate = 4147200
+10-16 19:11:26.367  5081  7475 D CCodec  :   Rect crop(0, 0, 1919, 1079)
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t color-standard = 0
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t color-range = 0
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t color-transfer = 0
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t frame-rate = 30
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t height = 1080
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t intra-refresh-period = 0
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t level = 4096
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t max-bitrate = 4147200
+10-16 19:11:26.367  5081  7475 D CCodec  :   string mime = "video/avc"
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t profile = 65536
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t video-qp-average = 0
+10-16 19:11:26.367  5081  7475 D CCodec  :   int32_t width = 1920
+10-16 19:11:26.367  5081  7475 D CCodec  : }
+10-16 19:11:26.368  5081  7475 I CCodecConfig: query failed after returning 13 values (BAD_INDEX)
+10-16 19:11:26.369  5081  7475 D CCodec  : input format changed to AMessage(what = 0x00000000) = {
+10-16 19:11:26.369  5081  7475 D CCodec  :   Rect crop(0, 0, 1919, 1079)
+10-16 19:11:26.369  5081  7475 D CCodec  :   int32_t color-standard = 1
+10-16 19:11:26.369  5081  7475 D CCodec  :   int32_t color-range = 2
+10-16 19:11:26.369  5081  7475 D CCodec  :   int32_t color-transfer = 3
+10-16 19:11:26.369  5081  7475 D CCodec  :   int32_t frame-rate = 30
+10-16 19:11:26.369  5081  7475 D CCodec  :   int32_t height = 1080
+10-16 19:11:26.369  5081  7475 D CCodec  :   int32_t intra-refresh-period = 0
+10-16 19:11:26.369  5081  7475 D CCodec  :   string mime = "video/raw"
+10-16 19:11:26.369  5081  7475 D CCodec  :   int32_t video-qp-average = 0
+10-16 19:11:26.369  5081  7475 D CCodec  :   int32_t width = 1920
+10-16 19:11:26.369  5081  7475 D CCodec  :   int32_t android._dataspace = 260
+10-16 19:11:26.369  5081  7475 D CCodec  :   int32_t using-sw-read-often = 1
+10-16 19:11:26.369  5081  7475 D CCodec  :   int64_t android._C2MemoryUsage = 1
+10-16 19:11:26.369  5081  7475 D CCodec  :   int32_t color-format = 2130708361
+10-16 19:11:26.369  5081  7475 D CCodec  :   int32_t android._color-format = 2130708361
+10-16 19:11:26.369  5081  7475 D CCodec  : }
+10-16 19:11:26.369  5081  7475 D GraphicBufferSource: setting dataspace: 0x104, acquired=0
+10-16 19:11:26.369  5081  7475 D CCodec  : ISConfig not changed
+10-16 19:11:26.371  5081  7475 W Codec2Client: query -- param skipped: index = 1342179345.
+10-16 19:11:26.371  5081  7475 W Codec2Client: query -- param skipped: index = 2415921170.
+10-16 19:11:26.371  5081  7475 D CCodecBufferChannel: [c2.android.avc.encoder#858] Using basic input block pool with poolID 1 => got 1 - OK (0)
+10-16 19:11:26.374  5081  7475 I CCodecBufferChannel: [c2.android.avc.encoder#858] Created output block pool with allocatorID 16 => poolID 29 - OK
+10-16 19:11:26.375  5081  7475 D CCodecBufferChannel: [c2.android.avc.encoder#858] Configured output block pool ids 29 => OK
+10-16 19:11:26.375   470   483 W ResourceManagerService: Ignoring request to add new resource entry with value <= 0
+10-16 19:11:26.376  5081  7255 D MPEG4Writer: PreAllocation enabled
+10-16 19:11:26.382  1665  2850 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:26.384  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 38 uptime_millis: 38 exec_start_elapsed_seconds: 285 [CONTEXT service_id=218 ]
+10-16 19:11:26.533  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-22.txt
+10-16 19:11:26.535  1665  2360 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:26.539  5081  5101 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-22.txt'.
+10-16 19:11:26.561  5081  7255 D GraphicBufferSource: got buffer with new dataSpace #104
+10-16 19:11:26.561  5081  7255 D C2OMXNode: dataspace changed to 0x104 pixel format: 0x2
+10-16 19:11:26.565  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 285 [CONTEXT service_id=218 ]
+10-16 19:11:26.565   476  7476 D SimpleC2Component: Using output block pool with poolID 29 => got 29 - 0
+10-16 19:11:26.569   476  7476 D SimpleC2Component: applied 2 configUpdates => BAD_INDEX (6)
+10-16 19:11:26.569   476  7476 D C2SoftAvcEnc: Params width 1920 height 1080 level 41 colorFormat 0 bframes 0
+10-16 19:11:26.575  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 19 uptime_millis: 19 exec_start_elapsed_seconds: 285 [CONTEXT service_id=218 ]
+10-16 19:11:26.604   476  7476 E C2SoftAvcEnc: Unable to set air params = 0x1ad
+10-16 19:11:26.718  5081  7475 D CCodecConfig: c2 config diff is   Buffer coded.init-data.value = {
+10-16 19:11:26.718  5081  7475 D CCodecConfig:     00000000:  00 00 00 01 67 42 c0 29  8d 68 07 80 22 7e 59 08  ....gB.).h.."~Y.
+10-16 19:11:26.718  5081  7475 D CCodecConfig:     00000010:  08 08 08 3c 22 11 a8 00  00 00 01 68 ce 01 a8 35  ...<"......h...5
+10-16 19:11:26.718  5081  7475 D CCodecConfig:     00000020:  c8                                                .
+10-16 19:11:26.718  5081  7475 D CCodecConfig:   }
+10-16 19:11:26.725  5081  7255 D MPEG4Writer: fpathconf _PC_FILESIZEBITS:64
+10-16 19:11:26.726  5081  7255 D MPEG4Writer: File size limit set to 4503599627370495 bytes implicitly
+10-16 19:11:26.726  5081  7255 D MPEG4Writer: MP4WtrCtrlHlpLooper Started
+10-16 19:11:26.726  5081  7255 I MPEG4Writer: limits: 4503599627370495/0 bytes/us, bit rate: -1 bps and the estimated moov size 3192 bytes
+10-16 19:11:26.727  5081  7482 I MPEG4Writer: setStartTimestampUs: 0
+10-16 19:11:26.727  5081  7482 I MPEG4Writer: Earliest track starting time: 0
+10-16 19:11:26.972  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Ready in Movies/Telemet: 2"
+10-16 19:11:26.974  5081  5081 D DeviceCapture: Found 1 global views to redraw
+10-16 19:11:27.039  5081  5081 I forceRedraw: FrameCommitCallback complete
+10-16 19:11:27.129  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:27.129  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:27.129  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:27.129  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:27.129  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:27.129  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:27.129  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:27.129  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:27.129  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:27.129  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:27.148  5081  5081 I DeviceCapture: got bitmap, returning
+10-16 19:11:27.150  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-23.png
+10-16 19:11:27.169  1665  2850 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:27.260  6023  6979 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 286 [CONTEXT service_id=218 ]
+10-16 19:11:27.281  6023  6979 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 33 uptime_millis: 33 exec_start_elapsed_seconds: 286 [CONTEXT service_id=218 ]
+10-16 19:11:27.291  6023  6032 I .gms.persistent: Background young concurrent copying GC freed 243543(11MB) AllocSpace objects, 0(0B) LOS objects, 47% free, 12MB/24MB, paused 6.787ms,18us total 60.666ms
+10-16 19:11:27.373  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-23.txt
+10-16 19:11:27.377  1665  2360 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:27.379  5081  5101 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-23.txt'.
+10-16 19:11:27.431  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 286 [CONTEXT service_id=218 ]
+10-16 19:11:27.434  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 7 uptime_millis: 7 exec_start_elapsed_seconds: 286 [CONTEXT service_id=218 ]
+10-16 19:11:27.497  5081  5221 D EGL_emulation: app_time_stats: avg=315.99ms min=44.28ms max=458.12ms count=4
+10-16 19:11:27.581  5081  7255 D EGL_emulation: app_time_stats: avg=26.11ms min=9.29ms max=62.90ms count=33
+10-16 19:11:27.713  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Ready in Movies/Telemet: 2"
+10-16 19:11:27.714  5081  5081 D DeviceCapture: Found 1 global views to redraw
+10-16 19:11:27.750  5081  5081 I forceRedraw: FrameCommitCallback complete
+10-16 19:11:27.850  5081  5081 I DeviceCapture: got bitmap, returning
+10-16 19:11:27.851  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-24.png
+10-16 19:11:27.854  1665  2850 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:27.965  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 287 [CONTEXT service_id=218 ]
+10-16 19:11:27.972  6023  6979 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 55 uptime_millis: 55 exec_start_elapsed_seconds: 287 [CONTEXT service_id=218 ]
+10-16 19:11:28.003   834   834 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+10-16 19:11:28.059  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-24.txt
+10-16 19:11:28.060  1665  2360 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:28.065  5081  5101 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-24.txt'.
+10-16 19:11:28.128  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 287 [CONTEXT service_id=218 ]
+10-16 19:11:28.132  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 9 uptime_millis: 9 exec_start_elapsed_seconds: 287 [CONTEXT service_id=218 ]
+10-16 19:11:28.421  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Ready in Movies/Telemet: 2"
+10-16 19:11:28.423  5081  5081 D DeviceCapture: Found 1 global views to redraw
+10-16 19:11:28.460  5081  5081 I forceRedraw: FrameCommitCallback complete
+10-16 19:11:28.488  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:28.488  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:28.488  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:28.488  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:28.488  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:28.488  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:28.488  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:28.488  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:28.488  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:28.488  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:28.525  5081  5081 I DeviceCapture: got bitmap, returning
+10-16 19:11:28.526  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-25.png
+10-16 19:11:28.528  1665  2360 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:28.612  5081  7255 D EGL_emulation: app_time_stats: avg=24.66ms min=11.04ms max=57.36ms count=24
+10-16 19:11:28.622  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 287 [CONTEXT service_id=218 ]
+10-16 19:11:28.627  6023  6875 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 39 uptime_millis: 39 exec_start_elapsed_seconds: 287 [CONTEXT service_id=218 ]
+10-16 19:11:28.713  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-25.txt
+10-16 19:11:28.719  1665  2363 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:28.721  5081  5101 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-25.txt'.
+10-16 19:11:28.793  5081  5221 D EGL_emulation: app_time_stats: avg=431.98ms min=252.34ms max=710.39ms count=3
+10-16 19:11:28.851  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:5 exec_start_elapsed_seconds: 287 [CONTEXT service_id=218 ]
+10-16 19:11:28.855  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:5 result: 1 elapsed_millis: 8 uptime_millis: 8 exec_start_elapsed_seconds: 287 [CONTEXT service_id=218 ]
+10-16 19:11:29.059  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Ready in Movies/Telemet: 2"
+10-16 19:11:29.060  5081  5081 D DeviceCapture: Found 1 global views to redraw
+10-16 19:11:29.081  5081  5081 I forceRedraw: FrameCommitCallback complete
+10-16 19:11:29.176  5081  5081 I DeviceCapture: got bitmap, returning
+10-16 19:11:29.177  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-26.png
+10-16 19:11:29.180  1665  2360 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:29.221  6023  6875 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 288 [CONTEXT service_id=218 ]
+10-16 19:11:29.231  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 16 uptime_millis: 16 exec_start_elapsed_seconds: 288 [CONTEXT service_id=218 ]
+10-16 19:11:29.321   834   834 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-16 19:11:29.373  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-26.txt
+10-16 19:11:29.379  1665  5415 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:29.396  5081  5101 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-26.txt'.
+10-16 19:11:29.469  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 288 [CONTEXT service_id=218 ]
+10-16 19:11:29.475  6023  6979 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 13 uptime_millis: 13 exec_start_elapsed_seconds: 288 [CONTEXT service_id=218 ]
+10-16 19:11:29.653  5081  7255 D EGL_emulation: app_time_stats: avg=22.91ms min=11.71ms max=64.95ms count=25
+10-16 19:11:29.743  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Ready in Movies/Telemet: 2"
+10-16 19:11:29.745  5081  5081 D DeviceCapture: Found 1 global views to redraw
+10-16 19:11:29.787  5081  5081 I forceRedraw: FrameCommitCallback complete
+10-16 19:11:29.831  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:29.831  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:29.831  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:29.831  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:29.831  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:29.831  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:29.831  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:29.831  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:29.831  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:29.831  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:29.865  5081  5081 I DeviceCapture: got bitmap, returning
+10-16 19:11:29.866  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-27.png
+10-16 19:11:29.869  1665  2850 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:29.956  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 289 [CONTEXT service_id=218 ]
+10-16 19:11:30.034  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 104 uptime_millis: 104 exec_start_elapsed_seconds: 289 [CONTEXT service_id=218 ]
+10-16 19:11:30.061  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-27.txt
+10-16 19:11:30.078  5081  5221 D EGL_emulation: app_time_stats: avg=428.09ms min=286.94ms max=706.88ms count=3
+10-16 19:11:30.088  1665  5278 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:30.092  5081  5101 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-27.txt'.
+10-16 19:11:30.271  6023  6979 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:5 exec_start_elapsed_seconds: 289 [CONTEXT service_id=218 ]
+10-16 19:11:30.292  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:5 result: 1 elapsed_millis: 16 uptime_millis: 16 exec_start_elapsed_seconds: 289 [CONTEXT service_id=218 ]
+10-16 19:11:30.415  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Ready in Movies/Telemet: 2"
+10-16 19:11:30.416  5081  5081 D DeviceCapture: Found 1 global views to redraw
+10-16 19:11:30.452  5081  5081 I forceRedraw: FrameCommitCallback complete
+10-16 19:11:30.573  5081  5081 I DeviceCapture: got bitmap, returning
+10-16 19:11:30.575  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-28.png
+10-16 19:11:30.580  1665  5415 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:30.716  5081  7255 D EGL_emulation: app_time_stats: avg=25.42ms min=10.37ms max=83.09ms count=23
+10-16 19:11:30.764  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-28.txt
+10-16 19:11:30.767  1665  5278 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:30.769  5081  5101 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-28.txt'.
+10-16 19:11:30.774  6023  6875 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 289 [CONTEXT service_id=218 ]
+10-16 19:11:30.801  6023  6875 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 102 uptime_millis: 102 exec_start_elapsed_seconds: 289 [CONTEXT service_id=218 ]
+10-16 19:11:31.006   834   834 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+10-16 19:11:31.099  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Ready in Movies/Telemet: 2"
+10-16 19:11:31.100  5081  5081 D DeviceCapture: Found 1 global views to redraw
+10-16 19:11:31.139  5081  5221 D EGL_emulation: app_time_stats: avg=530.71ms min=373.69ms max=687.73ms count=2
+10-16 19:11:31.140  5081  5081 I forceRedraw: FrameCommitCallback complete
+10-16 19:11:31.195  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:31.195  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:31.195  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:31.195  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:31.195  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:31.195  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:31.195  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:31.195  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:31.195  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:31.195  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:31.239  5081  5081 I DeviceCapture: got bitmap, returning
+10-16 19:11:31.240  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-29.png
+10-16 19:11:31.251  1665  2360 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:31.311  1665  1983 D PickerSyncController: syncAllMedia
+10-16 19:11:31.311  1665  1983 D PickerSyncController: syncAllMediaFromProvider() LOCAL, auth=com.android.providers.media.photopicker, retry=true
+10-16 19:11:31.312  1665  1983 D PickerSyncController: getSyncRequestParams() LOCAL, auth=com.android.providers.media.photopicker
+10-16 19:11:31.325   476   832 D BufferPoolAccessor2.0: bufferpool2 0x7147c6ec50c8 : 0(0 size) total buffers - 0(0 size) used buffers - 179/181 (recycle/alloc) - 2/180 (fetch/transfer)
+10-16 19:11:31.326   476   832 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+10-16 19:11:31.336  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 290 [CONTEXT service_id=218 ]
+10-16 19:11:31.356  1665  1983 D PickerSyncController:    Latest ID/Gen=1407:8b600a73-1ae4-4e32-9989-8248668261e7:external_primary/117
+10-16 19:11:31.357  1665  1983 D PickerSyncController:    Cached ID/Gen=null/-1
+10-16 19:11:31.357  1665  1983 D PickerSyncController:    RESULT=SyncRequestParams{type=MEDIA_FULL, gen=0, latest=Bundle[{last_media_sync_generation=117, media_collection_id=1407:8b600a73-1ae4-4e32-9989-8248668261e7:external_primary}]}
+10-16 19:11:31.357  1665  1983 I PickerSyncController: Executing SyncReset. isLocal: true. authority: com.android.providers.media.photopicker
+10-16 19:11:31.369  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 59 uptime_millis: 59 exec_start_elapsed_seconds: 290 [CONTEXT service_id=218 ]
+10-16 19:11:31.444  1665  1983 I PickerSyncController: SyncReset. isLocal:true. authority: com.android.providers.media.photopicker. result count: 0
+10-16 19:11:31.481  1665  1983 I PickerSyncController: Executing SyncAdd. isLocal: true. authority: com.android.providers.media.photopicker
+10-16 19:11:31.504  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-29.txt
+10-16 19:11:31.523  1665  5278 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:31.525  5081  5101 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-29.txt'.
+10-16 19:11:31.535  1665  1983 I PickerSyncController: Paged sync successful. QueryArgs: Bundle[{}]. Result count: 1. Cursor count: 1
+10-16 19:11:31.542   476  7476 D BufferPoolAccessor2.0: bufferpool2 0x7147c6ec7818 : 2(6220800 size) total buffers - 1(3110400 size) used buffers - 111/113 (recycle/alloc) - 2/113 (fetch/transfer)
+10-16 19:11:31.560  1665  1983 D PickerSyncController: syncAllMediaFromProvider() CLOUD, auth=null, retry=true
+10-16 19:11:31.561  1665  1983 D PickerSyncController: getSyncRequestParams() CLOUD, auth=null
+10-16 19:11:31.561  1665  1983 D PickerSyncController:    RESULT=SyncRequestParams{type=MEDIA_RESET, gen=0, latest=null}
+10-16 19:11:31.561  1665  1983 I PickerSyncController: Executing SyncReset. isLocal: false. authority: null
+10-16 19:11:31.561  1665  1983 I PickerSyncController: SyncReset. isLocal:false. authority: null. result count: 0
+10-16 19:11:31.562  1665  1983 D PickerSyncController: Ignoring cache media info for null authority with bundle: null
+10-16 19:11:31.562  1665  1983 I PickerSyncController: Executing SyncAlbumReset. isLocal: true. authority: com.android.providers.media.photopicker. albumId: null
+10-16 19:11:31.585  1665  1983 I PickerSyncController: Successfully executed SyncResetAlbum. authority: com.android.providers.media.photopicker. albumId: null. Result count: 0
+10-16 19:11:31.586  1665  1983 I PickerSyncController: Executing SyncAlbumReset. isLocal: false. authority: null. albumId: null
+10-16 19:11:31.587  1665  1983 I PickerSyncController: Successfully executed SyncResetAlbum. authority: null. albumId: null. Result count: 0
+10-16 19:11:31.602  6023  6979 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 290 [CONTEXT service_id=218 ]
+10-16 19:11:31.605  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 10 uptime_millis: 10 exec_start_elapsed_seconds: 290 [CONTEXT service_id=218 ]
+10-16 19:11:31.606  6062  7596 I GmscoreIpa: Starting mediastore instant index [CONTEXT service_id=255 ]
+10-16 19:11:31.719  5081  7255 D EGL_emulation: app_time_stats: avg=23.02ms min=9.38ms max=64.61ms count=29
+10-16 19:11:31.849  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Ready in Movies/Telemet: 2"
+10-16 19:11:31.850  5081  5081 D DeviceCapture: Found 1 global views to redraw
+10-16 19:11:31.894  5081  5081 I forceRedraw: FrameCommitCallback complete
+10-16 19:11:31.982  5081  5081 I DeviceCapture: got bitmap, returning
+10-16 19:11:31.983  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-30.png
+10-16 19:11:31.986  1665  2363 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:32.175  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-30.txt
+10-16 19:11:32.179  1665  2850 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:32.191  5081  5101 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-30.txt'.
+10-16 19:11:32.225  6023  6979 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 291 [CONTEXT service_id=218 ]
+10-16 19:11:32.244  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 54 uptime_millis: 54 exec_start_elapsed_seconds: 291 [CONTEXT service_id=218 ]
+10-16 19:11:32.499  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Ready in Movies/Telemet: 2"
+10-16 19:11:32.500  5081  5081 D DeviceCapture: Found 1 global views to redraw
+10-16 19:11:32.540  5081  5221 D EGL_emulation: app_time_stats: avg=466.65ms min=102.79ms max=650.76ms count=3
+10-16 19:11:32.541  5081  5081 I forceRedraw: FrameCommitCallback complete
+10-16 19:11:32.587  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:32.587  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:32.587  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:32.587  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:32.587  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:32.587  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:32.587  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:32.587  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:32.587  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:32.587  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:32.619  5081  5081 I DeviceCapture: got bitmap, returning
+10-16 19:11:32.619  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-31.png
+10-16 19:11:32.621  1665  2850 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:32.748  5081  7255 E BufferQueueProducer: [GraphicBufferSource](id:13d900000027,api:1,p:5081,c:5081) cancelBuffer: BufferQueue has been abandoned
+10-16 19:11:32.757  5081  7255 D MPEG4Writer: reset()
+10-16 19:11:32.758  5081  7255 D MPEG4Writer: Video track stopping. Stop source
+10-16 19:11:32.758  5081  7255 D MPEG4Writer: Video track source stopping
+10-16 19:11:32.758  5081  7255 D MPEG4Writer: Video track source stopped
+10-16 19:11:32.758  5081  7482 V MediaWriter: Track event err/info msg:101, trackId:1, type:1000,val:-1011
+10-16 19:11:32.758  5081  7482 I MPEG4Writer: Received total/0-length (150/0) buffers and encoded 150 frames. - Video
+10-16 19:11:32.759  5081  7255 D MPEG4Writer: Video track stopped. Status:0. Stop source
+10-16 19:11:32.760  6023  6875 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 291 [CONTEXT service_id=218 ]
+10-16 19:11:32.760  5081  7480 D MPEG4Writer: 0 chunks are written in the last batch
+10-16 19:11:32.762  5081  7475 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-16 19:11:32.762   476   476 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-16 19:11:32.762   476   476 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-16 19:11:32.762  5081  7255 D MPEG4Writer: WriterThread stopped. Status:0
+10-16 19:11:32.763  5081  7255 I MPEG4Writer: Adjust the moov start time from 0 us -> 0 us
+10-16 19:11:32.763  5081  7255 I MPEG4Writer: MOOV atom was written to the file
+10-16 19:11:32.763  5081  7255 D MPEG4Writer: release()
+10-16 19:11:32.763  5081  7255 D MPEG4Writer: ftruncate mPreAllocateFileEndOffset:375530 mOffset:1411 mMdatEndOffset:373486 diff:2044
+10-16 19:11:32.765  5081  7474 D MediaCodec: flushMediametrics
+10-16 19:11:32.765  5081  7474 D MediaCodec: flushMediametrics
+10-16 19:11:32.765  5081  7474 W MediaCodec: no metrics handle found
+10-16 19:11:32.770  6023  6875 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 19 uptime_millis: 19 exec_start_elapsed_seconds: 291 [CONTEXT service_id=218 ]
+10-16 19:11:32.777  5081  7255 D MPEG4Writer: final fsync() takes 14 ms, file size 373486
+10-16 19:11:32.777  5081  7255 D MPEG4Writer: MP4WtrCtrlHlpLooper stopped
+10-16 19:11:32.778  5081  7255 D MPEG4Writer: Top 5 write durations(microseconds): #1:36 #2:41 #3:95 #4:135 #5:138
+10-16 19:11:32.778  5081  7255 D MPEG4Writer: reset()
+10-16 19:11:32.778  5081  7255 D MPEG4Writer: Video track stopping. Stop source
+10-16 19:11:32.778  5081  7255 E MPEG4Writer: Stop() called but track is not started or stopped
+10-16 19:11:32.782  1665  1756 D MediaProvider: Moving /storage/emulated/0/Movies/Telemet/.pending-1792782686-DJI_A_0002_D_overlay.mp4 to /storage/emulated/0/Movies/Telemet/DJI_A_0002_D_overlay.mp4
+10-16 19:11:32.800  5081  5101 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-31.txt
+10-16 19:11:32.801  5081  7255 I Telemet : Overlay video ready in 6 s: Movies/Telemet/DJI_A_0002_D_overlay.mp4
+10-16 19:11:32.802  1665  5415 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:32.808  5081  5101 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-31.txt'.
+10-16 19:11:33.124  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: a string containing "Ready in Movies/Telemet: 2"
+10-16 19:11:33.989  1665  5278 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:34.002  5081  5101 I TestRunner: finished: t11_videoMatch(io.github.avsessisozx.telemet.UiFlowTest)

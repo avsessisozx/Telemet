@@ -1,0 +1,79 @@
+10-16 19:11:02.472  5081  5101 I TestRunner: started: t08_upgradeWithPermissionsSkipsWizard(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:11:02.475  5081  5101 W UiAutomation: UiAutomation.grantRuntimePermission() is more robust and should be used instead of 'pm grant'
+10-16 19:11:02.506   521  2311 W InputManager-JNI: Input channel object 'c484a91 io.github.avsessisozx.telemet/io.github.avsessisozx.telemet.ui.LogActivity (client)' was disposed without first being removed with the input manager!
+10-16 19:11:02.511  6023  6979 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.clearcut.uploader.QosUploaderService finished executing. cause:5 result: 1 elapsed_millis: 370 uptime_millis: 370 exec_start_elapsed_seconds: 261 [CONTEXT service_id=218 ]
+10-16 19:11:02.572  6062  6068 I gle.android.gms: Background young concurrent copying GC freed 155735(6143KB) AllocSpace objects, 88(3092KB) LOS objects, 38% free, 14MB/24MB, paused 39us,14us total 120.075ms
+10-16 19:11:02.599  5081  5101 W UiAutomation: UiAutomation.grantRuntimePermission() is more robust and should be used instead of 'pm grant'
+10-16 19:11:02.612  6023  6979 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.clearcut.uploader.QosUploaderService finished executing. cause:5 result: 1 elapsed_millis: 555 uptime_millis: 555 exec_start_elapsed_seconds: 261 [CONTEXT service_id=218 ]
+10-16 19:11:02.638  6062  6948 I ChimeraConfigurator: Detected pending changes for urgent request: [vision.ocr]. Pending module sets: container:2318189190800+mlkit.ocr.common,tflite_dynamite:2627305025100800+tflite_dynamite,vision_ocr:2316024025100000+vision.ocr
+10-16 19:11:02.644  6062  6948 I GmsDebugLogger: [73] 1801
+10-16 19:11:02.646  6062  6948 W ZappDownloader: No successful module downloads for requested features [vision.ocr].
+10-16 19:11:02.646  6062  6948 I GmsDebugLogger: [30] [VisionOcrDynamite.integ:231602402100000],[TfliteDynamiteDynamite.integ:262730502100800],[MlkitOcrCommon.optional:231818100800]
+10-16 19:11:02.648  6062  6948 W ChimeraConfigService: Retry attempt was throttled. [CONTEXT service_id=264 ]
+10-16 19:11:02.648  6062  6948 I GmsDebugLogger: [83] 1 [vision.ocr]
+10-16 19:11:02.650  6062  6947 W Vision  : Request for optional module download of ocr failed. Request again.
+10-16 19:11:02.650  6062  6947 W Vision  : Would have logged:
+10-16 19:11:02.650  6062  6947 W Vision  : # dsae@37884fe7
+10-16 19:11:02.650  6062  6947 I Vision  : Schedule retrying download ocr at 261765 with backoff 40 seconds
+10-16 19:11:02.661  5081  5101 W UiAutomation: UiAutomation.grantRuntimePermission() is more robust and should be used instead of 'pm grant'
+10-16 19:11:02.711  5081  5101 W UiAutomation: UiAutomation.grantRuntimePermission() is more robust and should be used instead of 'pm grant'
+10-16 19:11:02.735  5081  5101 W UiAutomation: UiAutomation.grantRuntimePermission() is more robust and should be used instead of 'pm grant'
+10-16 19:11:02.752  5081  5101 W UiAutomation: UiAutomation.grantRuntimePermission() is more robust and should be used instead of 'pm grant'
+10-16 19:11:02.815   521  1662 I ActivityManager: Broadcasting: Intent { act=android.intent.action.CLOSE_SYSTEM_DIALOGS flg=0x400000 }
+10-16 19:11:02.818   834   834 I vol.VolumeDialogImpl: mDialog.dismiss() reason: volume_controller from: com.android.systemui.volume.VolumeDialogImpl$7.onDismissRequested:3
+10-16 19:11:02.819   521   538 I ActivityManager: Broadcast completed: result=0
+10-16 19:11:02.825   834   889 D SplashScreenView: Build android.window.SplashScreenView{c21356e V.E...... ......ID 0,0-0,0}
+10-16 19:11:02.825   834   889 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-16 19:11:02.825   834   889 D SplashScreenView: Branding: view: android.view.View{97f740f G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-16 19:11:02.847   400   400 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+10-16 19:11:02.860  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@250f797 in: PRE_ON_CREATE
+10-16 19:11:02.940  1099  2028 D EGL_emulation: app_time_stats: avg=144.86ms min=29.69ms max=444.00ms count=9
+10-16 19:11:03.127  5081  5081 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-16 19:11:03.227  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@250f797 in: CREATED
+10-16 19:11:03.231   980  7035 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+10-16 19:11:03.233  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@250f797 in: STARTED
+10-16 19:11:03.234  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@250f797 in: RESUMED
+10-16 19:11:03.286   834   899 D EGL_emulation: app_time_stats: avg=3249.22ms min=3249.22ms max=3249.22ms count=1
+10-16 19:11:03.337   521   538 W ziparchive: Unable to open '/data/app/~~jgbdf2cyX9WAGB4Ms6p9ww==/io.github.avsessisozx.telemet-_aznyiADPet489_QVpKCxw==/base.dm': No such file or directory
+10-16 19:11:03.340   521   538 I ActivityTaskManager: Displayed io.github.avsessisozx.telemet/.ui.MainActivity for user 0: +515ms
+10-16 19:11:03.346  1099  2278 D OneSearchSuggestProvider: Shut down the binder channel
+10-16 19:11:03.357   521  2198 I ImeTracker: io.github.avsessisozx.telemet:58b1fe1f: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-16 19:11:03.357   521  2198 I ImeTracker: io.github.avsessisozx.telemet:58b1fe1f: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-16 19:11:03.359  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+10-16 19:11:03.361  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-16 19:11:03.362  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.avsessisozx.telemet fieldId=0 fieldName=null extras=null}, false)
+10-16 19:11:03.362  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-16 19:11:03.364  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-16 19:11:03.367  1099  1148 I ImeTracker: com.google.android.apps.nexuslauncher:cded6f64: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+10-16 19:11:03.367  1099  1148 I ImeTracker: com.google.android.apps.nexuslauncher:cded6f64: onFailed at PHASE_CLIENT_VIEW_SERVED
+10-16 19:11:03.368  1099  1404 I IPCThreadState: oneway function results for code 2 on binder at 0x70c7c9a67a10 will be dropped but finished with status UNKNOWN_TRANSACTION
+10-16 19:11:03.377   834   885 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@96c1821
+10-16 19:11:03.385   521  2198 W InputManager-JNI: Input channel object 'eed28f Splash Screen io.github.avsessisozx.telemet (client)' was disposed without first being removed with the input manager!
+10-16 19:11:03.393  1024  1241 D BtGatt.ScanManager: uid 10131 isForeground true scanMode -1
+10-16 19:11:03.393  1024  1241 D BtGatt.ScanManager: uid 10131 isForeground true scanMode 1
+10-16 19:11:03.393  1024  1241 D BtGatt.ScanManager: uid 10131 isForeground true scanMode -1
+10-16 19:11:03.397  1714  3109 I PBSessionCacheImpl: Deleted sessionId[7540043897676337] from persistence.
+10-16 19:11:03.400  1714  2646 W SearchServiceCore: Abort, client detached.
+10-16 19:11:03.486   980  7035 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-16 19:11:03.498   980  7035 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-16 19:11:03.498   980  7035 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-16 19:11:03.498   980  7035 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-16 19:11:04.030  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view view.getTag() is "start_button"
+10-16 19:11:04.074  5081  5081 I ViewInteraction: Checking 'androidx.test.espresso.assertion.ViewAssertions$DoesNotExistViewAssertion@abbf231' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Welcome to Telemet"
+10-16 19:11:04.434   980  7035 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-16 19:11:04.435   980  7035 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-16 19:11:04.435   980  7035 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-16 19:11:04.435   980  7035 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-16 19:11:04.662  5081  5221 D EGL_emulation: app_time_stats: avg=219.16ms min=10.89ms max=877.80ms count=6
+10-16 19:11:04.793  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:04.793  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:04.793  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:04.793  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:04.793  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:04.793  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:04.793  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:04.793  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:04.793  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:04.793  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:05.126  1665  2850 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:05.133  5081  5101 I TestRunner: finished: t08_upgradeWithPermissionsSkipsWizard(io.github.avsessisozx.telemet.UiFlowTest)

@@ -1,0 +1,177 @@
+10-16 19:11:35.225  5081  5101 I TestRunner: started: t12_newSettings(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:11:35.436  1099  1099 W FrameTracker: Missed App frame:UNKNOWN: 76, 25891, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+10-16 19:11:35.437  1099  1099 W FrameTracker: Missed SF frame:UNKNOWN: 76, 25891, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+10-16 19:11:35.438  1099  1099 W FrameTracker: Missing HWUI jank callback for vsyncId: 25891, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+10-16 19:11:35.438  1099  1099 W FrameTracker: Missed App frame:UNKNOWN: 76, 25913, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+10-16 19:11:35.439  1099  1099 W FrameTracker: Missed SF frame:UNKNOWN: 76, 25913, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+10-16 19:11:35.439  1099  1099 W FrameTracker: Missing HWUI jank callback for vsyncId: 25913, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+10-16 19:11:35.440  1099  1099 W FrameTracker: Missed App frame:UNKNOWN: 74, 25935, 516799152, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+10-16 19:11:35.440  1099  1099 W FrameTracker: Missed SF frame:UNKNOWN: 74, 25935, 516799152, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+10-16 19:11:35.440  1099  1099 W FrameTracker: Missed App frame:UNKNOWN: 74, 25973, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+10-16 19:11:35.440  1099  1099 W FrameTracker: Missed SF frame:UNKNOWN: 74, 25973, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+10-16 19:11:35.440  1099  1099 W FrameTracker: Missing HWUI jank callback for vsyncId: 25973, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+10-16 19:11:35.440  1099  1099 W FrameTracker: Missed App frame:UNKNOWN: 74, 26004, 310155855, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+10-16 19:11:35.440  1099  1099 W FrameTracker: Missed SF frame:UNKNOWN: 74, 26004, 310155855, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+10-16 19:11:35.440  1099  1099 W FrameTracker: Missed SF frame:UNKNOWN: 66, 26026, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+10-16 19:11:35.440  1099  1099 W FrameTracker: Missing HWUI jank callback for vsyncId: 26026, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME>
+10-16 19:11:35.466   521  1662 I ActivityManager: Broadcasting: Intent { act=android.intent.action.CLOSE_SYSTEM_DIALOGS flg=0x400000 }
+10-16 19:11:35.469   834   834 I vol.VolumeDialogImpl: mDialog.dismiss() reason: volume_controller from: com.android.systemui.volume.VolumeDialogImpl$7.onDismissRequested:3
+10-16 19:11:35.470   521   538 I ActivityManager: Broadcast completed: result=0
+10-16 19:11:35.481   834   889 D SplashScreenView: Build android.window.SplashScreenView{b63812f V.E...... ......ID 0,0-0,0}
+10-16 19:11:35.481   834   889 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-16 19:11:35.481   834   889 D SplashScreenView: Branding: view: android.view.View{414833c G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-16 19:11:35.499   400   400 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+10-16 19:11:35.527  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@b9a5e3f in: PRE_ON_CREATE
+10-16 19:11:35.594  1099  2028 D EGL_emulation: app_time_stats: avg=112.13ms min=13.62ms max=224.72ms count=10
+10-16 19:11:35.740  5081  5081 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-16 19:11:35.961  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@b9a5e3f in: CREATED
+10-16 19:11:35.965  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@b9a5e3f in: STARTED
+10-16 19:11:35.966   980  7660 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+10-16 19:11:35.967  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@b9a5e3f in: RESUMED
+10-16 19:11:36.000   834   899 D EGL_emulation: app_time_stats: avg=29548.53ms min=29548.53ms max=29548.53ms count=1
+10-16 19:11:36.086  5081  5081 D AutofillManager: notifyViewEnteredForFillDialog:1073741824
+10-16 19:11:36.087  5081  5081 D AutofillManager: notifyViewEnteredForFillDialog:1073741825
+10-16 19:11:36.088  5081  5081 D AutofillManager: notifyViewEnteredForFillDialog:1073741826
+10-16 19:11:36.089  5081  5081 D AutofillManager: notifyViewEnteredForFillDialog:1073741827
+10-16 19:11:36.091  5081  5081 D AutofillManager: notifyViewEnteredForFillDialog:1073741828
+10-16 19:11:36.124  6062  6062 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.constellation.service.START pkg=com.google.android.gms }
+10-16 19:11:36.177   521   538 W ziparchive: Unable to open '/data/app/~~jgbdf2cyX9WAGB4Ms6p9ww==/io.github.avsessisozx.telemet-_aznyiADPet489_QVpKCxw==/base.dm': No such file or directory
+10-16 19:11:36.184   521   538 I ActivityTaskManager: Displayed io.github.avsessisozx.telemet/.ui.MainActivity for user 0: +704ms
+10-16 19:11:36.191   834   885 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@e3c25e6
+10-16 19:11:36.192   521  2270 W InputManager-JNI: Input channel object '85f55d6 Splash Screen io.github.avsessisozx.telemet (client)' was disposed without first being removed with the input manager!
+10-16 19:11:36.197  1099  2278 D OneSearchSuggestProvider: Shut down the binder channel
+10-16 19:11:36.202  1099  2801 I IPCThreadState: oneway function results for code 2 on binder at 0x70c7c9a731a0 will be dropped but finished with status UNKNOWN_TRANSACTION
+10-16 19:11:36.208  1714  3109 I PBSessionCacheImpl: Deleted sessionId[7540043897676340] from persistence.
+10-16 19:11:36.210  1099  1148 I ImeTracker: com.google.android.apps.nexuslauncher:17348905: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+10-16 19:11:36.211   521  2009 I ImeTracker: com.google.android.apps.nexuslauncher:17348905: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-16 19:11:36.223  1714  2646 I A       : Using proto config with mendel
+10-16 19:11:36.227  1714  2646 I A       : Using proto config with mendel
+10-16 19:11:36.228  1714  2646 W SearchServiceCore: Abort, client detached.
+10-16 19:11:36.230  1714  2646 I MicroDetectionState: Should stop hotword detection immediately - true
+10-16 19:11:36.234  1714  2646 I A       : Using proto config with mendel
+10-16 19:11:36.234  1714  2646 I A       : Using proto config with mendel
+10-16 19:11:36.247   521  1662 I ImeTracker: io.github.avsessisozx.telemet:19ee18b6: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-16 19:11:36.248   521  1662 I ImeTracker: io.github.avsessisozx.telemet:19ee18b6: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-16 19:11:36.255  1024  1241 D BtGatt.ScanManager: uid 10131 isForeground true scanMode -1
+10-16 19:11:36.255  1024  1241 D BtGatt.ScanManager: uid 10131 isForeground true scanMode 1
+10-16 19:11:36.255  1024  1241 D BtGatt.ScanManager: uid 10131 isForeground true scanMode -1
+10-16 19:11:36.260  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+10-16 19:11:36.262  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-16 19:11:36.268  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.avsessisozx.telemet fieldId=0 fieldName=null extras=null}, false)
+10-16 19:11:36.268  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-16 19:11:36.278  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-16 19:11:36.453   980  7660 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-16 19:11:36.455   980  7660 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-16 19:11:36.456   980  7660 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-16 19:11:36.456   980  7660 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-16 19:11:36.694  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view view.getTag() is "setting_mimo_extras"
+10-16 19:11:36.699  5081  5081 I ViewInteraction: Performing 'scroll to' action on view view.getTag() is "setting_mimo_extras"
+10-16 19:11:36.702  5081  5081 I ScrollToAction: View is already displayed. Returning.
+10-16 19:11:36.705  5081  5081 I ViewInteraction: Performing 'single click' action on view view.getTag() is "setting_mimo_extras"
+10-16 19:11:36.708  1099  1099 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=539.5, y[0]=936.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=295822, downTime=295822, deviceId=-1, source=0x1002, displayId=0, eventId=-615538474 }
+10-16 19:11:36.750  1099  1099 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=539.5, y[0]=936.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=295864, downTime=295822, deviceId=-1, source=0x1002, displayId=0, eventId=-517738161 }
+10-16 19:11:36.767   397  5739 D audioserver: FGS Logger Transaction failed
+10-16 19:11:36.767   397  5739 D audioserver: -129
+10-16 19:11:36.769   397   500 D AudioFlinger: mixer(0x7edec5299930) throttle end: throttle time(7)
+10-16 19:11:36.954   397   500 D audioserver: FGS Logger Transaction failed
+10-16 19:11:36.954   397   500 D audioserver: -129
+10-16 19:11:37.181  5081  5081 I ViewInteraction: Performing 'scroll to' action on view view.getTag() is "setting_auto_record"
+10-16 19:11:37.184  5081  5081 I ScrollToAction: View is already displayed. Returning.
+10-16 19:11:37.187  5081  5081 I ViewInteraction: Performing 'single click' action on view view.getTag() is "setting_auto_record"
+10-16 19:11:37.190  1099  1099 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=539.5, y[0]=1756.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=296304, downTime=296304, deviceId=-1, source=0x1002, displayId=0, eventId=-858610838 }
+10-16 19:11:37.232  1099  1099 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=539.5, y[0]=1756.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=296346, downTime=296304, deviceId=-1, source=0x1002, displayId=0, eventId=-847073722 }
+10-16 19:11:37.250   397  5739 D audioserver: FGS Logger Transaction failed
+10-16 19:11:37.250   397  5739 D audioserver: -129
+10-16 19:11:37.252  5081  5081 I Telemet : Automatic recording on
+10-16 19:11:37.264  5081  5221 D EGL_emulation: app_time_stats: avg=105.78ms min=27.54ms max=407.65ms count=10
+10-16 19:11:37.268   397   500 D AudioFlinger: mixer(0x7edec5299930) throttle end: throttle time(34)
+10-16 19:11:37.456   980  7660 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-16 19:11:37.457   980  7660 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-16 19:11:37.457   980  7660 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-16 19:11:37.457   980  7660 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-16 19:11:37.473   397   500 D audioserver: FGS Logger Transaction failed
+10-16 19:11:37.473   397   500 D audioserver: -129
+10-16 19:11:37.831  1665  1983 D PickerSyncController: syncAllMedia
+10-16 19:11:37.832  1665  1983 D PickerSyncController: syncAllMediaFromProvider() LOCAL, auth=com.android.providers.media.photopicker, retry=true
+10-16 19:11:37.832  1665  1983 D PickerSyncController: getSyncRequestParams() LOCAL, auth=com.android.providers.media.photopicker
+10-16 19:11:37.833  1665  1983 D PickerSyncController:    Latest ID/Gen=1407:8b600a73-1ae4-4e32-9989-8248668261e7:external_primary/143
+10-16 19:11:37.833  1665  1983 D PickerSyncController:    Cached ID/Gen=1407:8b600a73-1ae4-4e32-9989-8248668261e7:external_primary/117
+10-16 19:11:37.833  1665  1983 D PickerSyncController:    RESULT=SyncRequestParams{type=MEDIA_INCREMENTAL, gen=117, latest=Bundle[{last_media_sync_generation=143, media_collection_id=1407:8b600a73-1ae4-4e32-9989-8248668261e7:external_primary}]}
+10-16 19:11:37.833  1665  1983 I PickerSyncController: Executing SyncAdd. isLocal: true. authority: com.android.providers.media.photopicker
+10-16 19:11:37.836  1665  1983 I PickerSyncController: Paged sync successful. QueryArgs: Bundle[{android.provider.extra.SYNC_GENERATION=117}]. Result count: 1. Cursor count: 1
+10-16 19:11:37.836  1665  1983 I PickerSyncController: Executing SyncRemove. isLocal: true. authority: com.android.providers.media.photopicker
+10-16 19:11:37.837  1665  1983 I PickerSyncController: Paged sync successful. QueryArgs: Bundle[{android.provider.extra.SYNC_GENERATION=117}]. Result count: 0. Cursor count: 0
+10-16 19:11:37.838  1665  1983 D PickerSyncController: syncAllMediaFromProvider() CLOUD, auth=null, retry=true
+10-16 19:11:37.845  1665  1983 D PickerSyncController: getSyncRequestParams() CLOUD, auth=null
+10-16 19:11:37.848  1665  1983 D PickerSyncController:    RESULT=SyncRequestParams{type=MEDIA_RESET, gen=0, latest=null}
+10-16 19:11:37.851  1665  1983 I PickerSyncController: Executing SyncReset. isLocal: false. authority: null
+10-16 19:11:37.852  1665  1983 I PickerSyncController: SyncReset. isLocal:false. authority: null. result count: 0
+10-16 19:11:37.852  1665  1983 D PickerSyncController: Ignoring cache media info for null authority with bundle: null
+10-16 19:11:37.852  1665  1983 I PickerSyncController: Executing SyncAlbumReset. isLocal: true. authority: com.android.providers.media.photopicker. albumId: null
+10-16 19:11:37.855  1665  1983 I PickerSyncController: Successfully executed SyncResetAlbum. authority: com.android.providers.media.photopicker. albumId: null. Result count: 0
+10-16 19:11:37.856  1665  1983 I PickerSyncController: Executing SyncAlbumReset. isLocal: false. authority: null. albumId: null
+10-16 19:11:37.856  1665  1983 I PickerSyncController: Successfully executed SyncResetAlbum. authority: null. albumId: null. Result count: 0
+10-16 19:11:38.355   476   832 D BufferPoolAccessor2.0: bufferpool2 0x7147c6ec7818 : 0(0 size) total buffers - 0(0 size) used buffers - 149/151 (recycle/alloc) - 2/150 (fetch/transfer)
+10-16 19:11:38.355   476   832 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+10-16 19:11:38.455   980  7660 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-16 19:11:38.458   980  7660 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-16 19:11:38.458   980  7660 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-16 19:11:38.458   980  7660 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-16 19:11:38.669  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:38.669  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:38.669  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:38.669  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:38.669  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:38.669  5042  5073 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-16 19:11:38.669  5042  5073 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-16 19:11:38.669  5042  5073 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-16 19:11:38.669  5042  5073 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-16 19:11:38.669  5042  5073 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-16 19:11:38.814  1665  2360 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:38.845  6023  6875 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 297 [CONTEXT service_id=218 ]
+10-16 19:11:38.850  6023  6979 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 14 uptime_millis: 14 exec_start_elapsed_seconds: 297 [CONTEXT service_id=218 ]
+10-16 19:11:38.855   521  2270 I ActivityManager: Broadcasting: Intent { act=android.intent.action.CLOSE_SYSTEM_DIALOGS flg=0x400000 }
+10-16 19:11:38.858   834   834 I vol.VolumeDialogImpl: mDialog.dismiss() reason: volume_controller from: com.android.systemui.volume.VolumeDialogImpl$7.onDismissRequested:3
+10-16 19:11:38.859   521   538 I ActivityManager: Broadcast completed: result=0
+10-16 19:11:38.867   834   889 D SplashScreenView: Build android.window.SplashScreenView{f370756 V.E...... ......ID 0,0-0,0}
+10-16 19:11:38.867   834   889 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-16 19:11:38.867   834   889 D SplashScreenView: Branding: view: android.view.View{12e83d7 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-16 19:11:38.869  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@b9a5e3f in: PAUSED
+10-16 19:11:38.877  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@84a2d85 in: PRE_ON_CREATE
+10-16 19:11:38.880   400   400 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+10-16 19:11:38.943   834   899 E OpenGLRenderer: Unable to match the desired swap behavior.
+10-16 19:11:39.017   834   899 E OpenGLRenderer: Unable to match the desired swap behavior.
+10-16 19:11:39.018  5081  5081 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-16 19:11:39.186  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@84a2d85 in: CREATED
+10-16 19:11:39.187  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@84a2d85 in: STARTED
+10-16 19:11:39.204  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@84a2d85 in: RESUMED
+10-16 19:11:39.314   834   834 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-16 19:11:39.342   521   538 I ActivityTaskManager: Displayed io.github.avsessisozx.telemet/.ui.MainActivity for user 0: +479ms
+10-16 19:11:39.370   834   885 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@5b442e2
+10-16 19:11:39.372   521   534 W InputManager-JNI: Input channel object '3a7773b Splash Screen io.github.avsessisozx.telemet (client)' was disposed without first being removed with the input manager!
+10-16 19:11:39.459   980  7660 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-16 19:11:39.463   980  7660 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-16 19:11:39.463   980  7660 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-16 19:11:39.463   980  7660 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-16 19:11:39.465  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@b9a5e3f in: STOPPED
+10-16 19:11:39.466  5081  5081 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@b9a5e3f in: DESTROYED
+10-16 19:11:39.466  5081  5081 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@1b92b56
+10-16 19:11:39.471   980  7660 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:119
+10-16 19:11:39.472   521   538 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda13@ed42ada
+10-16 19:11:39.473   521   538 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda12@400db0b
+10-16 19:11:39.480   521  2009 W InputManager-JNI: Input channel object 'dd6e086 io.github.avsessisozx.telemet/io.github.avsessisozx.telemet.ui.MainActivity (client)' was disposed without first being removed with the input manager!
+10-16 19:11:39.492   521  2270 I ImeTracker: io.github.avsessisozx.telemet:3e1aa353: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-16 19:11:39.494   521  2270 I ImeTracker: io.github.avsessisozx.telemet:3e1aa353: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-16 19:11:39.494  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+10-16 19:11:39.500  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-16 19:11:39.500  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.avsessisozx.telemet fieldId=0 fieldName=null extras=null}, false)
+10-16 19:11:39.500  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-16 19:11:39.506  1561  1561 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-16 19:11:39.513   834   899 D EGL_emulation: app_time_stats: avg=1750.23ms min=2.68ms max=3497.77ms count=2
+10-16 19:11:40.039   834   834 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+10-16 19:11:40.072  5081  5081 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view view.getTag() is "match_videos"
+10-16 19:11:40.363   338  1667 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 3108416
+10-16 19:11:40.826  5081  5221 D EGL_emulation: app_time_stats: avg=371.57ms min=51.46ms max=1233.49ms count=4
+10-16 19:11:41.032  5081  5090 I ssisozx.telemet: Background young concurrent copying GC freed 12880(669KB) AllocSpace objects, 37(1020KB) LOS objects, 23% free, 6727KB/8749KB, paused 330us,11us total 141.759ms
+10-16 19:11:41.151  1665  2363 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:41.176  5081  5101 I TestRunner: finished: t12_newSettings(io.github.avsessisozx.telemet.UiFlowTest)

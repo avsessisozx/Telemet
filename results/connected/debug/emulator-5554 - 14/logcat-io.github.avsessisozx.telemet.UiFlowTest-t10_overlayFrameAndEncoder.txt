@@ -1,0 +1,226 @@
+10-16 19:11:09.743  5081  5101 I TestRunner: started: t10_overlayFrameAndEncoder(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:11:09.796   521  1789 W InputManager-JNI: Input channel object '42781f4 io.github.avsessisozx.telemet/io.github.avsessisozx.telemet.ui.OnboardingActivity (client)' was disposed without first being removed with the input manager!
+10-16 19:11:09.979  5081  5090 I ssisozx.telemet: Background young concurrent copying GC freed 34515(1947KB) AllocSpace objects, 67(2912KB) LOS objects, 42% free, 6584KB/11MB, paused 31us,12us total 217ms
+10-16 19:11:10.037  1665  5278 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:10.111   521   530 I system_server: NativeAlloc concurrent copying GC freed 328353(12MB) AllocSpace objects, 31(604KB) LOS objects, 48% free, 25MB/49MB, paused 33us,31us total 274.508ms
+10-16 19:11:10.122   335  7096 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10131 0}
+10-16 19:11:10.123   335  7097 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-16 19:11:10.123   335  7097 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x71924aecce10
+10-16 19:11:10.123   335  7097 I resolv  : doQuery: rcode=0, ancount=8, return value=261
+10-16 19:11:10.129   335  7098 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-16 19:11:10.131  6023  6979 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 269 [CONTEXT service_id=218 ]
+10-16 19:11:10.145  6023  6976 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 22 uptime_millis: 22 exec_start_elapsed_seconds: 269 [CONTEXT service_id=218 ]
+10-16 19:11:10.151   335  7098 I resolv  : res_nsend: used send_dg 165 terrno: 0
+10-16 19:11:10.151   335  7098 I resolv  : doQuery: rcode=0, ancount=8, return value=165
+10-16 19:11:10.154  6023  6330 D TrafficStats: tagSocket(216) with statsTag=0x1065fff, statsUid=-1
+10-16 19:11:10.197  1665  2363 W MediaProvider: isAppCloneUserPair for user 0: false
+10-16 19:11:10.211  5081  5101 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-16 19:11:10.213  5081  7108 D CCodec  : allocate(c2.android.avc.encoder)
+10-16 19:11:10.215  5081  7108 I Codec2Client: Available Codec2 services: "default" "software"
+10-16 19:11:10.216  5081  7108 I CCodec  : setting up 'default' as default (vendor) store
+10-16 19:11:10.225   476  4941 I mediaswcodec: missing struct descriptor #Param::CoreIndex(--004) for field values of struct #Param::CoreIndex(F-12004)
+10-16 19:11:10.225   476  4941 I mediaswcodec: missing struct descriptor #Param::CoreIndex(--1812) for field values of struct #Param::CoreIndex(F-11812)
+10-16 19:11:10.226   476  4941 I mediaswcodec: missing struct descriptor #Param::CoreIndex(--004) for field values of struct #Param::CoreIndex(F-12004)
+10-16 19:11:10.227   476  4941 I mediaswcodec: missing struct descriptor #Param::CoreIndex(--1812) for field values of struct #Param::CoreIndex(F-11812)
+10-16 19:11:10.230  5081  7108 I CCodec  : Created component [c2.android.avc.encoder]
+10-16 19:11:10.231  5081  7108 D CCodecConfig: read media type: video/avc
+10-16 19:11:10.232  5081  7108 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-16 19:11:10.232  5081  7108 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-16 19:11:10.233  5081  7108 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-16 19:11:10.233  5081  7108 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-16 19:11:10.234  5081  7108 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-16 19:11:10.234  5081  7108 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-16 19:11:10.235  5081  7108 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-16 19:11:10.236  5081  7108 D ReflectedParamUpdater: ignored struct field coding.gop.values
+10-16 19:11:10.237  5081  7108 D ReflectedParamUpdater: ignored struct field coding.qp.values
+10-16 19:11:10.237  5081  7108 D CCodecConfig: ignoring local param raw.color (0xc2001809) as it is already supported
+10-16 19:11:10.238  5081  7108 I CCodecConfig: query failed after returning 12 values (BAD_INDEX)
+10-16 19:11:10.239  5081  7108 D CCodecConfig: c2 config diff is Dict {
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   c2::i32 coded.average-qp.value = 0
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   c2::float coded.frame-rate.value = 1
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   c2::u32 coded.picture-type.value = 0
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   c2::u32 coded.pl.level = 20492
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   c2::u32 coded.pl.profile = 20481
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   c2::u32 coded.vui.color.matrix = 0
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   c2::u32 coded.vui.color.primaries = 0
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   c2::u32 coded.vui.color.range = 0
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   c2::u32 coded.vui.color.transfer = 0
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   c2::u32 coding.intra-refresh.mode = 0
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   c2::float coding.intra-refresh.period = 0
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   c2::u32 coding.request-sync-frame.value = 0
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   c2::i64 coding.sync-frame-interval.value = 1000000
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   string input.media-type.value = "video/raw"
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   string output.media-type.value = "video/avc"
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   c2::u32 raw.color.matrix = 0
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   c2::u32 raw.color.primaries = 0
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   c2::u32 raw.color.range = 0
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   c2::u32 raw.color.transfer = 0
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   c2::u32 raw.size.height = 16
+10-16 19:11:10.239  5081  7108 D CCodecConfig:   c2::u32 raw.size.width = 16
+10-16 19:11:10.239  5081  7108 D CCodecConfig: }
+10-16 19:11:10.239  5081  7108 W ColorUtils: expected specified color aspects (0:0:0:0)
+10-16 19:11:10.244  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 269 [CONTEXT service_id=218 ]
+10-16 19:11:10.246  6023  6980 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 34 uptime_millis: 34 exec_start_elapsed_seconds: 269 [CONTEXT service_id=218 ]
+10-16 19:11:10.248  5081  5101 D CodecSeeding: Seed: codec c2.android.avc.encoder, mediatype video/avc, overrideable 1
+10-16 19:11:10.248  5081  5101 D CodecProperties: setTuningValue(vq-target-bpp,0)
+10-16 19:11:10.248  5081  5101 D CodecProperties: setTuningValue(vq-target-bpp-1080p,1.90)
+10-16 19:11:10.248  5081  5101 D CodecProperties: setTuningValue(vq-target-bpp-720p,2.25)
+10-16 19:11:10.248  5081  5101 D CodecProperties: setTuningValue(vq-target-bpp-540p,2.65)
+10-16 19:11:10.248  5081  5101 D CodecProperties: setTuningValue(vq-target-bpp-480p,3.00)
+10-16 19:11:10.249  5081  5101 D CodecProperties: setTuningValue(vq-target-bpp-320x240,0)
+10-16 19:11:10.249  5081  5101 D CodecProperties: setTuningValue(vq-target-qpmax,-1)
+10-16 19:11:10.249  5081  5101 D CodecProperties: setTuningValue(vq-target-qpmax-1080p,45)
+10-16 19:11:10.249  5081  5101 D CodecProperties: setTuningValue(vq-target-qpmax-720p,43)
+10-16 19:11:10.249  5081  5101 D CodecProperties: setTuningValue(vq-target-qpmax-540p,42)
+10-16 19:11:10.249  5081  5101 D CodecProperties: setTuningValue(vq-target-qpmax-480p,38)
+10-16 19:11:10.249  5081  5101 D CodecProperties: setTuningValue(vq-bitrate-phaseout,1.75)
+10-16 19:11:10.249  5081  5101 D CodecProperties: setTuningValue(vq-boost-missing-qp,0.20)
+10-16 19:11:10.250  5081  5101 D CodecProperties: setFeatureValue(intra-refresh,0)
+10-16 19:11:10.250  5081  5101 D CodecProperties: setFeatureValue(qp-bounds,0)
+10-16 19:11:10.250  5081  5101 D CodecProperties: setFeatureValue(_vq_eligible.device,1)
+10-16 19:11:10.250  5081  5101 D CodecProperties: setFeatureValue(_quality.target,1)
+10-16 19:11:10.250  5081  5101 D CodecSeeding: Seed: codec c2.android.avc.encoder, mediatype video/avc, overrideable 0
+10-16 19:11:10.250  5081  5101 D VQApply : raise bitrate: configured 1843200 to floor 2073600
+10-16 19:11:10.250  5081  5101 D VQApply : minquality by QP: inject video-qp-max=43
+10-16 19:11:10.250  5081  5101 D VQApply : minquality/target bitrate raised from 1843200 to 2073600 bps
+10-16 19:11:10.250  5081  5101 D MediaCodec: shapeMediaFormat: deltas(6): AMessage(what = 0x00000000) = {
+10-16 19:11:10.250  5081  5101 D MediaCodec:     int32_t bitrate = 2073600
+10-16 19:11:10.250  5081  5101 D MediaCodec:     int32_t android._encoding-quality-level = 0
+10-16 19:11:10.250  5081  5101 D MediaCodec:     int32_t video-qp-max = 43
+10-16 19:11:10.250  5081  5101 D MediaCodec:     int32_t video-qp-i-max = 43
+10-16 19:11:10.250  5081  5101 D MediaCodec:     int32_t video-qp-p-max = 46
+10-16 19:11:10.250  5081  5101 D MediaCodec:     int32_t video-qp-b-max = 49
+10-16 19:11:10.250  5081  5101 D MediaCodec:   }
+10-16 19:11:10.251  5081  7107 D MediaCodec: flushMediametrics
+10-16 19:11:10.251  5081  7108 D CCodec  : [c2.android.avc.encoder] buffers are bound to CCodec for this session
+10-16 19:11:10.252  5081  7108 D CCodecConfig: no c2 equivalents for color-format
+10-16 19:11:10.252  5081  7108 D CCodecConfig: no c2 equivalents for video-qp-max
+10-16 19:11:10.252  5081  7108 D CCodecConfig: no c2 equivalents for video-qp-i-max
+10-16 19:11:10.252  5081  7108 D CCodecConfig: no c2 equivalents for video-qp-p-max
+10-16 19:11:10.252  5081  7108 D CCodecConfig: no c2 equivalents for video-qp-b-max
+10-16 19:11:10.252  5081  7108 D CCodecConfig: no c2 equivalents for flags
+10-16 19:11:10.252  5081  7108 D CCodecConfig: no c2 equivalents for encoder
+10-16 19:11:10.253  5081  7108 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 2073600
+10-16 19:11:10.253  5081  7108 D CCodecConfig:   c2::float coded.frame-rate.value = 30
+10-16 19:11:10.253  5081  7108 D CCodecConfig:   c2::i64 coding.sync-frame-interval.value = 2000000
+10-16 19:11:10.253  5081  7108 D CCodecConfig:   c2::u32 raw.size.height = 720
+10-16 19:11:10.253  5081  7108 D CCodecConfig:   c2::u32 raw.size.width = 1280
+10-16 19:11:10.253  5081  7108 W ColorUtils: expected specified color aspects (0:0:0:0)
+10-16 19:11:10.254  5081  7108 D CCodec  : encoding statistics level = 0
+10-16 19:11:10.254  5081  7108 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-16 19:11:10.254  5081  7108 D CCodec  :   Rect crop(0, 0, 1279, 719)
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t color-standard = 0
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t color-range = 0
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t color-transfer = 0
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t frame-rate = 30
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t height = 720
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t intra-refresh-period = 0
+10-16 19:11:10.254  5081  7108 D CCodec  :   string mime = "video/raw"
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t video-qp-average = 0
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t width = 1280
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t android._dataspace = 0
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t using-sw-read-often = 1
+10-16 19:11:10.254  5081  7108 D CCodec  :   int64_t android._C2MemoryUsage = 1
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t color-format = 2130708361
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t android._color-format = 2130708361
+10-16 19:11:10.254  5081  7108 D CCodec  : }
+10-16 19:11:10.254  5081  7108 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t bitrate = 2073600
+10-16 19:11:10.254  5081  7108 D CCodec  :   Rect crop(0, 0, 1279, 719)
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t color-standard = 0
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t color-range = 0
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t color-transfer = 0
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t frame-rate = 30
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t height = 720
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t intra-refresh-period = 0
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t level = 4096
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t max-bitrate = 2073600
+10-16 19:11:10.254  5081  7108 D CCodec  :   string mime = "video/avc"
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t profile = 65536
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t video-qp-average = 0
+10-16 19:11:10.254  5081  7108 D CCodec  :   int32_t width = 1280
+10-16 19:11:10.254  5081  7108 D CCodec  : }
+10-16 19:11:10.254  5081  7108 I CCodecConfig: query failed after returning 13 values (BAD_INDEX)
+10-16 19:11:10.257  5081  7108 D CCodec  : input format changed to AMessage(what = 0x00000000) = {
+10-16 19:11:10.257  5081  7108 D CCodec  :   Rect crop(0, 0, 1279, 719)
+10-16 19:11:10.257  5081  7108 D CCodec  :   int32_t color-standard = 1
+10-16 19:11:10.257  5081  7108 D CCodec  :   int32_t color-range = 2
+10-16 19:11:10.257  5081  7108 D CCodec  :   int32_t color-transfer = 3
+10-16 19:11:10.257  5081  7108 D CCodec  :   int32_t frame-rate = 30
+10-16 19:11:10.257  5081  7108 D CCodec  :   int32_t height = 720
+10-16 19:11:10.257  5081  7108 D CCodec  :   int32_t intra-refresh-period = 0
+10-16 19:11:10.257  5081  7108 D CCodec  :   string mime = "video/raw"
+10-16 19:11:10.257  5081  7108 D CCodec  :   int32_t video-qp-average = 0
+10-16 19:11:10.257  5081  7108 D CCodec  :   int32_t width = 1280
+10-16 19:11:10.257  5081  7108 D CCodec  :   int32_t android._dataspace = 260
+10-16 19:11:10.257  5081  7108 D CCodec  :   int32_t using-sw-read-often = 1
+10-16 19:11:10.257  5081  7108 D CCodec  :   int64_t android._C2MemoryUsage = 1
+10-16 19:11:10.257  5081  7108 D CCodec  :   int32_t color-format = 2130708361
+10-16 19:11:10.257  5081  7108 D CCodec  :   int32_t android._color-format = 2130708361
+10-16 19:11:10.257  5081  7108 D CCodec  : }
+10-16 19:11:10.257  5081  7108 D GraphicBufferSource: setting dataspace: 0x104, acquired=0
+10-16 19:11:10.257  5081  7108 D CCodec  : ISConfig not changed
+10-16 19:11:10.258  5081  7108 W Codec2Client: query -- param skipped: index = 1342179345.
+10-16 19:11:10.258  5081  7108 W Codec2Client: query -- param skipped: index = 2415921170.
+10-16 19:11:10.258  5081  7108 D CCodecBufferChannel: [c2.android.avc.encoder#499] Using basic input block pool with poolID 1 => got 1 - OK (0)
+10-16 19:11:10.258  5081  7108 D C2Store : Using DMABUF Heaps
+10-16 19:11:10.259  5081  7108 I CCodecBufferChannel: [c2.android.avc.encoder#499] Created output block pool with allocatorID 16 => poolID 27 - OK
+10-16 19:11:10.259   470  4940 D BufferPoolAccessor2.0: bufferpool2 0x75b9edacdce8 : 0(0 size) total buffers - 0(0 size) used buffers - 0/5 (recycle/alloc) - 2/4 (fetch/transfer)
+10-16 19:11:10.259   470  4940 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x75b9edacdce8 cached: 0/0M, 0/0% in use; allocs: 5, 0% recycled; transfers: 4, 50% unfetched
+10-16 19:11:10.259  5081  7108 D CCodecBufferChannel: [c2.android.avc.encoder#499] Configured output block pool ids 27 => OK
+10-16 19:11:10.260   470  3273 W ResourceManagerService: Ignoring request to add new resource entry with value <= 0
+10-16 19:11:10.262  5081  5101 D MPEG4Writer: PreAllocation enabled
+10-16 19:11:10.385  5081  5101 D GraphicBufferSource: got buffer with new dataSpace #104
+10-16 19:11:10.385  5081  5101 D C2OMXNode: dataspace changed to 0x104 pixel format: 0x2
+10-16 19:11:10.386   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-16 19:11:10.388   476  7113 D SimpleC2Component: Using output block pool with poolID 27 => got 27 - 0
+10-16 19:11:10.388   476  7113 D SimpleC2Component: applied 2 configUpdates => BAD_INDEX (6)
+10-16 19:11:10.388   476  7113 D C2SoftAvcEnc: Params width 1280 height 720 level 41 colorFormat 0 bframes 0
+10-16 19:11:10.398   476  7113 E C2SoftAvcEnc: Unable to set air params = 0x1ad
+10-16 19:11:10.409   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-16 19:11:10.409   476  7113 I Gralloc4: mapper 4.x is not supported
+10-16 19:11:10.467  5081  7108 D CCodecConfig: c2 config diff is   Buffer coded.init-data.value = {
+10-16 19:11:10.467  5081  7108 D CCodecConfig:     00000000:  00 00 00 01 67 42 c0 29  8d 68 05 00 5b a4 20 20  ....gB.).h..[.
+10-16 19:11:10.467  5081  7108 D CCodecConfig:     00000010:  20 20 f0 88 46 a0 00 00  00 01 68 ce 01 a8 35 c8    ..F.....h...5.
+10-16 19:11:10.467  5081  7108 D CCodecConfig:   }
+10-16 19:11:10.483  5081  5101 D MPEG4Writer: fpathconf _PC_FILESIZEBITS:64
+10-16 19:11:10.484  5081  5101 D MPEG4Writer: File size limit set to 4503599627370495 bytes implicitly
+10-16 19:11:10.484  5081  5101 D MPEG4Writer: MP4WtrCtrlHlpLooper Started
+10-16 19:11:10.484  5081  5101 I MPEG4Writer: limits: 4503599627370495/0 bytes/us, bit rate: -1 bps and the estimated moov size 3192 bytes
+10-16 19:11:10.494  5081  7119 I MPEG4Writer: setStartTimestampUs: 0
+10-16 19:11:10.494  5081  7119 I MPEG4Writer: Earliest track starting time: 0
+10-16 19:11:10.679  6023  6330 D TrafficStats: tagSocket(129) with statsTag=0x1065fff, statsUid=10142
+10-16 19:11:10.908  6023  6330 D TrafficStats: tagSocket(81) with statsTag=0x1065fff, statsUid=10132
+10-16 19:11:11.050  6023  6330 D TrafficStats: tagSocket(84) with statsTag=0x1065fff, statsUid=10130
+10-16 19:11:11.398  5081  5101 D EGL_emulation: app_time_stats: avg=9.88ms min=5.19ms max=24.12ms count=71
+10-16 19:11:12.175  5081  5101 E BufferQueueProducer: [GraphicBufferSource](id:13d900000024,api:1,p:5081,c:5081) cancelBuffer: BufferQueue has been abandoned
+10-16 19:11:12.182  5081  5101 D MPEG4Writer: reset()
+10-16 19:11:12.182  5081  5101 D MPEG4Writer: Video track stopping. Stop source
+10-16 19:11:12.182  5081  5101 D MPEG4Writer: Video track source stopping
+10-16 19:11:12.182  5081  5101 D MPEG4Writer: Video track source stopped
+10-16 19:11:12.182  5081  7119 V MediaWriter: Track event err/info msg:101, trackId:1, type:1000,val:-1011
+10-16 19:11:12.182  5081  7119 I MPEG4Writer: Received total/0-length (120/0) buffers and encoded 120 frames. - Video
+10-16 19:11:12.183  5081  5101 D MPEG4Writer: Video track stopped. Status:0. Stop source
+10-16 19:11:12.183  5081  7117 D MPEG4Writer: 0 chunks are written in the last batch
+10-16 19:11:12.183  5081  5101 D MPEG4Writer: WriterThread stopped. Status:0
+10-16 19:11:12.183  5081  5101 I MPEG4Writer: Adjust the moov start time from 0 us -> 0 us
+10-16 19:11:12.183  5081  5101 I MPEG4Writer: MOOV atom was written to the file
+10-16 19:11:12.183  5081  5101 D MPEG4Writer: release()
+10-16 19:11:12.183  5081  5101 D MPEG4Writer: ftruncate mPreAllocateFileEndOffset:214337 mOffset:1286 mMdatEndOffset:212417 diff:1920
+10-16 19:11:12.186  5081  7107 D MediaCodec: flushMediametrics
+10-16 19:11:12.186  5081  5101 D MPEG4Writer: final fsync() takes 2 ms, file size 212417
+10-16 19:11:12.186  5081  5101 D MPEG4Writer: MP4WtrCtrlHlpLooper stopped
+10-16 19:11:12.186  5081  5101 D MPEG4Writer: Top 5 write durations(microseconds): #1:46 #2:50 #3:81 #4:116 #5:165
+10-16 19:11:12.186  5081  5101 D MPEG4Writer: reset()
+10-16 19:11:12.186  5081  5101 D MPEG4Writer: Video track stopping. Stop source
+10-16 19:11:12.186  5081  5101 E MPEG4Writer: Stop() called but track is not started or stopped
+10-16 19:11:12.187  5081  7107 D MediaCodec: flushMediametrics
+10-16 19:11:12.187  5081  7107 W MediaCodec: no metrics handle found
+10-16 19:11:12.188   476   906 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-16 19:11:12.188   476   906 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-16 19:11:12.189  5081  7239 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-16 19:11:12.197   464  4847 D MediaBufferGroup: creating MemoryDealer
+10-16 19:11:12.202  5081  5101 I Telemet : Overlay test: 120 frames, last pts 3966666 us, took 1979 ms, 212417 bytes
+10-16 19:11:12.203  5081  5101 I TestRunner: finished: t10_overlayFrameAndEncoder(io.github.avsessisozx.telemet.UiFlowTest)

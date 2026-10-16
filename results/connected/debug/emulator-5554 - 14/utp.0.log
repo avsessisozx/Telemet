@@ -1,0 +1,111 @@
+INFO: Constructing runner from config.
+INFO: Configuring Android Instrumentation driver: android_instrumentation_runtime {
+  instrumentation_info {
+    app_package: "io.github.avsessisozx.telemet"
+    test_package: "io.github.avsessisozx.telemet.test"
+    test_runner_class: "androidx.test.runner.AndroidJUnitRunner"
+  }
+  instrumentation_args {
+    args_map {
+      key: "additionalTestOutputDir"
+      value: "/sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output"
+    }
+  }
+}
+am_instrument_timeout: 31536000
+
+INFO: Configuring AndroidTestApkInstallerPlugin: apks_to_install {
+  apk_paths: "/home/runner/work/Telemet/Telemet/app/build/outputs/apk/debug/app-debug.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+apks_to_install {
+  apk_paths: "/home/runner/work/Telemet/Telemet/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+
+INFO: No installables found in test fixture. Nothing to install.
+INFO: Installing [/home/runner/work/Telemet/Telemet/app/build/outputs/apk/debug/app-debug.apk] on device emulator-5554.
+INFO: Installing [/home/runner/work/Telemet/Telemet/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk] on device emulator-5554.
+INFO: Start logcat streaming.
+INFO: Running Android Instrumentation driver.
+INFO: Copying files from device to host: /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-1.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-1.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-10.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-10.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-11.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-11.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-12.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-12.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-13.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-13.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-14.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-14.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-15.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-15.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-16.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-16.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-17.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-17.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-18.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-18.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-19.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-19.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-2.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-2.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-20.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-20.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-21.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-21.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-22.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-22.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-23.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-23.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-24.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-24.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-25.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-25.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-26.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-26.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-27.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-27.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-28.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-28.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-29.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-29.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-3.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-3.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-30.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-30.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-31.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-31.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-4.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-4.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-5.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-5.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-6.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-6.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-7.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-7.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-8.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-8.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-9.txt to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-hierarchy-9.txt
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-1.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-1.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-10.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-10.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-11.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-11.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-12.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-12.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-13.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-13.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-14.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-14.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-15.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-15.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-16.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-16.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-17.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-17.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-18.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-18.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-19.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-19.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-2.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-2.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-20.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-20.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-21.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-21.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-22.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-22.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-23.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-23.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-24.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-24.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-25.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-25.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-26.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-26.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-27.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-27.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-28.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-28.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-29.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-29.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-3.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-3.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-30.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-30.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-31.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-31.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-4.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-4.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-5.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-5.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-7.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-7.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-8.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-8.png
+INFO: Copying /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-9.png to /home/runner/work/Telemet/Telemet/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 14/view-op-error-9.png
+INFO: Stop logcat streaming.
+INFO: Uninstalling io.github.avsessisozx.telemet for device emulator-5554.
+INFO: Uninstalling io.github.avsessisozx.telemet.test for device emulator-5554.
+INFO: Execute io.github.avsessisozx.telemet.UiFlowTest.t01_firstLaunchSkipEverything: PASSED
+INFO: Execute io.github.avsessisozx.telemet.UiFlowTest.t02_permissionsGrantedNoOnboardingAgain: PASSED
+INFO: Execute io.github.avsessisozx.telemet.UiFlowTest.t03_ridesListAndDetail: PASSED
+INFO: Execute io.github.avsessisozx.telemet.UiFlowTest.t04_settingsAndUnits: PASSED
+INFO: Execute io.github.avsessisozx.telemet.UiFlowTest.t05_clearDataWithBackupAndRestore: PASSED
+INFO: Execute io.github.avsessisozx.telemet.UiFlowTest.t06_languages: PASSED
+INFO: Execute io.github.avsessisozx.telemet.UiFlowTest.t07_logScreen: PASSED
+INFO: Execute io.github.avsessisozx.telemet.UiFlowTest.t08_upgradeWithPermissionsSkipsWizard: PASSED
+INFO: Execute io.github.avsessisozx.telemet.UiFlowTest.t09_freshInstallShowsWizard: PASSED
+INFO: Execute io.github.avsessisozx.telemet.UiFlowTest.t10_overlayFrameAndEncoder: PASSED
+INFO: Execute io.github.avsessisozx.telemet.UiFlowTest.t11_videoMatch: PASSED
+INFO: Execute io.github.avsessisozx.telemet.UiFlowTest.t12_newSettings: PASSED

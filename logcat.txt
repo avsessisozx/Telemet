@@ -1,0 +1,45 @@
+--------- beginning of main
+10-16 19:08:49.881 I/TestRunner( 5081): run started: 12 tests
+10-16 19:08:49.882 I/TestRunner( 5081): started: t01_firstLaunchSkipEverything(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:08:50.136 I/Telemet ( 5081): All app data cleared
+10-16 19:09:06.617 I/Telemet ( 5081): Setup finished
+10-16 19:09:09.785 I/TestRunner( 5081): finished: t01_firstLaunchSkipEverything(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:09:11.846 I/TestRunner( 5081): started: t02_permissionsGrantedNoOnboardingAgain(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:09:17.987 I/TestRunner( 5081): finished: t02_permissionsGrantedNoOnboardingAgain(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:09:19.439 I/TestRunner( 5081): started: t03_ridesListAndDetail(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:09:43.093 I/TestRunner( 5081): finished: t03_ridesListAndDetail(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:09:44.873 I/TestRunner( 5081): started: t04_settingsAndUnits(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:09:53.342 I/TestRunner( 5081): finished: t04_settingsAndUnits(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:09:54.724 I/TestRunner( 5081): started: t05_clearDataWithBackupAndRestore(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:10:04.386 I/Telemet ( 5081): Backup created: Downloads/Telemet/Backup/telemet-backup-20261016-191004.zip (87494 bytes)
+10-16 19:10:04.452 I/Telemet ( 5081): All app data cleared
+10-16 19:10:07.542 I/Telemet ( 5081): Backup restored: 2 rides, settings=true
+10-16 19:10:15.972 I/Telemet ( 5081): Setup finished
+10-16 19:10:17.183 I/TestRunner( 5081): finished: t05_clearDataWithBackupAndRestore(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:10:18.573 I/TestRunner( 5081): started: t06_languages(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:10:58.032 I/TestRunner( 5081): finished: t06_languages(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:10:59.033 I/TestRunner( 5081): started: t07_logScreen(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:11:01.435 I/TestRunner( 5081): finished: t07_logScreen(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:11:02.472 I/TestRunner( 5081): started: t08_upgradeWithPermissionsSkipsWizard(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:11:05.133 I/TestRunner( 5081): finished: t08_upgradeWithPermissionsSkipsWizard(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:11:06.346 I/TestRunner( 5081): started: t09_freshInstallShowsWizard(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:11:08.649 I/TestRunner( 5081): finished: t09_freshInstallShowsWizard(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:11:09.743 I/TestRunner( 5081): started: t10_overlayFrameAndEncoder(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:11:12.202 I/Telemet ( 5081): Overlay test: 120 frames, last pts 3966666 us, took 1979 ms, 212417 bytes
+10-16 19:11:12.203 I/TestRunner( 5081): finished: t10_overlayFrameAndEncoder(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:11:12.204 I/TestRunner( 5081): started: t11_videoMatch(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:11:12.990 I/Telemet ( 5081): Video match: 3 video(s) read
+10-16 19:11:12.996 I/Telemet ( 5081): Video match: time source FILE_UTC, offset 0 s, DJI_A_0001_D.MP4 100%, DJI_A_0002_D.MP4 100%, other.mp4 0%
+10-16 19:11:14.790 I/Telemet ( 5081): Video match: time source FILE_UTC, offset 1 s, DJI_A_0001_D.MP4 100%, DJI_A_0002_D.MP4 100%, other.mp4 0%
+10-16 19:11:15.167 I/Telemet ( 5081): Video match: time source FILE_UTC, offset 0 s, DJI_A_0001_D.MP4 100%, DJI_A_0002_D.MP4 100%, other.mp4 0%
+10-16 19:11:16.572 I/Telemet ( 5081): Video match: saved 4 file(s)
+10-16 19:11:17.746 I/Telemet ( 5081): Video match: saved 2 file(s)
+10-16 19:11:18.127 I/Telemet ( 5081): Overlay video: DJI_A_0001_D_overlay.mp4 1920x1080, 6 s
+10-16 19:11:26.314 I/Telemet ( 5081): Overlay video ready in 8 s: Movies/Telemet/DJI_A_0001_D_overlay.mp4
+10-16 19:11:26.322 I/Telemet ( 5081): Overlay video: DJI_A_0002_D_overlay.mp4 1920x1080, 5 s
+10-16 19:11:32.801 I/Telemet ( 5081): Overlay video ready in 6 s: Movies/Telemet/DJI_A_0002_D_overlay.mp4
+10-16 19:11:34.002 I/TestRunner( 5081): finished: t11_videoMatch(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:11:35.225 I/TestRunner( 5081): started: t12_newSettings(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:11:37.252 I/Telemet ( 5081): Automatic recording on
+10-16 19:11:41.176 I/TestRunner( 5081): finished: t12_newSettings(io.github.avsessisozx.telemet.UiFlowTest)
+10-16 19:11:42.523 I/TestRunner( 5081): run finished: 12 tests, 0 failed, 0 ignored
