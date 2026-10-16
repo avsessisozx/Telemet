@@ -70,6 +70,7 @@ class TelemetService : Service(), CameraLink.Listener {
     private lateinit var sensors: SensorHub
     private var wakeLock: PowerManager.WakeLock? = null
     private var started = false
+    private val autoRecord = AutoRecord()
 
     private var sentInWindow = 0
     private var windowStart = 0L
@@ -169,6 +170,7 @@ class TelemetService : Service(), CameraLink.Listener {
         summaryStart = windowStart
         gpsLostAt = 0L
         gpsRestarts = 0
+        autoRecord.reset()
         main.post(pushLoop)
         TelemetState.changed()
     }
@@ -240,6 +242,16 @@ class TelemetService : Service(), CameraLink.Listener {
             return
         }
         if (!link.pressRecord()) AppLog.w("Camera not connected, record command not sent")
+    }
+
+    /** Hareketle otomatik kayıt (Ayarlar'da açıksa). */
+    private fun runAutoRecord(now: Long) {
+        if (!prefs.autoRecord) return
+        val speed = if (TelemetState.hasFix) TelemetState.speedKmh else Double.NaN
+        val action = autoRecord.update(now, speed, TelemetState.cameraStatus?.isRecording, link.state == CameraLink.State.READY)
+        if (action == AutoRecord.Action.NONE) return
+        AppLog.i(if (action == AutoRecord.Action.START) "Moving: starting camera recording automatically" else "Stopped for a while: stopping camera recording automatically")
+        if (!link.pressRecord()) autoRecord.commandFailed()
     }
 
     /** Bekleyen kayıt varsa GPS ve kamera hazır olunca başlatır. */
@@ -328,6 +340,7 @@ class TelemetService : Service(), CameraLink.Listener {
             TelemetState.gForce = snap.totalG
             if (kotlin.math.abs(snap.leanDeg) > kotlin.math.abs(TelemetState.maxLeanDeg)) TelemetState.maxLeanDeg = snap.leanDeg
             startPendingRecord()
+            runAutoRecord(now)
             updateRate()
             main.postDelayed(this, PUSH_INTERVAL_MS)
         }
