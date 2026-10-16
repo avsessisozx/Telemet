@@ -3,7 +3,7 @@
 > Claude'un çalışma notu. Yalnızca `durum` dalında durur; `main`'e, README'ye ve sürüm notlarına girmez.
 > Yeni sohbette önce bunu oku, repoyu baştan tarama. Her sürümden sonra güncelle.
 
-Son güncelleme: 2026-10-16 · Son sürüm: **v0.1.(bu main derlemesi)** (2026-10-16) — v0.1.13'ten sonraki ilk sürüm
+Son güncelleme: 2026-10-16 · Son sürüm: **v0.1.19** (2026-10-16)
 
 ## Ne yapıyor
 Telefonu DJI Osmo Action 4 için Bluetooth GPS kumandası gibi kullanır: hız, rota, yükseklik
