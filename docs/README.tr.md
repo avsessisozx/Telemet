@@ -15,6 +15,9 @@ DJI Osmo Action kameralar videoya hız, rota ve yükseklik verisini ancak DJI'ni
 - 📍 **GPS kumandası taklidi:** telefon DJI GPS kumandası gibi davranır, veri videoya gömülür
 - 🎬 **Kamera kontrolü:** uygulamadan ya da bildirimden kaydı başlat/durdur; mod, kayıt durumu ve pil görünür
 - 🗂️ **Her sürüş ayrı:** Sürüşlerim ekranında sürüşler güne göre gruplu; mesafe, süre, en yüksek/ortalama hız, tırmanış
+- 🗺️ **Sürüş ayrıntısı:** sürüşe dokununca rota, hız, yükseklik ve yatış grafikleri; yeniden adlandır, paylaş, sil
+- ⚙️ **Ayarlar:** km ya da mil, kamera eşleşmesini sıfırlama, izin durumu, günlük, yedek alma ve geri yükleme, güncelleme kontrolü
+- 🛟 **Güvenli sıfırlama:** "Tüm verileri temizle" önce yedek alır, tek dokunuşla geri yüklenir; sürüş dosyaları silinmez
 - 💾 **Her sürüşün FIT + GPX yedeği:** kamera veriyi kaçırırsa FIT'i DJI Studio'ya aktar
 - 🏍️ **Yatış açısı ve G kuvveti:** jiroskop ve GPS'ten hesaplanır, telefonun nasıl takıldığından bağımsızdır; FIT'e yazılır
 - 📈 **Barometrik yükseklik:** barometresi olan telefonlarda çok daha kararlı yükseklik ve eğim
@@ -32,7 +35,7 @@ DJI Osmo Action kameralar videoya hız, rota ve yükseklik verisini ancak DJI'ni
 ## Hızlı başlangıç
 
 1. **Kamerada** kablosuz bağlantı açık olsun. Telefonda **DJI Mimo'yu kapat**; kamera aynı anda tek kumandayla konuşur.
-2. Telemet'i aç. **Kurulum** kartı gereken izinleri sırayla ister (konumda "Her zaman izin ver", Bluetooth, bildirim, pil; Xiaomi'de Otomatik başlatma ve Pil tasarrufu).
+2. Telemet'i aç. **Kurulum sihirbazı** gereken izinleri her biri ayrı sayfada sırayla ister (konumda "Her zaman izin ver", Bluetooth, bildirim, pil; Xiaomi'de Otomatik başlatma ve Pil tasarrufu).
 3. **Başlat**'a bas. İlk seferde kamera ekranındaki bağlantı isteğini onayla (uygulamadaki kod aynı olmalı).
 4. GPS noktası yeşil olunca kaydı kameradan ya da Telemet'ten başlat.
 5. Bitince **Durdur**'a bas. Sürüş **Sürüşlerim**'e eklenir, FIT/GPX dosyaları `İndirilenler/Telemet` klasörüne kaydedilir.

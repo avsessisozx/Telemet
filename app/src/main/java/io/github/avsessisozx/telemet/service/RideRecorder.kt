@@ -230,13 +230,15 @@ class RideRecorder(private val context: Context) {
                 append("</trkseg></trk>\n</gpx>\n")
             }
             val gpxUri = saveToDownloads("$id.gpx", "application/gpx+xml", gpx.toByteArray(Charsets.UTF_8))
+            // Sürüş, İndirilenler'e yazılamasa bile listeye eklenir: ham noktalar uygulama klasöründe
+            // saklandığı için dosyalar oradan yeniden üretilip paylaşılabilir.
+            if (summary != null) RideStore.save(context, id, summary, fitUri, gpxUri, raw.copyOf(FitEncoder.validLength(raw)))
+            fitRaw.delete()
+            gpxPart.delete()
             if (fitUri != null && gpxUri != null) {
-                if (summary != null) RideStore.save(context, id, summary, fitUri, gpxUri)
-                fitRaw.delete()
-                gpxPart.delete()
                 AppLog.i("Ride saved: Downloads/$FOLDER/$id.fit and .gpx ($count points, %.1f km)".format(Locale.US, km))
             } else {
-                AppLog.w("Ride files could not be fully saved; will retry on next start")
+                AppLog.w("Ride saved in the app, but Downloads could not be written; share it from My rides")
             }
         } catch (e: Exception) {
             AppLog.w("Could not create ride file ($id)", e)

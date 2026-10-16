@@ -18,6 +18,7 @@ android {
         targetSdk = 35
         versionCode = buildNumber
         versionName = "0.1.$buildNumber"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     // Her derlemenin aynı anahtarla imzalanması için depodaki sabit anahtar kullanılır.
@@ -64,4 +65,11 @@ kotlin {
 
 dependencies {
     testImplementation("junit:junit:4.13.2")
+
+    // Yalnızca emülatördeki arayüz testleri için; uygulamanın kendisine eklenmez.
+    androidTestImplementation("androidx.test:runner:1.6.2")
+    androidTestImplementation("androidx.test:rules:1.6.1")
+    androidTestImplementation("androidx.test:core:1.6.1")
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.6.1")
 }
