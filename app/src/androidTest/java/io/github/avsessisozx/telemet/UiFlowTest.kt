@@ -41,7 +41,6 @@ import org.junit.runner.RunWith
 import org.junit.runners.MethodSorters
 import java.io.ByteArrayOutputStream
 import java.io.File
-import java.io.FileOutputStream
 import kotlin.math.PI
 import kotlin.math.cos
 import kotlin.math.sin
@@ -57,6 +56,10 @@ class UiFlowTest {
     private val inst = InstrumentationRegistry.getInstrumentation()
     private val app: Context = inst.targetContext
     private val pkg = app.packageName
+
+    companion object {
+        const val SHOTS = "/sdcard/Download/telemet-screens"
+    }
 
     @get:Rule
     val watcher = object : TestWatcher() {
@@ -79,11 +82,23 @@ class UiFlowTest {
         return ParcelFileDescriptor.AutoCloseInputStream(pfd).use { it.readBytes().toString(Charsets.UTF_8) }
     }
 
+    /**
+     * Ekran görüntüsünü /sdcard/Download/telemet-screens klasörüne yazar. Dosyayı test süreci değil
+     * kabuk yazar; böylece uygulama verileri temizlense de görüntüler kaybolmaz.
+     */
     private fun shot(name: String) {
         Thread.sleep(700)
         val bmp: Bitmap = inst.uiAutomation.takeScreenshot() ?: return
-        val dir = File(inst.context.getExternalFilesDir(null), "screens").apply { mkdirs() }
-        FileOutputStream(File(dir, "$name.png")).use { bmp.compress(Bitmap.CompressFormat.PNG, 100, it) }
+        val bytes = ByteArrayOutputStream().also { bmp.compress(Bitmap.CompressFormat.PNG, 100, it) }.toByteArray()
+        shell("mkdir -p $SHOTS")
+        val fds = inst.uiAutomation.executeShellCommandRw("sh -c 'cat > $SHOTS/$name.png'")
+        ParcelFileDescriptor.AutoCloseOutputStream(fds[1]).use { it.write(bytes) }
+        ParcelFileDescriptor.AutoCloseInputStream(fds[0]).use { it.readBytes() }
+    }
+
+    /** Ana ekranı test eden testler önceki testin sonucuna bağlı kalmasın. */
+    private fun ensureSetupDone() {
+        inst.runOnMainSync { Prefs(app).onboardingDone = true }
     }
 
     /** Ekran gelene kadar (en fazla [timeoutMs]) dener. */
@@ -168,6 +183,7 @@ class UiFlowTest {
     /** İzinler verilince uyarı kaybolur; uygulama yeniden açılınca kurulum bir daha görünmez. */
     @Test
     fun t02_permissionsGrantedNoOnboardingAgain() {
+        ensureSetupDone()
         for (p in listOf(
             "android.permission.ACCESS_FINE_LOCATION", "android.permission.ACCESS_COARSE_LOCATION",
             "android.permission.ACCESS_BACKGROUND_LOCATION", "android.permission.BLUETOOTH_SCAN",
@@ -187,6 +203,7 @@ class UiFlowTest {
     /** Sürüş listesi, ayrıntı sayfası, yeniden adlandırma ve paylaşım dosyaları. */
     @Test
     fun t03_ridesListAndDetail() {
+        ensureSetupDone()
         val now = System.currentTimeMillis()
         seedRide("surus_test_a", now - 26 * 3600_000L, 35, lean = true)
         seedRide("surus_test_b", now - 2 * 3600_000L, 12, lean = false)
@@ -220,6 +237,7 @@ class UiFlowTest {
     /** Ayarlar ekranı ve birim değişimi (km ↔ mil). */
     @Test
     fun t04_settingsAndUnits() {
+        ensureSetupDone()
         launch(MainActivity::class.java) { putExtra(MainActivity.EXTRA_TAB, MainActivity.TAB_SETTINGS) }
         waitUntil { onView(withText(s(R.string.section_recording))).check(matches(isDisplayed())) }
         shot("11_settings_top")
@@ -285,6 +303,7 @@ class UiFlowTest {
     /** Diller: Türkçe, Arapça (sağdan sola), Japonca ve Almanca ekran görüntüleri. */
     @Test
     fun t06_languages() {
+        ensureSetupDone()
         for (lang in listOf("tr", "ar", "ja", "de")) {
             inst.runOnMainSync { LocaleHelper.set(app, lang) }
             Thread.sleep(800)
@@ -305,6 +324,7 @@ class UiFlowTest {
     /** Günlük sayfası açılır ve içerik gösterir. */
     @Test
     fun t07_logScreen() {
+        ensureSetupDone()
         launch(LogActivity::class.java)
         waitUntil { onView(tag("log_text")).check(matches(isDisplayed())) }
         shot("30_log")

@@ -112,7 +112,7 @@ jobs:
           script: |
             chmod +x gradlew
             ./gradlew --no-daemon connectedDebugAndroidTest > ui-test.log 2>&1 || touch ui-failed
-            mkdir -p pub && adb pull /sdcard/Android/data/io.github.avsessisozx.telemet.test/files/screens pub/ || true
+            mkdir -p pub && adb pull /sdcard/Download/telemet-screens pub/ || true
             adb logcat -d -v time AndroidRuntime:E TestRunner:I Telemet:I System.err:W *:S > pub/logcat.txt || true
 
       - name: Sonuçları yayınla
