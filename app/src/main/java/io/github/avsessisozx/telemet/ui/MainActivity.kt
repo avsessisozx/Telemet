@@ -72,6 +72,13 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         prefs = Prefs(this)
         Ui.styleWindow(this)
+        // Eski sürümden yükseltiliyorsa ve izinler zaten verilmişse sihirbazı gösterme;
+        // eksik kalan adımlar (pil, Xiaomi ayarları) ana ekrandaki uyarı şeridinde görünür.
+        if (!prefs.onboardingDone && prefs.isUpgradeFromPreWizard && Permissions.canRun(this) &&
+            Permissions.hasBackgroundLocation(this) && Permissions.hasNotifications(this)
+        ) {
+            prefs.onboardingDone = true
+        }
         if (!prefs.onboardingDone) {
             startActivity(Intent(this, OnboardingActivity::class.java))
             finish()

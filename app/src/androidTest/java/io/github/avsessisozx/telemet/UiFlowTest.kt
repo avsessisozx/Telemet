@@ -332,4 +332,30 @@ class UiFlowTest {
         waitUntil { onView(tag("log_text")).check(matches(isDisplayed())) }
         shot("30_log")
     }
+
+    /** Sihirbazdan önceki sürümden yükseltme: izinler tamsa sihirbaz hiç çıkmaz. */
+    @Test
+    fun t08_upgradeWithPermissionsSkipsWizard() {
+        for (p in listOf(
+            "android.permission.ACCESS_FINE_LOCATION", "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_BACKGROUND_LOCATION", "android.permission.BLUETOOTH_SCAN",
+            "android.permission.BLUETOOTH_CONNECT", "android.permission.POST_NOTIFICATIONS",
+        )) shell("pm grant $pkg $p")
+        // Eski sürümün bıraktığı durum: kumanda kimliği var, sihirbaz bayrağı hiç yok.
+        inst.runOnMainSync { Prefs(app).clearAll(); Prefs(app).remoteMac }
+        launch(MainActivity::class.java)
+        waitUntil { onView(tag("start_button")).check(matches(isDisplayed())) }
+        onView(withText(s(R.string.ob_welcome_title))).check(doesNotExist())
+        shot("40_upgrade_no_wizard")
+    }
+
+    /** Temiz kurulum (ya da verileri temizle): izinler verili olsa bile sihirbaz gösterilir. */
+    @Test
+    fun t09_freshInstallShowsWizard() {
+        inst.runOnMainSync { Prefs(app).clearAll() }
+        launch(MainActivity::class.java)
+        waitUntil { onView(withText(s(R.string.ob_welcome_title))).check(matches(isDisplayed())) }
+        shot("41_fresh_wizard")
+        ensureSetupDone()
+    }
 }

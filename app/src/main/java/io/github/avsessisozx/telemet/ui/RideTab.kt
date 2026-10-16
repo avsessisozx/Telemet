@@ -196,7 +196,7 @@ class RideTab(activity: MainActivity) : MainActivity.Tab(activity) {
         speedValue.text = if (live) units.speedNumber(s.speedKmh / 3.6) else "0"
         speedValue.setTextColor(if (live) Theme.TEXT else 0xFF555555.toInt())
         speedUnit.text = units.speedUnit
-        distance.label.text = units.distanceUnit
+        distance.label.text = ctx.getString(R.string.label_distance) + " (" + units.distanceUnit + ")"
         altitude.label.text = ctx.getString(R.string.label_altitude) + " (" + units.altitudeUnit + ")"
         distance.value.text = if (s.serviceRunning && s.rideFile != null) units.distanceNumber(s.distanceKm * 1000) else "–"
         altitude.value.text = if (live) units.altitudeNumber(s.altitudeM) else "–"

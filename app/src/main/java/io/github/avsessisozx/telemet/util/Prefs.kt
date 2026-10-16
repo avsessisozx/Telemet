@@ -72,6 +72,13 @@ class Prefs(context: Context) {
             return mac
         }
 
+    /**
+     * Sihirbazdan önceki bir sürümden yükseltilmiş kurulum: sihirbaz bayrağı hiç yazılmamış ama
+     * uygulama daha önce kullanılmış (kameraya tanıtılmış). Verileri temizle/geri yükle bu bayrağı yazar.
+     */
+    val isUpgradeFromPreWizard: Boolean
+        get() = !sp.contains("onboarding_done") && (sp.contains("remote_mac") || sp.contains("last_camera_address"))
+
     /** İlk açılıştaki kurulum sihirbazı tamamlandı mı. */
     var onboardingDone: Boolean
         get() = sp.getBoolean("onboarding_done", false)

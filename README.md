@@ -44,6 +44,9 @@ Built for motorcycle riders, but works the same on a bicycle, in a car or on foo
 - 📍 **GPS remote emulation** — the phone acts as the DJI GPS Bluetooth Remote; data is embedded in the video
 - 🎬 **Camera control** — start/stop recording from the app or the notification, see mode, recording state and battery
 - 🗂️ **Every ride saved separately** — "My rides" lists each ride grouped by day with distance, duration, max/avg speed and climb
+- 🗺️ **Ride details** — tap a ride to see its route, speed, altitude and lean charts; rename, share or delete it
+- ⚙️ **Settings** — km or miles, camera pairing reset, permission status, log, backup and restore, update check
+- 🛟 **Safe reset** — "Clear all data" backs up first and can be restored in one tap; ride files are never deleted
 - 💾 **FIT + GPX backup of every ride** — import the FIT file in DJI Studio (Dashboard → Data source → Import FIT file) if the camera missed data
 - 🏍️ **Lean angle and G-force** — calculated from the phone's gyroscope and GPS, independent of how the phone is mounted; written to the FIT file
 - 📈 **Barometric altitude** — on phones with a barometer, much steadier altitude and grade than GPS alone
@@ -71,7 +74,7 @@ Phone: Android 10 or newer with Bluetooth LE and GPS.
 ## Quick start
 
 1. **On the camera:** make sure wireless connection is enabled. **Close DJI Mimo** on your phone — the camera talks to only one remote at a time.
-2. Open Telemet. The **Setup** card walks you through the permissions it needs (location "Allow all the time", Bluetooth, notifications, battery exemption; on Xiaomi also Autostart and Battery saver).
+2. Open Telemet. The **setup wizard** walks you through the permissions it needs, one per page (location "Allow all the time", Bluetooth, notifications, battery exemption; on Xiaomi also Autostart and Battery saver).
 3. Tap **Start**. Approve the connection on the camera screen the first time (the code shown in the app must match).
 4. Wait for the green GPS dot, then start recording from the camera or from Telemet.
 5. Tap **Stop** when you're done. The ride appears in **My rides** and its FIT/GPX files are saved to `Downloads/Telemet`.
@@ -107,7 +110,7 @@ Heart rate, cadence, power and torque need external sensors and are not supporte
 
 **Is this the same as the official DJI GPS remote?** It uses the same Bluetooth protocol that DJI published for its GPS remote ([dji-sdk/Osmo-GPS-Controller-Demo](https://github.com/dji-sdk/Osmo-GPS-Controller-Demo)), implemented on the phone instead of an ESP32 board with a GPS module.
 
-**Recording stops in the background on my Xiaomi / Samsung / Huawei phone.** Finish the Setup card in the app. On Xiaomi set Autostart on and Battery saver to "No restrictions".
+**Recording stops in the background on my Xiaomi / Samsung / Huawei phone.** Finish the setup steps shown on the Ride screen. On Xiaomi set Autostart on and Battery saver to "No restrictions".
 
 **DJI Studio says the duration doesn't match.** The FIT file must cover the video's time range. Make sure the phone clock and camera clock agree, or use Time alignment.
 
@@ -120,7 +123,7 @@ Everything is written to the **Log** section at the bottom of the app. If someth
 | "Searching for camera" never ends | Is the camera on? Is DJI Mimo connected to it (on this or another phone)? Reset wireless connections on the camera. |
 | Camera rejected the connection | Reset wireless connections on the camera and approve the request on its screen. |
 | Connected but no data in the dashboard | Is the GPS dot green? Is "packets/s to camera" above 0? Share the log. |
-| Stops in the background | Complete the Setup card; allow background usage in the phone's settings. |
+| Stops in the background | Complete the setup steps on the Ride screen; allow background usage in the phone's settings. |
 
 ## How it works
 

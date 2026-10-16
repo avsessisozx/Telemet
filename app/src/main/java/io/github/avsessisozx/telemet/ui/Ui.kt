@@ -58,7 +58,9 @@ class Ui(val ctx: Context) {
             setTextColor(color)
             if (bold) typeface = Typeface.DEFAULT_BOLD
             if (value != null) text = value
-            textAlignment = View.TEXT_ALIGNMENT_VIEW_START
+            // Hizalama gravity ile yapılır: START sağdan sola dillerde de doğru, CENTER verilen yerler ortalanır.
+            textAlignment = View.TEXT_ALIGNMENT_GRAVITY
+            gravity = Gravity.START or Gravity.TOP
         }
 
     fun rounded(color: Int, radiusDp: Int = 14): GradientDrawable =

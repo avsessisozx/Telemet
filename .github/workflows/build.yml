@@ -144,6 +144,25 @@ jobs:
           name: apk
           path: out
 
+      - name: Sürüm notunu hazırla
+        env:
+          MSG: ${{ github.event.head_commit.message }}
+          VER: ${{ needs.build.outputs.version }}
+        run: |
+          # Commit sonundaki imza satırları (Co-Authored-By, oturum bağlantıları) sürüm notuna girmez.
+          {
+            echo "## What's new"
+            echo
+            printf '%s\n' "$MSG" | grep -viE '^(co-authored-by|claude-session|signed-off-by):' | sed -e :a -e '/^\n*$/{$d;N;ba' -e '}'
+            echo
+            echo "## Install"
+            echo
+            echo "On your Android phone, tap **Telemet-$VER.apk** below to download it, then open it. It installs over older versions and keeps your rides."
+            echo
+            echo "Turns your phone into a GPS remote for DJI Osmo Action cameras: speed, route and altitude dashboards in DJI Mimo / DJI Studio, plus lean angle, G-force and FIT/GPX export. [Read more](https://github.com/avsessisozx/Telemet#readme)"
+          } > notes.md
+          cat notes.md
+
       - name: Sürüm yayınla (Releases)
         uses: softprops/action-gh-release@v2
         with:
@@ -151,13 +170,4 @@ jobs:
           name: Telemet ${{ needs.build.outputs.version }}
           make_latest: true
           files: out/*.apk
-          body: |
-            ## What's new
-
-            ${{ github.event.head_commit.message }}
-
-            ## Install
-
-            On your Android phone, tap **Telemet-${{ needs.build.outputs.version }}.apk** below to download it, then open it. It installs over older versions and keeps your rides.
-
-            Turns your phone into a GPS remote for DJI Osmo Action cameras: speed, route and altitude dashboards in DJI Mimo / DJI Studio, plus lean angle, G-force and FIT/GPX export. [Read more](https://github.com/avsessisozx/Telemet#readme)
+          body_path: notes.md
