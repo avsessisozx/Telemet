@@ -17,6 +17,10 @@ Le fotocamere DJI Osmo Action registrano velocità, percorso e altitudine nel vi
 - 🗂️ **Ogni giro separato**: "I miei giri" raggruppati per giorno con distanza, durata, velocità max/media e dislivello
 - 💾 **Backup FIT + GPX di ogni giro**: importa il FIT in DJI Studio se la fotocamera ha perso i dati
 - 🏍️ **Angolo di piega e forza G** da giroscopio e GPS, indipendenti da come è montato il telefono
+- 🎞️ **Abbinamento ai video**: la videocamera divide le registrazioni lunghe in parti; sceglile (o condividile con Telemet dalla galleria) e ottieni un FIT + GPX per parte o un unico file unito
+- 🟩 **Video indicatori**: velocità, piega, G, altitudine, distanza e minimappa su sfondo verde, con dimensioni e durata di ogni parte; sovrapponilo al video con il chroma key
+- 🎛️ **Piega e G in DJI Mimo** (opzionale): scritti anche nei campi cadenza e potenza
+- 🤖 **Registrazione automatica** (opzionale): la videocamera parte quando ti muovi e si ferma dopo 3 minuti da fermo
 - 📈 **Altitudine barometrica** sui telefoni con barometro
 - 🔋 **Funziona come un navigatore**: continua a registrare a schermo spento o con un'altra app in primo piano
 - ⚡ **Primo segnale rapido**: il GPS si prepara all'apertura dell'app; i vuoti prima del segnale e nelle gallerie vengono riempiti

@@ -211,7 +211,7 @@ class RideRecorder(private val context: Context) {
         val gpxPart = File(dir, "$id.gpxpart")
         try {
             val raw = if (fitRaw.exists()) fitRaw.readBytes() else ByteArray(0)
-            val fit = FitEncoder.buildFile(raw, fileTime(id))
+            val fit = FitEncoder.buildFile(raw, fileTime(id), io.github.avsessisozx.telemet.util.Prefs(context).mimoExtras)
             if (fit == null) {
                 AppLog.i("Ride has no GPS points, no backup file created")
                 fitRaw.delete()

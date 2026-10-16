@@ -27,6 +27,16 @@ class Prefs(context: Context) {
         get() = sp.getBoolean("backup_enabled", true)
         set(v) = sp.edit().putBoolean("backup_enabled", v).apply()
 
+    /** Yatış açısını ve G'yi FIT dosyasında Mimo'nun kadans/güç alanlarına da yaz. Varsayılan: kapalı. */
+    var mimoExtras: Boolean
+        get() = sp.getBoolean("mimo_extras", false)
+        set(v) = sp.edit().putBoolean("mimo_extras", v).apply()
+
+    /** Motor hareket edince kamera kaydını başlat, uzun duruşta durdur. Varsayılan: kapalı. */
+    var autoRecord: Boolean
+        get() = sp.getBoolean("auto_record", false)
+        set(v) = sp.edit().putBoolean("auto_record", v).apply()
+
     /** Telemet ekrandayken ve sürüş sürerken ekran kararmasın. */
     var keepScreenOn: Boolean
         get() = sp.getBoolean("keep_screen_on", true)
@@ -111,6 +121,7 @@ class Prefs(context: Context) {
         sp.edit()
             .remove("smooth_gps").remove("backup_enabled").remove("keep_screen_on")
             .remove("units_imperial").remove("sensors_expanded")
+            .remove("mimo_extras").remove("auto_record")
             .commit()
     }
 

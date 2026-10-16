@@ -60,6 +60,9 @@ class SettingsTab(activity: MainActivity) : MainActivity.Tab(activity) {
                 prefs.smoothGps = it
                 AppLog.i(if (it) "Smooth GPS on (10 Hz)" else "Smooth GPS off (real fixes only)")
             },
+            ui.switchRow(ctx.getString(R.string.setting_mimo_extras), ctx.getString(R.string.setting_mimo_extras_desc), prefs.mimoExtras) {
+                prefs.mimoExtras = it
+            }.apply { tag = "setting_mimo_extras" },
             ui.switchRow(ctx.getString(R.string.setting_keep_screen), null, prefs.keepScreenOn) {
                 prefs.keepScreenOn = it
                 activity.updateKeepScreenOn()
@@ -72,6 +75,10 @@ class SettingsTab(activity: MainActivity) : MainActivity.Tab(activity) {
         cameraRow = ui.row(ctx.getString(R.string.camera_paired), value = cameraLabel())
         root.addView(ui.group(
             cameraRow.view,
+            ui.switchRow(ctx.getString(R.string.setting_auto_record), ctx.getString(R.string.setting_auto_record_desc), prefs.autoRecord) {
+                prefs.autoRecord = it
+                AppLog.i(if (it) "Automatic recording on" else "Automatic recording off")
+            }.apply { tag = "setting_auto_record" },
             ui.row(ctx.getString(R.string.camera_reset), ctx.getString(R.string.camera_reset_desc)) { resetPairing() }.view,
         ))
 

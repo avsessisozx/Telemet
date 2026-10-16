@@ -7,6 +7,7 @@ import sys
 import fitdecode
 
 path = sys.argv[1]
+mimo = "--mimo" in sys.argv[2:]
 records = []
 messages = {}
 with fitdecode.FitReader(path, check_crc=fitdecode.CrcCheck.RAISE) as fit:
@@ -41,6 +42,15 @@ else:
             errors.append(f"sensör alanı yok: {name}")
     if r.get("lean_angle") is not None and abs(abs(r["lean_angle"]) - 30.0) > 0.01 and abs(abs(r["lean_angle"]) - 25.0) > 0.01:
         errors.append(f"yatış açısı yanlış: {r['lean_angle']}")
+    if mimo:
+        # Mimo için: yatış açısı kadansa, G × 100 güce yazılır.
+        if r.get("cadence") != round(abs(r["lean_angle"])):
+            errors.append(f"kadans (yatış) yanlış: {r.get('cadence')}")
+        expected_power = round(r["g_force"] * 100)
+        if r.get("power") is None or abs(r["power"] - expected_power) > 1:
+            errors.append(f"güç (G) yanlış: {r.get('power')} != {expected_power}")
+    elif r.get("cadence") is not None or r.get("power") is not None:
+        errors.append("Mimo alanları kapalıyken kadans/güç yazılmış")
 
 if errors:
     print("HATA:", "; ".join(errors))

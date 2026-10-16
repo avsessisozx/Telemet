@@ -37,6 +37,9 @@ class RidesTab(activity: MainActivity) : MainActivity.Tab(activity) {
             setPadding(ui.dp(4), 0, 0, ui.dp(12))
         })
         root.addView(totalsRow)
+        root.addView(ui.button(ctx.getString(R.string.vs_title), Theme.GREY_BUTTON) {
+            ctx.startActivity(Intent(ctx, VideoSyncActivity::class.java))
+        }.apply { tag = "match_videos" })
         ongoing.addView(ongoingText)
         root.addView(ongoing)
         root.addView(list)

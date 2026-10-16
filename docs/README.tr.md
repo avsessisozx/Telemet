@@ -20,6 +20,10 @@ DJI Osmo Action kameralar videoya hız, rota ve yükseklik verisini ancak DJI'ni
 - 🛟 **Güvenli sıfırlama:** "Tüm verileri temizle" önce yedek alır, tek dokunuşla geri yüklenir; sürüş dosyaları silinmez
 - 💾 **Her sürüşün FIT + GPX yedeği:** kamera veriyi kaçırırsa FIT'i DJI Studio'ya aktar
 - 🏍️ **Yatış açısı ve G kuvveti:** jiroskop ve GPS'ten hesaplanır, telefonun nasıl takıldığından bağımsızdır; FIT'e yazılır
+- 🎞️ **Videolarla eşleştirme:** kamera uzun kayıtları parçalara böler; parçaları seçin (ya da galeriden Telemet'e paylaşın), her parça için ayrı FIT + GPX ya da hepsi için tek dosya alın. Başlangıç saatleri otomatik eşleşir, gerekirse saniye kaydırılır
+- 🟩 **Göstergeli video:** hız, yatış açısı, G, yükseklik, mesafe ve küçük rota haritası yeşil zemin üzerinde, her video parçasının boyutunda ve süresinde; CapCut gibi bir düzenleyicide renk anahtarıyla videonun üstüne koyun
+- 🎛️ **DJI Mimo'da yatış açısı ve G** (isteğe bağlı): kadans ve güç alanlarına da yazılır, Mimo bunları gösterge olarak gösterebilir
+- 🤖 **Otomatik kayıt** (isteğe bağlı): hareket edince kamera kayda başlar, 3 dakika durunca durur
 - 📈 **Barometrik yükseklik:** barometresi olan telefonlarda çok daha kararlı yükseklik ve eğim
 - 🔋 **Navigasyon uygulaması gibi çalışır:** ekran kapalıyken ya da başka uygulama öndeyken kayda devam eder
 - ⚡ **Hızlı ilk sinyal:** GPS uygulama açılır açılmaz ısınır; sinyal öncesi ve tünel boşlukları doldurulur

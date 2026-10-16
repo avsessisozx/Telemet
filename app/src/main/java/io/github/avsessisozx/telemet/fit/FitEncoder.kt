@@ -81,6 +81,38 @@ object FitEncoder {
         Field(9, 2, SINT16),   // grade (% * 100)
     )
 
+    /** Mimo'da gösterilebilen standart alanlar: cadence (rpm) ve power (W). */
+    private val MIMO_FIELDS = listOf(
+        Field(4, 1, UINT8),   // cadence ← yatış açısı
+        Field(7, 2, UINT16),  // power ← G × 100
+    )
+
+    private val STANDARD_PART: Int get() = 1 + RECORD_FIELDS.sumOf { it.size }
+
+    /** Kadans ve güç alanlarını standart alanlarla geliştirici alanları arasına ekler. */
+    private fun withMimoExtras(raw: ByteArray, points: List<Decoded>): ByteArray {
+        val std = STANDARD_PART
+        val out = ByteArrayOutputStream(points.size * (RECORD_SIZE + 3))
+        points.forEachIndexed { i, p ->
+            val at = i * RECORD_SIZE
+            out.write(raw, at, std)
+            out.write(mimoCadence(p.leanDeg))
+            val power = mimoPower(p.gForce)
+            out.write(power and 0xFF)
+            out.write((power ushr 8) and 0xFF)
+            out.write(raw, at + std, RECORD_SIZE - std)
+        }
+        return out.toByteArray()
+    }
+
+    /** Yatış açısı → kadans (0–90). */
+    fun mimoCadence(leanDeg: Double): Int =
+        if (leanDeg.isNaN()) 0 else abs(leanDeg).roundToLong().toInt().coerceIn(0, 90)
+
+    /** G kuvveti → güç (1,25 g → 125 W). */
+    fun mimoPower(g: Double): Int =
+        if (g.isNaN()) 0 else (abs(g) * 100).roundToLong().toInt().coerceIn(0, 500)
+
     /** Bir record mesajının diskteki uzunluğu (başlık baytı dahil). */
     val RECORD_SIZE: Int = 1 + RECORD_FIELDS.sumOf { it.size } + DEV_FIELDS.size * 4
 
@@ -222,11 +254,15 @@ object FitEncoder {
     /**
      * Tam .fit dosyasını üretir. Hiç nokta yoksa null döner.
      * Spor türü "bisiklet" seçildi: DJI uygulamaları hız/rota panolarını en sorunsuz bu türde gösteriyor.
+     *
+     * @param mimoExtras DJI Mimo geliştirici alanlarını göstermiyor. Açıksa yatış açısı (derece, işaretsiz)
+     *   standart "kadans" alanına, toplam G × 100 de "güç" alanına yazılır; böylece Mimo'nun kadans ve
+     *   güç göstergeleri yatış açısını ve G kuvvetini gösterir.
      */
-    fun buildFile(raw: ByteArray, createdUtcMillis: Long): ByteArray? {
+    fun buildFile(raw: ByteArray, createdUtcMillis: Long, mimoExtras: Boolean = false): ByteArray? {
         val points = decodeRecords(raw)
         if (points.isEmpty()) return null
-        val recordBytes = raw.copyOf(points.size * RECORD_SIZE)
+        val recordBytes = if (mimoExtras) withMimoExtras(raw, points) else raw.copyOf(points.size * RECORD_SIZE)
 
         val first = points.first()
         val last = points.last()
@@ -281,7 +317,7 @@ object FitEncoder {
         }
 
         // record'lar
-        body.define(L_RECORD, MSG_RECORD, RECORD_FIELDS, DEV_FIELDS.map { it.num })
+        body.define(L_RECORD, MSG_RECORD, if (mimoExtras) RECORD_FIELDS + MIMO_FIELDS else RECORD_FIELDS, DEV_FIELDS.map { it.num })
         body.raw(recordBytes)
 
         // event: kronometre durdu

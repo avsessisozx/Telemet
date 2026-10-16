@@ -45,6 +45,7 @@ class GpsTracker(context: Context, private val onFix: (Fix) -> Unit) : LocationL
     private var running = false
     private var previous: Location? = null
     private var smoothedDown = 0.0
+    private val speedFilter = SpeedFilter()
 
     var satellitesUsed = 0
         private set
@@ -120,6 +121,7 @@ class GpsTracker(context: Context, private val onFix: (Fix) -> Unit) : LocationL
         lm?.unregisterGnssStatusCallback(gnssCallback)
         previous = null
         lastFix = null
+        speedFilter.reset()
         AppLog.i("GPS stopped")
     }
 
@@ -127,13 +129,13 @@ class GpsTracker(context: Context, private val onFix: (Fix) -> Unit) : LocationL
         val prev = previous
         previous = location
 
-        var speed = if (location.hasSpeed()) location.speed.toDouble() else 0.0
+        var speed = if (location.hasSpeed()) location.speed.toDouble() else Double.NaN
         var bearingDeg = if (location.hasBearing()) location.bearing.toDouble() else Double.NaN
 
         if (prev != null) {
             val dt = (location.elapsedRealtimeNanos - prev.elapsedRealtimeNanos) / 1e9
             if (dt in 0.05..5.0) {
-                if (!location.hasSpeed()) speed = prev.distanceTo(location) / dt
+                if (speed.isNaN()) speed = prev.distanceTo(location) / dt
                 if (bearingDeg.isNaN()) bearingDeg = prev.bearingTo(location).toDouble()
                 if (location.hasAltitude() && prev.hasAltitude()) {
                     val rawDown = -(location.altitude - prev.altitude) / dt
@@ -143,6 +145,13 @@ class GpsTracker(context: Context, private val onFix: (Fix) -> Unit) : LocationL
             }
         }
         if (bearingDeg.isNaN()) bearingDeg = 0.0
+        if (speed.isNaN()) speed = 0.0
+        speed = speedFilter.filter(
+            speedMs = speed,
+            timeS = location.elapsedRealtimeNanos / 1e9,
+            speedAccuracyMs = if (location.hasSpeedAccuracy()) location.speedAccuracyMetersPerSecond.toDouble() else Double.NaN,
+            horizontalAccuracyM = if (location.hasAccuracy()) location.accuracy.toDouble() else Double.NaN,
+        )
         val rad = Math.toRadians(bearingDeg)
 
         val fix = Fix(
@@ -205,21 +214,36 @@ class GpsTracker(context: Context, private val onFix: (Fix) -> Unit) : LocationL
         private const val EARTH_RADIUS_M = 6_371_000.0
 
         /**
-         * Son ölçümü hız vektörüyle kısa süre ileri taşır (en fazla 1 sn).
-         * Telefon GPS'i genelde 1 Hz verir; DJI kumandası ise 10 Hz gönderir.
-         * Bu sayede kameraya akıcı 10 Hz veri gider.
+         * Ölçümü hız vektörüyle [dtSeconds] kadar ileri (ya da eksi değerde geri) taşır.
+         * Konum ve zaman aynı miktarda kaydırılır; en fazla ±1,5 sn.
          */
         fun extrapolate(f: Fix, dtSeconds: Double): Fix {
-            if (dtSeconds <= 0.0) return f
-            val dt = dtSeconds.coerceAtMost(1.0)
+            val dt = dtSeconds.coerceIn(-1.5, 1.5)
+            if (dt == 0.0) return f
             val dLat = f.velocityNorthMs * dt / EARTH_RADIUS_M
             val dLon = f.velocityEastMs * dt / (EARTH_RADIUS_M * cos(Math.toRadians(f.latitude)).coerceAtLeast(1e-6))
             return f.copy(
-                utcMillis = f.utcMillis + (dtSeconds * 1000).toLong(),
+                utcMillis = f.utcMillis + Math.round(dt * 1000),
                 latitude = f.latitude + Math.toDegrees(dLat),
                 longitude = f.longitude + Math.toDegrees(dLon),
                 altitudeM = f.altitudeM - f.velocityDownMs * dt,
             )
+        }
+
+        /**
+         * Kameraya giden paketteki saat yalnızca saniye hassasiyetinde. Saniyede 10 paket gönderirken
+         * her pakete o anki (salise farklı) konumu koyarsak, kamera aynı saniye etiketli farklı konumlar
+         * görür; hızı konumlardan hesaplarsa %5–10 sapma çıkar. Bu yüzden konum, paketin taşıdığı
+         * tam saniyeye taşınır: aynı saniyedeki bütün paketler aynı konumu taşır ve ardışık saniyeler
+         * arasındaki mesafe gerçekten 1 saniyelik yola karşılık gelir.
+         *
+         * @param ageMs ölçümden bu yana geçen süre
+         */
+        fun alignedToSecond(f: Fix, ageMs: Long): Fix {
+            val nowUtc = f.utcMillis + ageMs.coerceAtLeast(0)
+            val second = Math.floorDiv(nowUtc, 1000L) * 1000L
+            val aligned = extrapolate(f, (second - f.utcMillis) / 1000.0)
+            return aligned.copy(utcMillis = second)
         }
 
         fun headingDeg(f: Fix): Double {

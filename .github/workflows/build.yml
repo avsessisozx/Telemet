@@ -42,6 +42,7 @@ jobs:
         run: |
           pip install --quiet fitdecode
           python3 tools/validate_fit.py app/build/fit-sample/sample.fit
+          python3 tools/validate_fit.py app/build/fit-sample/sample-mimo.fit --mimo
 
       - name: Hataları özetle
         if: failure()

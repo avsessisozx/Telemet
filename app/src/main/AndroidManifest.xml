@@ -63,6 +63,25 @@
             android:name=".ui.LogActivity"
             android:exported="false" />
 
+        <!-- Videoları sürüşle eşleştirme; galeriden "Paylaş → Telemet" ile de açılır. -->
+        <activity
+            android:name=".ui.VideoSyncActivity"
+            android:exported="true"
+            android:label="@string/vs_title"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="video/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="video/*" />
+            </intent-filter>
+        </activity>
+
         <provider
             android:name=".util.ShareProvider"
             android:authorities="${applicationId}.share"

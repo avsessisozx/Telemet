@@ -115,4 +115,19 @@ class FitEncoderTest {
         val dir = File("build/fit-sample").apply { mkdirs() }
         File(dir, "sample.fit").writeBytes(fit)
     }
+
+    @Test
+    fun mimoExtrasFileIsValid() {
+        val plain = FitEncoder.buildFile(sampleRaw(), 1_791_000_000_000L)!!
+        val fit = FitEncoder.buildFile(sampleRaw(), 1_791_000_000_000L, mimoExtras = true)!!
+        assertEquals(0, FitEncoder.crc(0, fit, 0, 14))
+        assertEquals(0, FitEncoder.crc(0, fit, 0, fit.size))
+        // Her noktaya 3 bayt (kadans + güç), tanıma 2 alan (6 bayt) eklenir.
+        assertEquals(plain.size + 600 * 3 + 6, fit.size)
+        assertEquals(30, FitEncoder.mimoCadence(-30.4))
+        assertEquals(90, FitEncoder.mimoCadence(120.0))
+        assertEquals(125, FitEncoder.mimoPower(1.25))
+        val dir = File("build/fit-sample").apply { mkdirs() }
+        File(dir, "sample-mimo.fit").writeBytes(fit)
+    }
 }

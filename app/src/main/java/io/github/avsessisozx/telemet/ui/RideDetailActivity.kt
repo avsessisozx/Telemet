@@ -145,7 +145,7 @@ class RideDetailActivity : Activity() {
             try {
                 val dir = ShareProvider.freshDir(this)
                 val base = ride.name.ifEmpty { ride.id }.replace(Regex("[^A-Za-z0-9._ -]"), "_").trim().ifEmpty { ride.id }
-                val fit = File(dir, "$base.fit").apply { writeBytes(FitEncoder.buildFile(raw, ride.startUtcMillis) ?: ByteArray(0)) }
+                val fit = File(dir, "$base.fit").apply { writeBytes(FitEncoder.buildFile(raw, ride.startUtcMillis, io.github.avsessisozx.telemet.util.Prefs(this@RideDetailActivity).mimoExtras) ?: ByteArray(0)) }
                 val gpx = File(dir, "$base.gpx").apply { writeText(RideStore.gpx(ride.name.ifEmpty { ride.id }, points)) }
                 ShareProvider.share(this, listOf(fit, gpx), getString(R.string.share_subject, ride.name.ifEmpty { ride.id }), getString(R.string.share_chooser))
                 return
