@@ -320,7 +320,7 @@ class TelemetService : Service(), CameraLink.Listener {
             if (prefs.smoothGps) {
                 val fix = gps.lastFix
                 if (fix != null && age <= MAX_FIX_AGE_MS) {
-                    push(withSensors(GpsTracker.extrapolate(fix, age / 1000.0)))
+                    push(withSensors(GpsTracker.alignedToSecond(fix, age)))
                 }
             }
             val snap = sensors.snapshot(resetPeaks = false)
