@@ -3,7 +3,7 @@
 > Claude'un çalışma notu. Yalnızca `durum` dalında durur; `main`'e, README'ye ve sürüm notlarına girmez.
 > Yeni sohbette önce bunu oku, repoyu baştan tarama. Her sürümden sonra güncelle.
 
-Son güncelleme: 2026-10-16 · Son sürüm: **v0.1.8** (2026-10-15)
+Son güncelleme: 2026-10-16 · Son sürüm: **v0.1.13** (2026-10-16)
 
 ## Ne yapıyor
 Telefonu DJI Osmo Action 4 için Bluetooth GPS kumandası gibi kullanır: hız, rota, yükseklik
@@ -13,7 +13,10 @@ FIT + GPX yedeği. Sadece telefonun kendi sensörleri; ek cihaz yok.
 ## Teknik
 - Android, Kotlin, Gradle KTS · `io.github.avsessisozx.telemet` · minSdk 29
 - Sürüm: `versionName = 0.1.<buildNumber>` (CI derleme numarası)
-- CI: `.github/workflows/build.yml` → `main`'e push'ta APK derler ve yayınlar
+- CI: `.github/workflows/build.yml` → her dalda derleme + emülatör arayüz testleri (`UiFlowTest`, 9 test);
+  ekran görüntüleri `ci-screenshots` dalına yazılır; yalnız `main`'e push'ta sürüm yayınlanır
+- Sürüm notu = `main`'deki son commit mesajı (imza satırları CI'da otomatik siliniyor). `main`'e squash ile, temiz mesajla al
+- Metinler `tools/i18n/*.py` dosyalarında (12 dil), `tools/i18n/build.py` ile strings.xml üretilir
 - `repo-settings.yml`: repo açıklaması/etiketleri `.github/repo-settings.json`'dan
 - Araçlar: `tools/check_strings.py` (çeviri anahtarları), `tools/validate_fit.py` (FIT doğrulama)
 - Kullanıcının telefonu: Xiaomi Mi 10T Pro
@@ -25,6 +28,8 @@ FIT + GPX yedeği. Sadece telefonun kendi sensörleri; ek cihaz yok.
 - Sensörler: yatış, G, barometre · GPS ön ısıtma, A-GPS
 - Sahte konum uygulamasıyla test edildi, çalışıyor (kullanıcı onayı)
 - v0.1.8: 12 dil, yeni ikon, İngilizce README + `docs/README.*.md` (11 dil)
+- v0.1.13: yeni tasarım — kurulum sihirbazı (eski sürümden yükseltmede izinler tamsa atlanır), alt sekmeler,
+  sürüş ayrıntısı (rota + grafikler), ayarlar, yedek/geri yükleme, güvenli "tüm verileri temizle"
 
 ## Yarım / sıradaki
 - Uygulamaya yeni isim düşünülüyordu; henüz seçilmedi (şu an "Telemet")
