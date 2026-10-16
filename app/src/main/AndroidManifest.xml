@@ -68,6 +68,7 @@
             android:name=".ui.VideoSyncActivity"
             android:exported="true"
             android:label="@string/vs_title"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />

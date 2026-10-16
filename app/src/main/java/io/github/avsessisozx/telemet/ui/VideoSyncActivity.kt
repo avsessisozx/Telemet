@@ -160,14 +160,19 @@ class VideoSyncActivity : Activity() {
 
         actions = ui.vertical().apply { layoutParams = ui.matchWrap(0); visibility = View.GONE }
         // Saat düzeltmesi
-        offsetText = ui.text(15f, Theme.TEXT, bold = true).apply { layoutParams = ui.weight() }
+        offsetText = ui.text(15f, Theme.TEXT, bold = true).apply { tag = "vs_offset_text" }
         actions.addView(ui.card().apply {
+            addView(offsetText)
             addView(ui.horizontal().apply {
-                addView(offsetText)
-                for (d in listOf(-10, -1, 1, 10)) {
+                setPadding(0, ui.dp(10), 0, 0)
+                val steps = listOf(-10, -1, 1, 10)
+                steps.forEachIndexed { i, d ->
                     addView(ui.smallButton(if (d > 0) "+$d" else "$d", Theme.GREY_BUTTON) { changeOffset(d) }.apply {
                         tag = "vs_offset_$d"
-                        setPadding(ui.dp(10), 0, ui.dp(10), 0)
+                        setPadding(0, 0, 0, 0)
+                        layoutParams = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f).apply {
+                            if (i < steps.size - 1) marginEnd = ui.dp(8)
+                        }
                     })
                 }
             })

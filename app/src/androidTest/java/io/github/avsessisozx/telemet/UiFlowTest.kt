@@ -464,6 +464,11 @@ class UiFlowTest {
         onView(tag("vs_clip_0")).check(matches(hasDescendant(withText(containsString("100")))))
         onView(tag("vs_clip_2")).check(matches(hasDescendant(withText(containsString(s(R.string.vs_clip_nomatch, "", "").substringAfterLast("·").trim())))))
         shot("52_video_match")
+        onView(tag("vs_offset_1")).perform(scrollTo(), click())
+        onView(tag("vs_offset_text")).check(matches(withText(s(R.string.vs_offset, "+1"))))
+        onView(tag("vs_offset_-1")).perform(scrollTo(), click())
+        onView(tag("vs_offset_text")).check(matches(withText(s(R.string.vs_offset, "0"))))
+        shot("52b_video_offset")
 
         onView(tag("vs_save_each")).perform(scrollTo(), click())
         waitUntil(20_000) { onView(tag("vs_share")).check(matches(isDisplayed())) }
