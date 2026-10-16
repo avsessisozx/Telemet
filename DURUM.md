@@ -3,7 +3,7 @@
 > Claude'un çalışma notu. Yalnızca `durum` dalında durur; `main`'e, README'ye ve sürüm notlarına girmez.
 > Yeni sohbette önce bunu oku, repoyu baştan tarama. Her sürümden sonra güncelle.
 
-Son güncelleme: 2026-10-16 · Son sürüm: **v0.1.13** (2026-10-16)
+Son güncelleme: 2026-10-16 · Son sürüm: **v0.1.(bu main derlemesi)** (2026-10-16) — v0.1.13'ten sonraki ilk sürüm
 
 ## Ne yapıyor
 Telefonu DJI Osmo Action 4 için Bluetooth GPS kumandası gibi kullanır: hız, rota, yükseklik
@@ -31,11 +31,28 @@ FIT + GPX yedeği. Sadece telefonun kendi sensörleri; ek cihaz yok.
 - v0.1.13: yeni tasarım — kurulum sihirbazı (eski sürümden yükseltmede izinler tamsa atlanır), alt sekmeler,
   sürüş ayrıntısı (rota + grafikler), ayarlar, yedek/geri yükleme, güvenli "tüm verileri temizle"
 
+- 2026-10-16 sürümü (main a94d318):
+  - Hız sapması: 10 Hz modunda paketlerdeki saat saniye hassasiyetinde; konum artık tam saniyeye hizalanıyor
+    (`GpsTracker.alignedToSecond`), `SpeedFilter` tek seferlik sıçramaları ayıklıyor. Kullanıcı Google Haritalar'a göre
+    %5–10 fazla görüyordu; gerçek sürüşte doğrulanmadı.
+  - Videolarla eşleştirme: `ui/VideoSyncActivity` (Sürüşlerim'deki düğme + galeriden "Paylaş → Telemet"),
+    `video/Mp4Info` (mvhd okur), `video/VideoSync` (UTC / yerel / dosya adı yorumlarından en çok örtüşeni seçer, ± sn düzeltme).
+    Parça başına FIT+GPX, birleşik dosya.
+  - Göstergeli video: `overlay/OverlayRenderer` (yeşil zemin), `OverlayEncoder` (EGL + MediaCodec, açık zaman damgası),
+    Filmler/Telemet'e yazılır. Emülatörde 1080p ≈ 1,3× gerçek zaman.
+  - Ayarlar: "Mimo'da yatış/G" (FIT'te kadans=|yatış|, güç=G×100), "Hareket edince otomatik kayıt" (`service/AutoRecord`,
+    15 km/sa, 3 dk duruş; elle başlatılan kayda dokunmaz). İkisi de varsayılan kapalı.
+  - Testler: yeni birim testleri (SpeedTest, VideoSyncTest, AutoRecordTest, Mimo FIT) + emülatör t10–t12.
+    UI testlerinde emülatörün ANR penceresi gizleniyor (`hide_error_dialogs`).
+
 ## Yarım / sıradaki
 - Uygulamaya yeni isim düşünülüyordu; henüz seçilmedi (şu an "Telemet")
 - Mimo panosunda daha fazla veri alanı ve eksik kumanda özellikleri (mod değiştirme,
   fotoğraf, uyku/uyandırma, durum bilgisi) — hangilerinin bittiğini kodda doğrula
 - Gerçek motosiklet sürüşüyle uzun test henüz raporlanmadı
+- Gerçek cihazda doğrulanacak: hız düzeltmesi Mimo'da; DJI Action 4 MP4'ünün mvhd saati UTC mi yerel mi;
+  Mimo'nun kadans/güç göstergeleri; otomatik kayıt; göstergeli videonun telefondaki hızı (uzun videolarda dakikalar sürebilir)
+- DJI Action 4 dosya adı biçimi varsayımı: DJI_YYYYMMDDHHMMSS_xxxx_D.MP4 (yalnız mvhd yoksa yedek olarak kullanılıyor)
 
 ## Bilinen sorunlar
 - Kayıtlı bilinen hata yok.
