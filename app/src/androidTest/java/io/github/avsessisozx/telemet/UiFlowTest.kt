@@ -91,9 +91,12 @@ class UiFlowTest {
         val bmp: Bitmap = inst.uiAutomation.takeScreenshot() ?: return
         val bytes = ByteArrayOutputStream().also { bmp.compress(Bitmap.CompressFormat.PNG, 100, it) }.toByteArray()
         shell("mkdir -p $SHOTS")
-        val fds = inst.uiAutomation.executeShellCommandRw("sh -c 'cat > $SHOTS/$name.png'")
+        // Komutlar kabuksuz çalıştığı için yönlendirme yok; "tee" girdiyi dosyaya yazar.
+        // tee'nin çıktısı ayrı bir iş parçacığında okunur, yoksa boru dolup kilitlenir.
+        val fds = inst.uiAutomation.executeShellCommandRw("tee $SHOTS/$name.png")
+        val reader = Thread { ParcelFileDescriptor.AutoCloseInputStream(fds[0]).use { it.readBytes() } }.apply { start() }
         ParcelFileDescriptor.AutoCloseOutputStream(fds[1]).use { it.write(bytes) }
-        ParcelFileDescriptor.AutoCloseInputStream(fds[0]).use { it.readBytes() }
+        reader.join(10_000)
     }
 
     /** Ana ekranı test eden testler önceki testin sonucuna bağlı kalmasın. */
