@@ -119,6 +119,8 @@
     <string name="label_rides">Sürüş</string>
     <string name="label_time">Sürüş süresi</string>
     <string name="label_duration">Süre</string>
+    <string name="label_moving_time">Hareket süresi</string>
+    <string name="label_avg_moving_speed">Hareket ort. hızı</string>
     <string name="label_avg_speed">Ortalama hız</string>
     <string name="label_max_speed">En yüksek hız</string>
     <string name="label_climb">Tırmanış</string>
@@ -154,6 +156,8 @@
     <string name="section_troubleshooting">Sorun giderme</string>
     <string name="section_about">Hakkında</string>
     <string name="setting_smooth_gps_desc">Telefonun GPS ölçümleri arasını doldurur; kamera, DJI kumandasındaki gibi saniyede 10 güncelleme alır. Panoda takılma görürsen kapat.</string>
+    <string name="setting_smooth_route">Rota çizgisini yumuşat</string>
+    <string name="setting_smooth_route_desc">Sürüş ayrıntısındaki rota çiziminde GPS titremesini azaltır. Yalnızca görsel — kaydedilen FIT/GPX noktaları değişmez.</string>
     <string name="setting_backup_desc">Durdur\'a basınca İndirilenler/Telemet klasörüne kaydedilir.</string>
     <string name="setting_units">Birimler</string>
     <string name="units_metric">Metrik (km/sa, km, m)</string>

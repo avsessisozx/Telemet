@@ -119,6 +119,8 @@
     <string name="label_rides">Giri</string>
     <string name="label_time">Tempo in sella</string>
     <string name="label_duration">Durata</string>
+    <string name="label_moving_time">Tempo in movimento</string>
+    <string name="label_avg_moving_speed">Vel. media in mov.</string>
     <string name="label_avg_speed">Velocità media</string>
     <string name="label_max_speed">Velocità max</string>
     <string name="label_climb">Dislivello</string>
@@ -154,6 +156,8 @@
     <string name="section_troubleshooting">Risoluzione problemi</string>
     <string name="section_about">Informazioni</string>
     <string name="setting_smooth_gps_desc">Riempie i vuoti tra le misure GPS del telefono, così la fotocamera riceve 10 aggiornamenti al secondo come con il telecomando DJI. Disattiva se la dashboard va a scatti.</string>
+    <string name="setting_smooth_route">Smussa la linea del percorso</string>
+    <string name="setting_smooth_route_desc">Riduce il tremolio del GPS nel disegno del percorso nella schermata di dettaglio. Solo visivo: i punti FIT/GPX salvati non cambiano.</string>
     <string name="setting_backup_desc">Salvato in Download/Telemet quando tocchi Ferma.</string>
     <string name="setting_units">Unità</string>
     <string name="units_metric">Metriche (km/h, km, m)</string>

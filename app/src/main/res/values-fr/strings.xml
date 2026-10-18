@@ -119,6 +119,8 @@
     <string name="label_rides">Trajets</string>
     <string name="label_time">Temps de conduite</string>
     <string name="label_duration">Durée</string>
+    <string name="label_moving_time">Temps en mouvement</string>
+    <string name="label_avg_moving_speed">Vit. moy. en mouvement</string>
     <string name="label_avg_speed">Vitesse moyenne</string>
     <string name="label_max_speed">Vitesse max</string>
     <string name="label_climb">Dénivelé</string>
@@ -154,6 +156,8 @@
     <string name="section_troubleshooting">Dépannage</string>
     <string name="section_about">À propos</string>
     <string name="setting_smooth_gps_desc">Complète entre les mesures GPS du téléphone pour que la caméra reçoive 10 mises à jour par seconde, comme avec la télécommande DJI. Désactivez si le tableau de bord saccade.</string>
+    <string name="setting_smooth_route">Lisser le tracé de l\'itinéraire</string>
+    <string name="setting_smooth_route_desc">Réduit les tremblements du GPS dans le tracé de l\'itinéraire sur l\'écran de détail. Visuel uniquement — les points FIT/GPX enregistrés ne changent pas.</string>
     <string name="setting_backup_desc">Enregistré dans Téléchargements/Telemet quand vous touchez Arrêter.</string>
     <string name="setting_units">Unités</string>
     <string name="units_metric">Métrique (km/h, km, m)</string>

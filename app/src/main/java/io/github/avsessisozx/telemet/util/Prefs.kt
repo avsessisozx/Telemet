@@ -104,6 +104,14 @@ class Prefs(context: Context) {
         get() = sp.getBoolean("sensors_expanded", false)
         set(v) = sp.edit().putBoolean("sensors_expanded", v).apply()
 
+    /**
+     * Sürüş ayrıntısındaki rota çiziminde GPS titremesini yumuşat. Yalnızca görsel;
+     * kaydedilen FIT/GPX noktaları değişmez. Varsayılan: açık.
+     */
+    var smoothRoute: Boolean
+        get() = sp.getBoolean("smooth_route", true)
+        set(v) = sp.edit().putBoolean("smooth_route", v).apply()
+
     fun forgetCamera() {
         sp.edit().remove("last_camera_address").remove("last_camera_name").apply()
     }

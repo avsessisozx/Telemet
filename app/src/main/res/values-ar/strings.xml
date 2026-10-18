@@ -119,6 +119,8 @@
     <string name="label_rides">الرحلات</string>
     <string name="label_time">مدة القيادة</string>
     <string name="label_duration">المدة</string>
+    <string name="label_moving_time">وقت الحركة</string>
+    <string name="label_avg_moving_speed">متوسط سرعة الحركة</string>
     <string name="label_avg_speed">متوسط السرعة</string>
     <string name="label_max_speed">السرعة القصوى</string>
     <string name="label_climb">الصعود</string>
@@ -154,6 +156,8 @@
     <string name="section_troubleshooting">حل المشكلات</string>
     <string name="section_about">حول</string>
     <string name="setting_smooth_gps_desc">يملأ الفجوات بين قراءات GPS في الهاتف لتتلقى الكاميرا 10 تحديثات في الثانية كما مع جهاز تحكم DJI. أوقفه إذا بدت اللوحة متقطعة.</string>
+    <string name="setting_smooth_route">تنعيم خط المسار</string>
+    <string name="setting_smooth_route_desc">يقلّل اهتزاز GPS في رسم المسار على شاشة تفاصيل الرحلة. بصري فقط — نقاط FIT/GPX المحفوظة لا تتغيّر.</string>
     <string name="setting_backup_desc">يُحفظ في التنزيلات/Telemet عند الضغط على إيقاف.</string>
     <string name="setting_units">الوحدات</string>
     <string name="units_metric">متري (كم/س، كم، م)</string>

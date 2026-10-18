@@ -120,6 +120,8 @@
     <string name="label_rides">Rides</string>
     <string name="label_time">Riding time</string>
     <string name="label_duration">Duration</string>
+    <string name="label_moving_time">Moving time</string>
+    <string name="label_avg_moving_speed">Avg moving speed</string>
     <string name="label_avg_speed">Average speed</string>
     <string name="label_max_speed">Top speed</string>
     <string name="label_climb">Climb</string>
@@ -155,6 +157,8 @@
     <string name="section_troubleshooting">Troubleshooting</string>
     <string name="section_about">About</string>
     <string name="setting_smooth_gps_desc">Fills in between the phone\'s GPS fixes so the camera gets 10 updates per second, like the DJI remote. Turn off if the dashboard looks jumpy.</string>
+    <string name="setting_smooth_route">Smooth the route line</string>
+    <string name="setting_smooth_route_desc">Reduces GPS jitter in the route drawing on the ride detail screen. Visual only — the saved FIT/GPX points are not changed.</string>
     <string name="setting_backup_desc">Saved to Downloads/Telemet when you tap Stop.</string>
     <string name="setting_units">Units</string>
     <string name="units_metric">Metric (km/h, km, m)</string>
