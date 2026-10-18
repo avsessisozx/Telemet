@@ -3,7 +3,7 @@
 > Claude'un çalışma notu. Yalnızca `durum` dalında durur; `main`'e, README'ye ve sürüm notlarına girmez.
 > Yeni sohbette önce bunu oku, repoyu baştan tarama. Her sürümden sonra güncelle.
 
-Son güncelleme: 2026-10-16 · Son sürüm: **v0.1.19** (2026-10-16)
+Son güncelleme: 2026-10-19 · Son sürüm: **v0.1.21** (2026-10-19)
 
 ## Ne yapıyor
 Telefonu DJI Osmo Action 4 için Bluetooth GPS kumandası gibi kullanır: hız, rota, yükseklik
@@ -31,6 +31,21 @@ FIT + GPX yedeği. Sadece telefonun kendi sensörleri; ek cihaz yok.
 - v0.1.13: yeni tasarım — kurulum sihirbazı (eski sürümden yükseltmede izinler tamsa atlanır), alt sekmeler,
   sürüş ayrıntısı (rota + grafikler), ayarlar, yedek/geri yükleme, güvenli "tüm verileri temizle"
 
+- 2026-10-19 sürümü (v0.1.21, main c2f4db4):
+  - Rakip analizi: Strava v485.12, Yamaha MyRide v6.2.4, Pirelli Diablo Super Biker v7.5.2 APK'leri
+    REA/JADX ile incelendi. Sonuç: Telemet bu üçünün yaptığının çoğunu zaten yapıyor (çökme kurtarma,
+    tırmanış/iniş istatistiği dahil). Gerçekten eksik bulunan iki şey eklendi. MyRide bir telemetri
+    uygulaması değil (Yamaha motoruna bağlanan yardımcı), ondan alınacak az; Diablo + Strava asıl kaynak.
+  - Hareket süresi: `service/MovingTime` (saf Kotlin). Sürüş ayrıntısında, duruş toplam süreden ≥30 sn
+    azsa "hareket süresi" + "hareket ort. hızı" tile'ları gösterilir. Ham noktalardan hesaplanır, eski
+    sürüşlerde de çalışır. Eşik 0.8 m/sn (~3 km/sa), büyük boşluklar (>600 sn) atlanır.
+  - Rota yumuşatma: `service/RouteSmoother` (saf Kotlin). RideDetailActivity'de RouteView'a verilen
+    lat/lon, çizimden önce üçgen ağırlıklı pencereyle yumuşatılır (uçlar sabit). Dış servis/harita yok.
+    Yalnızca görsel — ham FIT/GPX değişmez. `Prefs.smoothRoute` (varsayılan AÇIK), ayar satırı eklendi.
+    NOT: Bu gerçek snap-to-road değil (yol haritası gerektirir, bağımsızlık felsefesine aykırı); titreme
+    azaltan yerel filtre. Ayar adı "Rota çizgisini yumuşat" olarak dürüstçe kondu.
+  - Testler: RouteSmootherTest, MovingTimeTest. CI 58 test, 0 başarısız; build+ui-test+release hepsi yeşil.
+
 - 2026-10-16 sürümü (main a94d318):
   - Hız sapması: 10 Hz modunda paketlerdeki saat saniye hassasiyetinde; konum artık tam saniyeye hizalanıyor
     (`GpsTracker.alignedToSecond`), `SpeedFilter` tek seferlik sıçramaları ayıklıyor. Kullanıcı Google Haritalar'a göre
@@ -46,6 +61,12 @@ FIT + GPX yedeği. Sadece telefonun kendi sensörleri; ek cihaz yok.
     UI testlerinde emülatörün ANR penceresi gizleniyor (`hide_error_dialogs`).
 
 ## Yarım / sıradaki
+- Hareket süresi ve rota yumuşatma gerçek sürüşte doğrulanmadı (yalnız emülatör arayüz testi geçti).
+  Kullanıcı gerçek sürüşte rota çiziminin ve hareket süresinin nasıl göründüğüne bakacak.
+- Rakip analizinden çıkan isteğe bağlı eklemeler (henüz yapılmadı): lap/bölüm (viraj kesimi) istatistiği
+  (Strava+Diablo), park yeri kaydet (MyRide). Kullanıcı istedikçe eklenir.
+- 3B rota izleme konuşuldu: harita olmadan, barometre+GPS'ten döndürülebilir 3B çizgi yapılabilir
+  (bağımsız, ücretsiz); gerçek uydu üstünde uçuş (Strava flyby) harita servisi/ücret ister — reddedildi.
 - Uygulamaya yeni isim düşünülüyordu; henüz seçilmedi (şu an "Telemet")
 - Mimo panosunda daha fazla veri alanı ve eksik kumanda özellikleri (mod değiştirme,
   fotoğraf, uyku/uyandırma, durum bilgisi) — hangilerinin bittiğini kodda doğrula
