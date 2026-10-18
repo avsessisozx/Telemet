@@ -119,6 +119,8 @@
     <string name="label_rides">走行回数</string>
     <string name="label_time">走行時間</string>
     <string name="label_duration">時間</string>
+    <string name="label_moving_time">移動時間</string>
+    <string name="label_avg_moving_speed">移動平均速度</string>
     <string name="label_avg_speed">平均速度</string>
     <string name="label_max_speed">最高速度</string>
     <string name="label_climb">獲得標高</string>
@@ -154,6 +156,8 @@
     <string name="section_troubleshooting">トラブルシューティング</string>
     <string name="section_about">このアプリについて</string>
     <string name="setting_smooth_gps_desc">スマホの GPS 測位の間を補完し、DJI リモコンと同じく毎秒 10 回カメラに送ります。ダッシュボードがカクつく場合はオフにしてください。</string>
+    <string name="setting_smooth_route">ルート線をなめらかに</string>
+    <string name="setting_smooth_route_desc">走行詳細画面のルート描画でGPSのブレを減らします。表示のみ — 保存されたFIT/GPXの点は変わりません。</string>
     <string name="setting_backup_desc">停止をタップすると ダウンロード/Telemet に保存されます。</string>
     <string name="setting_units">単位</string>
     <string name="units_metric">メートル法（km/h、km、m）</string>

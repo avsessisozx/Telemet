@@ -119,6 +119,8 @@
     <string name="label_rides">Поездки</string>
     <string name="label_time">Время в пути</string>
     <string name="label_duration">Длительность</string>
+    <string name="label_moving_time">Время в движении</string>
+    <string name="label_avg_moving_speed">Ср. скор. в движении</string>
     <string name="label_avg_speed">Средняя скорость</string>
     <string name="label_max_speed">Макс. скорость</string>
     <string name="label_climb">Набор высоты</string>
@@ -154,6 +156,8 @@
     <string name="section_troubleshooting">Устранение неполадок</string>
     <string name="section_about">О приложении</string>
     <string name="setting_smooth_gps_desc">Заполняет промежутки между измерениями GPS телефона, чтобы камера получала 10 обновлений в секунду, как с пультом DJI. Выключите, если панель дёргается.</string>
+    <string name="setting_smooth_route">Сглаживать линию маршрута</string>
+    <string name="setting_smooth_route_desc">Уменьшает дрожание GPS на рисунке маршрута в деталях поездки. Только визуально — сохранённые точки FIT/GPX не меняются.</string>
     <string name="setting_backup_desc">Сохраняется в Загрузки/Telemet после нажатия «Стоп».</string>
     <string name="setting_units">Единицы</string>
     <string name="units_metric">Метрические (км/ч, км, м)</string>

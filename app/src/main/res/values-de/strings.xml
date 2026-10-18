@@ -119,6 +119,8 @@
     <string name="label_rides">Fahrten</string>
     <string name="label_time">Fahrzeit</string>
     <string name="label_duration">Dauer</string>
+    <string name="label_moving_time">Bewegungszeit</string>
+    <string name="label_avg_moving_speed">Ø Geschw. in Bewegung</string>
     <string name="label_avg_speed">Ø Geschwindigkeit</string>
     <string name="label_max_speed">Höchstgeschwindigkeit</string>
     <string name="label_climb">Anstieg</string>
@@ -154,6 +156,8 @@
     <string name="section_troubleshooting">Fehlerbehebung</string>
     <string name="section_about">Über</string>
     <string name="setting_smooth_gps_desc">Füllt die Lücken zwischen den GPS-Messungen des Handys, damit die Kamera wie mit der DJI-Fernbedienung 10 Updates pro Sekunde bekommt. Ausschalten, wenn das Dashboard ruckelt.</string>
+    <string name="setting_smooth_route">Routenlinie glätten</string>
+    <string name="setting_smooth_route_desc">Verringert das GPS-Zittern in der Routendarstellung auf dem Fahrtdetail-Bildschirm. Nur optisch — die gespeicherten FIT/GPX-Punkte bleiben unverändert.</string>
     <string name="setting_backup_desc">Wird beim Tippen auf Stoppen unter Downloads/Telemet gespeichert.</string>
     <string name="setting_units">Einheiten</string>
     <string name="units_metric">Metrisch (km/h, km, m)</string>

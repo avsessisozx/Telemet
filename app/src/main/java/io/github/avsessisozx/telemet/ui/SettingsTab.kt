@@ -63,6 +63,9 @@ class SettingsTab(activity: MainActivity) : MainActivity.Tab(activity) {
             ui.switchRow(ctx.getString(R.string.setting_mimo_extras), ctx.getString(R.string.setting_mimo_extras_desc), prefs.mimoExtras) {
                 prefs.mimoExtras = it
             }.apply { tag = "setting_mimo_extras" },
+            ui.switchRow(ctx.getString(R.string.setting_smooth_route), ctx.getString(R.string.setting_smooth_route_desc), prefs.smoothRoute) {
+                prefs.smoothRoute = it
+            },
             ui.switchRow(ctx.getString(R.string.setting_keep_screen), null, prefs.keepScreenOn) {
                 prefs.keepScreenOn = it
                 activity.updateKeepScreenOn()

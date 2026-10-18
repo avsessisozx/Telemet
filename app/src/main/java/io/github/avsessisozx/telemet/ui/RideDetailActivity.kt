@@ -71,10 +71,18 @@ class RideDetailActivity : Activity() {
 
         // Rota
         if (points.size >= 2) {
+            val rawLat = DoubleArray(points.size) { FitEncoder.degrees(points[it].latSemi) }
+            val rawLon = DoubleArray(points.size) { FitEncoder.degrees(points[it].lonSemi) }
+            // Çizimde GPS titremesini yumuşat (ayar açıksa). Ham noktalara dokunulmaz.
+            val (drawLat, drawLon) = if (io.github.avsessisozx.telemet.util.Prefs(this).smoothRoute) {
+                io.github.avsessisozx.telemet.service.RouteSmoother.smooth(rawLat, rawLon)
+            } else {
+                rawLat to rawLon
+            }
             root.addView(RouteView(
                 this,
-                DoubleArray(points.size) { FitEncoder.degrees(points[it].latSemi) },
-                DoubleArray(points.size) { FitEncoder.degrees(points[it].lonSemi) },
+                drawLat,
+                drawLon,
                 DoubleArray(points.size) { points[it].enhancedSpeedMs },
             ).apply { tag = "route_view" }, ui.matchWrap(12))
         } else {
@@ -85,10 +93,24 @@ class RideDetailActivity : Activity() {
         val tiles = mutableListOf<View>(
             ui.tile(getString(R.string.label_distance), units.distance(ride.distanceM)),
             ui.tile(getString(R.string.label_duration), units.duration(ride.durationS)),
-            ui.tile(getString(R.string.label_avg_speed), units.speed(ride.avgSpeedMs)),
-            ui.tile(getString(R.string.label_max_speed), units.speed(ride.maxSpeedMs)),
-            ui.tile(getString(R.string.label_climb), units.altitude(ride.ascentM)),
         )
+        // Hareket süresi: toplam süreden belirgin azsa (duruş olmuşsa) göster.
+        val movingS = if (points.size >= 2) {
+            io.github.avsessisozx.telemet.service.MovingTime.seconds(
+                LongArray(points.size) { points[it].fitTime + FitEncoder.FIT_EPOCH_S },
+                DoubleArray(points.size) { points[it].enhancedSpeedMs },
+            )
+        } else 0L
+        val showMoving = movingS > 0 && ride.durationS - movingS >= 30
+        if (showMoving) {
+            tiles += ui.tile(getString(R.string.label_moving_time), units.duration(movingS))
+            // Hareket halindeyken ortalama hız.
+            val movingAvg = if (movingS > 0) ride.distanceM / movingS else 0.0
+            tiles += ui.tile(getString(R.string.label_avg_moving_speed), units.speed(movingAvg))
+        }
+        tiles += ui.tile(getString(R.string.label_avg_speed), units.speed(ride.avgSpeedMs))
+        tiles += ui.tile(getString(R.string.label_max_speed), units.speed(ride.maxSpeedMs))
+        tiles += ui.tile(getString(R.string.label_climb), units.altitude(ride.ascentM))
         if (points.isNotEmpty()) {
             tiles += ui.tile(getString(R.string.label_max_altitude), units.altitude(points.maxOf { it.enhancedAltitudeM }))
         }

@@ -119,6 +119,8 @@
     <string name="label_rides">Rutas</string>
     <string name="label_time">Tiempo de conducción</string>
     <string name="label_duration">Duración</string>
+    <string name="label_moving_time">Tiempo en movimiento</string>
+    <string name="label_avg_moving_speed">Vel. media en mov.</string>
     <string name="label_avg_speed">Velocidad media</string>
     <string name="label_max_speed">Velocidad máxima</string>
     <string name="label_climb">Subida</string>
@@ -154,6 +156,8 @@
     <string name="section_troubleshooting">Solución de problemas</string>
     <string name="section_about">Acerca de</string>
     <string name="setting_smooth_gps_desc">Rellena entre las lecturas GPS del teléfono para que la cámara reciba 10 actualizaciones por segundo, como con el mando de DJI. Desactívalo si el panel va a saltos.</string>
+    <string name="setting_smooth_route">Suavizar la línea de ruta</string>
+    <string name="setting_smooth_route_desc">Reduce el temblor del GPS en el dibujo de la ruta en la pantalla de detalle. Solo visual: los puntos FIT/GPX guardados no cambian.</string>
     <string name="setting_backup_desc">Se guarda en Descargas/Telemet al pulsar Detener.</string>
     <string name="setting_units">Unidades</string>
     <string name="units_metric">Métrico (km/h, km, m)</string>
