@@ -51,6 +51,7 @@ class GpsTracker(context: Context, private val onFix: (Fix) -> Unit) : LocationL
         private set
     var satellitesVisible = 0
         private set
+    private var lastGnssAt = 0L
     var lastFix: Fix? = null
         private set
 
@@ -60,7 +61,14 @@ class GpsTracker(context: Context, private val onFix: (Fix) -> Unit) : LocationL
             for (i in 0 until status.satelliteCount) if (status.usedInFix(i)) used++
             satellitesUsed = used
             satellitesVisible = status.satelliteCount
+            lastGnssAt = SystemClock.elapsedRealtime()
         }
+    }
+
+    /** Şu an görünen uydu sayısı; uydu durumu bir süredir gelmiyorsa (GPS çalışmıyorsa) 0. */
+    fun satellitesVisibleNow(): Int {
+        val fresh = lastGnssAt != 0L && SystemClock.elapsedRealtime() - lastGnssAt < GpsDiagnosis.GNSS_STALE_MS
+        return if (fresh) satellitesVisible else 0
     }
 
     fun isGpsEnabled(): Boolean = lm?.isProviderEnabled(LocationManager.GPS_PROVIDER) == true
@@ -75,6 +83,7 @@ class GpsTracker(context: Context, private val onFix: (Fix) -> Unit) : LocationL
             @Suppress("DEPRECATION")
             manager.registerGnssStatusCallback(gnssCallback, main)
             running = true
+            lastGnssAt = 0L
             AppLog.i("GPS started")
             true
         } catch (e: SecurityException) {

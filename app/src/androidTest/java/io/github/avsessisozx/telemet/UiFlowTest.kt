@@ -20,7 +20,10 @@ import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import io.github.avsessisozx.telemet.fit.FitEncoder
+import io.github.avsessisozx.telemet.service.GpsDiagnosis
 import io.github.avsessisozx.telemet.service.RideStore
+import io.github.avsessisozx.telemet.service.TelemetService
+import io.github.avsessisozx.telemet.service.TelemetState
 import io.github.avsessisozx.telemet.ui.MainActivity
 import io.github.avsessisozx.telemet.ui.OnboardingActivity
 import io.github.avsessisozx.telemet.ui.LogActivity
@@ -508,5 +511,65 @@ class UiFlowTest {
         launch(MainActivity::class.java) { putExtra(MainActivity.EXTRA_TAB, MainActivity.TAB_RIDES) }
         waitUntil { onView(tag("match_videos")).check(matches(isDisplayed())) }
         shot("56_rides_match_button")
+    }
+
+    /**
+     * Kullanıcının yaşadığı durum: Geliştirici seçeneklerinde sahte konum sağlayıcısı kalmış, gerçek GPS susmuş.
+     * Uygulama bunu fark edip uyarmalı; sağlayıcı kalkınca ve konum açılınca uyarı kendiliğinden kalkmalı.
+     * (CI betiği emülatörün gerçek GPS'ine saniyede bir konum yollar.)
+     */
+    @Test
+    fun t13_gpsIssueWarning() {
+        ensureSetupDone()
+        val p = pkg
+        for (perm in listOf(
+            "ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION", "ACCESS_BACKGROUND_LOCATION",
+            "BLUETOOTH_SCAN", "BLUETOOTH_CONNECT", "POST_NOTIFICATIONS",
+        )) shell("pm grant $p android.permission.$perm")
+        shell("cmd location set-location-enabled true")
+        shell("cmd location providers remove-test-provider gps")
+        shell("appops set com.android.shell android:mock_location allow")
+        shell("cmd location providers add-test-provider gps")
+        shell("cmd location providers set-test-provider-enabled gps true")
+
+        fun issue(): GpsDiagnosis.Issue {
+            var v = GpsDiagnosis.Issue.NONE
+            inst.runOnMainSync { v = TelemetState.gpsIssue }
+            return v
+        }
+        fun hasFix(): Boolean {
+            var v = false
+            inst.runOnMainSync { v = TelemetState.hasFix }
+            return v
+        }
+
+        try {
+            launch(MainActivity::class.java) { putExtra(MainActivity.EXTRA_TAB, MainActivity.TAB_RIDE) }
+            inst.runOnMainSync { TelemetService.start(app) }
+
+            // 1) Sahte sağlayıcı kalmış: ~30 sn sonra "uydu verisi yok" uyarısı çıkmalı.
+            waitUntil(60_000) { assertEquals(GpsDiagnosis.Issue.NO_SATELLITES, issue()) }
+            waitUntil { onView(withText(s(R.string.gps_nodata))).check(matches(isDisplayed())) }
+            waitUntil { onView(withText(s(R.string.gps_hint_nosat))).check(matches(isDisplayed())) }
+            shot("57_gps_warning_mock_left")
+
+            // 2) Sağlayıcı kaldırılınca gerçek GPS konum vermeli, uyarı kalkmalı.
+            shell("cmd location providers remove-test-provider gps")
+            waitUntil(60_000) { assertTrue("konum gelmedi", hasFix()) }
+            waitUntil(15_000) { assertEquals(GpsDiagnosis.Issue.NONE, issue()) }
+            waitUntil { onView(withText(s(R.string.gps_fix))).check(matches(isDisplayed())) }
+            shot("58_gps_warning_cleared")
+
+            // 3) Konum kapatılınca anında "konum kapalı" uyarısı.
+            shell("cmd location set-location-enabled false")
+            waitUntil(15_000) { assertEquals(GpsDiagnosis.Issue.LOCATION_OFF, issue()) }
+            waitUntil { onView(withText(s(R.string.gps_hint_off))).check(matches(isDisplayed())) }
+            shot("59_gps_warning_location_off")
+        } finally {
+            shell("cmd location set-location-enabled true")
+            shell("cmd location providers remove-test-provider gps")
+            inst.runOnMainSync { TelemetService.stop(app) }
+            Thread.sleep(500)
+        }
     }
 }

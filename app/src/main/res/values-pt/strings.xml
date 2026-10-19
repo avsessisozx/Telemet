@@ -37,6 +37,10 @@
     <string name="gps_info">Precisão ±%1$.0f m • %2$.1f pacotes/s para a câmera • Total %3$d</string>
     <string name="gps_backup_file">Backup: %1$s</string>
     <string name="gps_wait_hint">Aguarde ao ar livre; o primeiro sinal pode levar de alguns segundos a um minuto.</string>
+    <string name="gps_nodata">Sem dados de GPS do telefone</string>
+    <string name="gps_hint_off">A localização está desativada. Ative-a nas configurações do telefone.</string>
+    <string name="gps_hint_nosat">Não chegam dados de satélites. Abra Configurações → Opções do desenvolvedor → \"Selecionar app de local fictício\", defina como Nenhum e reinicie o telefone. Se estiver em ambiente fechado, vá para fora.</string>
+    <string name="gps_hint_nopos">Há satélites visíveis, mas ainda não há posição. Vá para um local aberto com vista livre do céu.</string>
     <string name="dlg_bgloc_msg">Para o GPS não ser cortado com a navegação aberta ou a tela desligada, escolha \"Permitir o tempo todo\" na próxima tela.</string>
     <string name="dlg_autostart_title">Início automático</string>
     <string name="dlg_autostart_msg">Encontre o Telemet na lista e ative. Assim a gravação continua mesmo se o celular fechar o app.</string>
@@ -88,6 +92,7 @@
     <string name="notif_rec">● REC</string>
     <string name="notif_gps_sats">GPS %1$d sat.</string>
     <string name="notif_gps_searching">Procurando GPS</string>
+    <string name="notif_gps_nodata">Sem dados de GPS ⚠</string>
     <string name="rides_title">Meus passeios</string>
     <string name="rides_desc">Cada Iniciar → Parar é um passeio. Os arquivos ficam em Downloads/Telemet. No DJI Studio, importe o arquivo FIT em Painel → Fonte de dados → Importar arquivo FIT.</string>
     <string name="rides_ongoing">● Gravando agora: %1$s\nO passeio entra na lista quando você tocar em Parar.</string>

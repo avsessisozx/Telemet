@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.LinearLayout
 import io.github.avsessisozx.telemet.R
 import io.github.avsessisozx.telemet.ble.CameraLink
+import io.github.avsessisozx.telemet.service.GpsDiagnosis
 import io.github.avsessisozx.telemet.service.GpsWarmup
 import io.github.avsessisozx.telemet.service.TelemetService
 import io.github.avsessisozx.telemet.service.TelemetState
@@ -48,6 +49,13 @@ class RideTab(activity: MainActivity) : MainActivity.Tab(activity) {
     private val gForce = ui.metric(ctx.getString(R.string.label_gforce), 22f)
     private val maxLean = ui.metric(ctx.getString(R.string.label_max_lean), 22f)
     private val sensorInfo = ui.text(12f, Theme.MUTED).apply { setPadding(0, ui.dp(10), 0, 0) }
+    /** GPS'ten konum gelmeyince sebebi ve ne yapılacağını söyler; GPS kartında hep görünür. */
+    private val gpsHint = ui.text(13f, Theme.RED).apply {
+        gravity = Gravity.CENTER_HORIZONTAL
+        setPadding(0, ui.dp(8), 0, 0)
+        visibility = View.GONE
+        tag = "gps_hint"
+    }
     private val gpsInfo = ui.text(12f, Theme.MUTED).apply { setPadding(0, ui.dp(6), 0, 0) }
 
     private val startButton: Button
@@ -89,6 +97,7 @@ class RideTab(activity: MainActivity) : MainActivity.Tab(activity) {
                 addView(gpsDot)
                 addView(gpsTitle)
             })
+            addView(gpsHint)
             addView(speedValue)
             addView(speedUnit)
             addView(ui.horizontal().apply {
@@ -187,11 +196,30 @@ class RideTab(activity: MainActivity) : MainActivity.Tab(activity) {
                 gpsTitle.text = ctx.getString(R.string.gps_fix)
                 ui.setDot(gpsDot, Theme.GREEN)
             }
+            s.gpsIssue == GpsDiagnosis.Issue.LOCATION_OFF || s.gpsIssue == GpsDiagnosis.Issue.NO_SATELLITES -> {
+                gpsTitle.text = ctx.getString(R.string.gps_nodata)
+                ui.setDot(gpsDot, Theme.RED)
+            }
             else -> {
                 gpsTitle.text = ctx.getString(R.string.gps_searching)
                 ui.setDot(gpsDot, Theme.YELLOW)
             }
         }
+        val hintRes = if (s.serviceRunning && !s.hasFix) {
+            when (s.gpsIssue) {
+                GpsDiagnosis.Issue.LOCATION_OFF -> R.string.gps_hint_off
+                GpsDiagnosis.Issue.NO_SATELLITES -> R.string.gps_hint_nosat
+                GpsDiagnosis.Issue.NO_POSITION -> R.string.gps_hint_nopos
+                GpsDiagnosis.Issue.NONE -> null
+            }
+        } else {
+            null
+        }
+        if (hintRes != null) {
+            gpsHint.text = ctx.getString(hintRes)
+            gpsHint.setTextColor(if (s.gpsIssue == GpsDiagnosis.Issue.NO_POSITION) Theme.YELLOW else Theme.RED)
+        }
+        gpsHint.visibility = if (hintRes != null) View.VISIBLE else View.GONE
         val live = s.serviceRunning && s.hasFix
         speedValue.text = if (live) units.speedNumber(s.speedKmh / 3.6) else "0"
         speedValue.setTextColor(if (live) Theme.TEXT else 0xFF555555.toInt())

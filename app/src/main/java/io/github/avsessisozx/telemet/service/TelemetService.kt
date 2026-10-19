@@ -43,6 +43,9 @@ class TelemetService : Service(), CameraLink.Listener {
         /** GPS bu kadar süre sessiz kalırsa konum güncellemeleri yeniden kaydedilir. */
         private const val GPS_RESTART_AFTER_MS = 8_000L
         private const val SUMMARY_INTERVAL_MS = 60_000L
+        /** Hiç konum gelmediyse ilk yeniden kayıt bu süreden sonra, sonra bu aralıkla (soğuk başlangıcı bozmasın diye geniş). */
+        private const val FIRST_FIX_RESTART_AFTER_MS = 60_000L
+        private const val FIRST_FIX_RESTART_EVERY_MS = 90_000L
 
         fun start(context: Context) {
             context.startForegroundService(Intent(context, TelemetService::class.java).setAction(ACTION_START))
@@ -84,6 +87,8 @@ class TelemetService : Service(), CameraLink.Listener {
     private var fixesInSummary = 0
     private var packetsInSummary = 0
     private var summaryStart = 0L
+    private var gpsStartedAt = 0L
+    private var lastIssueCheckAt = 0L
 
     override fun onBind(intent: Intent?): IBinder? = null
 
@@ -170,6 +175,10 @@ class TelemetService : Service(), CameraLink.Listener {
         summaryStart = windowStart
         gpsLostAt = 0L
         gpsRestarts = 0
+        gpsStartedAt = windowStart
+        lastIssueCheckAt = 0L
+        lastGpsRestartAt = 0L
+        TelemetState.gpsIssue = GpsDiagnosis.Issue.NONE
         autoRecord.reset()
         main.post(pushLoop)
         TelemetState.changed()
@@ -190,6 +199,7 @@ class TelemetService : Service(), CameraLink.Listener {
         wakeLock = null
         TelemetState.serviceRunning = false
         TelemetState.hasFix = false
+        TelemetState.gpsIssue = GpsDiagnosis.Issue.NONE
         TelemetState.recordPending = false
         TelemetState.resetCamera()
         TelemetState.changed()
@@ -312,17 +322,23 @@ class TelemetService : Service(), CameraLink.Listener {
             // GPS bekçisi: sinyal vardı ama uzun süre ölçüm gelmiyorsa güncellemeleri yeniden kaydet.
             // (İlk sinyal aranırken dokunulmaz; yeniden başlatmak ilk sinyali geciktirebilir.)
             val silentFor = age
-            if (gps.lastFix != null && silentFor > GPS_RESTART_AFTER_MS && now - lastGpsRestartAt > GPS_RESTART_AFTER_MS * 2) {
+            val neverFixed = gps.lastFix == null && now - gpsStartedAt > FIRST_FIX_RESTART_AFTER_MS &&
+                now - maxOf(lastGpsRestartAt, gpsStartedAt) > FIRST_FIX_RESTART_EVERY_MS
+            if (neverFixed || (gps.lastFix != null && silentFor > GPS_RESTART_AFTER_MS && now - lastGpsRestartAt > GPS_RESTART_AFTER_MS * 2)) {
                 lastGpsRestartAt = now
                 gpsRestarts++
                 if (gpsRestarts <= 3 || gpsRestarts % 10 == 0) {
-                    AppLog.w("GPS silent for ${silentFor / 1000} s, restarting (attempt $gpsRestarts)")
+                    AppLog.w(
+                        if (neverFixed) "No GPS position yet after ${(now - gpsStartedAt) / 1000} s, restarting (attempt $gpsRestarts)"
+                        else "GPS silent for ${silentFor / 1000} s, restarting (attempt $gpsRestarts)",
+                    )
                 }
                 gps.restart()
             }
             if (now - summaryStart >= SUMMARY_INTERVAL_MS) {
                 AppLog.i(
                     "Last 1 min: $fixesInSummary GPS fixes, $packetsInSummary packets to camera" +
+                        ", satellites ${gps.satellitesVisibleNow()} visible/${gps.satellitesUsed} used" +
                         (if (ride.isRecording) ", total %.1f km".format(java.util.Locale.US, ride.distanceM / 1000) else ""),
                 )
                 fixesInSummary = 0
@@ -339,11 +355,41 @@ class TelemetService : Service(), CameraLink.Listener {
             TelemetState.leanDeg = snap.leanDeg
             TelemetState.gForce = snap.totalG
             if (kotlin.math.abs(snap.leanDeg) > kotlin.math.abs(TelemetState.maxLeanDeg)) TelemetState.maxLeanDeg = snap.leanDeg
+            if (now - lastIssueCheckAt >= 1_000) {
+                lastIssueCheckAt = now
+                checkGpsIssue(now)
+            }
             startPendingRecord()
             runAutoRecord(now)
             updateRate()
             main.postDelayed(this, PUSH_INTERVAL_MS)
         }
+    }
+
+    /** Konum gelmiyorsa nedenini tahmin eder; ekranda ve bildirimde gösterilir, günlüğe bir kez yazılır. */
+    private fun checkGpsIssue(now: Long) {
+        val lastFixAt = gps.lastFix?.elapsedMillis ?: gpsStartedAt
+        val issue = GpsDiagnosis.diagnose(
+            providerEnabled = gps.isGpsEnabled(),
+            hasFix = TelemetState.hasFix,
+            silentMs = now - lastFixAt,
+            satellitesVisible = gps.satellitesVisibleNow(),
+        )
+        if (issue == TelemetState.gpsIssue) return
+        TelemetState.gpsIssue = issue
+        when (issue) {
+            GpsDiagnosis.Issue.LOCATION_OFF -> AppLog.w("GPS problem: phone location is turned off")
+            GpsDiagnosis.Issue.NO_SATELLITES -> AppLog.w(
+                "GPS problem: no data from the phone's GPS for ${GpsDiagnosis.GRACE_MS / 1000} s (0 satellites visible). " +
+                    "A mock-location app may still be selected in Developer options, or the system is blocking location.",
+            )
+            GpsDiagnosis.Issue.NO_POSITION -> AppLog.w(
+                "GPS problem: ${gps.satellitesVisibleNow()} satellites visible but no position yet. Go outdoors with a clear sky.",
+            )
+            GpsDiagnosis.Issue.NONE -> AppLog.i("GPS problem cleared")
+        }
+        TelemetState.changed()
+        refreshNotification()
     }
 
     private fun push(fix: GpsTracker.Fix) {
@@ -431,7 +477,12 @@ class TelemetService : Service(), CameraLink.Listener {
             CameraLink.State.IDLE -> getString(R.string.cam_idle)
         }
         val rec = if (TelemetState.cameraStatus?.isRecording == true) " • " + getString(R.string.notif_rec) else ""
-        val gpsText = if (TelemetState.hasFix) getString(R.string.notif_gps_sats, TelemetState.satellitesUsed) else getString(R.string.notif_gps_searching)
+        val gpsText = when {
+            TelemetState.hasFix -> getString(R.string.notif_gps_sats, TelemetState.satellitesUsed)
+            TelemetState.gpsIssue == GpsDiagnosis.Issue.NONE || TelemetState.gpsIssue == GpsDiagnosis.Issue.NO_POSITION ->
+                getString(R.string.notif_gps_searching)
+            else -> getString(R.string.notif_gps_nodata)
+        }
         val dist = if (TelemetState.rideFile != null) " • %.1f km".format(TelemetState.distanceKm) else ""
         return "$cam$rec • $gpsText$dist"
     }

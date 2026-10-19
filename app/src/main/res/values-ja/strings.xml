@@ -37,6 +37,10 @@
     <string name="gps_info">精度 ±%1$.0f m • カメラへ %2$.1f パケット/秒 • 合計 %3$d</string>
     <string name="gps_backup_file">バックアップ：%1$s</string>
     <string name="gps_wait_hint">屋外で待ってください。最初の測位には数秒〜1分かかることがあります。</string>
+    <string name="gps_nodata">スマホから GPS データが届きません</string>
+    <string name="gps_hint_off">位置情報がオフです。スマホの設定でオンにしてください。</string>
+    <string name="gps_hint_nosat">衛星データが届いていません。設定 → 開発者向けオプション →「模擬位置情報アプリを選択」を「なし」にして、スマホを再起動してください。屋内の場合は屋外に出てください。</string>
+    <string name="gps_hint_nopos">衛星は見えていますが、まだ位置が取得できていません。空が開けた屋外に移動してください。</string>
     <string name="dlg_bgloc_msg">ナビ使用中や画面オフでも GPS が途切れないよう、次の画面で「常に許可」を選んでください。</string>
     <string name="dlg_autostart_title">自動起動</string>
     <string name="dlg_autostart_msg">一覧で Telemet を探してオンにしてください。スマホがアプリを終了しても記録が続きます。</string>
@@ -88,6 +92,7 @@
     <string name="notif_rec">● 録画中</string>
     <string name="notif_gps_sats">GPS 衛星 %1$d</string>
     <string name="notif_gps_searching">GPS 検索中</string>
+    <string name="notif_gps_nodata">GPS データなし ⚠</string>
     <string name="rides_title">走行記録</string>
     <string name="rides_desc">開始 → 停止 が 1 回の走行です。ファイルは ダウンロード/Telemet にあります。DJI Studio では ダッシュボード → データソース → FIT ファイルをインポート で読み込めます。</string>
     <string name="rides_ongoing">● 記録中：%1$s\n停止をタップするとこの走行が一覧に追加されます。</string>
