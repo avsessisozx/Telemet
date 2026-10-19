@@ -76,7 +76,13 @@ FIT + GPX yedeği. Sadece telefonun kendi sensörleri; ek cihaz yok.
 - DJI Action 4 dosya adı biçimi varsayımı: DJI_YYYYMMDDHHMMSS_xxxx_D.MP4 (yalnız mvhd yoksa yedek olarak kullanılıyor)
 
 ## Bilinen sorunlar
-- Kayıtlı bilinen hata yok.
+- 2026-10-19 kullanıcı günlüğü (v0.1.19, Mi 10T Pro, gerçek sürüş 1 saat): kamera bağlantısı sağlam ama
+  GPS'ten HİÇ konum gelmedi ("0 GPS fixes"); konum açık, izinler tam. `gps-test` dalında emülatör testi
+  (`GpsSelfTest`): gerçek GPS yolu çalışıyor (40 sn'de 69 konum); kapatılmamış sahte konum sağlayıcısı
+  aynı tabloyu birebir üretiyor (0 konum), kaldırılınca geri geliyor. En güçlü şüphe: Geliştirici
+  seçeneklerinde sahte konum uygulaması seçili kalmış. Kullanıcıdan doğrulama bekleniyor.
+  Önerilen düzeltme (yapılmadı): konum gelmezse günlüğe uydu/sağlayıcı teşhisi + ekranda uyarı,
+  ilk konum hiç gelmezse de GPS bekçisinin yeniden kaydetmesi.
 
 ## Kurallar
 - Sürüm vermeden önce kendin derle ve test et; kullanıcıya bozuk sürüm test ettirme
