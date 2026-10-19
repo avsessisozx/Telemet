@@ -112,7 +112,9 @@ jobs:
           emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -camera-front none
           script: |
             chmod +x gradlew
-            ./gradlew --no-daemon connectedDebugAndroidTest > ui-test.log 2>&1 || touch ui-failed
+            (i=0; while [ $i -lt 2000 ]; do lon=$(awk "BEGIN{printf \"%.6f\", 28.9784 + $i*0.0002}"); adb emu geo fix $lon 41.0082 50 8 >/dev/null 2>&1; i=$((i+1)); sleep 1; done) &
+            ./gradlew --no-daemon connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=io.github.avsessisozx.telemet.GpsSelfTest > ui-test.log 2>&1 || touch ui-failed
+            mkdir -p pub && adb shell dumpsys location > pub/dumpsys-location.txt 2>&1 || true
             mkdir -p pub && adb pull /sdcard/Download/telemet-screens pub/ || true
             adb logcat -d -v time AndroidRuntime:E TestRunner:I Telemet:I System.err:W *:S > pub/logcat.txt || true
 
