@@ -37,6 +37,10 @@
     <string name="gps_info">Doğruluk ±%1$.0f m • Kameraya %2$.1f paket/sn • Toplam %3$d</string>
     <string name="gps_backup_file">Yedek kayıt: %1$s</string>
     <string name="gps_wait_hint">Açık havada bekle; ilk sinyal birkaç saniye ile bir dakika arası sürebilir.</string>
+    <string name="gps_nodata">Telefondan GPS verisi gelmiyor</string>
+    <string name="gps_hint_off">Konum kapalı. Telefonun ayarlarından konumu aç.</string>
+    <string name="gps_hint_nosat">Hiç uydu verisi gelmiyor. Ayarlar → Geliştirici seçenekleri → \"Sahte konum uygulaması seç\" kısmını \"Hiçbiri\" yap ve telefonu yeniden başlat. İçerideysen dışarı çık.</string>
+    <string name="gps_hint_nopos">Uydular görünüyor ama henüz konum yok. Gökyüzünü gören açık bir yere çık.</string>
     <string name="dlg_bgloc_msg">Navigasyon açıkken ya da ekran kapalıyken GPS\'in kesilmemesi için açılacak ekranda \"Her zaman izin ver\" seçeneğini seç.</string>
     <string name="dlg_autostart_title">Otomatik başlatma</string>
     <string name="dlg_autostart_msg">Açılacak listede Telemet\'i bulup anahtarını aç. Böylece telefon uygulamayı kapatsa bile kayıt kendiliğinden devam eder.</string>
@@ -88,6 +92,7 @@
     <string name="notif_rec">● KAYIT</string>
     <string name="notif_gps_sats">GPS %1$d uydu</string>
     <string name="notif_gps_searching">GPS aranıyor</string>
+    <string name="notif_gps_nodata">GPS verisi yok ⚠</string>
     <string name="rides_title">Sürüşlerim</string>
     <string name="rides_desc">Her Başlat → Durdur bir sürüştür. Dosyalar İndirilenler/Telemet klasöründe. FIT dosyasını DJI Studio\'da Pano → Veri kaynağı → FIT Dosyasını İçe Aktar ile kullanabilirsin.</string>
     <string name="rides_ongoing">● Şu an kayıtta: %1$s\nDurdur\'a basınca bu sürüş listeye eklenir.</string>

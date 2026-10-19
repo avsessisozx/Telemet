@@ -37,6 +37,10 @@
     <string name="gps_info">精度 ±%1$.0f m • 发送到相机 %2$.1f 包/秒 • 共 %3$d</string>
     <string name="gps_backup_file">备份：%1$s</string>
     <string name="gps_wait_hint">请在室外等待；首次定位可能需要几秒到一分钟。</string>
+    <string name="gps_nodata">手机没有提供 GPS 数据</string>
+    <string name="gps_hint_off">定位已关闭。请在手机设置中开启定位。</string>
+    <string name="gps_hint_nosat">收不到任何卫星数据。请打开 设置 → 开发者选项 → “选择模拟位置信息应用”，设为“无”，然后重启手机。如果在室内，请到室外。</string>
+    <string name="gps_hint_nopos">能看到卫星，但还没有定位。请到能看到天空的开阔处。</string>
     <string name="dlg_bgloc_msg">为了在导航打开或屏幕关闭时 GPS 不中断，请在下一个页面选择“始终允许”。</string>
     <string name="dlg_autostart_title">自启动</string>
     <string name="dlg_autostart_msg">在列表中找到 Telemet 并打开开关。这样即使手机关闭了应用，记录也会继续。</string>
@@ -88,6 +92,7 @@
     <string name="notif_rec">● 录像中</string>
     <string name="notif_gps_sats">GPS %1$d 颗卫星</string>
     <string name="notif_gps_searching">正在搜索 GPS</string>
+    <string name="notif_gps_nodata">无 GPS 数据 ⚠</string>
     <string name="rides_title">我的骑行</string>
     <string name="rides_desc">每次开始 → 停止就是一次骑行。文件位于 下载/Telemet。在 DJI Studio 中通过 仪表盘 → 数据来源 → 导入 FIT 文件 使用。</string>
     <string name="rides_ongoing">● 正在记录：%1$s\n点击停止后，这次骑行会加入列表。</string>

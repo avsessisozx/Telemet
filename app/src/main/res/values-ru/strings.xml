@@ -37,6 +37,10 @@
     <string name="gps_info">Точность ±%1$.0f м • %2$.1f пакетов/с на камеру • Всего %3$d</string>
     <string name="gps_backup_file">Резервная копия: %1$s</string>
     <string name="gps_wait_hint">Подождите на открытом месте; первое определение может занять от нескольких секунд до минуты.</string>
+    <string name="gps_nodata">Телефон не передаёт данные GPS</string>
+    <string name="gps_hint_off">Геолокация выключена. Включите её в настройках телефона.</string>
+    <string name="gps_hint_nosat">Данные со спутников не поступают. Откройте Настройки → Для разработчиков → \"Выбрать приложение для подмены местоположения\", выберите \"Нет\" и перезагрузите телефон. Если вы в помещении, выйдите на улицу.</string>
+    <string name="gps_hint_nopos">Спутники видны, но позиции пока нет. Выйдите на открытое место с хорошим обзором неба.</string>
     <string name="dlg_bgloc_msg">Чтобы GPS не отключался при открытой навигации или выключенном экране, выберите на следующем экране «Разрешить всегда».</string>
     <string name="dlg_autostart_title">Автозапуск</string>
     <string name="dlg_autostart_msg">Найдите Telemet в списке и включите. Тогда запись продолжится, даже если телефон закроет приложение.</string>
@@ -88,6 +92,7 @@
     <string name="notif_rec">● ЗАПИСЬ</string>
     <string name="notif_gps_sats">GPS %1$d спутн.</string>
     <string name="notif_gps_searching">Поиск GPS</string>
+    <string name="notif_gps_nodata">Нет данных GPS ⚠</string>
     <string name="rides_title">Мои поездки</string>
     <string name="rides_desc">Каждое «Старт → Стоп» — одна поездка. Файлы лежат в Загрузки/Telemet. В DJI Studio импортируйте FIT-файл через Панель → Источник данных → Импорт FIT-файла.</string>
     <string name="rides_ongoing">● Идёт запись: %1$s\nПоездка появится в списке после нажатия «Стоп».</string>

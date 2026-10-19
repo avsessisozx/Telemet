@@ -37,6 +37,10 @@
     <string name="gps_info">الدقة ±%1$.0f م • %2$.1f حزمة/ث إلى الكاميرا • الإجمالي %3$d</string>
     <string name="gps_backup_file">نسخة احتياطية: %1$s</string>
     <string name="gps_wait_hint">انتظر في مكان مفتوح؛ قد يستغرق أول تحديد للموقع من بضع ثوانٍ إلى دقيقة.</string>
+    <string name="gps_nodata">لا تصل بيانات GPS من الهاتف</string>
+    <string name="gps_hint_off">خدمة الموقع متوقفة. فعّلها من إعدادات الهاتف.</string>
+    <string name="gps_hint_nosat">لا تصل أي بيانات من الأقمار الصناعية. افتح الإعدادات ← خيارات المطور ← \"تحديد تطبيق الموقع الوهمي\"، اختر لا شيء ثم أعد تشغيل الهاتف. إذا كنت في مكان مغلق فاخرج إلى الخارج.</string>
+    <string name="gps_hint_nopos">الأقمار الصناعية ظاهرة لكن لا يوجد موقع بعد. انتقل إلى مكان مفتوح يظهر فيه السماء بوضوح.</string>
     <string name="dlg_bgloc_msg">حتى لا ينقطع GPS أثناء فتح الملاحة أو إطفاء الشاشة، اختر \"السماح طوال الوقت\" في الشاشة التالية.</string>
     <string name="dlg_autostart_title">التشغيل التلقائي</string>
     <string name="dlg_autostart_msg">ابحث عن Telemet في القائمة وفعّله. بذلك يستمر التسجيل حتى لو أغلق الهاتف التطبيق.</string>
@@ -88,6 +92,7 @@
     <string name="notif_rec">● تسجيل</string>
     <string name="notif_gps_sats">GPS %1$d قمر</string>
     <string name="notif_gps_searching">جارٍ البحث عن GPS</string>
+    <string name="notif_gps_nodata">لا بيانات GPS ⚠</string>
     <string name="rides_title">رحلاتي</string>
     <string name="rides_desc">كل ابدأ ← إيقاف هي رحلة واحدة. الملفات في التنزيلات/Telemet. في DJI Studio استورد ملف FIT من لوحة البيانات ← مصدر البيانات ← استيراد ملف FIT.</string>
     <string name="rides_ongoing">● جارٍ التسجيل الآن: %1$s\nستُضاف هذه الرحلة إلى القائمة عند الضغط على إيقاف.</string>

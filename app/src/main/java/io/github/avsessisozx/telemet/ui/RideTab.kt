@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.LinearLayout
 import io.github.avsessisozx.telemet.R
 import io.github.avsessisozx.telemet.ble.CameraLink
+import io.github.avsessisozx.telemet.service.GpsDiagnosis
 import io.github.avsessisozx.telemet.service.GpsWarmup
 import io.github.avsessisozx.telemet.service.TelemetService
 import io.github.avsessisozx.telemet.service.TelemetState
@@ -187,6 +188,10 @@ class RideTab(activity: MainActivity) : MainActivity.Tab(activity) {
                 gpsTitle.text = ctx.getString(R.string.gps_fix)
                 ui.setDot(gpsDot, Theme.GREEN)
             }
+            s.gpsIssue == GpsDiagnosis.Issue.LOCATION_OFF || s.gpsIssue == GpsDiagnosis.Issue.NO_SATELLITES -> {
+                gpsTitle.text = ctx.getString(R.string.gps_nodata)
+                ui.setDot(gpsDot, Theme.RED)
+            }
             else -> {
                 gpsTitle.text = ctx.getString(R.string.gps_searching)
                 ui.setDot(gpsDot, Theme.YELLOW)
@@ -232,7 +237,14 @@ class RideTab(activity: MainActivity) : MainActivity.Tab(activity) {
         gpsInfo.text = when {
             live -> ctx.getString(R.string.gps_info, s.horizontalAccuracyM, s.gpsPacketsPerSecond, s.gpsPacketsSent) +
                 (s.rideFile?.let { "\n" + ctx.getString(R.string.gps_backup_file, it) } ?: "")
-            s.serviceRunning -> ctx.getString(R.string.gps_wait_hint)
+            s.serviceRunning -> ctx.getString(
+                when (s.gpsIssue) {
+                    GpsDiagnosis.Issue.LOCATION_OFF -> R.string.gps_hint_off
+                    GpsDiagnosis.Issue.NO_SATELLITES -> R.string.gps_hint_nosat
+                    GpsDiagnosis.Issue.NO_POSITION -> R.string.gps_hint_nopos
+                    GpsDiagnosis.Issue.NONE -> R.string.gps_wait_hint
+                },
+            )
             else -> ""
         }
         gpsInfo.visibility = if (gpsInfo.text.isNullOrEmpty()) View.GONE else View.VISIBLE

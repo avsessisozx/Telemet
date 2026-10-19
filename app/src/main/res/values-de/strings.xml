@@ -37,6 +37,10 @@
     <string name="gps_info">Genauigkeit ±%1$.0f m • %2$.1f Pakete/s an die Kamera • Gesamt %3$d</string>
     <string name="gps_backup_file">Sicherung: %1$s</string>
     <string name="gps_wait_hint">Im Freien warten; der erste Fix kann ein paar Sekunden bis eine Minute dauern.</string>
+    <string name="gps_nodata">Keine GPS-Daten vom Telefon</string>
+    <string name="gps_hint_off">Der Standort ist ausgeschaltet. Schalte ihn in den Telefoneinstellungen ein.</string>
+    <string name="gps_hint_nosat">Es kommen keine Satellitendaten an. Öffne Einstellungen → Entwickleroptionen → \"Apps für Standort-Simulation auswählen\", stelle Keine ein und starte das Telefon neu. Wenn du drinnen bist, geh nach draußen.</string>
+    <string name="gps_hint_nopos">Satelliten sind sichtbar, aber es gibt noch keine Position. Geh ins Freie mit freier Sicht zum Himmel.</string>
     <string name="dlg_bgloc_msg">Damit GPS nicht abbricht, während die Navigation läuft oder der Bildschirm aus ist, wähle im nächsten Bildschirm \"Immer zulassen\".</string>
     <string name="dlg_autostart_title">Autostart</string>
     <string name="dlg_autostart_msg">Suche Telemet in der Liste und schalte es ein. So läuft die Aufzeichnung weiter, auch wenn das Handy die App schließt.</string>
@@ -88,6 +92,7 @@
     <string name="notif_rec">● REC</string>
     <string name="notif_gps_sats">GPS %1$d Sat.</string>
     <string name="notif_gps_searching">Suche GPS</string>
+    <string name="notif_gps_nodata">Keine GPS-Daten ⚠</string>
     <string name="rides_title">Meine Fahrten</string>
     <string name="rides_desc">Jedes Starten → Stoppen ist eine Fahrt. Die Dateien liegen unter Downloads/Telemet. In DJI Studio die FIT-Datei über Dashboard → Datenquelle → FIT-Datei importieren einlesen.</string>
     <string name="rides_ongoing">● Aufzeichnung läuft: %1$s\nDie Fahrt erscheint in der Liste, wenn du auf Stoppen tippst.</string>

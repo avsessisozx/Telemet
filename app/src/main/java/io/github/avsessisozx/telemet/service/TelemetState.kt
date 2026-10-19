@@ -16,6 +16,8 @@ object TelemetState {
     var cameraStatus: CameraStatus? = null
 
     var hasFix = false
+    /** GPS'ten konum gelmiyorsa tahmin edilen sebep. */
+    var gpsIssue = GpsDiagnosis.Issue.NONE
     var fixAgeMs = Long.MAX_VALUE
     var satellitesUsed = 0
     var satellitesVisible = 0
@@ -67,6 +69,7 @@ object TelemetState {
     fun resetAll() {
         serviceRunning = false
         hasFix = false
+        gpsIssue = GpsDiagnosis.Issue.NONE
         fixAgeMs = Long.MAX_VALUE
         satellitesUsed = 0
         satellitesVisible = 0
