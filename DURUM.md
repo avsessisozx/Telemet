@@ -3,7 +3,7 @@
 > Claude'un çalışma notu. Yalnızca `durum` dalında durur; `main`'e, README'ye ve sürüm notlarına girmez.
 > Yeni sohbette önce bunu oku, repoyu baştan tarama. Her sürümden sonra güncelle.
 
-Son güncelleme: 2026-10-19 · Son sürüm: **v0.1.21** (2026-10-19)
+Son güncelleme: 2026-10-19 · Son sürüm: **v0.1.25** (2026-10-19)
 
 ## Ne yapıyor
 Telefonu DJI Osmo Action 4 için Bluetooth GPS kumandası gibi kullanır: hız, rota, yükseklik
@@ -61,6 +61,12 @@ FIT + GPX yedeği. Sadece telefonun kendi sensörleri; ek cihaz yok.
     UI testlerinde emülatörün ANR penceresi gizleniyor (`hide_error_dialogs`).
 
 ## Yarım / sıradaki
+- v0.1.25 (2026-10-19, main fdbb40d): GPS uyarıları — `service/GpsDiagnosis` (saf Kotlin, GpsDiagnosisTest): konum kapalı /
+  uydu verisi yok (sahte konum şüphesi) / uydu var konum yok. GPS kartında kırmızı uyarı (`gps_hint`), bildirimde "GPS verisi yok",
+  12 dil. Günlükte dakikalık uydu sayısı; ilk konum 60 sn'de gelmezse GPS yeniden kaydı (sonra 90 sn arayla).
+  Emülatör testi `UiFlowTest.t13_gpsIssueWarning` (CI, emülatörün gerçek GPS'ine `adb emu geo fix` döngüsü).
+  NOT: uyarı metni ilk denemede kapalı "Sensörler" kartının içindeydi ve görünmüyordu; test yakaladı, GPS kartına taşındı.
+  CI notu: emülatör ara sıra DeadSystemException ile çöküyor (flake); `gh run rerun --failed` yeterli.
 - Hareket süresi ve rota yumuşatma gerçek sürüşte doğrulanmadı (yalnız emülatör arayüz testi geçti).
   Kullanıcı gerçek sürüşte rota çiziminin ve hareket süresinin nasıl göründüğüne bakacak.
 - Rakip analizinden çıkan isteğe bağlı eklemeler (henüz yapılmadı): lap/bölüm (viraj kesimi) istatistiği
@@ -76,13 +82,12 @@ FIT + GPX yedeği. Sadece telefonun kendi sensörleri; ek cihaz yok.
 - DJI Action 4 dosya adı biçimi varsayımı: DJI_YYYYMMDDHHMMSS_xxxx_D.MP4 (yalnız mvhd yoksa yedek olarak kullanılıyor)
 
 ## Bilinen sorunlar
-- 2026-10-19 kullanıcı günlüğü (v0.1.19, Mi 10T Pro, gerçek sürüş 1 saat): kamera bağlantısı sağlam ama
-  GPS'ten HİÇ konum gelmedi ("0 GPS fixes"); konum açık, izinler tam. `gps-test` dalında emülatör testi
-  (`GpsSelfTest`): gerçek GPS yolu çalışıyor (40 sn'de 69 konum); kapatılmamış sahte konum sağlayıcısı
-  aynı tabloyu birebir üretiyor (0 konum), kaldırılınca geri geliyor. En güçlü şüphe: Geliştirici
-  seçeneklerinde sahte konum uygulaması seçili kalmış. Kullanıcıdan doğrulama bekleniyor.
-  Önerilen düzeltme (yapılmadı): konum gelmezse günlüğe uydu/sağlayıcı teşhisi + ekranda uyarı,
-  ilk konum hiç gelmezse de GPS bekçisinin yeniden kaydetmesi.
+- 2026-10-19 kullanıcı günlüğü (v0.1.19, Mi 10T Pro, 1 saatlik gerçek sürüş): kamera bağlantısı sağlam ama GPS'ten
+  HİÇ konum gelmedi ("0 GPS fixes"), konum açık, izinler tam. Emülatör testiyle (`UiFlowTest.t13`) doğrulandı:
+  gerçek GPS yolu çalışıyor; kapatılmamış sahte konum sağlayıcısı birebir aynı tabloyu üretiyor (0 konum, 0 uydu),
+  sağlayıcı kalkınca konum geri geliyor. En güçlü şüphe: Geliştirici seçeneklerinde sahte konum uygulaması seçili kalmış.
+  Kullanıcıdan doğrulama bekleniyor (Geliştirici seçenekleri → sahte konum uygulaması → Hiçbiri, telefonu yeniden başlat, dışarıda dene).
+  İkinci telefonda (Galaxy A23) da "GPS aranıyor" dedi; evde denemiş olabilir (bina içinde GPS tutmaz) — dışarıda denenmeli.
 
 ## Kurallar
 - Sürüm vermeden önce kendin derle ve test et; kullanıcıya bozuk sürüm test ettirme
