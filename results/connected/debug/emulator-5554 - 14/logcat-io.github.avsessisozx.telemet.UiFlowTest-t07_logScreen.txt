@@ -1,0 +1,44 @@
+10-19 20:56:58.353  5209  5239 I TestRunner: started: t07_logScreen(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:56:58.398   519  2172 W InputManager-JNI: Input channel object 'ed23c94 io.github.avsessisozx.telemet/io.github.avsessisozx.telemet.ui.OnboardingActivity (client)' was disposed without first being removed with the input manager!
+10-19 20:56:58.654   519  2172 I ActivityManager: Broadcasting: Intent { act=android.intent.action.CLOSE_SYSTEM_DIALOGS flg=0x400000 }
+10-19 20:56:58.662   834   834 I vol.VolumeDialogImpl: mDialog.dismiss() reason: volume_controller from: com.android.systemui.volume.VolumeDialogImpl$7.onDismissRequested:3
+10-19 20:56:58.663   519   536 I ActivityManager: Broadcast completed: result=0
+10-19 20:56:58.685   834   899 D SplashScreenView: Build android.window.SplashScreenView{20de6ba V.E...... ......ID 0,0-0,0}
+10-19 20:56:58.685   834   899 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-19 20:56:58.685   834   899 D SplashScreenView: Branding: view: android.view.View{a14196b G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-19 20:56:58.726   399   399 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+10-19 20:56:58.809  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.LogActivity@b824c6e in: PRE_ON_CREATE
+10-19 20:56:58.834  1634  1634 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+10-19 20:56:58.834  1634  2154 E HwDetectorWithState: a: 3
+10-19 20:56:58.868  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.LogActivity@b824c6e in: CREATED
+10-19 20:56:58.881  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.LogActivity@b824c6e in: STARTED
+10-19 20:56:58.883  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.LogActivity@b824c6e in: RESUMED
+10-19 20:56:59.095   519   536 W ziparchive: Unable to open '/data/app/~~qfLb8u394HXUdHG2JjTXwA==/io.github.avsessisozx.telemet-3OgxvqJ8zWKfDTmwelEPcA==/base.dm': No such file or directory
+10-19 20:56:59.096   519   536 I ActivityTaskManager: Displayed io.github.avsessisozx.telemet/.ui.LogActivity for user 0: +425ms
+10-19 20:56:59.102  5273  5306 I ImeTracker: com.google.android.apps.nexuslauncher:d410e79d: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+10-19 20:56:59.102   519  2172 I ImeTracker: com.google.android.apps.nexuslauncher:d410e79d: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-19 20:56:59.103  5273  5369 D OneSearchSuggestProvider: Shut down the binder channel
+10-19 20:56:59.104  5273  5886 I IPCThreadState: oneway function results for code 2 on binder at 0x7106ebdd6ae0 will be dropped but finished with status UNKNOWN_TRANSACTION
+10-19 20:56:59.125  1019  1316 D BtGatt.ScanManager: uid 10131 isForeground true scanMode -1
+10-19 20:56:59.125  1019  1316 D BtGatt.ScanManager: uid 10131 isForeground true scanMode -1
+10-19 20:56:59.140   519   595 I ImeTracker: io.github.avsessisozx.telemet:daf40775: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-19 20:56:59.140   519   595 I ImeTracker: io.github.avsessisozx.telemet:daf40775: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-19 20:56:59.147   834   898 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@d43329d
+10-19 20:56:59.148   519  2163 W InputManager-JNI: Input channel object '1d22842 Splash Screen io.github.avsessisozx.telemet (client)' was disposed without first being removed with the input manager!
+10-19 20:56:59.149  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+10-19 20:56:59.157  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-19 20:56:59.158  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.avsessisozx.telemet fieldId=0 fieldName=null extras=null}, false)
+10-19 20:56:59.158  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-19 20:56:59.158  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-19 20:56:59.980  5209  5209 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view view.getTag() is "log_text"
+10-19 20:57:00.026  1630  1977 I AiAiEcho: Predicting[0]:
+10-19 20:57:00.026  1630  1977 I AiAiEcho: EchoTargets:
+10-19 20:57:00.026  1630  1977 I AiAiEcho: Filtered by AiAi flag check:
+10-19 20:57:00.026  1630  1977 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+10-19 20:57:00.027  1630  1977 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+10-19 20:57:00.028   834   906 D EGL_emulation: app_time_stats: avg=1805.95ms min=34.11ms max=6849.31ms count=4
+10-19 20:57:00.041   834   834 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-19 20:57:00.526  5209  5267 D EGL_emulation: app_time_stats: avg=358.34ms min=29.17ms max=1251.19ms count=4
+10-19 20:57:00.630   834   834 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+10-19 20:57:00.972  1621  2039 W MediaProvider: isAppCloneUserPair for user 0: false
+10-19 20:57:00.976  5209  5239 I TestRunner: finished: t07_logScreen(io.github.avsessisozx.telemet.UiFlowTest)

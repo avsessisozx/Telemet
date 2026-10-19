@@ -1,0 +1,243 @@
+10-19 20:57:07.566  5209  5239 I TestRunner: started: t10_overlayFrameAndEncoder(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:57:07.581  5273  5273 D SearchTargetUtil:  query= size=15
+10-19 20:57:07.582  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=samsung one ui 9,group_id=web114939,response_id=24a59708-29d0-4201-9658-b0e4506d9e85,support_query_builder=false,} searchAction=samsung one ui 9 searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: f7a037ec-bac0-497e-93ca-3b34837ddc8b
+10-19 20:57:07.582  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=affordable dewalt 20v tools under 80,group_id=web114939,response_id=24a59708-29d0-4201-9658-b0e4506d9e85,support_query_builder=false,} searchAction=affordable dewalt 20v tools under 80 searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 5a52095a-97a7-4bf9-a4b2-a8799e008a0a
+10-19 20:57:07.588  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=2027 cadillac xt5 phev air trim,group_id=web114939,response_id=24a59708-29d0-4201-9658-b0e4506d9e85,support_query_builder=false,} searchAction=2027 cadillac xt5 phev air trim searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 3ba05bc2-a205-47a1-9688-205f962148f4
+10-19 20:57:07.588  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=congresswoman ilhan omar,group_id=web114939,response_id=24a59708-29d0-4201-9658-b0e4506d9e85,support_query_builder=false,} searchAction=congresswoman ilhan omar searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: cfc58362-17d0-486e-91bf-42234cd1404c
+10-19 20:57:07.588  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=brad keselowski rfk racing departure,group_id=web114939,response_id=24a59708-29d0-4201-9658-b0e4506d9e85,support_query_builder=false,} searchAction=brad keselowski rfk racing departure searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 1dcff8ac-0189-4c52-aed2-c0be81da1bfc
+10-19 20:57:07.588  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=lottery powerball jackpot,group_id=web114939,response_id=24a59708-29d0-4201-9658-b0e4506d9e85,support_query_builder=false,} searchAction=lottery powerball jackpot searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: b4b1b033-1ed8-4f21-ab94-a9a8379c5693
+10-19 20:57:07.588  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=boat capsized sharks,group_id=web114939,response_id=24a59708-29d0-4201-9658-b0e4506d9e85,support_query_builder=false,} searchAction=boat capsized sharks searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 3f4d3efe-7f76-46d6-a630-6c3310cb27d2
+10-19 20:57:07.588  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=andrew cathy,group_id=web114939,response_id=24a59708-29d0-4201-9658-b0e4506d9e85,support_query_builder=false,} searchAction=andrew cathy searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: ff872081-b981-4e95-b8aa-6998d9b43f75
+10-19 20:57:07.589  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=mike malott joaquin buckley ufc edmonton,group_id=web114939,response_id=24a59708-29d0-4201-9658-b0e4506d9e85,support_query_builder=false,} searchAction=mike malott joaquin buckley ufc edmonton searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 592dc12e-ef9c-4415-aff2-86c305f98629
+10-19 20:57:07.589  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=beamng drive ps5 release,group_id=web114939,response_id=24a59708-29d0-4201-9658-b0e4506d9e85,support_query_builder=false,} searchAction=beamng drive ps5 release searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: e58ec8e5-1efb-498b-a6a9-38f4bd239a61
+10-19 20:57:07.589  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=tom hardy mobland streaming milestone,group_id=web114939,response_id=24a59708-29d0-4201-9658-b0e4506d9e85,support_query_builder=false,} searchAction=tom hardy mobland streaming milestone searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: b57843ef-4484-4df2-9224-0f8eb8158a84
+10-19 20:57:07.589  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=milo wolf muscle growth research,group_id=web114939,response_id=24a59708-29d0-4201-9658-b0e4506d9e85,support_query_builder=false,} searchAction=milo wolf muscle growth research searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: bc3d245b-85d0-4eaf-8729-cdf2ded46d07
+10-19 20:57:07.589  5273  5273 D SearchTargetUtil: layoutType=extra_tall_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{bitmap_url=,suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=true,is_personal=false,suggest_raw_text=shawn oliver massachusetts,group_id=web114939,response_id=24a59708-29d0-4201-9658-b0e4506d9e85,support_query_builder=false,} searchAction=shawn oliver massachusetts searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: a6227be5-760e-44e0-8e1f-322473e555a0
+10-19 20:57:07.589  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=family farmstead dairy cheese recall,group_id=web114939,response_id=24a59708-29d0-4201-9658-b0e4506d9e85,support_query_builder=false,} searchAction=family farmstead dairy cheese recall searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: b4c30030-ee49-4927-bc8f-2634a251d1b7
+10-19 20:57:07.589  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=spacex falcon 9 rocket launch,group_id=web114939,response_id=24a59708-29d0-4201-9658-b0e4506d9e85,support_query_builder=false,} searchAction=spacex falcon 9 rocket launch searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: ecdfcd69-f7c2-4fa6-bed1-fb081be3e801
+10-19 20:57:07.733  5273  5281 I s.nexuslauncher: NativeAlloc concurrent copying GC freed 76092(3724KB) AllocSpace objects, 6(720KB) LOS objects, 49% free, 5629KB/10MB, paused 34us,34us total 355.632ms
+10-19 20:57:07.736  5273  5283 W System  : A resource failed to call release.
+10-19 20:57:07.736  5273  5283 W System  : A resource failed to call release.
+10-19 20:57:07.736  5273  5283 W System  : A resource failed to call release.
+10-19 20:57:07.736  5273  5283 W System  : A resource failed to call release.
+10-19 20:57:07.736  5273  5283 W System  : A resource failed to call release.
+10-19 20:57:07.736  5273  5283 W System  : A resource failed to call release.
+10-19 20:57:07.736  5273  5283 W System  : A resource failed to call release.
+10-19 20:57:07.736  5273  5283 W System  : A resource failed to call release.
+10-19 20:57:07.736  5273  5283 W System  : A resource failed to call release.
+10-19 20:57:07.736  5273  5283 W System  : A resource failed to call release.
+10-19 20:57:07.736  5273  5283 W System  : A resource failed to call release.
+10-19 20:57:07.736  5273  5283 W System  : A resource failed to call release.
+10-19 20:57:07.737  5273  5283 W System  : A resource failed to call release.
+10-19 20:57:07.737  5273  5283 W System  : A resource failed to call release.
+10-19 20:57:07.878  1621  5394 W MediaProvider: isAppCloneUserPair for user 0: false
+10-19 20:57:07.918  5478  6954 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 233 [CONTEXT service_id=218 ]
+10-19 20:57:07.947  5478  6954 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 43 uptime_millis: 43 exec_start_elapsed_seconds: 233 [CONTEXT service_id=218 ]
+10-19 20:57:07.982  1621  2039 W MediaProvider: isAppCloneUserPair for user 0: false
+10-19 20:57:07.995  5209  5239 D MediaCodecList: codecHandlesFormat: no format, so no extra checks
+10-19 20:57:07.997  5478  6207 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 233 [CONTEXT service_id=218 ]
+10-19 20:57:07.999  5478  6479 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 8 uptime_millis: 8 exec_start_elapsed_seconds: 233 [CONTEXT service_id=218 ]
+10-19 20:57:08.000  5209  7016 D CCodec  : allocate(c2.android.avc.encoder)
+10-19 20:57:08.002  5209  7016 I Codec2Client: Available Codec2 services: "default" "software"
+10-19 20:57:08.004  5209  7016 I CCodec  : setting up 'default' as default (vendor) store
+10-19 20:57:08.011   478   933 I mediaswcodec: missing struct descriptor #Param::CoreIndex(--004) for field values of struct #Param::CoreIndex(F-12004)
+10-19 20:57:08.011   478   933 I mediaswcodec: missing struct descriptor #Param::CoreIndex(--1812) for field values of struct #Param::CoreIndex(F-11812)
+10-19 20:57:08.011   478   933 I mediaswcodec: missing struct descriptor #Param::CoreIndex(--004) for field values of struct #Param::CoreIndex(F-12004)
+10-19 20:57:08.011   478   933 I mediaswcodec: missing struct descriptor #Param::CoreIndex(--1812) for field values of struct #Param::CoreIndex(F-11812)
+10-19 20:57:08.014  5209  7016 I CCodec  : Created component [c2.android.avc.encoder]
+10-19 20:57:08.014  5209  7016 D CCodecConfig: read media type: video/avc
+10-19 20:57:08.015  5209  7016 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+10-19 20:57:08.015  5209  7016 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+10-19 20:57:08.015  5209  7016 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+10-19 20:57:08.016  5209  7016 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+10-19 20:57:08.016  5209  7016 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+10-19 20:57:08.016  5209  7016 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+10-19 20:57:08.016  5209  7016 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+10-19 20:57:08.017  5209  7016 D ReflectedParamUpdater: ignored struct field coding.gop.values
+10-19 20:57:08.018  5209  7016 D ReflectedParamUpdater: ignored struct field coding.qp.values
+10-19 20:57:08.018  5209  7016 D CCodecConfig: ignoring local param raw.color (0xc2001809) as it is already supported
+10-19 20:57:08.019  5209  7016 I CCodecConfig: query failed after returning 12 values (BAD_INDEX)
+10-19 20:57:08.019  5209  7016 D CCodecConfig: c2 config diff is Dict {
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   c2::i32 coded.average-qp.value = 0
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   c2::float coded.frame-rate.value = 1
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   c2::u32 coded.picture-type.value = 0
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   c2::u32 coded.pl.level = 20492
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   c2::u32 coded.pl.profile = 20481
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   c2::u32 coded.vui.color.matrix = 0
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   c2::u32 coded.vui.color.primaries = 0
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   c2::u32 coded.vui.color.range = 0
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   c2::u32 coded.vui.color.transfer = 0
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   c2::u32 coding.intra-refresh.mode = 0
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   c2::float coding.intra-refresh.period = 0
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   c2::u32 coding.request-sync-frame.value = 0
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   c2::i64 coding.sync-frame-interval.value = 1000000
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   c2::u32 input.delay.value = 0
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   string input.media-type.value = "video/raw"
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   string output.media-type.value = "video/avc"
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   c2::u32 raw.color.matrix = 0
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   c2::u32 raw.color.primaries = 0
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   c2::u32 raw.color.range = 0
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   c2::u32 raw.color.transfer = 0
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   c2::u32 raw.size.height = 16
+10-19 20:57:08.019  5209  7016 D CCodecConfig:   c2::u32 raw.size.width = 16
+10-19 20:57:08.019  5209  7016 D CCodecConfig: }
+10-19 20:57:08.019  5209  7016 W ColorUtils: expected specified color aspects (0:0:0:0)
+10-19 20:57:08.025  5209  5239 D CodecSeeding: Seed: codec c2.android.avc.encoder, mediatype video/avc, overrideable 1
+10-19 20:57:08.025  5209  5239 D CodecProperties: setTuningValue(vq-target-bpp,0)
+10-19 20:57:08.025  5209  5239 D CodecProperties: setTuningValue(vq-target-bpp-1080p,1.90)
+10-19 20:57:08.025  5209  5239 D CodecProperties: setTuningValue(vq-target-bpp-720p,2.25)
+10-19 20:57:08.026  5209  5239 D CodecProperties: setTuningValue(vq-target-bpp-540p,2.65)
+10-19 20:57:08.026  5209  5239 D CodecProperties: setTuningValue(vq-target-bpp-480p,3.00)
+10-19 20:57:08.026  5209  5239 D CodecProperties: setTuningValue(vq-target-bpp-320x240,0)
+10-19 20:57:08.026  5209  5239 D CodecProperties: setTuningValue(vq-target-qpmax,-1)
+10-19 20:57:08.026  5209  5239 D CodecProperties: setTuningValue(vq-target-qpmax-1080p,45)
+10-19 20:57:08.026  5209  5239 D CodecProperties: setTuningValue(vq-target-qpmax-720p,43)
+10-19 20:57:08.026  5209  5239 D CodecProperties: setTuningValue(vq-target-qpmax-540p,42)
+10-19 20:57:08.026  5209  5239 D CodecProperties: setTuningValue(vq-target-qpmax-480p,38)
+10-19 20:57:08.026  5209  5239 D CodecProperties: setTuningValue(vq-bitrate-phaseout,1.75)
+10-19 20:57:08.026  5209  5239 D CodecProperties: setTuningValue(vq-boost-missing-qp,0.20)
+10-19 20:57:08.026  5209  5239 D CodecProperties: setFeatureValue(intra-refresh,0)
+10-19 20:57:08.026  5209  5239 D CodecProperties: setFeatureValue(qp-bounds,0)
+10-19 20:57:08.026  5209  5239 D CodecProperties: setFeatureValue(_vq_eligible.device,1)
+10-19 20:57:08.026  5209  5239 D CodecProperties: setFeatureValue(_quality.target,1)
+10-19 20:57:08.026  5209  5239 D CodecSeeding: Seed: codec c2.android.avc.encoder, mediatype video/avc, overrideable 0
+10-19 20:57:08.026  5209  5239 D VQApply : raise bitrate: configured 1843200 to floor 2073600
+10-19 20:57:08.026  5209  5239 D VQApply : minquality by QP: inject video-qp-max=43
+10-19 20:57:08.026  5209  5239 D VQApply : minquality/target bitrate raised from 1843200 to 2073600 bps
+10-19 20:57:08.026  5209  5239 D MediaCodec: shapeMediaFormat: deltas(6): AMessage(what = 0x00000000) = {
+10-19 20:57:08.026  5209  5239 D MediaCodec:     int32_t bitrate = 2073600
+10-19 20:57:08.026  5209  5239 D MediaCodec:     int32_t android._encoding-quality-level = 0
+10-19 20:57:08.026  5209  5239 D MediaCodec:     int32_t video-qp-max = 43
+10-19 20:57:08.026  5209  5239 D MediaCodec:     int32_t video-qp-i-max = 43
+10-19 20:57:08.026  5209  5239 D MediaCodec:     int32_t video-qp-p-max = 46
+10-19 20:57:08.026  5209  5239 D MediaCodec:     int32_t video-qp-b-max = 49
+10-19 20:57:08.026  5209  5239 D MediaCodec:   }
+10-19 20:57:08.026  5209  7015 D MediaCodec: flushMediametrics
+10-19 20:57:08.026  5209  7016 D CCodec  : [c2.android.avc.encoder] buffers are bound to CCodec for this session
+10-19 20:57:08.027  5209  7016 D CCodecConfig: no c2 equivalents for color-format
+10-19 20:57:08.027  5209  7016 D CCodecConfig: no c2 equivalents for video-qp-max
+10-19 20:57:08.027  5209  7016 D CCodecConfig: no c2 equivalents for video-qp-i-max
+10-19 20:57:08.027  5209  7016 D CCodecConfig: no c2 equivalents for video-qp-p-max
+10-19 20:57:08.027  5209  7016 D CCodecConfig: no c2 equivalents for video-qp-b-max
+10-19 20:57:08.027  5209  7016 D CCodecConfig: no c2 equivalents for flags
+10-19 20:57:08.027  5209  7016 D CCodecConfig: no c2 equivalents for encoder
+10-19 20:57:08.027  5209  7016 D CCodecConfig: c2 config diff is   c2::u32 coded.bitrate.value = 2073600
+10-19 20:57:08.027  5209  7016 D CCodecConfig:   c2::float coded.frame-rate.value = 30
+10-19 20:57:08.027  5209  7016 D CCodecConfig:   c2::i64 coding.sync-frame-interval.value = 2000000
+10-19 20:57:08.027  5209  7016 D CCodecConfig:   c2::u32 raw.size.height = 720
+10-19 20:57:08.027  5209  7016 D CCodecConfig:   c2::u32 raw.size.width = 1280
+10-19 20:57:08.027  5209  7016 W ColorUtils: expected specified color aspects (0:0:0:0)
+10-19 20:57:08.028  5209  7016 D CCodec  : encoding statistics level = 0
+10-19 20:57:08.028  5209  7016 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+10-19 20:57:08.028  5209  7016 D CCodec  :   Rect crop(0, 0, 1279, 719)
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t color-standard = 0
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t color-range = 0
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t color-transfer = 0
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t frame-rate = 30
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t height = 720
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t intra-refresh-period = 0
+10-19 20:57:08.028  5209  7016 D CCodec  :   string mime = "video/raw"
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t video-qp-average = 0
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t width = 1280
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t android._dataspace = 0
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t using-sw-read-often = 1
+10-19 20:57:08.028  5209  7016 D CCodec  :   int64_t android._C2MemoryUsage = 1
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t color-format = 2130708361
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t android._color-format = 2130708361
+10-19 20:57:08.028  5209  7016 D CCodec  : }
+10-19 20:57:08.028  5209  7016 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t bitrate = 2073600
+10-19 20:57:08.028  5209  7016 D CCodec  :   Rect crop(0, 0, 1279, 719)
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t color-standard = 0
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t color-range = 0
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t color-transfer = 0
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t frame-rate = 30
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t height = 720
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t intra-refresh-period = 0
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t level = 4096
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t max-bitrate = 2073600
+10-19 20:57:08.028  5209  7016 D CCodec  :   string mime = "video/avc"
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t profile = 65536
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t video-qp-average = 0
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t width = 1280
+10-19 20:57:08.028  5209  7016 D CCodec  : }
+10-19 20:57:08.028  5209  7016 I CCodecConfig: query failed after returning 13 values (BAD_INDEX)
+10-19 20:57:08.028  5209  7016 D CCodec  : input format changed to AMessage(what = 0x00000000) = {
+10-19 20:57:08.028  5209  7016 D CCodec  :   Rect crop(0, 0, 1279, 719)
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t color-standard = 1
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t color-range = 2
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t color-transfer = 3
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t frame-rate = 30
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t height = 720
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t intra-refresh-period = 0
+10-19 20:57:08.028  5209  7016 D CCodec  :   string mime = "video/raw"
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t video-qp-average = 0
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t width = 1280
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t android._dataspace = 260
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t using-sw-read-often = 1
+10-19 20:57:08.028  5209  7016 D CCodec  :   int64_t android._C2MemoryUsage = 1
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t color-format = 2130708361
+10-19 20:57:08.028  5209  7016 D CCodec  :   int32_t android._color-format = 2130708361
+10-19 20:57:08.028  5209  7016 D CCodec  : }
+10-19 20:57:08.029  5209  7016 D GraphicBufferSource: setting dataspace: 0x104, acquired=0
+10-19 20:57:08.029  5209  7016 D CCodec  : ISConfig not changed
+10-19 20:57:08.029  5209  7016 W Codec2Client: query -- param skipped: index = 1342179345.
+10-19 20:57:08.029  5209  7016 W Codec2Client: query -- param skipped: index = 2415921170.
+10-19 20:57:08.030  5209  7016 D CCodecBufferChannel: [c2.android.avc.encoder#689] Using basic input block pool with poolID 1 => got 1 - OK (0)
+10-19 20:57:08.030  5209  7016 D C2Store : Using DMABUF Heaps
+10-19 20:57:08.031   470  4851 D BufferPoolAccessor2.0: bufferpool2 0x7ee6f2e5aa98 : 0(0 size) total buffers - 0(0 size) used buffers - 0/5 (recycle/alloc) - 2/4 (fetch/transfer)
+10-19 20:57:08.031   470  4851 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x7ee6f2e5aa98 cached: 0/0M, 0/0% in use; allocs: 5, 0% recycled; transfers: 4, 50% unfetched
+10-19 20:57:08.031  5209  7016 I CCodecBufferChannel: [c2.android.avc.encoder#689] Created output block pool with allocatorID 16 => poolID 27 - OK
+10-19 20:57:08.031  5209  7016 D CCodecBufferChannel: [c2.android.avc.encoder#689] Configured output block pool ids 27 => OK
+10-19 20:57:08.032   470   874 W ResourceManagerService: Ignoring request to add new resource entry with value <= 0
+10-19 20:57:08.033  5209  5239 D MPEG4Writer: PreAllocation enabled
+10-19 20:57:08.127  5209  5239 D GraphicBufferSource: got buffer with new dataSpace #104
+10-19 20:57:08.127  5209  5239 D C2OMXNode: dataspace changed to 0x104 pixel format: 0x2
+10-19 20:57:08.129   133   133 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-19 20:57:08.131   478  7021 D SimpleC2Component: Using output block pool with poolID 27 => got 27 - 0
+10-19 20:57:08.131   478  7021 D SimpleC2Component: applied 2 configUpdates => BAD_INDEX (6)
+10-19 20:57:08.131   478  7021 D C2SoftAvcEnc: Params width 1280 height 720 level 41 colorFormat 0 bframes 0
+10-19 20:57:08.145   478  7021 E C2SoftAvcEnc: Unable to set air params = 0x1ad
+10-19 20:57:08.154   133   133 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-19 20:57:08.154   478  7021 I Gralloc4: mapper 4.x is not supported
+10-19 20:57:08.218  5209  7016 D CCodecConfig: c2 config diff is   Buffer coded.init-data.value = {
+10-19 20:57:08.218  5209  7016 D CCodecConfig:     00000000:  00 00 00 01 67 42 c0 29  8d 68 05 00 5b a4 20 20  ....gB.).h..[.
+10-19 20:57:08.218  5209  7016 D CCodecConfig:     00000010:  20 20 f0 88 46 a0 00 00  00 01 68 ce 01 a8 35 c8    ..F.....h...5.
+10-19 20:57:08.218  5209  7016 D CCodecConfig:   }
+10-19 20:57:08.223  5209  5239 D MPEG4Writer: fpathconf _PC_FILESIZEBITS:64
+10-19 20:57:08.223  5209  5239 D MPEG4Writer: File size limit set to 4503599627370495 bytes implicitly
+10-19 20:57:08.224  5209  5239 D MPEG4Writer: MP4WtrCtrlHlpLooper Started
+10-19 20:57:08.224  5209  5239 I MPEG4Writer: limits: 4503599627370495/0 bytes/us, bit rate: -1 bps and the estimated moov size 3192 bytes
+10-19 20:57:08.250  5209  7026 I MPEG4Writer: setStartTimestampUs: 0
+10-19 20:57:08.250  5209  7026 I MPEG4Writer: Earliest track starting time: 0
+10-19 20:57:09.146  5209  5239 D EGL_emulation: app_time_stats: avg=7.06ms min=3.65ms max=10.41ms count=87
+10-19 20:57:09.593  5209  5239 E BufferQueueProducer: [GraphicBufferSource](id:145900000024,api:1,p:5209,c:5209) cancelBuffer: BufferQueue has been abandoned
+10-19 20:57:09.598  5209  5239 D MPEG4Writer: reset()
+10-19 20:57:09.598  5209  5239 D MPEG4Writer: Video track stopping. Stop source
+10-19 20:57:09.598  5209  5239 D MPEG4Writer: Video track source stopping
+10-19 20:57:09.598  5209  5239 D MPEG4Writer: Video track source stopped
+10-19 20:57:09.599  5209  7026 V MediaWriter: Track event err/info msg:101, trackId:1, type:1000,val:-1011
+10-19 20:57:09.599  5209  7026 I MPEG4Writer: Received total/0-length (120/0) buffers and encoded 120 frames. - Video
+10-19 20:57:09.599  5209  5239 D MPEG4Writer: Video track stopped. Status:0. Stop source
+10-19 20:57:09.600  5209  7024 D MPEG4Writer: 0 chunks are written in the last batch
+10-19 20:57:09.600  5209  5239 D MPEG4Writer: WriterThread stopped. Status:0
+10-19 20:57:09.600  5209  5239 I MPEG4Writer: Adjust the moov start time from 0 us -> 0 us
+10-19 20:57:09.600  5209  5239 I MPEG4Writer: MOOV atom was written to the file
+10-19 20:57:09.600  5209  5239 D MPEG4Writer: release()
+10-19 20:57:09.600  5209  5239 D MPEG4Writer: ftruncate mPreAllocateFileEndOffset:214337 mOffset:1286 mMdatEndOffset:212417 diff:1920
+10-19 20:57:09.602  5209  5239 D MPEG4Writer: final fsync() takes 1 ms, file size 212417
+10-19 20:57:09.602  5209  5239 D MPEG4Writer: MP4WtrCtrlHlpLooper stopped
+10-19 20:57:09.603  5209  5239 D MPEG4Writer: Top 5 write durations(microseconds): #1:25 #2:55 #3:77 #4:114 #5:445
+10-19 20:57:09.603  5209  5239 D MPEG4Writer: reset()
+10-19 20:57:09.603  5209  5239 D MPEG4Writer: Video track stopping. Stop source
+10-19 20:57:09.603  5209  5239 E MPEG4Writer: Stop() called but track is not started or stopped
+10-19 20:57:09.604  5209  7015 D MediaCodec: flushMediametrics
+10-19 20:57:09.606  5209  7015 D MediaCodec: flushMediametrics
+10-19 20:57:09.606  5209  7015 W MediaCodec: no metrics handle found
+10-19 20:57:09.606   478   478 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-19 20:57:09.607   478   478 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-19 20:57:09.607  5209  7146 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-19 20:57:09.626   466   896 D MediaBufferGroup: creating MemoryDealer
+10-19 20:57:09.631  5209  5239 I Telemet : Overlay test: 120 frames, last pts 3966666 us, took 1614 ms, 212417 bytes
+10-19 20:57:09.631  5209  5239 I TestRunner: finished: t10_overlayFrameAndEncoder(io.github.avsessisozx.telemet.UiFlowTest)

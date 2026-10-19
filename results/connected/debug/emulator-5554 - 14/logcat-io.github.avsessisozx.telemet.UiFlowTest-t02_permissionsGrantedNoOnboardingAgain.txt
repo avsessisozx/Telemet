@@ -1,0 +1,1268 @@
+10-19 20:55:24.230  5209  5239 I TestRunner: started: t02_permissionsGrantedNoOnboardingAgain(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:55:24.235  1691  2623 W LocationOracle: getBestLocation(): no location is available
+10-19 20:55:24.284  1691  2131 I A       : incrementApaDataDownloadStoreStatus(latency = PT0.167S, appVersion = 13.17.16.23, status = NOT_FOUND, locale = *, fileGroupnames = apa_head_suggest, accountScoped = false, localGroupsAvailable = false, timeSinceSearchBoot = Optional[PT1M37.722S] (ONE_TO_FIVE_MINUTES), timeSinceDataDownloadInit = PT39.615S (THIRTY_SECONDS_TO_ONE_MINUTE))
+10-19 20:55:24.288  1691  2131 I A       : incrementApaDataDownloadStoreStatusNotFound(appVersion = 13.17.16.23, locale = *, groupName = apa_head_suggest, accountScoped = false, foundGroups = 0, status = 0, localGroupsAvailable = false)
+10-19 20:55:24.295  1691  1783 I earchbox:search: Background young concurrent copying GC freed 93465(9450KB) AllocSpace objects, 15(5892KB) LOS objects, 41% free, 19MB/34MB, paused 40us,31us total 839.762ms
+10-19 20:55:24.307   519  1666 W InputManager-JNI: Input channel object '1235144 io.github.avsessisozx.telemet/io.github.avsessisozx.telemet.ui.MainActivity (client)' was disposed without first being removed with the input manager!
+10-19 20:55:24.318  5209  5239 W UiAutomation: UiAutomation.grantRuntimePermission() is more robust and should be used instead of 'pm grant'
+10-19 20:55:24.351  5478  5713 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.icing.proxy.IcingInternalCorporaUpdateService started execution. cause:9 exec_start_elapsed_seconds: 129 [CONTEXT service_id=218 ]
+10-19 20:55:24.362  5478  5548 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.icing.proxy.IcingInternalCorporaUpdateService finished executing. cause:9 result: 1 elapsed_millis: 116 uptime_millis: 116 exec_start_elapsed_seconds: 129 [CONTEXT service_id=218 ]
+10-19 20:55:24.369  1691  2102 W LocationOracle: No location returned by GMS core getLastLocation()
+10-19 20:55:24.509  5552  5552 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.findmydevice.spot.service.management.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
+10-19 20:55:24.534  1828  2425 W d.process.acore: Long monitor contention with owner binder:1828_6 (2745) at android.database.sqlite.SQLiteConnection android.database.sqlite.SQLiteConnectionPool.waitForConnection(java.lang.String, int, android.os.CancellationSignal)(SQLiteConnectionPool.java:726) waiters=0 in void android.database.sqlite.SQLiteConnectionPool.releaseConnection(android.database.sqlite.SQLiteConnection) for 131ms
+10-19 20:55:24.552  5209  5239 W UiAutomation: UiAutomation.grantRuntimePermission() is more robust and should be used instead of 'pm grant'
+10-19 20:55:24.572  5552  5552 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.findmydevice.spot.service.locationreport.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
+10-19 20:55:24.588  5209  5239 W UiAutomation: UiAutomation.grantRuntimePermission() is more robust and should be used instead of 'pm grant'
+10-19 20:55:24.593  1691  2133 I sb.r.PDSWriter: Updating TNG suggest bootstrap data
+10-19 20:55:24.601  1691  2102 I sb.r.PDSWriter: Updated TNG suggest bootstrap data
+10-19 20:55:24.603  5209  5239 W UiAutomation: UiAutomation.grantRuntimePermission() is more robust and should be used instead of 'pm grant'
+10-19 20:55:24.605  1691  1691 I SearchWidgetFlow: GsaWidgetProvider:onReceive(Intent { act=update-widget-intent flg=0x10 cmp=com.google.android.googlequicksearchbox/.SearchWidgetProvider }) started
+10-19 20:55:24.612  1691  2581 I SearchWidgetFlow: GsaWidgetSessionController:handleGenericClientEvent
+10-19 20:55:24.617  1691  2581 I SearchWidgetFlow: SearchWidgetWorker:handleIntent(Intent { act=update-widget-intent flg=0x10 cmp=com.google.android.googlequicksearchbox/.SearchWidgetProvider }) started
+10-19 20:55:24.618  1691  1691 I SearchWidgetFlow: SearchWidget:handleIntent(Intent { act=update-widget-intent flg=0x10 cmp=com.google.android.googlequicksearchbox/.SearchWidgetProvider })
+10-19 20:55:24.622  5209  5239 W UiAutomation: UiAutomation.grantRuntimePermission() is more robust and should be used instead of 'pm grant'
+10-19 20:55:24.623  1691  2133 I SearchWidgetFlow: SearchWidgetWorker:handleIntent(Intent { act=update-widget-intent flg=0x10 cmp=com.google.android.googlequicksearchbox/.SearchWidgetProvider }) done
+10-19 20:55:24.627  1691  2133 I SearchWidgetFlow: GsaWidgetProvider:onReceive(Intent { act=update-widget-intent flg=0x10 cmp=com.google.android.googlequicksearchbox/.SearchWidgetProvider }) done
+10-19 20:55:24.633  1691  2581 W SearchServiceCore: Abort, client detached.
+10-19 20:55:24.633  1691  2581 W SearchServiceCore: Abort, client detached.
+10-19 20:55:24.633  1691  2581 W SearchServiceCore: Abort, client detached.
+10-19 20:55:24.635  5273  5273 D SearchTargetUtil:  query= size=15
+10-19 20:55:24.636  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=samsung one ui 9,group_id=web114939,response_id=4eb7ef9d-11cc-494d-87c1-590bff04cf5a,support_query_builder=false,} searchAction=samsung one ui 9 searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 79931571-0d53-4780-90b7-5db074816e69
+10-19 20:55:24.636  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=affordable dewalt 20v tools under 80,group_id=web114939,response_id=4eb7ef9d-11cc-494d-87c1-590bff04cf5a,support_query_builder=false,} searchAction=affordable dewalt 20v tools under 80 searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: f4055f4e-fc5b-4814-8218-f3221679baea
+10-19 20:55:24.637  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=2027 cadillac xt5 phev air trim,group_id=web114939,response_id=4eb7ef9d-11cc-494d-87c1-590bff04cf5a,support_query_builder=false,} searchAction=2027 cadillac xt5 phev air trim searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: d9dfa5bc-7335-421c-9bc9-f447e8be61ef
+10-19 20:55:24.637  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=congresswoman ilhan omar,group_id=web114939,response_id=4eb7ef9d-11cc-494d-87c1-590bff04cf5a,support_query_builder=false,} searchAction=congresswoman ilhan omar searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 4df070b4-c7c3-4420-91a8-d1cc76b2e958
+10-19 20:55:24.637  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=brad keselowski rfk racing departure,group_id=web114939,response_id=4eb7ef9d-11cc-494d-87c1-590bff04cf5a,support_query_builder=false,} searchAction=brad keselowski rfk racing departure searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 81d705c0-c4c0-4039-9547-7c823fda9a7f
+10-19 20:55:24.637  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=lottery powerball jackpot,group_id=web114939,response_id=4eb7ef9d-11cc-494d-87c1-590bff04cf5a,support_query_builder=false,} searchAction=lottery powerball jackpot searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 5190d40c-8b47-49de-accc-1cb83dccd703
+10-19 20:55:24.637  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=boat capsized sharks,group_id=web114939,response_id=4eb7ef9d-11cc-494d-87c1-590bff04cf5a,support_query_builder=false,} searchAction=boat capsized sharks searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 4d531a68-551d-4fa1-94d3-71682dbbf469
+10-19 20:55:24.637  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=andrew cathy,group_id=web114939,response_id=4eb7ef9d-11cc-494d-87c1-590bff04cf5a,support_query_builder=false,} searchAction=andrew cathy searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: d13e3ee4-2202-4806-9231-f7c09f3857b2
+10-19 20:55:24.637  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=mike malott joaquin buckley ufc edmonton,group_id=web114939,response_id=4eb7ef9d-11cc-494d-87c1-590bff04cf5a,support_query_builder=false,} searchAction=mike malott joaquin buckley ufc edmonton searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: c6e8922d-caef-4096-9311-7f21cdd5f34e
+10-19 20:55:24.637  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=beamng drive ps5 release,group_id=web114939,response_id=4eb7ef9d-11cc-494d-87c1-590bff04cf5a,support_query_builder=false,} searchAction=beamng drive ps5 release searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 724d2aa0-60f6-4f26-b97f-0cd2fe11f9cc
+10-19 20:55:24.637  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=tom hardy mobland streaming milestone,group_id=web114939,response_id=4eb7ef9d-11cc-494d-87c1-590bff04cf5a,support_query_builder=false,} searchAction=tom hardy mobland streaming milestone searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: c72a2757-bce0-43e2-a82a-9533bf49c572
+10-19 20:55:24.637  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=milo wolf muscle growth research,group_id=web114939,response_id=4eb7ef9d-11cc-494d-87c1-590bff04cf5a,support_query_builder=false,} searchAction=milo wolf muscle growth research searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 6d9d6fdd-c642-45d7-852c-c6d0a756359d
+10-19 20:55:24.637  5273  5273 D SearchTargetUtil: layoutType=extra_tall_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{bitmap_url=,suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=true,is_personal=false,suggest_raw_text=shawn oliver massachusetts,group_id=web114939,response_id=4eb7ef9d-11cc-494d-87c1-590bff04cf5a,support_query_builder=false,} searchAction=shawn oliver massachusetts searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 0bcac147-1c35-4491-8b16-1db566bc4b1f
+10-19 20:55:24.637  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=family farmstead dairy cheese recall,group_id=web114939,response_id=4eb7ef9d-11cc-494d-87c1-590bff04cf5a,support_query_builder=false,} searchAction=family farmstead dairy cheese recall searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: f625774a-3fb8-4f42-9ff5-5710893691ea
+10-19 20:55:24.637  5273  5273 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=spacex falcon 9 rocket launch,group_id=web114939,response_id=4eb7ef9d-11cc-494d-87c1-590bff04cf5a,support_query_builder=false,} searchAction=spacex falcon 9 rocket launch searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 038a9265-bf27-4b9a-9df8-b8e3bf16a57c
+10-19 20:55:24.641  5478  5529 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.clearcut.uploader.QosUploaderService started execution. cause:5 exec_start_elapsed_seconds: 130 [CONTEXT service_id=218 ]
+10-19 20:55:24.644  5209  5239 W UiAutomation: UiAutomation.grantRuntimePermission() is more robust and should be used instead of 'pm grant'
+10-19 20:55:24.663  1691  1691 V ClearcutMetricXmitter: Transmission is done.
+10-19 20:55:24.666  1691  1691 V ClearcutMetricXmitter: Transmission is done.
+10-19 20:55:24.668  5478  5548 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.clearcut.uploader.QosUploaderService finished executing. cause:5 result: 1 elapsed_millis: 38 uptime_millis: 38 exec_start_elapsed_seconds: 130 [CONTEXT service_id=218 ]
+10-19 20:55:24.705   519  2178 I ActivityManager: Broadcasting: Intent { act=android.intent.action.CLOSE_SYSTEM_DIALOGS flg=0x400000 }
+10-19 20:55:24.707   834   834 I vol.VolumeDialogImpl: mDialog.dismiss() reason: volume_controller from: com.android.systemui.volume.VolumeDialogImpl$7.onDismissRequested:3
+10-19 20:55:24.708   519   536 I ActivityManager: Broadcast completed: result=0
+10-19 20:55:24.719   834   899 D SplashScreenView: Build android.window.SplashScreenView{c73e2aa V.E...... ......ID 0,0-0,0}
+10-19 20:55:24.719   834   899 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-19 20:55:24.719   834   899 D SplashScreenView: Branding: view: android.view.View{5e37e9b G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-19 20:55:24.768  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@1d558c8 in: PRE_ON_CREATE
+10-19 20:55:24.773   399   399 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+10-19 20:55:24.850  1634  1634 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+10-19 20:55:24.850  1634  2150 E HwDetectorWithState: a: 3
+10-19 20:55:24.958  5273  5316 D EGL_emulation: app_time_stats: avg=318.61ms min=23.38ms max=640.32ms count=4
+10-19 20:55:25.061  5209  5209 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-19 20:55:25.308  5478  5486 I .gms.persistent: Background concurrent copying GC freed 295049(14MB) AllocSpace objects, 6(120KB) LOS objects, 49% free, 10MB/21MB, paused 34us,24us total 504.287ms
+10-19 20:55:25.310  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@1d558c8 in: CREATED
+10-19 20:55:25.319  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@1d558c8 in: STARTED
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.337   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.347   834   906 D EGL_emulation: app_time_stats: avg=12584.27ms min=12584.27ms max=12584.27ms count=1
+10-19 20:55:25.352  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@1d558c8 in: RESUMED
+10-19 20:55:25.357   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.357   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.357   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.357   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.360   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.360   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.360   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.360   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.365   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.365   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.365   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.365   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.366   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.366   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.366   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.366   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.366   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.366   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.366   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.366   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.366   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.366   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.366   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.366   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.367   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.367   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.367   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.367   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.367   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.367   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.367   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.367   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.367   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.367   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.367   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.367   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.367   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.367   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.367   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.367   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.367   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.367   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.367   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.367   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.367   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.368   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.369   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.369   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.369   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.369   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.369   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.369   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.369   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.369   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.369   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.369   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.369   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.369   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.369   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.369   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.369   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.369   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.376   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.376   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.376   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.376   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.378   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.378   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.378   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.378   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.379   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.379   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.379   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.379   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.380   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.380   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.380   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.380   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.380   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.380   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.380   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.380   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.381   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.381   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.381   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.381   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.381   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.381   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.381   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.381   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.381   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.381   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.381   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.381   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.383   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.383   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.383   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.383   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.384   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.384   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.384   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.384   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.384   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.384   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.384   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.384   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.385   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.385   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.385   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.385   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.385   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.385   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.385   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.385   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.394   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.394   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.394   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.394   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.414   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.414   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.414   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.414   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.420   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.420   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.420   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.420   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.425   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.425   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.425   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.425   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.426   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.426   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.426   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.426   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.426   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.426   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.426   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.426   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.428   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.428   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.428   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.428   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.429   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.429   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.429   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.429   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.431   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.431   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.431   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.431   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.431   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.431   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.431   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.431   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.438   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.438   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.438   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.438   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.447   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.447   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.447   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.447   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.449   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.449   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.449   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.449   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.450   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.451   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.451   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.451   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.451   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.451   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.451   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.451   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.452   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.452   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.452   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.452   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.458   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.458   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.458   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.458   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.467   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.467   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.467   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.467   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.479   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.479   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.479   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.479   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.486   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.486   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.486   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.486   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.514   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.514   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.514   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.514   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.514   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.514   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.514   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.514   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.571   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.571   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.571   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.571   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.572   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.572   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.572   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.572   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.572   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.572   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.572   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.572   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.595   519   536 W ziparchive: Unable to open '/data/app/~~qfLb8u394HXUdHG2JjTXwA==/io.github.avsessisozx.telemet-3OgxvqJ8zWKfDTmwelEPcA==/base.dm': No such file or directory
+10-19 20:55:25.596   519   536 I ActivityTaskManager: Displayed io.github.avsessisozx.telemet/.ui.MainActivity for user 0: +820ms
+10-19 20:55:25.605   834   898 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@a9fee4d
+10-19 20:55:25.606   519  2182 I ImeTracker: io.github.avsessisozx.telemet:c26ac384: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-19 20:55:25.606   519  2182 I ImeTracker: io.github.avsessisozx.telemet:c26ac384: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-19 20:55:25.614   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.614   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.614   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.614   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.615   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.615   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.615   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.615   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.616   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.616   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.616   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.616   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.617   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.617   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.617   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.617   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.617   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.617   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.618   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.618   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.618   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.618   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.618   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.618   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.618   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.618   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.618   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.618   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.618   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.618   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.618   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.618   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.619   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.619   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.619   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.619   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.619   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.619   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.619   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.619   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.620   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.620   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.620   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.620   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.621   519  1963 W InputManager-JNI: Input channel object 'aefb14b Splash Screen io.github.avsessisozx.telemet (client)' was disposed without first being removed with the input manager!
+10-19 20:55:25.631   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.631   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.631   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.631   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.632   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.632   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.632   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.632   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.632   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.632   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.633   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.633   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.633   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.633   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.633   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.633   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.634   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.634   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.634   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.634   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.634   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.634   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.634   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.634   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.634   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.634   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.634   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.634   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.635   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.635   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.635   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.635   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.635   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.635   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.635   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.635   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.637   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.637   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.637   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.637   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.642  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+10-19 20:55:25.651  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-19 20:55:25.651  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.avsessisozx.telemet fieldId=0 fieldName=null extras=null}, false)
+10-19 20:55:25.651  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-19 20:55:25.656   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.656   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.656   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.656   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.674   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.675   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.675   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.675   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.683  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-19 20:55:25.689   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.689   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.689   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.689   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.700   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.700   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.700   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.700   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.732  5273  5306 I ImeTracker: com.google.android.apps.nexuslauncher:f3559dae: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+10-19 20:55:25.735  5273  5306 I ImeTracker: com.google.android.apps.nexuslauncher:f3559dae: onFailed at PHASE_CLIENT_VIEW_SERVED
+10-19 20:55:25.757   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.757   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.757   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.757   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.767   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.767   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.767   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.767   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.769   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.769   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.769   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.769   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.772  5273  5369 D OneSearchSuggestProvider: Shut down the binder channel
+10-19 20:55:25.774  5273  5886 I IPCThreadState: oneway function results for code 2 on binder at 0x7106ebdd9120 will be dropped but finished with status UNKNOWN_TRANSACTION
+10-19 20:55:25.788  1019  1316 D BtGatt.ScanManager: uid 10131 isForeground true scanMode -1
+10-19 20:55:25.789  1019  1316 D BtGatt.ScanManager: uid 10131 isForeground true scanMode -1
+10-19 20:55:25.793   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.793   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.793   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.793   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.795   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.795   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.795   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.795   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.797   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.797   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.797   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.797   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.806   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.806   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.806   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.806   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.814   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.814   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.814   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.814   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.816   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.816   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.816   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.816   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.819   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.819   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.819   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.819   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.820   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.820   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.820   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.820   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.821   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.821   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.821   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.821   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.821   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.821   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.821   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.822   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.822   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.822   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.822   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.826   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.826   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.826   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.826   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.827   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.827   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.827   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.827   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.830   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.830   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.830   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.830   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.831   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.831   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.831   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.831   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.831   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.831   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.831   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.831   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.832   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.832   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.832   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.832   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.833   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.833   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.833   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.833   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.833   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.833   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.833   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.833   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.834   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.834   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.834   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.834   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.836   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.836   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.836   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.836   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.836   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.836   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.836   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.836   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.837   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.837   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.837   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.837   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.837   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.837   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.837   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.837   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.838   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.838   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.838   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.838   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.848   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.848   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.848   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.848   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.850   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.850   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.850   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.850   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.876   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.876   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.876   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.876   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.932   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.932   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.932   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.932   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.941   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.941   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.941   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.941   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.946  5209  5209 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view view.getTag() is "start_button"
+10-19 20:55:25.952   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.952   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.952   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.952   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.955   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.955   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.955   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.955   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.962   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.962   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.962   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.962   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.969   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.969   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.969   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.969   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.970   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.970   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.970   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.970   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.970   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.970   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.970   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.970   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.970   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.970   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.970   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.971   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.971   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.971   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.971   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.971   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.971   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.971   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.971   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.971   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.971   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.971   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.971   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.971   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.972   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.972   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.972   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.972   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.985   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.985   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.985   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.985   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.987   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.987   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.987   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.987   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.988   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.988   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.988   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.988   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.990   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.990   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.990   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.990   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.990   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.990   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.990   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.990   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.991   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.991   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.991   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.991   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.994   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.994   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.994   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.994   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.996   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.996   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.996   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.996   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.999   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:25.999   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:25.999   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:25.999   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.001   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.001   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.001   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.001   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.006   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.006   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.006   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.006   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.007   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.007   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.007   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.007   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.008   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.008   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.008   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.008   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.009   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.009   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.009   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.009   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.009   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.009   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.009   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.009   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.010   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.010   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.010   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.010   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.011   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.011   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.011   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.011   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.012   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.012   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.012   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.012   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.014   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.014   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.014   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.014   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.015   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.015   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.015   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.015   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.016   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.016   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.016   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.016   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.017   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.017   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.017   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.017   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.017   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.017   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.017   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.017   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.018   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.018   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.018   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.018   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.020   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.020   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.020   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.020   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.021   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.021   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.021   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.021   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.022   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.022   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.022   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.022   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.023   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.023   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.023   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.023   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.024   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.024   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.024   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.024   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.025   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.025   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.025   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.025   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.026   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.026   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.026   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.026   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.027   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.027   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.027   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.028   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.028   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.028   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.028   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.029   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.029   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.029   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.029   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.030   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.030   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.030   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.030   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.030   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.030   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.030   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.030   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.031   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.031   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.031   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.031   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.031   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.031   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.031   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.031   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.032   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.032   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.032   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.032   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.032   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.032   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.032   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.032   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.038   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.038   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.038   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.038   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.038   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.038   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.038   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.038   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.039   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.039   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.039   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.039   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.040   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.040   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.040   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.040   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.040   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.040   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.040   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.040   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.041   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.041   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.041   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.041   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.042   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.042   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.042   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.042   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.042   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.042   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.042   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.042   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.043   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.043   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.043   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.043   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.043   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.043   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.043   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.043   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.044   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.044   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.044   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.044   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.045   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.045   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.045   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.045   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.045   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.045   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.045   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.045   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.046   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.046   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.046   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.046   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.047   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.047   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.047   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.047   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.047   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.047   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.047   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.047   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.050   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.050   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.050   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.050   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.055   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.055   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.055   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.055   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.058   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.058   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.058   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.058   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.060  5209  5209 I ViewInteraction: Checking 'androidx.test.espresso.assertion.ViewAssertions$DoesNotExistViewAssertion@6b2bd02' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Welcome to Telemet"
+10-19 20:55:26.066  5209  5224 W ssisozx.telemet: Cleared Reference was only reachable from finalizer (only reported once)
+10-19 20:55:26.074   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.074   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.074   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.074   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.076   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.076   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.076   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.076   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.076   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.076   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.076   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.076   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.078   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.078   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.078   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.078   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.079   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.079   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.079   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.079   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.080   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.080   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.080   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.080   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.080   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.080   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.080   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.080   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.081   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.081   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.081   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.081   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.081   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.081   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.081   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.081   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.081   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.081   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.081   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.081   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.082   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.082   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.082   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.082   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.082   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.082   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.082   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.082   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.083   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.083   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.083   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.083   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.083   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.083   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.083   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.083   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.102   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.102   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.102   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.102   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.103   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.103   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.103   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.103   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.107   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.107   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.107   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.107   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.107   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.107   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.107   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.107   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.110   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.110   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.110   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.110   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.111   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.111   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.111   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.111   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.111   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.111   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.111   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.111   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.112   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.112   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.112   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.112   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.117   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.117   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.117   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.117   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.118   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.118   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.118   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.118   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.118   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.118   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.118   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.118   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.119   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.119   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.119   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.119   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.127  5209  5209 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=not (view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view view.getTag() is "setup_banner"
+10-19 20:55:26.133   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.133   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.133   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.133   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.141   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.141   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.141   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.141   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.141   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=11
+10-19 20:55:26.141   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.141   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.156   519   528 I system_server: Background young concurrent copying GC freed 1092917(23MB) AllocSpace objects, 13(324KB) LOS objects, 45% free, 27MB/50MB, paused 78us,46us total 231.220ms
+10-19 20:55:26.193  5552  5563 I gle.android.gms: Background concurrent copying GC freed 541411(22MB) AllocSpace objects, 299(11MB) LOS objects, 49% free, 8389KB/16MB, paused 42us,10us total 235.299ms
+10-19 20:55:26.735   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.738   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:55:26.738   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.738   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.763   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:26.765   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:55:26.766   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:26.766   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:26.799   335   368 I netd    : setProcSysNet(4, 2, wlan0, retrans_time_ms, 750) <0.10ms>
+10-19 20:55:26.799   335   368 I netd    : setProcSysNet(4, 2, wlan0, ucast_solicit, 10) <0.06ms>
+10-19 20:55:26.799   335   368 I netd    : setProcSysNet(6, 2, wlan0, retrans_time_ms, 750) <0.04ms>
+10-19 20:55:26.800   335   368 I netd    : setProcSysNet(6, 2, wlan0, ucast_solicit, 10) <0.02ms>
+10-19 20:55:26.871  5174  5199 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-19 20:55:26.871  5174  5199 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-19 20:55:26.871  5174  5199 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-19 20:55:26.871  5174  5199 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-19 20:55:26.871  5174  5199 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-19 20:55:26.871  5174  5199 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-19 20:55:26.871  5174  5199 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-19 20:55:26.871  5174  5199 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-19 20:55:26.871  5174  5199 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-19 20:55:26.871  5174  5199 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-19 20:55:26.973  5209  5267 D EGL_emulation: app_time_stats: avg=142.36ms min=16.48ms max=634.48ms count=10
+10-19 20:55:26.981  1043  1043 D CarrierSvcBindHelper: onPackageModified: com.google.android.contacts
+10-19 20:55:26.983  1043  1043 D CarrierSvcBindHelper: No carrier app for: 0
+10-19 20:55:26.985   836   858 I PermissionControllerServiceImpl: Updating user sensitive for uid 10155
+10-19 20:55:26.988  1019  1019 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-19 20:55:26.990   834   834 D ControlsListingControllerImpl: ServiceConfig reloaded, count: 0
+10-19 20:55:26.991   519   625 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS
+10-19 20:55:27.017  1043  1349 D ImsResolver: maybeAddedImsService, packageName: com.google.android.contacts
+10-19 20:55:27.019  1019  1019 V MediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-19 20:55:27.026   834   905 D StylusManager: Stylus InputDevice changed: 14 virtio_input_multi_touch_11
+10-19 20:55:27.033  1621  2039 W MediaProvider: isAppCloneUserPair for user 0: false
+10-19 20:55:27.037   834   905 D StylusManager: Stylus InputDevice changed: 13 virtio_input_multi_touch_10
+10-19 20:55:27.038   834   905 D StylusManager: Stylus InputDevice changed: 12 virtio_input_multi_touch_9
+10-19 20:55:27.038   834   905 D StylusManager: Stylus InputDevice changed: 11 virtio_input_multi_touch_8
+10-19 20:55:27.038   834   905 D StylusManager: Stylus InputDevice changed: 7 virtio_input_multi_touch_4
+10-19 20:55:27.038   834   905 D StylusManager: Stylus InputDevice changed: 10 virtio_input_multi_touch_7
+10-19 20:55:27.068   834   905 D StylusManager: Stylus InputDevice changed: 9 virtio_input_multi_touch_6
+10-19 20:55:27.093   834   905 D StylusManager: Stylus InputDevice changed: 8 virtio_input_multi_touch_5
+10-19 20:55:27.093   834   905 D StylusManager: Stylus InputDevice changed: 5 virtio_input_multi_touch_2
+10-19 20:55:27.093   834   905 D StylusManager: Stylus InputDevice changed: 4 virtio_input_multi_touch_1
+10-19 20:55:27.093   834   905 D StylusManager: Stylus InputDevice changed: 6 virtio_input_multi_touch_3
+10-19 20:55:27.163  5478  5550 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 132 [CONTEXT service_id=218 ]
+10-19 20:55:27.175  5478  5713 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 33 uptime_millis: 33 exec_start_elapsed_seconds: 132 [CONTEXT service_id=218 ]
+10-19 20:55:27.208   519   547 E system_server: No package ID 7f found for resource ID 0x7f080107.
+10-19 20:55:27.208   519   547 E system_server: No package ID 7f found for resource ID 0x7f150560.
+10-19 20:55:27.227  5478  5550 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskService started execution. cause:5 exec_start_elapsed_seconds: 132 [CONTEXT service_id=218 ]
+10-19 20:55:27.230  5478  5550 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.tapandpay.gcmtask.TapAndPayGcmTaskService finished executing. cause:5 result: 2 elapsed_millis: 23 uptime_millis: 23 exec_start_elapsed_seconds: 132 [CONTEXT service_id=218 ]
+10-19 20:55:27.240  1630  1630 I AiAiEcho: AppFetcherImpl onPackageChanged com.google.android.contacts.
+10-19 20:55:27.241  1630  2619 I AiAiEcho: AppIndexer Package:[com.google.android.contacts] UserProfile:[0] Enabled:[true].
+10-19 20:55:27.241  1630  2619 I AiAiEcho: AppFetcherImplV2 updateApps package:[com.google.android.contacts], userId:[0], reason:[package is updated.].
+10-19 20:55:27.317  5209  5209 I ViewInteraction: Performing 'scroll to' action on view view.getTag() is "sensors_header"
+10-19 20:55:27.325  5209  5209 I ScrollToAction: View is already displayed. Returning.
+10-19 20:55:27.332  5209  5209 I ViewInteraction: Performing 'single click' action on view view.getTag() is "sensors_header"
+10-19 20:55:27.342  5273  5273 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=539.5, y[0]=1211.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=132882, downTime=132882, deviceId=-1, source=0x1002, displayId=0, eventId=-244856070 }
+10-19 20:55:27.379  5273  5273 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=539.5, y[0]=1211.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=132923, downTime=132882, deviceId=-1, source=0x1002, displayId=0, eventId=-972703551 }
+10-19 20:55:27.403   396   396 D audioserver: FGS Logger Transaction failed
+10-19 20:55:27.403   396   396 D audioserver: -129
+10-19 20:55:27.482  4264  4400 I Bugle   : BroadcastReceiverAsyncWorkTracker: Acknowledging broadcast of bdxy@1861ed1
+10-19 20:55:27.574   396   504 D audioserver: FGS Logger Transaction failed
+10-19 20:55:27.574   396   504 D audioserver: -129
+10-19 20:55:27.583  5478  5927 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package: flg=0x45000010 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+10-19 20:55:27.611  5478  5525 W ChimeraUtils: Module com.google.android.gms.nearby_en missing resource null(0)
+10-19 20:55:27.620  5478  5939 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+10-19 20:55:27.637  5478  5525 W ChimeraUtils: Module com.google.android.gms.nearby_en missing resource null(0)
+10-19 20:55:27.647  5478  5525 W ChimeraUtils: Module com.google.android.gms.nearby_en missing resource null(0)
+10-19 20:55:27.740   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:27.744   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:55:27.744   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:27.744   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:27.764   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:27.765   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:55:27.765   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:27.765   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:27.985  5209  5267 D EGL_emulation: app_time_stats: avg=49.72ms min=9.97ms max=408.89ms count=19
+10-19 20:55:28.439  5552  5933 I SystemUpdate: [Installation,ReceiverIntentOperation] Received intent: Intent { act=com.google.android.gms.update.BASE_MODULE_INIT cat=[targeted_intent_op_prefix:.update.control.ReceiverIntentOperation] cmp=com.google.android.gms/.chimera.GmsIntentOperationService }.
+10-19 20:55:28.442  5478  5650 E bwfc    : Phenotype API error. Event # edax@75580de5, EventCode: 5 [CONTEXT service_id=51 ]
+10-19 20:55:28.442  5478  5650 E bwfc    : bwdx: 29501: Stale snapshot for com.google.android.gms.tron.metrics(change count changed - expected 1  but was 0)
+10-19 20:55:28.442  5478  5650 E bwfc    : 	at bwfg.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):16)
+10-19 20:55:28.442  5478  5650 E bwfc    : 	at bwff.g(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:55:28.442  5478  5650 E bwfc    : 	at bwfc.e(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+10-19 20:55:28.442  5478  5650 E bwfc    : 	at bwfc.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-19 20:55:28.442  5478  5650 E bwfc    : 	at avsy.eo(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-19 20:55:28.442  5478  5650 E bwfc    : 	at avtf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):14)
+10-19 20:55:28.442  5478  5650 E bwfc    : 	at dfhf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-19 20:55:28.442  5478  5650 E bwfc    : 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-19 20:55:28.442  5478  5650 E bwfc    : 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):8)
+10-19 20:55:28.442  5478  5650 E bwfc    : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-19 20:55:28.442  5478  5650 E bwfc    : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-19 20:55:28.442  5478  5650 E bwfc    : 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:55:28.442  5478  5650 E bwfc    : 	at java.lang.Thread.run(Thread.java:1012)
+10-19 20:55:28.450  5552  5626 I Auth    : [WorkAccount] update authenticator enabled for boot or update
+10-19 20:55:28.453  5552  5928 W SystemServiceRegistry: No service published for: persistent_data_block
+10-19 20:55:28.458  5478  5650 W AsyncOperation: operation=CommitToConfigurationOperationCall, opStatusCode=29501 [CONTEXT service_id=51 ]
+10-19 20:55:28.458  5478  5650 W AsyncOperation: OperationException[Status{statusCode=Stale snapshot for com.google.android.gms.tron.metrics(change count changed - expected 1  but was 0), resolution=null}]
+10-19 20:55:28.458  5478  5650 W AsyncOperation: 	at bwfc.e(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-19 20:55:28.458  5478  5650 W AsyncOperation: 	at bwfc.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-19 20:55:28.458  5478  5650 W AsyncOperation: 	at avsy.eo(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-19 20:55:28.458  5478  5650 W AsyncOperation: 	at avtf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):14)
+10-19 20:55:28.458  5478  5650 W AsyncOperation: 	at dfhf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-19 20:55:28.458  5478  5650 W AsyncOperation: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-19 20:55:28.458  5478  5650 W AsyncOperation: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):8)
+10-19 20:55:28.458  5478  5650 W AsyncOperation: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-19 20:55:28.458  5478  5650 W AsyncOperation: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-19 20:55:28.458  5478  5650 W AsyncOperation: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:55:28.458  5478  5650 W AsyncOperation: 	at java.lang.Thread.run(Thread.java:1012)
+10-19 20:55:28.459  5478  5525 W MobStoreFlagStore: Failed to commit due to stale snapshot for com.google.android.gms.tron.metrics, triggering flag update. Experiments may be delayed til next app start.
+10-19 20:55:28.479  5478  5478 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.auth.account.workaccount.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+10-19 20:55:28.480  5478  5478 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.auth.account.workaccount.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+10-19 20:55:28.488  5552  5928 I Auth    : [FRP,FrpUpdateIntentOperation] FRP is not supported for this device / user
+10-19 20:55:28.506  5552  5929 I SystemUpdate: [Execution,InstallationEventIntentOperation] Handling event of type 1.
+10-19 20:55:28.507  5478  5492 I Auth    : [WorkAccountServiceImpl] init work authenticator
+10-19 20:55:28.518  5552  5928 I SystemUpdate: [Execution,InstallationIntentOperation] Received intent: Intent { act=com.google.android.gms.update.INSTALL_UPDATE cat=[targeted_intent_op_prefix:.update.execution.InstallationIntentOperation] cmp=com.google.android.gms/.chimera.GmsIntentOperationService }.
+10-19 20:55:28.520  5552  5928 I SystemUpdate: [Execution,ExecutionManager] Action finished-execution executed for 0.00 seconds.
+10-19 20:55:28.559  5478  5665 W .gms.persistent: Long monitor contention with owner [com.google.android.gms.chimera.container.intentoperation.PersistentIntentOperationChimeraService-Executor] processing com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener for action com.google.android.gms.phenotype.UPDATE (5664) at void hjm.run()(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3) waiters=0 in void hjm.run() for 10.310s
+10-19 20:55:28.560  5478  5676 W .gms.persistent: Long monitor contention with owner [com.google.android.gms.chimera.container.intentoperation.PersistentIntentOperationChimeraService-Executor] processing com.google.android.gms.platformconfigurator.PhenotypeConfigurationUpdateListener for action com.google.android.gms.phenotype.UPDATE (5664) at void hjm.run()(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3) waiters=1 in void hjm.run() for 9.901s
+10-19 20:55:28.568  5478  5676 I NamespaceManager: Package com.android.refreshratecontrol name not found! Using module version.
+10-19 20:55:28.581  5478  5676 I NamespaceManager: Package com.google.oslo name not found! Using module version.
+10-19 20:55:28.602  1621  5394 W MediaProvider: isAppCloneUserPair for user 0: false
+10-19 20:55:28.606  5478  5939 I PTCommittedOperation: Receive new configuration for com.google.android.gms.platformconfigurator
+10-19 20:55:28.610  5209  5209 I ViewInteraction: Performing 'scroll to' action on view view.getTag() is "sensors_header"
+10-19 20:55:28.613  5209  5209 I ScrollToAction: View is already displayed. Returning.
+10-19 20:55:28.617  5209  5209 I ViewInteraction: Performing 'single click' action on view view.getTag() is "sensors_header"
+10-19 20:55:28.620  5478  5676 I NamespaceManager: Package com.android.media name not found! Using module version.
+10-19 20:55:28.623  5273  5273 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=539.5, y[0]=1211.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=134168, downTime=134168, deviceId=-1, source=0x1002, displayId=0, eventId=-354033406 }
+10-19 20:55:28.624  5552  5932 W ModuleInitIntentOp: Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+10-19 20:55:28.624  5552  5628 W ModuleInitIntentOp: Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+10-19 20:55:28.626  5478  5676 I NamespaceManager: Package com.android.media.swcodec name not found! Using module version.
+10-19 20:55:28.626  5478  5676 I NamespaceManager: Package com.android.appsearch name not found! Using module version.
+10-19 20:55:28.627  5478  5676 I NamespaceManager: Package com.android.neuralnetworks name not found! Using module version.
+10-19 20:55:28.628  5478  5676 I NamespaceManager: Package com.android.media name not found! Using module version.
+10-19 20:55:28.630  5552  5935 I SyncIntentOperation: Handling the intent: Intent { act=com.google.android.gms.phenotype.COMMITTED flg=0x10 pkg=com.google.android.gms cmp=com.google.android.gms/.chimera.GmsIntentOperationService (has extras) }. [CONTEXT service_id=80 ]
+10-19 20:55:28.631  5478  5676 I NamespaceManager: Package 1 name not found! Using module version.
+10-19 20:55:28.631  5552  5628 W ModuleInitIntentOp: Dropping unexpected action com.google.android.gms.phenotype.COMMITTED
+10-19 20:55:28.632  5552  5932 V Backup  : [PhenotypeConfigIO] Phenotype broadcast received for different package
+10-19 20:55:28.632  5552  5932 I MlBenchmarkInstaller: Intent: com.google.android.gms.phenotype.COMMITTED [CONTEXT service_id=340 ]
+10-19 20:55:28.633  5552  5932 I MlBenchmarkInstaller: COMMITTED Extra package name: com.google.android.gms.platformconfigurator [CONTEXT service_id=340 ]
+10-19 20:55:28.633  5552  5628 I MdiSyncModule: flag handling is skipping irrelevant intent.
+10-19 20:55:28.641  5552  5928 I Auth    : [SupervisedAccountIntentOperation] onHandleIntent(): android.intent.action.BOOT_COMPLETED
+10-19 20:55:28.641  5552  5928 I Auth    : [SupervisedAccountIntentOperation] This operation is disabled
+10-19 20:55:28.642  5552  5626 W Auth    : [PubsubPeriodicSyncherRuntimeInit] Initializing periodic tasks, IntentAction=android.intent.action.BOOT_COMPLETED, InitRuntimeState=2
+10-19 20:55:28.642  5552  5932 I LocationHistory: [IntentOperation] Handling action com.google.android.gms.phenotype.COMMITTED [CONTEXT service_id=314 ]
+10-19 20:55:28.643  5552  5935 I GmsSyncPolicyEngine: Periodic sync 1 disabled by policy, cancelled.
+10-19 20:55:28.648  5552  5935 I GmsSyncPolicyEngine: Periodic sync 2 disabled by policy, cancelled.
+10-19 20:55:28.650  5552  5935 I GmsSyncPolicyEngine: Periodic sync 3 disabled by policy, cancelled.
+10-19 20:55:28.652  5552  5963 W ChimeraUtils: Module com.google.android.gms.auth_authzen__phone missing resource null(0)
+10-19 20:55:28.653  5552  5963 I Authzen : [AuthZenEventHandler] Handling event: android.intent.action.BOOT_COMPLETED
+10-19 20:55:28.654  5552  5963 I Authzen : [TransactionCache] Clearing transaction cache
+10-19 20:55:28.664  5478  5960 W EasyUnlock: [EasyUnlockSupportReporterIntentOperation] Invalid account list. [CONTEXT service_id=234 ]
+10-19 20:55:28.665  5273  5273 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=539.5, y[0]=1211.5, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=134210, downTime=134168, deviceId=-1, source=0x1002, displayId=0, eventId=-1005372521 }
+10-19 20:55:28.669  5478  5478 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.auth.proximity.devicesyncservice.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentBoundBrokerService }
+10-19 20:55:28.669  5478  5478 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.auth.proximity.devicesyncservice.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentBoundBrokerService }
+10-19 20:55:28.671  5552  5626 I RecoverableKeyStoreGms: [RecoverableKeyStoreGmsInitOperation] Initializing auth_folsom
+10-19 20:55:28.682   396  3178 D audioserver: FGS Logger Transaction failed
+10-19 20:55:28.682   396  3178 D audioserver: -129
+10-19 20:55:28.685  5552  5626 I RecoverableKeyStoreGms: [RecoverableKeyStoreGmsInitOperation] com.google.android.gms.auth.folsom.service.FolsomPublicKeyUpdateService is already enabled. Ignore.
+10-19 20:55:28.690  5552  5626 I RecoverableKeyStoreGms: [RecoverableKeyStoreGmsInitOperation] com.google.android.gms.auth.folsom.service.GcmReceiverService is already enabled. Ignore.
+10-19 20:55:28.702  5552  5661 I Icing   : Indexing com.google.android.gms-internal.3p:MobileApplication from com.google.android.gms
+10-19 20:55:28.709   396   504 D AudioFlinger: mixer(0x72cd8a7c8930) throttle end: throttle time(34)
+10-19 20:55:28.720   519   595 V RecoverableKeyStoreMgr: Not updating secret types - same as old value.
+10-19 20:55:28.724  5552  5661 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+10-19 20:55:28.752   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:28.766  5478  5548 W EasyUnlock: [HostValidator] Invalid account list. [CONTEXT service_id=234 ]
+10-19 20:55:28.770   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:28.770   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:28.770   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:28.770   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:55:28.773   971  5890 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=62
+10-19 20:55:28.773   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:55:28.773   971  5890 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:55:28.795  5552  5928 I Auth    : [AuthManaged, PasswordComplexityHelperImpl] Updating password complexity components state.
+10-19 20:55:28.796  5552  5928 I Auth    : [AuthManaged, PasswordComplexityHelperImpl] Disabling com.google.android.gms.auth.managed.admin.DeviceAdminReceiver
+10-19 20:55:28.807  5552  5928 I Auth    : [AuthManaged, PasswordComplexityHelperImpl] Disabling com.google.android.gms.auth.managed.ui.SetNewPasswordActivity
+10-19 20:55:28.808  5552  5928 I Auth    : [AuthManaged, AuthManagedModuleInitIntentOperation] enabling com.google.android.gms.auth.managed.ui.EmmActivity
+10-19 20:55:28.808  5552  5928 I Auth    : [AuthManaged, AuthManagedModuleInitIntentOperation] enabling com.google.android.gms.auth.managed.ui.PhoneskyDpcInstallActivity
+10-19 20:55:28.813  5552  5661 I Icing   : Indexing done com.google.android.gms-internal.3p:MobileApplication
+10-19 20:55:28.814  5552  5661 I Icing   : Indexing done com.google.android.gms-apps
+10-19 20:55:28.834  5552  5928 W Auth    : [AuthManaged, SettingsSecurityDeviceOwnerChimeraActivity] device owner: n/a
+10-19 20:55:28.840  5552  5928 I Auth    : [AuthManaged, AuthManagedModuleInitIntentOperation] disabling com.google.android.gms.auth.managed.ui.SettingsSecurityDeviceOwnerActivity
+10-19 20:55:28.844  5552  5626 I RecoverableKeyStoreGms: [RecoverableKeyStoreGmsInitOperation] Setting vault handle
+10-19 20:55:28.846   519  2113 V RecoverableKeyStoreMgr: Not updating server params - same as old value.
+10-19 20:55:28.847   519  2113 I RecoverySnapshotLstnrs: Registered listener for agent with uid 10131
+10-19 20:55:28.848  5552  5928 I Auth    : [AuthManaged, PasswordComplexityHelperImpl] Updating password complexity components state.
+10-19 20:55:28.848  5552  5928 I Auth    : [AuthManaged, PasswordComplexityHelperImpl] Disabling com.google.android.gms.auth.managed.admin.DeviceAdminReceiver
+10-19 20:55:28.851  5552  5928 I Auth    : [AuthManaged, PasswordComplexityHelperImpl] Disabling com.google.android.gms.auth.managed.ui.SetNewPasswordActivity
+10-19 20:55:28.853  5478  5542 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 134 [CONTEXT service_id=218 ]
+10-19 20:55:28.862  5552  5626 I RecoverableKeyStoreGms: [EnrollmentManager] Returning certificates list from cache [CONTEXT service_id=172 ]
+10-19 20:55:28.872  5478  5478 I ProximityAuth: [MessageProcessorManager] MessageProcessorManager instantiated for user UserHandle{0}
+10-19 20:55:28.874  5552  5932 I GmsCoreXrpcWrapper: Returning a channel provider with trafficStatsTag=18692 trafficStatsUid=-1
+10-19 20:55:28.877  5478  5699 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 90 uptime_millis: 90 exec_start_elapsed_seconds: 134 [CONTEXT service_id=218 ]
+10-19 20:55:28.884   519   595 I RecoverableKeyStoreMgr: The cert file serial number is the same, so skip updating.
+10-19 20:55:28.887  5478  5478 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.auth.proximity.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentBoundBrokerService }
+10-19 20:55:28.888  5478  5478 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.auth.proximity.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentBoundBrokerService }
+10-19 20:55:28.889  5552  5626 I RecoverableKeyStoreGms: [EnrollmentManager] Recovery service is initialized. [CONTEXT service_id=172 ]
+10-19 20:55:28.895  5552  5932 I AutofillModuleInitInten: AutofillModuleInitIntentOperation onInitRuntimeState(2) [CONTEXT service_id=177 ]
+10-19 20:55:28.899  5478  5548 W ProximityAuth: [GetMyPublicKey] Failed to fetch public key.
+10-19 20:55:28.899  5478  5548 E dlpn    : RuntimeException while executing runnable dlqc{qze@a464985} with executor MoreExecutors.directExecutor()
+10-19 20:55:28.899  5478  5548 E dlpn    : java.lang.NullPointerException: Attempt to get length of null array
+10-19 20:55:28.899  5478  5548 E dlpn    : 	at android.util.Base64.encode(Base64.java:496)
+10-19 20:55:28.899  5478  5548 E dlpn    : 	at android.util.Base64.encodeToString(Base64.java:458)
+10-19 20:55:28.899  5478  5548 E dlpn    : 	at com.google.android.gms.auth.proximity.RemoteDevice.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:55:28.899  5478  5548 E dlpn    : 	at qze.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-19 20:55:28.899  5478  5548 E dlpn    : 	at dlqc.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-19 20:55:28.899  5478  5548 E dlpn    : 	at dlpk.execute(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:55:28.899  5478  5548 E dlpn    : 	at dlpn.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-19 20:55:28.899  5478  5548 E dlpn    : 	at dlpn.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3)
+10-19 20:55:28.899  5478  5548 E dlpn    : 	at acei.done(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:55:28.899  5478  5548 E dlpn    : 	at java.util.concurrent.FutureTask.finishCompletion(FutureTask.java:381)
+10-19 20:55:28.899  5478  5548 E dlpn    : 	at java.util.concurrent.FutureTask.set(FutureTask.java:232)
+10-19 20:55:28.899  5478  5548 E dlpn    : 	at java.util.concurrent.FutureTask.run(FutureTask.java:272)
+10-19 20:55:28.899  5478  5548 E dlpn    : 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-19 20:55:28.899  5478  5548 E dlpn    : 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-19 20:55:28.899  5478  5548 E dlpn    : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-19 20:55:28.899  5478  5548 E dlpn    : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-19 20:55:28.899  5478  5548 E dlpn    : 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:55:28.899  5478  5548 E dlpn    : 	at java.lang.Thread.run(Thread.java:1012)
+10-19 20:55:28.901  5552  5552 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.auth.cryptauth.cryptauthservice.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+10-19 20:55:28.902  5552  5552 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.auth.cryptauth.cryptauthservice.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+10-19 20:55:28.906   519  2157 E RecoverySnapshotStorage: Error reading snapshot for 10131 from disk
+10-19 20:55:28.906   519  2157 E RecoverySnapshotStorage: java.io.FileNotFoundException: /data/system/recoverablekeystore/snapshots/10131.xml: open failed: ENOENT (No such file or directory)
+10-19 20:55:28.906   519  2157 E RecoverySnapshotStorage: 	at libcore.io.IoBridge.open(IoBridge.java:574)
+10-19 20:55:28.906   519  2157 E RecoverySnapshotStorage: 	at java.io.FileInputStream.<init>(FileInputStream.java:160)
+10-19 20:55:28.906   519  2157 E RecoverySnapshotStorage: 	at com.android.server.locksettings.recoverablekeystore.storage.RecoverySnapshotStorage.readFromDisk(RecoverySnapshotStorage.java:152)
+10-19 20:55:28.906   519  2157 E RecoverySnapshotStorage: 	at com.android.server.locksettings.recoverablekeystore.storage.RecoverySnapshotStorage.get(RecoverySnapshotStorage.java:104)
+10-19 20:55:28.906   519  2157 E RecoverySnapshotStorage: 	at com.android.server.locksettings.recoverablekeystore.RecoverableKeyStoreManager.getKeyChainSnapshot(RecoverableKeyStoreManager.java:369)
+10-19 20:55:28.906   519  2157 E RecoverySnapshotStorage: 	at com.android.server.locksettings.LockSettingsService.getKeyChainSnapshot(LockSettingsService.java:2494)
+10-19 20:55:28.906   519  2157 E RecoverySnapshotStorage: 	at com.android.internal.widget.ILockSettings$Stub.onTransact(ILockSettings.java:838)
+10-19 20:55:28.906   519  2157 E RecoverySnapshotStorage: 	at android.os.Binder.execTransactInternal(Binder.java:1339)
+10-19 20:55:28.906   519  2157 E RecoverySnapshotStorage: 	at android.os.Binder.execTransact(Binder.java:1275)
+10-19 20:55:28.906   519  2157 E RecoverySnapshotStorage: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+10-19 20:55:28.906   519  2157 E RecoverySnapshotStorage: 	at libcore.io.Linux.open(Native Method)
+10-19 20:55:28.906   519  2157 E RecoverySnapshotStorage: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+10-19 20:55:28.906   519  2157 E RecoverySnapshotStorage: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+10-19 20:55:28.906   519  2157 E RecoverySnapshotStorage: 	at libcore.io.IoBridge.open(IoBridge.java:560)
+10-19 20:55:28.906   519  2157 E RecoverySnapshotStorage: 	... 8 more
+10-19 20:55:28.907   519  2157 W PlatformKeyManager: Platform generation ID was 0 but no entry was present in AndroidKeyStore. Generating fresh key.
+10-19 20:55:28.908   396   504 D audioserver: FGS Logger Transaction failed
+10-19 20:55:28.909   396   504 D audioserver: -129
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: [WrappingKeyManager] InternalRecoveryServiceException during wrapping key generation [CONTEXT service_id=172 ]
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: android.security.keystore.recovery.InternalRecoveryServiceException: Failed to import secret key.
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	at android.security.keystore.recovery.RecoveryController.wrapUnexpectedServiceSpecificException(RecoveryController.java:783)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	at android.security.keystore.recovery.RecoveryController.generateKey(RecoveryController.java:569)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	at qiw.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	at qiw.e(:com.google.android.gms@231818047@23.18.18 (190800-535401451):15)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	at qfw.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):68)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	at com.google.android.gms.auth.folsom.operation.FolsomModuleInitIntentOperation.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):5)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	at zdm.onHandleIntent(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	at zhv.onHandleIntent(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	at hjm.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	at hjl.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):11)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	at dfhf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	at java.lang.Thread.run(Thread.java:1012)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: Caused by: android.os.ServiceSpecificException: Failed to import secret key. (code 22)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3071)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	at android.os.Parcel.createException(Parcel.java:3041)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	at android.os.Parcel.readException(Parcel.java:3024)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	at android.os.Parcel.readException(Parcel.java:2966)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	at com.android.internal.widget.ILockSettings$Stub$Proxy.generateKey(ILockSettings.java:1679)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	at android.security.keystore.recovery.RecoveryController.generateKey(RecoveryController.java:556)
+10-19 20:55:28.913  5552  5626 W RecoverableKeyStoreGms: 	... 13 more
+10-19 20:55:28.937  5552  5552 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-19 20:55:28.937  5552  5552 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-19 20:55:28.944  5552  5928 V Backup  : [MigrateUtil] Clearing migrate temp dir: /data/user/0/com.google.android.gms/files/migrate_dir
+10-19 20:55:28.945  5552  5552 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-19 20:55:28.947  5552  5928 D Backup  : [MigrateCleaner] D2D transport was not selected, not selecting cloud transport.
+10-19 20:55:28.947  5552  5928 V Backup  : [G1ModuleInitIntentOperation] BbG1 notifications disabled by flag
+10-19 20:55:28.948  5552  5928 V Backup  : [SettingsModuleInit] onInitRuntimeState
+10-19 20:55:28.948  5552  5928 V Backup  : [NoBackupNotification] Disabled, not scheduling
+10-19 20:55:28.949  5552  5928 V Backup  : [AccountChangedIO] Received intent, action = android.intent.action.BOOT_COMPLETED
+10-19 20:55:28.961  5552  5929 I Ads     : Parental control value is stale. Refreshing.
+10-19 20:55:28.961  5552  5929 W Ads     : Play store is not installed or the service for parental controls is not available.
+10-19 20:55:28.962  5552  5929 I Ads     : Initialized AdMob in container 23.18.18 (190800-535401451)
+10-19 20:55:28.968  5552  5929 I Backup  : [TargetEnabler] Setting target components to enabled = false
+10-19 20:55:28.970  5552  5928 I Backup  : [GmsBackupAccountManager] Backup account not found in gmscore.
+10-19 20:55:28.972  5478  5959 W ChimeraUtils: Module com.google.android.gms.backup_base missing resource null(0)
+10-19 20:55:28.977  5552  5929 I Backup  : [TargetEnabler] Enabling D2dMigrateHelperService on non-Pixel on P+
+10-19 20:55:28.980  5552  5928 I Backup  : [GmsBackupAccountManager] Backup account not found in gmscore.
+10-19 20:55:28.984  5552  5928 V Backup  : [AccountChangedIO] currentDestinationString: null
+10-19 20:55:28.986  5478  5959 V Backup  : [BackupAccountNotifier] Handling new intent. Show notification: true
+10-19 20:55:28.991  5552  5602 I TelephonySpamChimeraSer: Running Telephony Spam Chimera Service [CONTEXT service_id=150 ]
+10-19 20:55:28.991  5478  5959 V Backup  : [BackupAccountNotifier] Handling new intent. Show notification: true
+10-19 20:55:29.016  5478  5699 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.telephonyspam.sync.SpamListSyncTaskService started execution. cause:5 exec_start_elapsed_seconds: 134 [CONTEXT service_id=218 ]
+10-19 20:55:29.022  5209  5267 D EGL_emulation: app_time_stats: avg=170.28ms min=17.68ms max=682.74ms count=6
+10-19 20:55:29.025  5209  5239 I TestRunner: finished: t02_permissionsGrantedNoOnboardingAgain(io.github.avsessisozx.telemet.UiFlowTest)

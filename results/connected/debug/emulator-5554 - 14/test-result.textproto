@@ -1,0 +1,749 @@
+# proto-message: google.testing.platform.proto.api.core.TestSuiteResult
+# 2026-10-19T20:58:24.941584971Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 13
+  device {
+    id: "emulator-5554"
+    friendly_name: "primary"
+  }
+}
+test_status: PASSED
+test_result {
+  test_case {
+    test_class: "UiFlowTest"
+    test_package: "io.github.avsessisozx.telemet"
+    test_method: "t01_firstLaunchSkipEverything"
+    start_time {
+      seconds: 1792443307
+      nanos: 530000000
+    }
+    end_time {
+      seconds: 1792443322
+      nanos: 545000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-io.github.avsessisozx.telemet.UiFlowTest-t01_firstLaunchSkipEverything.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "UiFlowTest"
+    test_package: "io.github.avsessisozx.telemet"
+    test_method: "t02_permissionsGrantedNoOnboardingAgain"
+    start_time {
+      seconds: 1792443324
+      nanos: 446000000
+    }
+    end_time {
+      seconds: 1792443329
+      nanos: 191000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-io.github.avsessisozx.telemet.UiFlowTest-t02_permissionsGrantedNoOnboardingAgain.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "UiFlowTest"
+    test_package: "io.github.avsessisozx.telemet"
+    test_method: "t03_ridesListAndDetail"
+    start_time {
+      seconds: 1792443330
+      nanos: 24000000
+    }
+    end_time {
+      seconds: 1792443348
+      nanos: 819000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-io.github.avsessisozx.telemet.UiFlowTest-t03_ridesListAndDetail.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "UiFlowTest"
+    test_package: "io.github.avsessisozx.telemet"
+    test_method: "t04_settingsAndUnits"
+    start_time {
+      seconds: 1792443349
+      nanos: 670000000
+    }
+    end_time {
+      seconds: 1792443355
+      nanos: 935000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-io.github.avsessisozx.telemet.UiFlowTest-t04_settingsAndUnits.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "UiFlowTest"
+    test_package: "io.github.avsessisozx.telemet"
+    test_method: "t05_clearDataWithBackupAndRestore"
+    start_time {
+      seconds: 1792443356
+      nanos: 432000000
+    }
+    end_time {
+      seconds: 1792443377
+      nanos: 768000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-io.github.avsessisozx.telemet.UiFlowTest-t05_clearDataWithBackupAndRestore.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "UiFlowTest"
+    test_package: "io.github.avsessisozx.telemet"
+    test_method: "t06_languages"
+    start_time {
+      seconds: 1792443378
+      nanos: 277000000
+    }
+    end_time {
+      seconds: 1792443418
+      nanos: 57000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-io.github.avsessisozx.telemet.UiFlowTest-t06_languages.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "UiFlowTest"
+    test_package: "io.github.avsessisozx.telemet"
+    test_method: "t07_logScreen"
+    start_time {
+      seconds: 1792443418
+      nanos: 570000000
+    }
+    end_time {
+      seconds: 1792443421
+      nanos: 136000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-io.github.avsessisozx.telemet.UiFlowTest-t07_logScreen.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "UiFlowTest"
+    test_package: "io.github.avsessisozx.telemet"
+    test_method: "t08_upgradeWithPermissionsSkipsWizard"
+    start_time {
+      seconds: 1792443421
+      nanos: 444000000
+    }
+    end_time {
+      seconds: 1792443424
+      nanos: 99000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-io.github.avsessisozx.telemet.UiFlowTest-t08_upgradeWithPermissionsSkipsWizard.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "UiFlowTest"
+    test_package: "io.github.avsessisozx.telemet"
+    test_method: "t09_freshInstallShowsWizard"
+    start_time {
+      seconds: 1792443424
+      nanos: 841000000
+    }
+    end_time {
+      seconds: 1792443427
+      nanos: 263000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-io.github.avsessisozx.telemet.UiFlowTest-t09_freshInstallShowsWizard.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "UiFlowTest"
+    test_package: "io.github.avsessisozx.telemet"
+    test_method: "t10_overlayFrameAndEncoder"
+    start_time {
+      seconds: 1792443427
+      nanos: 722000000
+    }
+    end_time {
+      seconds: 1792443429
+      nanos: 797000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-io.github.avsessisozx.telemet.UiFlowTest-t10_overlayFrameAndEncoder.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "UiFlowTest"
+    test_package: "io.github.avsessisozx.telemet"
+    test_method: "t11_videoMatch"
+    start_time {
+      seconds: 1792443429
+      nanos: 799000000
+    }
+    end_time {
+      seconds: 1792443449
+      nanos: 625000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-io.github.avsessisozx.telemet.UiFlowTest-t11_videoMatch.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "UiFlowTest"
+    test_package: "io.github.avsessisozx.telemet"
+    test_method: "t12_newSettings"
+    start_time {
+      seconds: 1792443450
+      nanos: 64000000
+    }
+    end_time {
+      seconds: 1792443455
+      nanos: 889000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-io.github.avsessisozx.telemet.UiFlowTest-t12_newSettings.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "UiFlowTest"
+    test_package: "io.github.avsessisozx.telemet"
+    test_method: "t13_gpsIssueWarning"
+    start_time {
+      seconds: 1792443456
+      nanos: 356000000
+    }
+    end_time {
+      seconds: 1792443498
+      nanos: 742000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/logcat-io.github.avsessisozx.telemet.UiFlowTest-t13_gpsIssueWarning.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "/home/runner/work/Telemet/Telemet/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 14/testlog/test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}

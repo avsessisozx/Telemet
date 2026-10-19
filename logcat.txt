@@ -1,0 +1,64 @@
+--------- beginning of main
+10-19 20:55:07.368 I/TestRunner( 5209): run started: 13 tests
+10-19 20:55:07.369 I/TestRunner( 5209): started: t01_firstLaunchSkipEverything(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:55:07.435 I/Telemet ( 5209): All app data cleared
+10-19 20:55:19.552 I/Telemet ( 5209): Setup finished
+10-19 20:55:22.386 I/TestRunner( 5209): finished: t01_firstLaunchSkipEverything(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:55:24.230 I/TestRunner( 5209): started: t02_permissionsGrantedNoOnboardingAgain(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:55:29.025 I/TestRunner( 5209): finished: t02_permissionsGrantedNoOnboardingAgain(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:55:29.848 I/TestRunner( 5209): started: t03_ridesListAndDetail(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:55:48.660 I/TestRunner( 5209): finished: t03_ridesListAndDetail(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:55:49.453 I/TestRunner( 5209): started: t04_settingsAndUnits(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:55:55.772 I/TestRunner( 5209): finished: t04_settingsAndUnits(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:55:56.266 I/TestRunner( 5209): started: t05_clearDataWithBackupAndRestore(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:56:05.228 I/Telemet ( 5209): Backup created: Downloads/Telemet/Backup/telemet-backup-20261019-205605.zip (87487 bytes)
+10-19 20:56:05.382 I/Telemet ( 5209): All app data cleared
+10-19 20:56:08.072 I/Telemet ( 5209): Backup restored: 2 rides, settings=true
+10-19 20:56:16.417 I/Telemet ( 5209): Setup finished
+10-19 20:56:17.591 I/TestRunner( 5209): finished: t05_clearDataWithBackupAndRestore(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:56:18.076 I/TestRunner( 5209): started: t06_languages(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:56:57.900 I/TestRunner( 5209): finished: t06_languages(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:56:58.353 I/TestRunner( 5209): started: t07_logScreen(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:57:00.976 I/TestRunner( 5209): finished: t07_logScreen(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:57:01.289 I/TestRunner( 5209): started: t08_upgradeWithPermissionsSkipsWizard(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:57:03.909 I/TestRunner( 5209): finished: t08_upgradeWithPermissionsSkipsWizard(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:57:04.669 I/TestRunner( 5209): started: t09_freshInstallShowsWizard(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:57:07.099 I/TestRunner( 5209): finished: t09_freshInstallShowsWizard(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:57:07.566 I/TestRunner( 5209): started: t10_overlayFrameAndEncoder(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:57:09.631 I/Telemet ( 5209): Overlay test: 120 frames, last pts 3966666 us, took 1614 ms, 212417 bytes
+10-19 20:57:09.631 I/TestRunner( 5209): finished: t10_overlayFrameAndEncoder(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:57:09.633 I/TestRunner( 5209): started: t11_videoMatch(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:57:10.176 I/Telemet ( 5209): Video match: 3 video(s) read
+10-19 20:57:10.200 I/Telemet ( 5209): Video match: time source FILE_UTC, offset 0 s, DJI_A_0001_D.MP4 100%, DJI_A_0002_D.MP4 100%, other.mp4 0%
+10-19 20:57:12.074 I/Telemet ( 5209): Video match: time source FILE_UTC, offset 1 s, DJI_A_0001_D.MP4 100%, DJI_A_0002_D.MP4 100%, other.mp4 0%
+10-19 20:57:12.373 I/Telemet ( 5209): Video match: time source FILE_UTC, offset 0 s, DJI_A_0001_D.MP4 100%, DJI_A_0002_D.MP4 100%, other.mp4 0%
+10-19 20:57:13.658 I/Telemet ( 5209): Video match: saved 4 file(s)
+10-19 20:57:14.954 I/Telemet ( 5209): Video match: saved 2 file(s)
+10-19 20:57:15.303 I/Telemet ( 5209): Overlay video: DJI_A_0001_D_overlay.mp4 1920x1080, 6 s
+10-19 20:57:22.622 I/Telemet ( 5209): Overlay video ready in 7 s: Movies/Telemet/DJI_A_0001_D_overlay.mp4
+10-19 20:57:22.625 I/Telemet ( 5209): Overlay video: DJI_A_0002_D_overlay.mp4 1920x1080, 5 s
+10-19 20:57:28.231 I/Telemet ( 5209): Overlay video ready in 5 s: Movies/Telemet/DJI_A_0002_D_overlay.mp4
+10-19 20:57:29.464 I/TestRunner( 5209): finished: t11_videoMatch(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:57:29.884 I/TestRunner( 5209): started: t12_newSettings(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:57:31.841 I/Telemet ( 5209): Automatic recording on
+10-19 20:57:35.719 I/TestRunner( 5209): finished: t12_newSettings(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:57:36.190 I/TestRunner( 5209): started: t13_gpsIssueWarning(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:57:37.803 I/Telemet ( 5209): Telemet started (version 0.1.25)
+10-19 20:57:37.807 I/Telemet ( 5209): GPS started
+10-19 20:57:37.810 I/Telemet ( 5209): Sensors: gyroscope yes, gravity yes, barometer yes
+10-19 20:57:37.813 I/Telemet ( 5209): Backup recording started: surus_20261019_205737
+10-19 20:57:37.833 I/Telemet ( 5209): Scan started (filtered)
+10-19 20:57:57.844 I/Telemet ( 5209): Camera not found, scanning again in 3 s
+10-19 20:58:00.854 I/Telemet ( 5209): Scan started (unfiltered)
+10-19 20:58:08.147 W/Telemet ( 5209): GPS problem: no data from the phone's GPS for 30 s (0 satellites visible). A mock-location app may still be selected in Developer options, or the system is blocking location.
+10-19 20:58:10.175 W/Telemet ( 5209): GPS problem: 6 satellites visible but no position yet. Go outdoors with a clear sky.
+10-19 20:58:12.854 I/Telemet ( 5209): Filled 35 s before the first GPS fix with the first position
+10-19 20:58:13.255 I/Telemet ( 5209): GPS problem cleared
+10-19 20:58:14.325 W/Telemet ( 5209): Location turned off! No GPS data will arrive.
+10-19 20:58:15.317 W/Telemet ( 5209): GPS problem: phone location is turned off
+10-19 20:58:16.457 W/Telemet ( 5209): GPS signal lost
+10-19 20:58:18.097 I/Telemet ( 5209): GPS stopped
+10-19 20:58:18.131 I/Telemet ( 5209): Ride saved: Downloads/Telemet/surus_20261019_205737.fit and .gpx (42 points, 0.0 km)
+10-19 20:58:18.133 I/Telemet ( 5209): Telemet stopped
+10-19 20:58:18.581 I/TestRunner( 5209): finished: t13_gpsIssueWarning(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:58:19.302 I/TestRunner( 5209): run finished: 13 tests, 0 failed, 0 ignored

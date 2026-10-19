@@ -1,0 +1,191 @@
+10-19 20:57:29.884  5209  5239 I TestRunner: started: t12_newSettings(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:57:29.934   519  2157 W InputManager-JNI: Input channel object 'd420af3 io.github.avsessisozx.telemet/io.github.avsessisozx.telemet.ui.VideoSyncActivity (client)' was disposed without first being removed with the input manager!
+10-19 20:57:30.031   519   594 I ActivityManager: Broadcasting: Intent { act=android.intent.action.CLOSE_SYSTEM_DIALOGS flg=0x400000 }
+10-19 20:57:30.035   834   834 I vol.VolumeDialogImpl: mDialog.dismiss() reason: volume_controller from: com.android.systemui.volume.VolumeDialogImpl$7.onDismissRequested:3
+10-19 20:57:30.036   519   536 I ActivityManager: Broadcast completed: result=0
+10-19 20:57:30.053   834   899 D SplashScreenView: Build android.window.SplashScreenView{9ec7f17 V.E...... ......ID 0,0-0,0}
+10-19 20:57:30.053   834   899 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-19 20:57:30.053   834   899 D SplashScreenView: Branding: view: android.view.View{b354f04 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-19 20:57:30.084   399   399 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+10-19 20:57:30.093  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@849f514 in: PRE_ON_CREATE
+10-19 20:57:30.191  1634  1634 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+10-19 20:57:30.192  1634  2154 E HwDetectorWithState: a: 3
+10-19 20:57:30.298  5209  5209 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-19 20:57:30.484  5209  5224 I ssisozx.telemet: Background young concurrent copying GC freed 29748(1692KB) AllocSpace objects, 47(2560KB) LOS objects, 43% free, 4869KB/8668KB, paused 43us,16us total 163.977ms
+10-19 20:57:30.540  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@849f514 in: CREATED
+10-19 20:57:30.543  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@849f514 in: STARTED
+10-19 20:57:30.544   971  7582 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+10-19 20:57:30.545  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@849f514 in: RESUMED
+10-19 20:57:30.567   834   906 D EGL_emulation: app_time_stats: avg=7750.47ms min=7750.47ms max=7750.47ms count=1
+10-19 20:57:30.630  5209  5209 D AutofillManager: notifyViewEnteredForFillDialog:1073741824
+10-19 20:57:30.631  5209  5209 D AutofillManager: notifyViewEnteredForFillDialog:1073741825
+10-19 20:57:30.632  5209  5209 D AutofillManager: notifyViewEnteredForFillDialog:1073741826
+10-19 20:57:30.633  5209  5209 D AutofillManager: notifyViewEnteredForFillDialog:1073741827
+10-19 20:57:30.633  5209  5209 D AutofillManager: notifyViewEnteredForFillDialog:1073741828
+10-19 20:57:30.635  5209  5209 D AutofillManager: notifyViewEnteredForFillDialog:1073741829
+10-19 20:57:30.699   519   536 W ziparchive: Unable to open '/data/app/~~qfLb8u394HXUdHG2JjTXwA==/io.github.avsessisozx.telemet-3OgxvqJ8zWKfDTmwelEPcA==/base.dm': No such file or directory
+10-19 20:57:30.699   519   536 I ActivityTaskManager: Displayed io.github.avsessisozx.telemet/.ui.MainActivity for user 0: +655ms
+10-19 20:57:30.756   519   594 I ImeTracker: io.github.avsessisozx.telemet:cea2bfd3: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-19 20:57:30.756   519   594 I ImeTracker: io.github.avsessisozx.telemet:cea2bfd3: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-19 20:57:30.768   834   898 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@a43536e
+10-19 20:57:30.770   519   594 W InputManager-JNI: Input channel object '9a553cb Splash Screen io.github.avsessisozx.telemet (client)' was disposed without first being removed with the input manager!
+10-19 20:57:30.864   971  7582 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:57:30.865   971  7582 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:57:30.865   971  7582 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:57:30.865   971  7582 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:57:30.866  5273  5306 I ImeTracker: com.google.android.apps.nexuslauncher:c7d2690f: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+10-19 20:57:30.866  5273  5306 I ImeTracker: com.google.android.apps.nexuslauncher:c7d2690f: onFailed at PHASE_CLIENT_VIEW_SERVED
+10-19 20:57:30.868  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+10-19 20:57:30.872  5273  5369 D OneSearchSuggestProvider: Shut down the binder channel
+10-19 20:57:30.906  5273  5886 I IPCThreadState: oneway function results for code 2 on binder at 0x7106ebdd90c0 will be dropped but finished with status UNKNOWN_TRANSACTION
+10-19 20:57:30.908  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-19 20:57:30.908  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.avsessisozx.telemet fieldId=0 fieldName=null extras=null}, false)
+10-19 20:57:30.908  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-19 20:57:30.908  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-19 20:57:30.917  1019  1316 D BtGatt.ScanManager: uid 10131 isForeground true scanMode -1
+10-19 20:57:30.917  1019  1316 D BtGatt.ScanManager: uid 10131 isForeground true scanMode -1
+10-19 20:57:31.120   971  7582 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:57:31.122   971  7582 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:57:31.122   971  7582 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:57:31.122   971  7582 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:57:31.259  2975  3938 I DialerTaskExecutor: com.android.voicemail.impl.scheduling.TaskExecutor$WorkerThreadHandler.handleMessage:221 executing task com.android.voicemail.impl.ActivationTask@e49f0a7 [CONTEXT enable_persistent_logger=true ]
+10-19 20:57:31.261  2975  2975 I DialerLogcatLoggingBindings: com.android.dialer.logging.logcat.LogcatLoggingBindings.logImpression:41 Impression: VVM_ACTIVATION_STARTED
+10-19 20:57:31.262  2975  3938 I DialerPreOMigrationHandler: com.android.voicemail.impl.PreOMigrationHandler.migrate:76 ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} already migrated [CONTEXT enable_persistent_logger=true ]
+10-19 20:57:31.265  2975  3938 I DialerOmtpVvmCarrierConfigHelper: com.android.voicemail.impl.OmtpVvmCarrierConfigHelper.isCarrierAppInstalled:637 carrier app not installed in this device [CONTEXT ratelimit_period="1 MINUTES [skipped: 4]" ]
+10-19 20:57:31.265  2975  3938 I DialerVoicemailStatus: com.android.voicemail.impl.VoicemailStatus$Editor.apply:112 enter
+10-19 20:57:31.266  2975  3938 I DialerVoicemailStatusDataServiceImpl: com.android.dialer.voicemailstatus.dataservice.impl.VoicemailStatusDataServiceImpl.insertOrUpdateVoicemailStatus:196 enter
+10-19 20:57:31.270  2975  7585 I DialerRestVoicemailEnabledFn: com.android.dialer.voicemail.service.impl.vvmclients.rest.RestVoicemailEnabledFn.isEnabled:51 disabled by flag [CONTEXT ratelimit_period="1 MINUTES [skipped: 23]" ]
+10-19 20:57:31.270  2975  7585 I DialerCvvmEnabledFn: com.android.dialer.voicemail.service.impl.vvmclients.omtp.protocol.cvvm.CvvmEnabledFn.isEnabled:37 disabled by flag [CONTEXT ratelimit_period="1 MINUTES [skipped: 11]" ]
+10-19 20:57:31.276  2975  7585 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 20:57:31.276  2975  7585 I DialerVoicemailStatusDataServiceImpl: com.android.dialer.voicemailstatus.dataservice.impl.VoicemailStatusDataServiceImpl.lambda$insertOrUpdateVoicemailStatus$5:213 merged status: # kee@6600c263
+10-19 20:57:31.277  2975  3938 I DialerActivationTask: com.android.voicemail.impl.ActivationTask.onExecuteInBackgroundThread:292 VVM content provider configured - vvm_type_cvvm PhoneAccountHandle: [ComponentName: com.android.phone/com.android.services.telephony.TelephonyConnectionService subId: 1] [CONTEXT enable_persistent_logger=true ]
+10-19 20:57:31.278  2975  3938 I DialerActivationTask: com.android.voicemail.impl.ActivationTask.updateVoicemailsWithIccId:477 conversion disabled [CONTEXT enable_persistent_logger=true ]
+10-19 20:57:31.278  2975  3938 I DialerOmtpVvmCarrierConfigHelper: com.android.voicemail.impl.OmtpVvmCarrierConfigHelper.handleEvent:527 OmtpEvent:CONFIG_ACTIVATING PhoneAccountHandle: [ComponentName: com.android.phone/com.android.services.telephony.TelephonyConnectionService subId: 1] [CONTEXT enable_persistent_logger=true ]
+10-19 20:57:31.279  2975  3938 I DialerVoicemailStatus: com.android.voicemail.impl.VoicemailStatus$Editor.apply:112 enter
+10-19 20:57:31.279  2975  3938 I DialerVoicemailStatusDataServiceImpl: com.android.dialer.voicemailstatus.dataservice.impl.VoicemailStatusDataServiceImpl.insertOrUpdateVoicemailStatus:196 enter
+10-19 20:57:31.287  2975  7585 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 20:57:31.287  2975  7585 I DialerVoicemailStatusDataServiceImpl: com.android.dialer.voicemailstatus.dataservice.impl.VoicemailStatusDataServiceImpl.lambda$insertOrUpdateVoicemailStatus$5:213 merged status: # kee@6600c263
+10-19 20:57:31.289  2975  3938 I DialerActivationTask: com.android.voicemail.impl.ActivationTask.onExecuteInBackgroundThread:339 sending an activation request [CONTEXT enable_persistent_logger=true ]
+10-19 20:57:31.291  1043  1243 D SmsNumberUtils: enter filterDestAddr. destAddr="[BajqU4K5_YhSYbs-7QUn0dOwcmI]"
+10-19 20:57:31.292  1043  1243 D SmsNumberUtils: destAddr is not formatted.
+10-19 20:57:31.292  1043  1243 D SmsNumberUtils: leave filterDestAddr, new destAddr="[BajqU4K5_YhSYbs-7QUn0dOwcmI]"
+10-19 20:57:31.296  2975  3938 I DialerLogcatLoggingBindings: com.android.dialer.logging.logcat.LogcatLoggingBindings.logImpression:46 Impression: CVVM_SEND_VVM_SMS
+10-19 20:57:31.339  5209  5209 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view view.getTag() is "setting_mimo_extras"
+10-19 20:57:31.345  5209  5209 I ViewInteraction: Performing 'scroll to' action on view view.getTag() is "setting_mimo_extras"
+10-19 20:57:31.347  5209  5209 I ScrollToAction: View is already displayed. Returning.
+10-19 20:57:31.350  5209  5209 I ViewInteraction: Performing 'single click' action on view view.getTag() is "setting_mimo_extras"
+10-19 20:57:31.354  5273  5273 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=539.5, y[0]=936.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=256897, downTime=256897, deviceId=-1, source=0x1002, displayId=0, eventId=-728259068 }
+10-19 20:57:31.394  5273  5273 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=539.5, y[0]=936.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=256938, downTime=256897, deviceId=-1, source=0x1002, displayId=0, eventId=-823130720 }
+10-19 20:57:31.408   396   396 D audioserver: FGS Logger Transaction failed
+10-19 20:57:31.408   396   396 D audioserver: -129
+10-19 20:57:31.413   396   504 D AudioFlinger: mixer(0x72cd8a7c8930) throttle end: throttle time(8)
+10-19 20:57:31.571   396   504 D audioserver: FGS Logger Transaction failed
+10-19 20:57:31.571   396   504 D audioserver: -129
+10-19 20:57:31.771  5209  5209 I ViewInteraction: Performing 'scroll to' action on view view.getTag() is "setting_auto_record"
+10-19 20:57:31.774  5209  5209 I ScrollToAction: View is already displayed. Returning.
+10-19 20:57:31.776  5209  5209 I ViewInteraction: Performing 'single click' action on view view.getTag() is "setting_auto_record"
+10-19 20:57:31.780  5273  5273 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=539.5, y[0]=2008.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=257324, downTime=257324, deviceId=-1, source=0x1002, displayId=0, eventId=-987099836 }
+10-19 20:57:31.798  2975  2975 I DialerStatusSmsFetcher: com.android.voicemail.impl.sms.StatusSmsFetcher.onReceive:106 Request SMS successfully sent [CONTEXT enable_persistent_logger=true ]
+10-19 20:57:31.820  5273  5273 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=539.5, y[0]=2008.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=BUTTON_PRIMARY, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=257365, downTime=257324, deviceId=-1, source=0x1002, displayId=0, eventId=-179426118 }
+10-19 20:57:31.841  5209  5209 I Telemet : Automatic recording on
+10-19 20:57:31.842   396   396 D audioserver: FGS Logger Transaction failed
+10-19 20:57:31.842   396   396 D audioserver: -129
+10-19 20:57:31.845   971  7582 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:57:31.849   971  7582 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:57:31.849   971  7582 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:57:31.849   971  7582 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:57:31.854  5209  5267 D EGL_emulation: app_time_stats: avg=122.71ms min=29.94ms max=482.43ms count=9
+10-19 20:57:31.864   396   504 D AudioFlinger: mixer(0x72cd8a7c8930) throttle end: throttle time(44)
+10-19 20:57:32.069   396   504 D audioserver: FGS Logger Transaction failed
+10-19 20:57:32.069   396   504 D audioserver: -129
+10-19 20:57:32.125   971  7582 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:57:32.126   971  7582 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:57:32.127   971  7582 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:57:32.127   971  7582 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:57:32.735   834   834 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-19 20:57:32.844   971  7582 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:57:32.846   971  7582 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:57:32.846   971  7582 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:57:32.846   971  7582 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:57:33.111   478   832 D BufferPoolAccessor2.0: bufferpool2 0x7ceb4e9ae0f8 : 0(0 size) total buffers - 0(0 size) used buffers - 149/151 (recycle/alloc) - 2/150 (fetch/transfer)
+10-19 20:57:33.111   478   832 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+10-19 20:57:33.130   971  7582 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:57:33.133   971  7582 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:57:33.133   971  7582 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:57:33.133   971  7582 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:57:33.213  1621  1840 D PickerSyncController: syncAllMedia
+10-19 20:57:33.213  1621  1840 D PickerSyncController: syncAllMediaFromProvider() LOCAL, auth=com.android.providers.media.photopicker, retry=true
+10-19 20:57:33.213  1621  1840 D PickerSyncController: getSyncRequestParams() LOCAL, auth=com.android.providers.media.photopicker
+10-19 20:57:33.214  1621  1840 D PickerSyncController:    Latest ID/Gen=1407:6b8ae332-7487-43d0-a67d-a1913530cbf4:external_primary/139
+10-19 20:57:33.214  1621  1840 D PickerSyncController:    Cached ID/Gen=1407:6b8ae332-7487-43d0-a67d-a1913530cbf4:external_primary/114
+10-19 20:57:33.214  1621  1840 D PickerSyncController:    RESULT=SyncRequestParams{type=MEDIA_INCREMENTAL, gen=114, latest=Bundle[{last_media_sync_generation=139, media_collection_id=1407:6b8ae332-7487-43d0-a67d-a1913530cbf4:external_primary}]}
+10-19 20:57:33.214  1621  1840 I PickerSyncController: Executing SyncAdd. isLocal: true. authority: com.android.providers.media.photopicker
+10-19 20:57:33.215  1621  1840 I PickerSyncController: Paged sync successful. QueryArgs: Bundle[{android.provider.extra.SYNC_GENERATION=114}]. Result count: 1. Cursor count: 1
+10-19 20:57:33.216  1621  1840 I PickerSyncController: Executing SyncRemove. isLocal: true. authority: com.android.providers.media.photopicker
+10-19 20:57:33.217  1621  1840 I PickerSyncController: Paged sync successful. QueryArgs: Bundle[{android.provider.extra.SYNC_GENERATION=114}]. Result count: 0. Cursor count: 0
+10-19 20:57:33.217  1621  1840 D PickerSyncController: syncAllMediaFromProvider() CLOUD, auth=null, retry=true
+10-19 20:57:33.217  1621  1840 D PickerSyncController: getSyncRequestParams() CLOUD, auth=null
+10-19 20:57:33.217  1621  1840 D PickerSyncController:    RESULT=SyncRequestParams{type=MEDIA_RESET, gen=0, latest=null}
+10-19 20:57:33.217  1621  1840 I PickerSyncController: Executing SyncReset. isLocal: false. authority: null
+10-19 20:57:33.217  1621  1840 I PickerSyncController: SyncReset. isLocal:false. authority: null. result count: 0
+10-19 20:57:33.217  1621  1840 D PickerSyncController: Ignoring cache media info for null authority with bundle: null
+10-19 20:57:33.217  1621  1840 I PickerSyncController: Executing SyncAlbumReset. isLocal: true. authority: com.android.providers.media.photopicker. albumId: null
+10-19 20:57:33.217  1621  1840 I PickerSyncController: Successfully executed SyncResetAlbum. authority: com.android.providers.media.photopicker. albumId: null. Result count: 0
+10-19 20:57:33.217  1621  1840 I PickerSyncController: Executing SyncAlbumReset. isLocal: false. authority: null. albumId: null
+10-19 20:57:33.217  1621  1840 I PickerSyncController: Successfully executed SyncResetAlbum. authority: null. albumId: null. Result count: 0
+10-19 20:57:33.255  5174  5199 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-19 20:57:33.255  5174  5199 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-19 20:57:33.255  5174  5199 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-19 20:57:33.255  5174  5199 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-19 20:57:33.255  5174  5199 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-19 20:57:33.256  5174  5199 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-19 20:57:33.256  5174  5199 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-19 20:57:33.256  5174  5199 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-19 20:57:33.256  5174  5199 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-19 20:57:33.256  5174  5199 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-19 20:57:33.374  1621  2038 W MediaProvider: isAppCloneUserPair for user 0: false
+10-19 20:57:33.394  5478  6208 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 258 [CONTEXT service_id=218 ]
+10-19 20:57:33.397  5478  6208 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 12 uptime_millis: 12 exec_start_elapsed_seconds: 258 [CONTEXT service_id=218 ]
+10-19 20:57:33.426   519  2182 I ActivityManager: Broadcasting: Intent { act=android.intent.action.CLOSE_SYSTEM_DIALOGS flg=0x400000 }
+10-19 20:57:33.428   834   834 I vol.VolumeDialogImpl: mDialog.dismiss() reason: volume_controller from: com.android.systemui.volume.VolumeDialogImpl$7.onDismissRequested:3
+10-19 20:57:33.429   519   536 I ActivityManager: Broadcast completed: result=0
+10-19 20:57:33.436   834   899 D SplashScreenView: Build android.window.SplashScreenView{8662b92 V.E...... ......ID 0,0-0,0}
+10-19 20:57:33.436   834   899 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-19 20:57:33.436   834   899 D SplashScreenView: Branding: view: android.view.View{9b33963 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-19 20:57:33.437  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@849f514 in: PAUSED
+10-19 20:57:33.463  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@1787488 in: PRE_ON_CREATE
+10-19 20:57:33.486   399   399 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+10-19 20:57:33.530   834   906 E OpenGLRenderer: Unable to match the desired swap behavior.
+10-19 20:57:33.545  5209  5209 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-19 20:57:33.638   834   906 E OpenGLRenderer: Unable to match the desired swap behavior.
+10-19 20:57:33.712  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@1787488 in: CREATED
+10-19 20:57:33.712  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@1787488 in: STARTED
+10-19 20:57:33.723  5209  5224 I ssisozx.telemet: Background concurrent copying GC freed 29583(1260KB) AllocSpace objects, 31(2160KB) LOS objects, 49% free, 5401KB/10MB, paused 29us,14us total 141.988ms
+10-19 20:57:33.792  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@1787488 in: RESUMED
+10-19 20:57:33.869   971  7582 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:57:33.871   971  7582 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:57:33.871   971  7582 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:57:33.871   971  7582 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:57:33.948   519   536 I ActivityTaskManager: Displayed io.github.avsessisozx.telemet/.ui.MainActivity for user 0: +516ms
+10-19 20:57:33.961   834   898 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@40692d5
+10-19 20:57:33.962   519   533 W InputManager-JNI: Input channel object '5f68d67 Splash Screen io.github.avsessisozx.telemet (client)' was disposed without first being removed with the input manager!
+10-19 20:57:34.042   519   533 I ImeTracker: io.github.avsessisozx.telemet:704f03a: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-19 20:57:34.042   519   533 I ImeTracker: io.github.avsessisozx.telemet:704f03a: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-19 20:57:34.043  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+10-19 20:57:34.044  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-19 20:57:34.044  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.avsessisozx.telemet fieldId=0 fieldName=null extras=null}, false)
+10-19 20:57:34.045  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-19 20:57:34.045  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-19 20:57:34.060   971  7582 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:119
+10-19 20:57:34.063   519   536 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda13@ab44c6c
+10-19 20:57:34.063   519   536 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda12@595a235
+10-19 20:57:34.064  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@849f514 in: STOPPED
+10-19 20:57:34.065  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@849f514 in: DESTROYED
+10-19 20:57:34.065  5209  5209 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@b5345ff
+10-19 20:57:34.080   834   906 D EGL_emulation: app_time_stats: avg=1754.43ms min=4.88ms max=3503.98ms count=2
+10-19 20:57:34.088   519   533 W InputManager-JNI: Input channel object 'f135ad8 io.github.avsessisozx.telemet/io.github.avsessisozx.telemet.ui.MainActivity (client)' was disposed without first being removed with the input manager!
+10-19 20:57:34.640  5209  5209 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view view.getTag() is "match_videos"
+10-19 20:57:34.947   341  5399 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 2858176
+10-19 20:57:35.412  5209  5267 D EGL_emulation: app_time_stats: avg=362.57ms min=34.75ms max=1233.43ms count=4
+10-19 20:57:35.706  1621  2039 W MediaProvider: isAppCloneUserPair for user 0: false
+10-19 20:57:35.719  5209  5239 I TestRunner: finished: t12_newSettings(io.github.avsessisozx.telemet.UiFlowTest)

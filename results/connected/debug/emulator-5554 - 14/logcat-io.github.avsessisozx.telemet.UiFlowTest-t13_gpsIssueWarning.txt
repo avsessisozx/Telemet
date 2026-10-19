@@ -1,0 +1,1092 @@
+10-19 20:57:36.190  5209  5239 I TestRunner: started: t13_gpsIssueWarning(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:57:36.291   519  1963 W InputManager-JNI: Input channel object 'ebee4ac io.github.avsessisozx.telemet/io.github.avsessisozx.telemet.ui.MainActivity (client)' was disposed without first being removed with the input manager!
+10-19 20:57:36.326  5209  5239 W UiAutomation: UiAutomation.grantRuntimePermission() is more robust and should be used instead of 'pm grant'
+10-19 20:57:36.359  5209  5239 W UiAutomation: UiAutomation.grantRuntimePermission() is more robust and should be used instead of 'pm grant'
+10-19 20:57:36.380  5209  5239 W UiAutomation: UiAutomation.grantRuntimePermission() is more robust and should be used instead of 'pm grant'
+10-19 20:57:36.401  5209  5239 W UiAutomation: UiAutomation.grantRuntimePermission() is more robust and should be used instead of 'pm grant'
+10-19 20:57:36.417  5209  5239 W UiAutomation: UiAutomation.grantRuntimePermission() is more robust and should be used instead of 'pm grant'
+10-19 20:57:36.453  5209  5239 W UiAutomation: UiAutomation.grantRuntimePermission() is more robust and should be used instead of 'pm grant'
+10-19 20:57:36.545  5478  7690 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-19 20:57:36.553  5478  6954 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-19 20:57:36.554  5478  5695 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-19 20:57:36.555  5478  5695 I NearbyDiscovery: DiscoveryController, showNotification, itemSize=0 [CONTEXT service_id=265 ]
+10-19 20:57:36.555  5478  5695 I NearbyDiscovery: Show notifications: 0 total, no changes since last shown, no-op. [CONTEXT service_id=265 ]
+10-19 20:57:36.555  5478  7698 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-19 20:57:36.558  5552  7701 I LocationHistory: [IntentOperation] Handling action android.location.PROVIDERS_CHANGED [CONTEXT service_id=314 ]
+10-19 20:57:36.558  5552  7701 I LocationHistory: [IntentOperation] Device settings changed to ENABLED. Scheduling periodic tasks. [CONTEXT service_id=314 ]
+10-19 20:57:36.559  5552  7701 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.storevisits.StoreVisitsProcessingService.StoreVisitsProcessing is scheduled to run EVERY_6_HOURS [CONTEXT service_id=173 ]
+10-19 20:57:36.561  5552  7701 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.wifi.WifiPlaceVisitProcessingService.WifiPlaceVisit is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.562  5552  7701 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.uploads.BatchDeidentifiedDataUploadService.BatchDeidentifiedDataUpload is scheduled to run EVERY_6_HOURS [CONTEXT service_id=173 ]
+10-19 20:57:36.563  5552  7701 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.geller.GellerCleanupService.GellerCleanup is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.564  5552  7701 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.settings.LocationHistoryActiveProcessingService.LocationHistoryActiveProcessing is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.564  5478  6954 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-19 20:57:36.565  5552  7701 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.pulp.PulpInferenceService.PulpInference is scheduled to run EVERY_7_DAYS [CONTEXT service_id=173 ]
+10-19 20:57:36.566  5552  7701 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.pulp.PulpMddDownloadScheduleService.PulpMddRefreshDownloadTask is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.567  5552  7701 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.pulp.PulpMddMaintenanceService.PulpMddMaintenanceTask is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.567  5552  7701 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.FederatedScheduleService.FederatedLocation is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.568  5552  7701 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedTaskIdentityDataService is not available. This may cause the task to be lost.
+10-19 20:57:36.568  5552  7701 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.FederatedTaskIdentityDataService.FederatedLocation is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.569  5552  7701 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedJobHistoryService is not available. This may cause the task to be lost.
+10-19 20:57:36.569  5552  7701 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.FederatedJobHistoryService.FederatedLocation is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.570  5552  7701 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhDatabaseCleanupJob.OdlhDatabaseCleanup is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.570  5552  7701 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditMergeJob.EditMergeJob is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.571  5552  7701 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditUploadJob.EditUploadJob is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.572  5552  7701 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.historicalbusyness.HistoricalBusynessProcessingService.HistoricalBusyness is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.572  5552  7701 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhRemovedAccountsCleanupJob.OdlhRemovedAccountsCleanup is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.573   519  2164 I ActivityManager: Broadcasting: Intent { act=android.intent.action.CLOSE_SYSTEM_DIALOGS flg=0x400000 }
+10-19 20:57:36.575  5552  7701 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhUserEditSyncJob.OdlhUserEditSync is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.576   834   834 I vol.VolumeDialogImpl: mDialog.dismiss() reason: volume_controller from: com.android.systemui.volume.VolumeDialogImpl$7.onDismissRequested:3
+10-19 20:57:36.576   519   536 I ActivityManager: Broadcast completed: result=0
+10-19 20:57:36.584   834   899 D SplashScreenView: Build android.window.SplashScreenView{4a5bc81 V.E...... ......ID 0,0-0,0}
+10-19 20:57:36.584   834   899 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-19 20:57:36.584   834   899 D SplashScreenView: Branding: view: android.view.View{6c6c126 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-19 20:57:36.587  5552  7701 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.regionfetcher.RegionMddMaintenanceService.RegionMddMaintenanceTask is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.587  5552  7701 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.regionfetcher.RegionMddDownloadScheduleService.RegionMddRefreshDownloadTask is scheduled to run EVERY_6_HOURS [CONTEXT service_id=173 ]
+10-19 20:57:36.588  5552  7702 I LocationHistory: [IntentOperation] Handling action android.location.PROVIDERS_CHANGED [CONTEXT service_id=314 ]
+10-19 20:57:36.588  5552  7702 I LocationHistory: [IntentOperation] Device settings changed to ENABLED. Scheduling periodic tasks. [CONTEXT service_id=314 ]
+10-19 20:57:36.588  5552  7702 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.storevisits.StoreVisitsProcessingService.StoreVisitsProcessing is scheduled to run EVERY_6_HOURS [CONTEXT service_id=173 ]
+10-19 20:57:36.588  5552  7702 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.wifi.WifiPlaceVisitProcessingService.WifiPlaceVisit is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.588  5552  7702 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.uploads.BatchDeidentifiedDataUploadService.BatchDeidentifiedDataUpload is scheduled to run EVERY_6_HOURS [CONTEXT service_id=173 ]
+10-19 20:57:36.588  5552  7702 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.geller.GellerCleanupService.GellerCleanup is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.588  5552  7702 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.settings.LocationHistoryActiveProcessingService.LocationHistoryActiveProcessing is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.589  5552  7702 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.pulp.PulpInferenceService.PulpInference is scheduled to run EVERY_7_DAYS [CONTEXT service_id=173 ]
+10-19 20:57:36.589  5552  7702 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.pulp.PulpMddDownloadScheduleService.PulpMddRefreshDownloadTask is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.589  5552  7702 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.pulp.PulpMddMaintenanceService.PulpMddMaintenanceTask is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.589  5552  7702 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.FederatedScheduleService.FederatedLocation is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.589  5552  7702 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedTaskIdentityDataService is not available. This may cause the task to be lost.
+10-19 20:57:36.593  5552  7702 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.FederatedTaskIdentityDataService.FederatedLocation is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.604  5552  7702 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedJobHistoryService is not available. This may cause the task to be lost.
+10-19 20:57:36.607  5552  7702 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.FederatedJobHistoryService.FederatedLocation is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.608  5552  7702 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhDatabaseCleanupJob.OdlhDatabaseCleanup is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.609  5552  7702 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditMergeJob.EditMergeJob is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.609  5552  7702 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditUploadJob.EditUploadJob is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.609  5552  7702 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.historicalbusyness.HistoricalBusynessProcessingService.HistoricalBusyness is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.614  5552  7702 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhRemovedAccountsCleanupJob.OdlhRemovedAccountsCleanup is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.615  5552  7702 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhUserEditSyncJob.OdlhUserEditSync is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.615  5552  7702 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.regionfetcher.RegionMddMaintenanceService.RegionMddMaintenanceTask is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:57:36.615  5552  7702 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.regionfetcher.RegionMddDownloadScheduleService.RegionMddRefreshDownloadTask is scheduled to run EVERY_6_HOURS [CONTEXT service_id=173 ]
+10-19 20:57:36.620   399   399 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+10-19 20:57:36.735  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@73d1429 in: PRE_ON_CREATE
+10-19 20:57:36.744  1634  1634 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+10-19 20:57:36.744  1634  2150 E HwDetectorWithState: a: 3
+10-19 20:57:36.780  5478  7714 I GCoreUlr: WorldUpdater received intent Intent { act=com.google.android.location.reporting.ACTION_UPDATE_WORLD cmp=com.google.android.gms/com.google.android.location.reporting.service.DispatchingService (has extras) } with receiverAction android.location.PROVIDERS_CHANGED
+10-19 20:57:36.790  5478  7714 I GCoreUlr: WorldUpdater:android.location.PROVIDERS_CHANGED: Ensuring that reporting is stopped because of reasons: (no Google accounts)
+10-19 20:57:36.797  5478  7714 I GCoreUlr: Unbound from all signal providers.
+10-19 20:57:36.799  5478  7714 I GCoreUlr: WorldUpdater received intent Intent { act=com.google.android.location.reporting.ACTION_UPDATE_WORLD cmp=com.google.android.gms/com.google.android.location.reporting.service.DispatchingService (has extras) } with receiverAction android.location.PROVIDERS_CHANGED
+10-19 20:57:36.799  5478  7714 I GCoreUlr: WorldUpdater:android.location.PROVIDERS_CHANGED: Ensuring that reporting is stopped because of reasons: (no Google accounts)
+10-19 20:57:36.810  5478  7714 I GCoreUlr: Unbound from all signal providers.
+10-19 20:57:36.890  5209  5209 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-19 20:57:36.912  5478  5478 I GCoreUlr: Unbound from all signal providers.
+10-19 20:57:36.913  5478  5478 I GCoreUlr: Stopping handler for UlrDispSvcFast
+10-19 20:57:37.044  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@73d1429 in: CREATED
+10-19 20:57:37.066  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@73d1429 in: STARTED
+10-19 20:57:37.074  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@73d1429 in: RESUMED
+10-19 20:57:37.228   519   536 W ziparchive: Unable to open '/data/app/~~qfLb8u394HXUdHG2JjTXwA==/io.github.avsessisozx.telemet-3OgxvqJ8zWKfDTmwelEPcA==/base.dm': No such file or directory
+10-19 20:57:37.229   519   536 I ActivityTaskManager: Displayed io.github.avsessisozx.telemet/.ui.MainActivity for user 0: +646ms
+10-19 20:57:37.256   834   898 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@3bce480
+10-19 20:57:37.261  5273  5369 D OneSearchSuggestProvider: Shut down the binder channel
+10-19 20:57:37.263  1019  1316 D BtGatt.ScanManager: uid 10131 isForeground true scanMode -1
+10-19 20:57:37.263  1019  1316 D BtGatt.ScanManager: uid 10131 isForeground true scanMode -1
+10-19 20:57:37.264  5273  5886 I IPCThreadState: oneway function results for code 2 on binder at 0x7106ebda9ba0 will be dropped but finished with status UNKNOWN_TRANSACTION
+10-19 20:57:37.266  5273  5306 I ImeTracker: com.google.android.apps.nexuslauncher:bbd7a36e: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+10-19 20:57:37.267   519  2172 I ImeTracker: com.google.android.apps.nexuslauncher:bbd7a36e: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-19 20:57:37.267   519   532 W InputManager-JNI: Input channel object '6d2007e Splash Screen io.github.avsessisozx.telemet (client)' was disposed without first being removed with the input manager!
+10-19 20:57:37.290   519  2180 I ImeTracker: io.github.avsessisozx.telemet:937a0815: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-19 20:57:37.291   519  2180 I ImeTracker: io.github.avsessisozx.telemet:937a0815: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-19 20:57:37.318  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+10-19 20:57:37.322  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-19 20:57:37.325  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.avsessisozx.telemet fieldId=0 fieldName=null extras=null}, false)
+10-19 20:57:37.325  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-19 20:57:37.325  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-19 20:57:37.791  5209  5209 D CompatibilityChangeReporter: Compat change id reported: 263076149; UID 10192; state: ENABLED
+10-19 20:57:37.800  5209  5209 D CompatibilityChangeReporter: Compat change id reported: 160794467; UID 10192; state: ENABLED
+10-19 20:57:37.803  5209  5209 I Telemet : Telemet started (version 0.1.25)
+10-19 20:57:37.807  5209  5209 I Telemet : GPS started
+10-19 20:57:37.810  5209  5209 I Telemet : Sensors: gyroscope yes, gravity yes, barometer yes
+10-19 20:57:37.813  5209  5209 I Telemet : Backup recording started: surus_20261019_205737
+10-19 20:57:37.816  5209  5209 D BluetoothAdapter: isLeEnabled(): ON
+10-19 20:57:37.819  1019  3936 D BtGatt.GattService: registerScanner() - UUID=a2bcaec8-6154-4f6f-b67c-fe2a240bed6a
+10-19 20:57:37.820  1019  3936 I bt_stack: [INFO:le_scanning_manager.cc(155)] RegisterScanner in shim layer
+10-19 20:57:37.820  1019  1278 D BtGatt.GattService: onScannerRegistered() - UUID=a2bcaec8-6154-4f6f-b67c-fe2a240bed6a, scannerId=3, status=0
+10-19 20:57:37.820  5209  5909 D BluetoothLeScanner: onScannerRegistered() - status=0 scannerId=3 mScannerId=0
+10-19 20:57:37.821  1019  3936 D BtGatt.GattService: start scan with filters
+10-19 20:57:37.822  1019  3936 D BtGatt.GattService: enforcePrivilegedPermissionIfNeeded([BluetoothLeScanFilter [mDeviceName=null, mDeviceAddress=null, mUuid=null, mUuidMask=null, mServiceSolicitationUuid=null, mServiceSolicitationUuidMask=null, mServiceDataUuid=null, mServiceData=null, mServiceDataMask=null, mManufacturerId=2218, mManufacturerData=[], mManufacturerDataMask=null, mAdvertisingDataType=-1, mAdvertisingData=null, mAdvertisingDataMask=null, mTransportBlockFilter=null]])
+10-19 20:57:37.823  1019  3936 D BtGatt.ScanManager: startScan()  [ScanClient scanModeApp 2 scanModeUsed 2 [appScanStats io.github.avsessisozx.telemet]]
+10-19 20:57:37.824  1019  1316 D BtGatt.ScanManager: handling starting scan
+10-19 20:57:37.824  1019  3936 D ActivityAttributionService: notifyActivityAttributionInfo UID=1002 packageName=com.google.android.bluetooth deviceAddress=no_active_device_address
+10-19 20:57:37.824  1019  3936 I bt_btif : packages/modules/Bluetooth/system/btif/src/bluetooth.cc:829 get_profile_interface: get_profile_interface: id = activity_attribution
+10-19 20:57:37.824  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(268)] ScanFilterEnable in shim layer
+10-19 20:57:37.825  1019  1278 D BtGatt.GattService: onScanFilterEnableDisabled() - clientIf=3, status=0, action=1
+10-19 20:57:37.825  1019  1278 D BtGatt.ScanManager: callback done for scannerId - 3 status - 0
+10-19 20:57:37.826  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(243)] ScanFilterAdd in shim layer
+10-19 20:57:37.826  1019  1278 D BtGatt.GattService: onScanFilterConfig() - clientIf=3, action = 0 status = 0, filterType=0, availableSpace=0
+10-19 20:57:37.826  1019  1278 D BtGatt.ScanManager: callback done for scannerId - 3 status - 0
+10-19 20:57:37.826  1019  1316 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0
+10-19 20:57:37.827  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(204)] ScanFilterParamSetup in shim layer
+10-19 20:57:37.827  1019  1278 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=3, status=0, action=0, availableSpace=0
+10-19 20:57:37.827  1019  1278 D BtGatt.ScanManager: callback done for scannerId - 3 status - 0
+10-19 20:57:37.827  1019  1316 D BtGatt.ScanManager: start gattClientScanNative from startRegularScan()
+10-19 20:57:37.827  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(168)] Scan in shim layer started
+10-19 20:57:37.827  1019  1316 D BtGatt.ScanManager: configureRegularScanParams() - queue=3
+10-19 20:57:37.827  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(168)] Scan in shim layer stopped
+10-19 20:57:37.827  1019  1316 D BtGatt.ScanManager: Start gattClientScanNative with old scanMode -1 new scanMode 2 ( in MS: 100 / 100, in scan unit: 160 / 160 ) [ScanClient scanModeApp 2 scanModeUsed 2 [appScanStats io.github.avsessisozx.telemet]]
+10-19 20:57:37.827  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(346)] SetScanParameters in shim layer
+10-19 20:57:37.827  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(168)] Scan in shim layer started
+10-19 20:57:37.827  1019  1316 D BtGatt.ScanManager: apply scan timeout (300000)to scannerId 3
+10-19 20:57:37.828  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:588 stop_scan: Scanning already stopped, return!
+10-19 20:57:37.828  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:175 register_client: Scheduled address rotation for first client registered
+10-19 20:57:37.828  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:178 register_client: Client registered
+10-19 20:57:37.828  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:193 unregister_client: Client unregistered
+10-19 20:57:37.828  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:197 unregister_client: Cancelled address rotation alarm
+10-19 20:57:37.828  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:588 stop_scan: Scanning already stopped, return!
+10-19 20:57:37.828  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:175 register_client: Scheduled address rotation for first client registered
+10-19 20:57:37.828  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:178 register_client: Client registered
+10-19 20:57:37.828  1019  1278 D BtGatt.GattService: onScanParamSetupCompleted : 0
+10-19 20:57:37.829  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:1369 on_advertising_filter_complete: Got a Command complete LE_ADV_FILTER, status UNKNOWN_CONNECTION
+10-19 20:57:37.833  5209  5209 I Telemet : Scan started (filtered)
+10-19 20:57:38.009  1630  2132 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+10-19 20:57:38.009  1630  2132 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+10-19 20:57:38.028   834   906 D EGL_emulation: app_time_stats: avg=3947.78ms min=3947.78ms max=3947.78ms count=1
+10-19 20:57:38.035  1630  2132 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+10-19 20:57:38.035  1630  2132 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+10-19 20:57:38.063  5478  5695 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-19 20:57:38.065  5478  5695 I NearbyDiscovery: DiscoveryController, showNotification, itemSize=0 [CONTEXT service_id=265 ]
+10-19 20:57:38.066  5478  5695 I NearbyDiscovery: Show notifications: 0 total, no changes since last shown, no-op. [CONTEXT service_id=265 ]
+10-19 20:57:38.163   834   905 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+10-19 20:57:38.167   834   905 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+10-19 20:57:38.695  5209  5267 D EGL_emulation: app_time_stats: avg=245.03ms min=40.49ms max=642.72ms count=6
+10-19 20:57:39.266   519   533 D ConnectivityService: requestNetwork for uid/pid:10128/2975 activeRequest: null callbackRequest: 145 [NetworkRequest [ REQUEST id=146, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10128 RequestorUid: 10128 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+10-19 20:57:39.267   519   756 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=146, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10128 RequestorUid: 10128 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]
+10-19 20:57:39.267   519   756 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=146, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10128 RequestorUid: 10128 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]
+10-19 20:57:39.267   519   763 D ConnectivityService: NetReassign [146 : null → 100] [c 1] [a 0] [i 1]
+10-19 20:57:39.268   519   756 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=146, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10128 RequestorUid: 10128 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]
+10-19 20:57:39.268   519   756 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=146, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10128 RequestorUid: 10128 RequestorPkg: com.google.android.dialer UnderlyingNetworks: Null] ]
+10-19 20:57:39.271  2975  2975 I DialerConstellationSyncWorker: com.android.dialer.businessvoice.control.worker.ConstellationSyncWorker.startWork:66 starting work
+10-19 20:57:39.272  2975  3139 I DialerCountryCodeProvider: com.android.dialer.businessvoice.verifiedcall.impl.i18n.CountryCodeProvider.getSimCountryCodeInternal:85 returning Redacted-2-chars
+10-19 20:57:39.272  2975  3139 I DialerCachedVerifiedNumberProvider: com.android.dialer.businessvoice.verifiedcall.impl.constellation.CachedVerifiedNumberProvider.refreshConstellationInfo:190 Retrieving constellation info and refreshing the cache.
+10-19 20:57:39.290  5552  5552 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-19 20:57:39.290  5552  5552 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-19 20:57:39.293  5552  5552 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-19 20:57:39.294  5552  5601 E constellation: [api_verify_phone_operation] Failed to generate Client Signature
+10-19 20:57:39.294  5552  5601 E constellation: acwp: Stored private key deleted
+10-19 20:57:39.294  5552  5601 E constellation: 	at acos.e(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+10-19 20:57:39.294  5552  5601 E constellation: 	at acos.d(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-19 20:57:39.294  5552  5601 E constellation: 	at acoa.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):22)
+10-19 20:57:39.294  5552  5601 E constellation: 	at acoa.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):12)
+10-19 20:57:39.294  5552  5601 E constellation: 	at avsy.eo(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-19 20:57:39.294  5552  5601 E constellation: 	at avtf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):14)
+10-19 20:57:39.294  5552  5601 E constellation: 	at dfhf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-19 20:57:39.294  5552  5601 E constellation: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-19 20:57:39.294  5552  5601 E constellation: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-19 20:57:39.294  5552  5601 E constellation: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-19 20:57:39.294  5552  5601 E constellation: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-19 20:57:39.294  5552  5601 E constellation: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:57:39.294  5552  5601 E constellation: 	at java.lang.Thread.run(Thread.java:1012)
+10-19 20:57:39.294  2975  3107 W DialerVerifiedNumberProvider: com.android.dialer.businessvoice.verifiedcall.impl.constellation.VerifiedNumberProvider.lambda$getConstellationResponse$1:155 Failed to get constellation token.
+10-19 20:57:39.294  2975  3107 W DialerVerifiedNumberProvider: nkq: 5004:
+10-19 20:57:39.294  2975  3107 W DialerVerifiedNumberProvider: 	at nov.au(PG:1)
+10-19 20:57:39.294  2975  3107 W DialerVerifiedNumberProvider: 	at nnf.g(PG:2)
+10-19 20:57:39.294  2975  3107 W DialerVerifiedNumberProvider: 	at npo.a(Unknown Source:2)
+10-19 20:57:39.294  2975  3107 W DialerVerifiedNumberProvider: 	at npy.dm(PG:9)
+10-19 20:57:39.294  2975  3107 W DialerVerifiedNumberProvider: 	at ncz.onTransact(PG:4)
+10-19 20:57:39.294  2975  3107 W DialerVerifiedNumberProvider: 	at android.os.Binder.execTransactInternal(Binder.java:1344)
+10-19 20:57:39.294  2975  3107 W DialerVerifiedNumberProvider: 	at android.os.Binder.execTransact(Binder.java:1275)
+10-19 20:57:39.299  2975  3139 W DialerConstellationSyncWorker: com.android.dialer.businessvoice.control.worker.ConstellationSyncWorker.lambda$syncConstellation$2:110 Constellation api request failed, status code: 5004
+10-19 20:57:39.299  2975  3106 I WM-WorkerWrapper: Worker result RETRY for Work [ id=fcd49467-9bd0-4104-81a7-6857fd411b3a, tags={ com.google.apps.tiktok.contrib.work.TikTokListenableWorker, TikTokWorker#com.android.dialer.businessvoice.control.worker.ConstellationSyncWorker } ]
+10-19 20:57:40.102  5209  5267 D EGL_emulation: app_time_stats: avg=123.29ms min=13.63ms max=1088.30ms count=11
+10-19 20:57:42.118  5209  5267 D EGL_emulation: app_time_stats: avg=1002.15ms min=15.30ms max=1989.01ms count=2
+10-19 20:57:42.734   834   834 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-19 20:57:44.118  5209  5267 D EGL_emulation: app_time_stats: avg=998.12ms min=18.20ms max=1978.03ms count=2
+10-19 20:57:46.135  5209  5267 D EGL_emulation: app_time_stats: avg=1008.57ms min=28.10ms max=1989.04ms count=2
+10-19 20:57:48.138  5209  5267 D EGL_emulation: app_time_stats: avg=999.69ms min=22.56ms max=1976.82ms count=2
+10-19 20:57:50.150  5209  5267 D EGL_emulation: app_time_stats: avg=1001.43ms min=9.71ms max=1993.15ms count=2
+10-19 20:57:51.770   834   834 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+10-19 20:57:52.169  5209  5267 D EGL_emulation: app_time_stats: avg=1009.29ms min=25.15ms max=1993.42ms count=2
+10-19 20:57:52.735   834   834 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-19 20:57:54.185  5209  5267 D EGL_emulation: app_time_stats: avg=1007.79ms min=33.45ms max=1982.12ms count=2
+10-19 20:57:55.091  5552  7728 I GmscoreIpa: Starting mediastore instant index [CONTEXT service_id=255 ]
+10-19 20:57:56.202  5209  5267 D EGL_emulation: app_time_stats: avg=1008.39ms min=25.33ms max=1991.46ms count=2
+10-19 20:57:57.839  5209  5209 D BluetoothAdapter: isLeEnabled(): ON
+10-19 20:57:57.841  1019  3936 D BtGatt.GattService: stopScan() - queue size =3
+10-19 20:57:57.841  1019  3936 D ActivityAttributionService: notifyActivityAttributionInfo UID=1002 packageName=com.google.android.bluetooth deviceAddress=no_active_device_address
+10-19 20:57:57.841  1019  3936 I bt_btif : packages/modules/Bluetooth/system/btif/src/bluetooth.cc:829 get_profile_interface: get_profile_interface: id = activity_attribution
+10-19 20:57:57.842  1019  1316 D BtGatt.ScanManager: handling stopping scan  [ScanClient scanModeApp 2 scanModeUsed 2 [appScanStats io.github.avsessisozx.telemet]]
+10-19 20:57:57.842  1019  1316 D BtGatt.ScanManager: stop gattClientScanNative
+10-19 20:57:57.842  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(168)] Scan in shim layer stopped
+10-19 20:57:57.842  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:193 unregister_client: Client unregistered
+10-19 20:57:57.842  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:197 unregister_client: Cancelled address rotation alarm
+10-19 20:57:57.842  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(204)] ScanFilterParamSetup in shim layer
+10-19 20:57:57.842  1019  1278 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=3, status=0, action=0, availableSpace=0
+10-19 20:57:57.842  1019  1278 D BtGatt.ScanManager: callback done for scannerId - 3 status - 0
+10-19 20:57:57.842  1019  1316 D BtGatt.ScanManager: configureRegularScanParams() - queue=2
+10-19 20:57:57.842  1019  1316 D BtGatt.ScanManager: configureRegularScanParams() - queue empty, scan stopped
+10-19 20:57:57.844  1019  3936 D BtGatt.GattService: unregisterScanner() - scannerId=3
+10-19 20:57:57.844  1019  3936 I bt_stack: [INFO:le_scanning_manager.cc(162)] Unregister in shim layer, scanner_id:3
+10-19 20:57:57.844  5209  5209 I Telemet : Camera not found, scanning again in 3 s
+10-19 20:57:58.068  5209  5267 D EGL_emulation: app_time_stats: avg=925.93ms min=15.05ms max=1836.82ms count=2
+10-19 20:58:00.024  1630  1977 I AiAiEcho: Predicting[0]:
+10-19 20:58:00.024  1630  1977 I AiAiEcho: EchoTargets:
+10-19 20:58:00.024  1630  1977 I AiAiEcho: Filtered by AiAi flag check:
+10-19 20:58:00.024  1630  1977 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+10-19 20:58:00.025  1630  1977 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+10-19 20:58:00.026   834   906 D EGL_emulation: app_time_stats: avg=5499.23ms min=18.62ms max=21808.01ms count=4
+10-19 20:58:00.036   834   834 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-19 20:58:00.235  5209  5267 D EGL_emulation: app_time_stats: avg=1076.08ms min=20.53ms max=2131.62ms count=2
+10-19 20:58:00.846  5209  5209 D BluetoothAdapter: isLeEnabled(): ON
+10-19 20:58:00.848  1019  3936 D BtGatt.GattService: registerScanner() - UUID=b12c1a41-c347-4c74-8ffb-a66cf411098b
+10-19 20:58:00.848  1019  3936 I bt_stack: [INFO:le_scanning_manager.cc(155)] RegisterScanner in shim layer
+10-19 20:58:00.848  1019  1278 D BtGatt.GattService: onScannerRegistered() - UUID=b12c1a41-c347-4c74-8ffb-a66cf411098b, scannerId=3, status=0
+10-19 20:58:00.848  5209  5909 D BluetoothLeScanner: onScannerRegistered() - status=0 scannerId=3 mScannerId=0
+10-19 20:58:00.849  1019  3936 D BtGatt.GattService: start scan with filters
+10-19 20:58:00.849  1019  3936 D BtGatt.GattService: enforcePrivilegedPermissionIfNeeded(null)
+10-19 20:58:00.850  1019  3936 D BtGatt.ScanManager: startScan()  [ScanClient scanModeApp 2 scanModeUsed 2 [appScanStats io.github.avsessisozx.telemet]]
+10-19 20:58:00.850  1019  3936 D ActivityAttributionService: notifyActivityAttributionInfo UID=1002 packageName=com.google.android.bluetooth deviceAddress=no_active_device_address
+10-19 20:58:00.850  1019  3936 I bt_btif : packages/modules/Bluetooth/system/btif/src/bluetooth.cc:829 get_profile_interface: get_profile_interface: id = activity_attribution
+10-19 20:58:00.850  1019  1316 D BtGatt.ScanManager: handling starting scan
+10-19 20:58:00.851  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(268)] ScanFilterEnable in shim layer
+10-19 20:58:00.851  1019  1278 D BtGatt.GattService: onScanFilterEnableDisabled() - clientIf=3, status=0, action=1
+10-19 20:58:00.851  1019  1278 D BtGatt.ScanManager: callback done for scannerId - 3 status - 0
+10-19 20:58:00.851  1019  1316 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0
+10-19 20:58:00.851  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(204)] ScanFilterParamSetup in shim layer
+10-19 20:58:00.851  1019  1278 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=3, status=0, action=0, availableSpace=0
+10-19 20:58:00.851  1019  1278 D BtGatt.ScanManager: callback done for scannerId - 3 status - 0
+10-19 20:58:00.851  1019  1316 D BtGatt.ScanManager: start gattClientScanNative from startRegularScan()
+10-19 20:58:00.851  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(168)] Scan in shim layer started
+10-19 20:58:00.851  1019  1316 D BtGatt.ScanManager: configureRegularScanParams() - queue=3
+10-19 20:58:00.851  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(168)] Scan in shim layer stopped
+10-19 20:58:00.851  1019  1316 D BtGatt.ScanManager: Start gattClientScanNative with old scanMode -1 new scanMode 2 ( in MS: 100 / 100, in scan unit: 160 / 160 ) [ScanClient scanModeApp 2 scanModeUsed 2 [appScanStats io.github.avsessisozx.telemet]]
+10-19 20:58:00.851  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(346)] SetScanParameters in shim layer
+10-19 20:58:00.851  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(168)] Scan in shim layer started
+10-19 20:58:00.852  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:588 stop_scan: Scanning already stopped, return!
+10-19 20:58:00.852  1019  1316 D BtGatt.ScanManager: apply scan timeout (300000)to scannerId 3
+10-19 20:58:00.852  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:175 register_client: Scheduled address rotation for first client registered
+10-19 20:58:00.852  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:178 register_client: Client registered
+10-19 20:58:00.852  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:193 unregister_client: Client unregistered
+10-19 20:58:00.853  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:197 unregister_client: Cancelled address rotation alarm
+10-19 20:58:00.853  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:588 stop_scan: Scanning already stopped, return!
+10-19 20:58:00.853  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:175 register_client: Scheduled address rotation for first client registered
+10-19 20:58:00.853  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:178 register_client: Client registered
+10-19 20:58:00.853  1019  1278 D BtGatt.GattService: onScanParamSetupCompleted : 0
+10-19 20:58:00.854  5209  5209 I Telemet : Scan started (unfiltered)
+10-19 20:58:02.252  5209  5267 D EGL_emulation: app_time_stats: avg=501.71ms min=17.42ms max=1147.67ms count=4
+10-19 20:58:02.735   834   834 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-19 20:58:04.252  5209  5267 D EGL_emulation: app_time_stats: avg=993.91ms min=14.41ms max=1973.41ms count=2
+10-19 20:58:06.269  5209  5267 D EGL_emulation: app_time_stats: avg=1007.94ms min=30.14ms max=1985.75ms count=2
+10-19 20:58:08.147  5209  5209 W Telemet : GPS problem: no data from the phone's GPS for 30 s (0 satellites visible). A mock-location app may still be selected in Developer options, or the system is blocking location.
+10-19 20:58:08.271  5209  5267 D EGL_emulation: app_time_stats: avg=996.48ms min=25.14ms max=1967.81ms count=2
+10-19 20:58:08.303  5209  5209 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: is "No GPS data from the phone"
+10-19 20:58:08.317  5209  5209 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: is "No satellite data is arriving. Open Settings → Developer options → \"Select mock location app\", set it to None and restart the phone. If you are indoors, go outside."
+10-19 20:58:08.354  1630  2132 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+10-19 20:58:08.355  1630  2132 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+10-19 20:58:08.377   834   906 D EGL_emulation: app_time_stats: avg=8350.50ms min=8350.50ms max=8350.50ms count=1
+10-19 20:58:08.394   834   905 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+10-19 20:58:08.398   834   905 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+10-19 20:58:09.041  5174  5199 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-19 20:58:09.041  5174  5199 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-19 20:58:09.041  5174  5199 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-19 20:58:09.041  5174  5199 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-19 20:58:09.041  5174  5199 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-19 20:58:09.041  5174  5199 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-19 20:58:09.041  5174  5199 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-19 20:58:09.041  5174  5199 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-19 20:58:09.041  5174  5199 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-19 20:58:09.041  5174  5199 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-19 20:58:09.153  1621  3895 W MediaProvider: isAppCloneUserPair for user 0: false
+10-19 20:58:09.172  5478  6207 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 294 [CONTEXT service_id=218 ]
+10-19 20:58:09.178   971  7744 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+10-19 20:58:09.179  5478  7743 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 12 uptime_millis: 12 exec_start_elapsed_seconds: 294 [CONTEXT service_id=218 ]
+10-19 20:58:09.373   971  7744 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:58:09.375   971  7744 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:58:09.375   971  7744 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:58:09.375   971  7744 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:58:09.607  5209  5267 D EGL_emulation: app_time_stats: avg=667.94ms min=19.90ms max=1315.98ms count=2
+10-19 20:58:09.849   971  7744 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:58:09.850   971  7744 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:58:09.850   971  7744 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:58:09.850   971  7744 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:58:10.175  5209  5209 W Telemet : GPS problem: 6 satellites visible but no position yet. Go outdoors with a clear sky.
+10-19 20:58:10.378   971  7744 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:58:10.380   971  7744 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:58:10.380   971  7744 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:58:10.380   971  7744 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:58:10.382  1630  2132 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+10-19 20:58:10.382  1630  2132 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+10-19 20:58:10.392   834   906 D EGL_emulation: app_time_stats: avg=503.84ms min=22.05ms max=1177.98ms count=4
+10-19 20:58:10.408   834   905 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+10-19 20:58:10.410   834   905 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+10-19 20:58:10.632  5209  5267 D EGL_emulation: app_time_stats: avg=142.00ms min=19.45ms max=435.75ms count=7
+10-19 20:58:10.849   971  7744 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:58:10.850   971  7744 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:58:10.850   971  7744 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:58:10.850   971  7744 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:58:11.383   971  7744 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:58:11.386   971  7744 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:58:11.386   971  7744 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:58:11.386   971  7744 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:58:11.639  5209  5267 D EGL_emulation: app_time_stats: avg=249.76ms min=14.37ms max=529.21ms count=4
+10-19 20:58:11.849   971  7744 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:58:11.852   971  7744 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:58:11.852   971  7744 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:58:11.852   971  7744 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:58:12.400   971  7744 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:58:12.403   971  7744 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:58:12.403   971  7744 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:58:12.403   971  7744 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:58:12.656  5209  5267 D EGL_emulation: app_time_stats: avg=166.97ms min=14.45ms max=442.47ms count=6
+10-19 20:58:12.735   834   834 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+10-19 20:58:12.849   971  7744 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:58:12.851   971  7744 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:58:12.851   971  7744 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:58:12.851   971  7744 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+10-19 20:58:12.854  5209  5209 I Telemet : Filled 35 s before the first GPS fix with the first position
+10-19 20:58:12.854  5478  5590 W FusedLocation: forcing availability [CONTEXT service_id=6 ]
+10-19 20:58:13.255  5209  5209 I Telemet : GPS problem cleared
+10-19 20:58:13.407   971  7744 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:58:13.409   971  7744 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:58:13.409   971  7744 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:58:13.409   971  7744 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+10-19 20:58:13.441  5209  5209 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: is "GPS signal OK"
+10-19 20:58:13.460  1630  2132 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+10-19 20:58:13.461  1630  2132 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+10-19 20:58:13.487   834   905 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+10-19 20:58:13.488   834   905 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+10-19 20:58:13.504   834   906 D EGL_emulation: app_time_stats: avg=1555.89ms min=50.05ms max=3061.72ms count=2
+10-19 20:58:13.849   971  7744 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:58:13.851   971  7744 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:58:13.851   971  7744 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:58:13.851   971  7744 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:333
+10-19 20:58:14.070  5209  5267 D EGL_emulation: app_time_stats: avg=281.32ms min=18.05ms max=558.73ms count=5
+10-19 20:58:14.267  1621  2038 W MediaProvider: isAppCloneUserPair for user 0: false
+10-19 20:58:14.284  5478  6207 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 299 [CONTEXT service_id=218 ]
+10-19 20:58:14.289  1630  5265 I AiAiEcho: Settings changed for uri: content://settings/secure/location_mode
+10-19 20:58:14.290  5478  7714 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 10 uptime_millis: 10 exec_start_elapsed_seconds: 299 [CONTEXT service_id=218 ]
+10-19 20:58:14.291  1630  1977 I AiAiEcho: Predicting[0]:
+10-19 20:58:14.291  1630  1977 I AiAiEcho: EchoTargets:
+10-19 20:58:14.291  1630  1977 I AiAiEcho: Filtered by AiAi flag check:
+10-19 20:58:14.293  1630  1977 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+10-19 20:58:14.293  1630  1977 I AiAiEcho: Predicting[0]:
+10-19 20:58:14.293  1630  1977 I AiAiEcho: EchoTargets:
+10-19 20:58:14.293  1630  1977 I AiAiEcho: Filtered by AiAi flag check:
+10-19 20:58:14.293  1630  1977 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+10-19 20:58:14.294  1630  1977 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+10-19 20:58:14.296  1630  1977 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+10-19 20:58:14.296   834   834 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-19 20:58:14.297  5478  6327 I NearbySharing: Location is disabled [CONTEXT service_id=194 ]
+10-19 20:58:14.298  5478  6327 I NearbySharing: Stopping scanning because Nearby Sharing is disabled. [CONTEXT service_id=194 ]
+10-19 20:58:14.299  5478  6327 I NearbySharing: Failed to stop scanning because we're not scanning. [CONTEXT service_id=194 ]
+10-19 20:58:14.301  5478  6327 I NearbySharing: Can't stop advertising FastInitiation. Not advertising. [CONTEXT service_id=194 ]
+10-19 20:58:14.301  5478  6327 I NearbySharing: Stopping Fast Init advertisement because we're not scanning in the foreground. [CONTEXT service_id=194 ]
+10-19 20:58:14.304  1019  1316 D BtGatt.ScanManager: suspend scan  [ScanClient scanModeApp 2 scanModeUsed 2 [appScanStats io.github.avsessisozx.telemet]]
+10-19 20:58:14.304  1019  1316 D BtGatt.ScanManager: handling stopping scan  [ScanClient scanModeApp 2 scanModeUsed 2 [appScanStats io.github.avsessisozx.telemet]]
+10-19 20:58:14.304  1019  1316 D BtGatt.ScanManager: stop gattClientScanNative
+10-19 20:58:14.304  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(168)] Scan in shim layer stopped
+10-19 20:58:14.304  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:193 unregister_client: Client unregistered
+10-19 20:58:14.304  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:197 unregister_client: Cancelled address rotation alarm
+10-19 20:58:14.305  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(204)] ScanFilterParamSetup in shim layer
+10-19 20:58:14.306  1019  1278 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=3, status=0, action=0, availableSpace=0
+10-19 20:58:14.306  1019  1278 D BtGatt.ScanManager: callback done for scannerId - 3 status - 0
+10-19 20:58:14.306  1019  1316 D BtGatt.ScanManager: configureRegularScanParams() - queue=2
+10-19 20:58:14.306  1019  1316 D BtGatt.ScanManager: configureRegularScanParams() - queue empty, scan stopped
+10-19 20:58:14.306   971  7744 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:119
+10-19 20:58:14.308  5478  7683 I FusedLocation: fused provider disabled - clearing locations [CONTEXT service_id=6 ]
+10-19 20:58:14.309  5478  6327 I NearbySharing: Stopping advertising because Nearby Sharing is disabled. [CONTEXT service_id=194 ]
+10-19 20:58:14.311  5478  6327 I NearbySharing: Failed to scan for fast initiation because we're already scanning with isHighPowerAllowed=false. [CONTEXT service_id=194 ]
+10-19 20:58:14.311  5478  6327 I NearbySharing: Dismissing HUN as there's no device nearby. [CONTEXT service_id=194 ]
+10-19 20:58:14.311  5478  6327 I NearbySharing: Cancelling in use notification [CONTEXT service_id=194 ]
+10-19 20:58:14.313   519   536 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda13@ab44c6c
+10-19 20:58:14.313   519   536 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda12@595a235
+10-19 20:58:14.314   519   536 I GnssVisibilityControl: Updating non-framework location access proxy apps in the GNSS HAL to: []
+10-19 20:58:14.325   519   536 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda13@ab44c6c
+10-19 20:58:14.325   519   536 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda12@595a235
+10-19 20:58:14.325  5209  5209 W Telemet : Location turned off! No GPS data will arrive.
+10-19 20:58:14.332   519   756 D WifiActiveModeWarden: Switching all client mode managers
+10-19 20:58:14.350  5552  5552 I NearbySharing: SharingTileService created. [CONTEXT service_id=194 ]
+10-19 20:58:14.351  5552  5678 I NearbySharing: Create pesudo logger. [CONTEXT service_id=194 ]
+10-19 20:58:14.364  5478  5620 I NearbySharing: A new client has bound to the NearbySharingService ClientBridge for calling package com.google.android.gms [CONTEXT service_id=194 ]
+10-19 20:58:14.372  5478  5478 I Wear_Controller: Wearable module requires a companion app to be installed.
+10-19 20:58:14.372  5478  5478 I WearableService: onCreate: Wearable Services not starting. Wear is not available on this device.
+10-19 20:58:14.375  5478  5478 D BoundBrokerSvc: onUnbind: Intent { act=android.net.action.RECOMMEND_NETWORKS cmp=com.google.android.gms/.chimera.PersistentBoundBrokerService }
+10-19 20:58:14.383  5478  5512 W WearableService: onGetService: Wear is not available on this device.
+10-19 20:58:14.389  5552  7769 I LocationHistory: [IntentOperation] Handling action android.location.MODE_CHANGED [CONTEXT service_id=314 ]
+10-19 20:58:14.389  5552  7769 I LocationHistory: [IntentOperation] Device settings changed to DISABLED. Cancelling periodic tasks. [CONTEXT service_id=314 ]
+10-19 20:58:14.390  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.storevisits.StoreVisitsProcessingService.StoreVisitsProcessing is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.390  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.wifi.WifiPlaceVisitProcessingService.WifiPlaceVisit is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.390  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.uploads.BatchDeidentifiedDataUploadService.BatchDeidentifiedDataUpload is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.391  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.geller.GellerCleanupService.GellerCleanup is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.391  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.settings.LocationHistoryActiveProcessingService.LocationHistoryActiveProcessing is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.391  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.backup.OdlhBackupService.OdlhBackup is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.391  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhRemovedAccountsCleanupJob.OdlhRemovedAccountsCleanup is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.391  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhDatabaseCleanupJob.OdlhDatabaseCleanup is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.391  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhUserEditSyncJob.OdlhUserEditSync is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.391  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditMergeJob.EditMergeJob is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.391  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditUploadJob.EditUploadJob is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.392  5552  7769 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedTaskIdentityDataService is not available. This may cause the task to be lost.
+10-19 20:58:14.392  5552  7769 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedJobHistoryService is not available. This may cause the task to be lost.
+10-19 20:58:14.393  5552  7766 I LocationHistory: [IntentOperation] Handling action android.location.PROVIDERS_CHANGED [CONTEXT service_id=314 ]
+10-19 20:58:14.393  5552  7766 I LocationHistory: [IntentOperation] Device settings changed to DISABLED. Cancelling periodic tasks. [CONTEXT service_id=314 ]
+10-19 20:58:14.395  5552  7766 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.storevisits.StoreVisitsProcessingService.StoreVisitsProcessing is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.396  5552  7766 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.wifi.WifiPlaceVisitProcessingService.WifiPlaceVisit is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.396  5552  7766 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.uploads.BatchDeidentifiedDataUploadService.BatchDeidentifiedDataUpload is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.397  5552  7766 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.geller.GellerCleanupService.GellerCleanup is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.399  5552  7766 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.settings.LocationHistoryActiveProcessingService.LocationHistoryActiveProcessing is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.399  5552  7766 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.backup.OdlhBackupService.OdlhBackup is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.399  5552  7766 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhRemovedAccountsCleanupJob.OdlhRemovedAccountsCleanup is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.399  5552  7766 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhDatabaseCleanupJob.OdlhDatabaseCleanup is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.399  5552  7766 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhUserEditSyncJob.OdlhUserEditSync is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.399  5552  7766 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditMergeJob.EditMergeJob is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.399  5552  7766 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditUploadJob.EditUploadJob is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.399  5552  7766 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedTaskIdentityDataService is not available. This may cause the task to be lost.
+10-19 20:58:14.399  5552  7766 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedJobHistoryService is not available. This may cause the task to be lost.
+10-19 20:58:14.400  5552  5572 W gle.android.gms: Couldn't lock the profile file /data/misc/profiles/cur/0/com.google.android.gms/primary.prof: Failed to lock file '/data/misc/profiles/cur/0/com.google.android.gms/primary.prof': Try again
+10-19 20:58:14.400  5552  5572 W gle.android.gms: Could not forcefully load profile /data/misc/profiles/cur/0/com.google.android.gms/primary.prof
+10-19 20:58:14.421  5478  7763 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-19 20:58:14.434  5552  7769 I LocationHistory: [IntentOperation] Handling action android.location.PROVIDERS_CHANGED [CONTEXT service_id=314 ]
+10-19 20:58:14.434  5552  7769 I LocationHistory: [IntentOperation] Device settings changed to DISABLED. Cancelling periodic tasks. [CONTEXT service_id=314 ]
+10-19 20:58:14.434  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.storevisits.StoreVisitsProcessingService.StoreVisitsProcessing is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.434  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.wifi.WifiPlaceVisitProcessingService.WifiPlaceVisit is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.435  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.uploads.BatchDeidentifiedDataUploadService.BatchDeidentifiedDataUpload is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.435  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.geller.GellerCleanupService.GellerCleanup is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.435  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.settings.LocationHistoryActiveProcessingService.LocationHistoryActiveProcessing is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.436  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.backup.OdlhBackupService.OdlhBackup is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.436  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhRemovedAccountsCleanupJob.OdlhRemovedAccountsCleanup is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.437  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhDatabaseCleanupJob.OdlhDatabaseCleanup is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.437  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhUserEditSyncJob.OdlhUserEditSync is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.437  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditMergeJob.EditMergeJob is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.437  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditUploadJob.EditUploadJob is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.441  5478  7764 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-19 20:58:14.453  5478  7774 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-19 20:58:14.453  5478  7774 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-19 20:58:14.455  5552  7769 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedTaskIdentityDataService is not available. This may cause the task to be lost.
+10-19 20:58:14.456  5478  5695 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-19 20:58:14.459  5478  5695 I NearbyDiscovery: DiscoveryController, showNotification, itemSize=0 [CONTEXT service_id=265 ]
+10-19 20:58:14.462  5552  7769 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedJobHistoryService is not available. This may cause the task to be lost.
+10-19 20:58:14.468  5552  7769 I LocationHistory: [IntentOperation] Handling action android.location.PROVIDERS_CHANGED [CONTEXT service_id=314 ]
+10-19 20:58:14.469  5552  7769 I LocationHistory: [IntentOperation] Device settings changed to DISABLED. Cancelling periodic tasks. [CONTEXT service_id=314 ]
+10-19 20:58:14.472  5478  7764 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-19 20:58:14.472  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.storevisits.StoreVisitsProcessingService.StoreVisitsProcessing is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.474  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.wifi.WifiPlaceVisitProcessingService.WifiPlaceVisit is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.475  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.uploads.BatchDeidentifiedDataUploadService.BatchDeidentifiedDataUpload is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.476  5478  7771 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-19 20:58:14.476  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.geller.GellerCleanupService.GellerCleanup is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.477  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.settings.LocationHistoryActiveProcessingService.LocationHistoryActiveProcessing is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.478   519  2178 D SafetySourceDataValidator: Package com.google.android.gms has expected signature
+10-19 20:58:14.478   519  2178 D SafetySourceDataValidator: Package com.google.android.gms has expected signature
+10-19 20:58:14.479  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.backup.OdlhBackupService.OdlhBackup is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.479  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhRemovedAccountsCleanupJob.OdlhRemovedAccountsCleanup is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.479  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhDatabaseCleanupJob.OdlhDatabaseCleanup is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.480  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhUserEditSyncJob.OdlhUserEditSync is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.480  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditMergeJob.EditMergeJob is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.481  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditUploadJob.EditUploadJob is cancelled [CONTEXT service_id=173 ]
+10-19 20:58:14.483  5552  7769 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedTaskIdentityDataService is not available. This may cause the task to be lost.
+10-19 20:58:14.483  5552  7769 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedJobHistoryService is not available. This may cause the task to be lost.
+10-19 20:58:14.486  5478  7773 I GCoreUlr: WorldUpdater received intent Intent { act=com.google.android.location.reporting.ACTION_UPDATE_WORLD cmp=com.google.android.gms/com.google.android.location.reporting.service.DispatchingService (has extras) } with receiverAction android.location.PROVIDERS_CHANGED
+10-19 20:58:14.486  5478  7773 I GCoreUlr: WorldUpdater:android.location.PROVIDERS_CHANGED: Ensuring that reporting is stopped because of reasons: (no Google accounts)
+10-19 20:58:14.487  5478  7773 I GCoreUlr: Unbound from all signal providers.
+10-19 20:58:14.488  5478  7773 I GCoreUlr: WorldUpdater received intent Intent { act=com.google.android.location.reporting.ACTION_UPDATE_WORLD cmp=com.google.android.gms/com.google.android.location.reporting.service.DispatchingService (has extras) } with receiverAction android.location.PROVIDERS_CHANGED
+10-19 20:58:14.490  5478  7773 I GCoreUlr: WorldUpdater:android.location.PROVIDERS_CHANGED: Ensuring that reporting is stopped because of reasons: (no Google accounts)
+10-19 20:58:14.490  5478  7773 I GCoreUlr: Unbound from all signal providers.
+10-19 20:58:14.491  5478  7773 I GCoreUlr: WorldUpdater received intent Intent { act=com.google.android.location.reporting.ACTION_UPDATE_WORLD cmp=com.google.android.gms/com.google.android.location.reporting.service.DispatchingService (has extras) } with receiverAction android.location.PROVIDERS_CHANGED
+10-19 20:58:14.492  5478  7773 I GCoreUlr: WorldUpdater:android.location.PROVIDERS_CHANGED: Ensuring that reporting is stopped because of reasons: (no Google accounts)
+10-19 20:58:14.492  5478  7773 I GCoreUlr: Unbound from all signal providers.
+10-19 20:58:14.493  5478  5695 I NearbyDiscovery: Show notifications: 0 total, no changes since last shown, no-op. [CONTEXT service_id=265 ]
+10-19 20:58:14.499  5478  5478 I GCoreUlr: Unbound from all signal providers.
+10-19 20:58:14.500  5478  5478 I GCoreUlr: Stopping handler for UlrDispSvcFast
+10-19 20:58:14.532  5478  7772 I SemanticLocation: [MDD] ModelBundleMetadata: File not found [CONTEXT service_id=173 ]
+10-19 20:58:14.532  5478  7772 I SemanticLocation: java.io.FileNotFoundException: /data/user/0/com.google.android.gms/files/model_bundle_metadata.pb: open failed: ENOENT (No such file or directory)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at libcore.io.IoBridge.open(IoBridge.java:574)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at java.io.FileInputStream.<init>(FileInputStream.java:160)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at android.app.ContextImpl.openFileInput(ContextImpl.java:745)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at bzxt.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at bzxd.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):9)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at bzxd.<init>(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at cadn.j(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at cadn.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):36)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at cacs.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):16)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at java.lang.Thread.run(Thread.java:1012)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at libcore.io.Linux.open(Native Method)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:8063)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	at libcore.io.IoBridge.open(IoBridge.java:560)
+10-19 20:58:14.532  5478  7772 I SemanticLocation: 	... 19 more
+10-19 20:58:14.568  5478  7764 I NamespaceManager: Package com.android.refreshratecontrol name not found! Using module version.
+10-19 20:58:14.569  5478  7764 I NamespaceManager: Package com.google.oslo name not found! Using module version.
+10-19 20:58:14.569  5478  7764 I NamespaceManager: Package com.android.media name not found! Using module version.
+10-19 20:58:14.572  5478  7764 I NamespaceManager: Package com.android.media.swcodec name not found! Using module version.
+10-19 20:58:14.572  5478  7764 I NamespaceManager: Package com.android.neuralnetworks name not found! Using module version.
+10-19 20:58:14.572  5478  7764 I NamespaceManager: Package com.android.media name not found! Using module version.
+10-19 20:58:14.572  5478  7764 I NamespaceManager: Package 1 name not found! Using module version.
+10-19 20:58:14.572  5478  7764 I NamespaceManager: Package rkpd name not found! Using module version.
+10-19 20:58:14.573  5478  7764 I NamespaceManager: Package android.companion name not found! Using module version.
+10-19 20:58:14.573  5478  7764 I NamespaceManager: Package com.google.android.aicore name not found! Using module version.
+10-19 20:58:14.573  5478  7764 I NamespaceManager: Package com.google.android.audioproxy name not found! Using module version.
+10-19 20:58:14.573  5478  7764 I NamespaceManager: Package com.google.android.apps.pixel.psi name not found! Using module version.
+10-19 20:58:14.573  5478  7764 I NamespaceManager: Package com.google.android.apps.safetycore name not found! Using module version.
+10-19 20:58:14.573  5478  7764 I NamespaceManager: Package com.google.android.crashrecovery name not found! Using module version.
+10-19 20:58:14.573  5478  7764 I NamespaceManager: Package com.google.android.profiling name not found! Using module version.
+10-19 20:58:14.573  5478  7764 I NamespaceManager: Package com.google.android.bt name not found! Using module version.
+10-19 20:58:14.573  5478  7764 I NamespaceManager: Package com.google.android.nfcservices name not found! Using module version.
+10-19 20:58:14.573  5478  7764 I NamespaceManager: Package com.google.android.webapp name not found! Using module version.
+10-19 20:58:14.573  5478  7764 I NamespaceManager: Package com.google.android.telephonycore name not found! Using module version.
+10-19 20:58:14.573  5478  7764 I NamespaceManager: Package com.google.android.uprobestats name not found! Using module version.
+10-19 20:58:14.577  1691  1691 I BgTaskExecutorImpl: Starting EXCLUSIVE background task UPLOAD_ASSISTANT_DEVICE_SETTINGS.
+10-19 20:58:14.582  5552  7766 I ChimeraConfigurator: Starting update, reason: 4 urgentFeatures: vision.ocr:-1
+10-19 20:58:14.591  1621  1840 I TranscodeHelper: Empty transcode compat stale
+10-19 20:58:14.594  1621  1840 I TranscodeHelper: Parsed 0 packages from resource
+10-19 20:58:14.594  1621  1840 I TranscodeHelper: Parsed 8 packages from device config
+10-19 20:58:14.594  1621  1840 I MediaProvider: Changed PhotoPickerGetContentActivity component state to STATE_ENABLED ( 1 )
+10-19 20:58:14.595  1621  1840 I MediaProvider: Changed PhotoPickerUserSelectActivity component state to STATE_ENABLED ( 1 )
+10-19 20:58:14.596  1621  1840 I MediaApplication: PhotoPickerSettingsActivity is now disabled.
+10-19 20:58:14.600  1691  2581 I A       : Using proto config with mendel
+10-19 20:58:14.600  1691  2581 I A       : Using proto config with mendel
+10-19 20:58:14.601  1691  5457 I NetworkRecognitionRnr: Using pair HTTP connection
+10-19 20:58:14.601  1691  2581 I A       : Using proto config with mendel
+10-19 20:58:14.601  1691  2581 I A       : Merging legacy hotword config map with new proto.
+10-19 20:58:14.601  1691  2581 I A       : Adding from config to map. Locale: cmn-Hant-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-19 20:58:14.601  1691  2581 I A       : Adding from config to map. Locale: id-ID modelPrefix: x_google Location:cfffcc1a4c1c084c003c8eb27f73d770 isSpeakerIdSupported: true
+10-19 20:58:14.601  1691  2581 I A       : Adding from config to map. Locale: ko-KR modelPrefix: x_google Location:0b132163a2eb2c1194b202067475724b isSpeakerIdSupported: true
+10-19 20:58:14.601  1691  2581 I A       : Skipping. Expected model: 2 Found: 1
+10-19 20:58:14.601  1691  2581 I A       : Adding from config to map. Locale: zh-TW modelPrefix: x_google Location:4e7cae00daee30ec565c34e3aa67a51f isSpeakerIdSupported: true
+10-19 20:58:14.602  1691  2581 I A       : Using proto config with mendel
+10-19 20:58:14.602  1691  2581 I A       : Using proto config with mendel
+10-19 20:58:14.602  1691  2581 I A       : Using proto config with mendel
+10-19 20:58:14.602  1691  2581 I MicroDetectionState: Should stop hotword detection immediately - true
+10-19 20:58:14.612  1691  2623 I A       : [Upload] Connected
+10-19 20:58:14.614  5552  7766 I ChimeraConfigurator: Detected pending changes for urgent request: [vision.ocr]. Pending module sets: container:2318189190800+mlkit.ocr.common,tflite_dynamite:2640104055100800+tflite_dynamite,vision_ocr:2316024025100000+vision.ocr
+10-19 20:58:14.614  1691  2623 I NetworkRecognitionRnr: Using pair HTTP connection
+10-19 20:58:14.614  1691  1691 E A       : onError
+10-19 20:58:14.614  1691  1691 E A       : com.google.android.apps.gsa.shared.speech.a.m: errorCode: 65561, engine: 2
+10-19 20:58:14.614  1691  1691 E A       : 	at com.google.android.apps.gsa.staticplugins.dc.a.e.a(PG:3)
+10-19 20:58:14.614  1691  1691 E A       : 	at com.google.android.apps.gsa.s3.n.hh(PG:1)
+10-19 20:58:14.614  1691  1691 E A       : 	at com.google.cd.g.a.f.e(PG:2)
+10-19 20:58:14.614  1691  1691 E A       : 	at com.google.android.apps.gsa.speech.k.a.g.d(PG:22)
+10-19 20:58:14.614  1691  1691 E A       : 	at com.google.android.apps.gsa.speech.k.a.g.ks(PG:6)
+10-19 20:58:14.614  1691  1691 E A       : 	at com.google.android.apps.gsa.s3.o.e(PG:14)
+10-19 20:58:14.614  1691  1691 E A       : 	at com.google.android.apps.gsa.s3.p.run(PG:1)
+10-19 20:58:14.614  1691  1691 E A       : 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+10-19 20:58:14.614  1691  1691 E A       : 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-19 20:58:14.614  1691  1691 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.e.run(PG:2)
+10-19 20:58:14.614  1691  1691 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.bi.run(PG:1)
+10-19 20:58:14.614  1691  1691 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.bi.run(PG:1)
+10-19 20:58:14.614  1691  1691 E A       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-19 20:58:14.614  1691  1691 E A       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-19 20:58:14.614  1691  1691 E A       : 	at java.lang.Thread.run(Thread.java:1012)
+10-19 20:58:14.614  1691  1691 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.l.run(PG:5)
+10-19 20:58:14.614  1691  1691 E A       : Caused by: com.google.android.apps.gsa.shared.speech.a.o: errorCode: 65586, engine: 2
+10-19 20:58:14.614  1691  1691 E A       : 	... 15 more
+10-19 20:58:14.614  1691  1691 E A       : Caused by: com.google.android.apps.gsa.shared.speech.a.k: errorCode: 401, engine: 2
+10-19 20:58:14.614  1691  1691 E A       : 	at com.google.android.apps.gsa.assistant.shared.n.h.a(PG:5)
+10-19 20:58:14.614  1691  1691 E A       : 	at com.google.android.apps.gsa.s3.producers.j.hE(PG:2)
+10-19 20:58:14.614  1691  1691 E A       : 	at com.google.android.apps.gsa.speech.k.a.g.d(PG:16)
+10-19 20:58:14.614  1691  1691 E A       : 	... 12 more
+10-19 20:58:14.614  1691  2624 I A       : [Upload] Connected
+10-19 20:58:14.617  1691  1691 W A       : Failed to sync device settings.
+10-19 20:58:14.617  1691  1691 I A       : Retrying to sync device settings.
+10-19 20:58:14.636  5552  7766 I GmsDebugLogger: [73] 1801
+10-19 20:58:14.640  5552  7766 W ZappDownloader: No successful module downloads for requested features [vision.ocr].
+10-19 20:58:14.640  5552  7766 I GmsDebugLogger: [30] [VisionOcrDynamite.integ:231602402100000],[TfliteDynamiteDynamite.integ:264010405100800],[MlkitOcrCommon.optional:231818100800]
+10-19 20:58:14.642  5552  7766 W ChimeraConfigService: Retry attempt was throttled. [CONTEXT service_id=264 ]
+10-19 20:58:14.642  5552  7766 I GmsDebugLogger: [83] 1 [vision.ocr]
+10-19 20:58:14.643  5552  7767 W Vision  : Request for optional module download of ocr failed. Request again.
+10-19 20:58:14.644  5552  7767 W Vision  : Would have logged:
+10-19 20:58:14.644  5552  7767 W Vision  : # dsae@37884fe7
+10-19 20:58:14.644  5552  7767 I Vision  : Schedule retrying download ocr at 300189 with backoff 80 seconds
+10-19 20:58:14.648  5478  7764 I bwir    : updateFromConfigurations using legacy put method [CONTEXT service_id=204 ]
+10-19 20:58:14.659  5478  7764 I NamespaceManager: Package com.android.refreshratecontrol name not found! Using module version.
+10-19 20:58:14.660  5478  7764 I NamespaceManager: Package com.google.oslo name not found! Using module version.
+10-19 20:58:14.660  5478  7764 I NamespaceManager: Package com.android.media name not found! Using module version.
+10-19 20:58:14.660  5478  7764 I NamespaceManager: Package com.android.media.swcodec name not found! Using module version.
+10-19 20:58:14.661  5478  7764 I NamespaceManager: Package com.android.neuralnetworks name not found! Using module version.
+10-19 20:58:14.661  5478  7764 I NamespaceManager: Package com.android.media name not found! Using module version.
+10-19 20:58:14.661  5478  7764 I NamespaceManager: Package 1 name not found! Using module version.
+10-19 20:58:14.662  5478  7764 I NamespaceManager: Package rkpd name not found! Using module version.
+10-19 20:58:14.662  5478  7764 I NamespaceManager: Package android.companion name not found! Using module version.
+10-19 20:58:14.662  5478  7764 I NamespaceManager: Package com.google.android.aicore name not found! Using module version.
+10-19 20:58:14.663  5478  7764 I NamespaceManager: Package com.google.android.audioproxy name not found! Using module version.
+10-19 20:58:14.663  5478  7764 I NamespaceManager: Package com.google.android.apps.pixel.psi name not found! Using module version.
+10-19 20:58:14.663  5478  7764 I NamespaceManager: Package com.google.android.apps.safetycore name not found! Using module version.
+10-19 20:58:14.663  5478  7764 I NamespaceManager: Package com.google.android.crashrecovery name not found! Using module version.
+10-19 20:58:14.664  5478  7764 I NamespaceManager: Package com.google.android.profiling name not found! Using module version.
+10-19 20:58:14.664  5478  7764 I NamespaceManager: Package com.google.android.bt name not found! Using module version.
+10-19 20:58:14.664  5478  7764 I NamespaceManager: Package com.google.android.nfcservices name not found! Using module version.
+10-19 20:58:14.665  5478  7764 I NamespaceManager: Package com.google.android.webapp name not found! Using module version.
+10-19 20:58:14.665  5478  7764 I NamespaceManager: Package com.google.android.telephonycore name not found! Using module version.
+10-19 20:58:14.665  5478  7764 I NamespaceManager: Package com.google.android.uprobestats name not found! Using module version.
+10-19 20:58:14.896   130   130 I lowmemorykiller: lmkd data connection established
+10-19 20:58:14.929   130   130 I lowmemorykiller: Using psi monitors for memory pressure detection
+10-19 20:58:14.929   130   130 I lowmemorykiller: Properties reinitilized
+10-19 20:58:14.929  7788  7788 I lowmemorykiller: lmkd updated properties successfully
+10-19 20:58:14.929   130   130 I lowmemorykiller: lmkd data connection dropped
+10-19 20:58:14.929   130   130 I lowmemorykiller: closing lmkd data connection
+10-19 20:58:14.930   519   519 W ServiceConnector.Impl: mayInterruptIfRunning not supported - ignoring
+10-19 20:58:14.935  1630  1630 D AugmentedAutofillService: handleOnConnected(): debug=true, verbose=false
+10-19 20:58:14.935  1630  3114 I AiAiAutofill: Disconnected AiAiAugmentedAutofillService.
+10-19 20:58:14.937  1630  3114 I AiAiAutofill: Connected AiAiAugmentedAutofillService.
+10-19 20:58:15.054  5273  5273 I ActivityThread: Schedule relaunch activity: com.google.android.apps.nexuslauncher.NexusLauncherActivity
+10-19 20:58:15.056  5273  5273 D b/254119092: clearActivity
+10-19 20:58:15.056  5273  5273 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+10-19 20:58:15.058  5273  5273 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@331d46c
+10-19 20:58:15.062   519  1963 W InputManager-JNI: Input channel object '65b4d65 com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity (client)' was disposed without first being removed with the input manager!
+10-19 20:58:15.064  5273  5273 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+10-19 20:58:15.064  5273  5273 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+10-19 20:58:15.118  5273  5306 I AiAiSuggestUi: Connecting to system intelligence module.
+10-19 20:58:15.124  5273  5300 I AiAiSuggestUi: Successfully connected to system intelligence:
+10-19 20:58:15.132   834   834 D NavigationModeController: getCurrentUserContext: contextUser=0 currentUser=0
+10-19 20:58:15.136  1630  2825 I AiAiEcho: Settings changed for uri: content://settings/secure/show_qr_code_scanner_setting
+10-19 20:58:15.136  1630  1977 I AiAiEcho: Predicting[0]:
+10-19 20:58:15.137  1630  1977 I AiAiEcho: EchoTargets:
+10-19 20:58:15.137  1630  1977 I AiAiEcho: Filtered by AiAi flag check:
+10-19 20:58:15.137  1630  1977 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+10-19 20:58:15.138  1630  1977 I AiAiEcho: Predicting[0]:
+10-19 20:58:15.138  1630  1977 I AiAiEcho: EchoTargets:
+10-19 20:58:15.138  1630  1977 I AiAiEcho: Filtered by AiAi flag check:
+10-19 20:58:15.138  1630  1977 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+10-19 20:58:15.139  1630  1977 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+10-19 20:58:15.141  1630  1977 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+10-19 20:58:15.145   834   834 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-19 20:58:15.149  5478  7764 I bwir    : updateFromConfigurations using legacy put method [CONTEXT service_id=204 ]
+10-19 20:58:15.153  5273  5273 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-19 20:58:15.165  5273  5273 D DeviceSearchAlg: search timeout = %d200
+10-19 20:58:15.168  5273  5273 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-19 20:58:15.168  5273  5273 W BcSmartspaceView: Current card is not present in the Adapter; cannot log.
+10-19 20:58:15.171  5273  5273 I OverviewComponentObserver: updateOverviewTargets: mIsHomeDisabled=false, isDefaultHomeNull=false, mIsDefaultHome=true
+10-19 20:58:15.189  1630  1630 I AiAiEcho: SearchContextManagerImpl::setSearchContext resultTypes=[141151] extras=[Bundle[mParcelledData.dataSize=684]] sessionId=[com.google.android.apps.nexuslauncher:87a53af3-9bd1-4dca-a755-b540bcdf3564,0]
+10-19 20:58:15.191  5273  5306 D SearchTargetUtil:  query= size=1
+10-19 20:58:15.191  5273  5306 D SearchTargetUtil: layoutType=icon_row resultType=4096 packageName= extras=Bundle{icon_container_enabled=true,zero_state_all_apps_web_suggest_count=3,rank=1.0,key_ipc_start=300736,hide_subtitle=true,zero_state_qsb_web_suggest_count=10,}ParentID: null targetID: SESSION_INFO:0::zero_state_flags
+10-19 20:58:15.200  5273  5273 I ContentCaptureHelper: Setting logging level to DEBUG
+10-19 20:58:15.200  5273  5273 D ContentCaptureManager: setFlushViewTreeAppearingEventDisabled(): setting to false
+10-19 20:58:15.200  5273  5273 D ContentCaptureManager: updateWindowAttributes(): window flags=-2137980672
+10-19 20:58:15.211  5273  5273 D MainContentCaptureSession: Destroying session (ctx=com.google.android.apps.nexuslauncher.NexusLauncherActivity@e8b680a, id=1517710177) with 0 event(s) for act:com.google.android.apps.nexuslauncher/.NexusLauncherActivity [state=2 (ACTIVE), disabled=false]
+10-19 20:58:15.234  5273  5273 D AutofillManager: view is not autofillable - activity denied for autofill
+10-19 20:58:15.241  5273  5306 I ImeTracker: com.google.android.apps.nexuslauncher:d49ed155: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+10-19 20:58:15.241  5273  5306 I ImeTracker: com.google.android.apps.nexuslauncher:d49ed155: onFailed at PHASE_CLIENT_VIEW_SERVED
+10-19 20:58:15.242  5273  5273 D TISBindHelper: TIS service connected
+10-19 20:58:15.243  5273  5273 D b/254119092: Set mActivity=com.google.android.apps.nexuslauncher.NexusLauncherActivity@83a4e55
+10-19 20:58:15.243  5273  5273 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+10-19 20:58:15.244  5273  5273 D MainContentCaptureSession: handleScheduleFlush(act:com.google.android.apps.nexuslauncher/.NexusLauncherActivity [state=1 (WAITING_FOR_SERVER), disabled=false], reason=FORCE_FLUSH): not a timeout reason because mDirectServiceInterface is not ready yet
+10-19 20:58:15.247  1691  1691 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@9232a72
+10-19 20:58:15.250   519  2182 W InputManager-JNI: Input channel object '82bc2bc com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity (client)' was disposed without first being removed with the input manager!
+10-19 20:58:15.317  5209  5209 W Telemet : GPS problem: phone location is turned off
+10-19 20:58:15.320   519   528 I system_server: NativeAlloc concurrent copying GC freed 614341(24MB) AllocSpace objects, 36(692KB) LOS objects, 47% free, 26MB/50MB, paused 50us,75us total 194.583ms
+10-19 20:58:15.320   519   529 W JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.android.server.wm.ActivityRecord$$ExternalSyntheticLambda0
+10-19 20:58:15.320   519   529 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+10-19 20:58:15.320   519   529 W JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.android.server.am.ActivityManagerService$14
+10-19 20:58:15.320   519   529 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+10-19 20:58:15.326   519   519 D BluetoothDeviceConfigChangeTracker: shouldRestartWhenPropertiesUpdated: INIT_gd_hal_snoop_logger_filtering='true',scan_timeout_millis='300000',location_denylist_name='',audio_policy_hf_enabled='true',INIT_gd_hal_snoop_logger_socket='true',location_denylist_advertising_data='⊈0016AAFE40/00FFFFFFF0,⊆0016AAFE/00FFFFFF,⊆00FF4C0002/00FFFFFFFF',le_audio_enabled_by_default='false',location_denylist_mac='',audio_policy_ag_enabled='true'
+10-19 20:58:15.326   519   519 D BluetoothDeviceConfigListener: All properties unchanged, skipping restart
+10-19 20:58:15.338   519   519 E DeviceConfig: Parsing int failed for location_mode
+10-19 20:58:15.551  5209  5267 D EGL_emulation: app_time_stats: avg=370.30ms min=20.50ms max=1089.78ms count=4
+10-19 20:58:15.621  5209  5209 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Location is turned off. Turn it on in the phone's settings."
+10-19 20:58:15.622  5209  5209 D DeviceCapture: Found 1 global views to redraw
+10-19 20:58:15.651  5209  5209 I forceRedraw: FrameCommitCallback complete
+10-19 20:58:15.696  5174  5199 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-19 20:58:15.696  5174  5199 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-19 20:58:15.696  5174  5199 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-19 20:58:15.696  5174  5199 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-19 20:58:15.696  5174  5199 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-19 20:58:15.696  5174  5199 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-19 20:58:15.696  5174  5199 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-19 20:58:15.696  5174  5199 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-19 20:58:15.696  5174  5199 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-19 20:58:15.696  5174  5199 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-19 20:58:15.721  5209  5209 I DeviceCapture: got bitmap, returning
+10-19 20:58:15.722  5209  5239 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-29.png
+10-19 20:58:15.724  1621  2475 W MediaProvider: isAppCloneUserPair for user 0: false
+10-19 20:58:15.737  5478  7772 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 301 [CONTEXT service_id=218 ]
+10-19 20:58:15.740  5478  7772 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 7 uptime_millis: 7 exec_start_elapsed_seconds: 301 [CONTEXT service_id=218 ]
+10-19 20:58:15.818  5209  5239 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-29.txt
+10-19 20:58:15.819  1621  3895 W MediaProvider: isAppCloneUserPair for user 0: false
+10-19 20:58:15.823  5209  5239 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-29.txt'.
+10-19 20:58:15.835  5478  7743 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 301 [CONTEXT service_id=218 ]
+10-19 20:58:15.837  5478  7773 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 9 uptime_millis: 9 exec_start_elapsed_seconds: 301 [CONTEXT service_id=218 ]
+10-19 20:58:15.961  5478  5695 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-19 20:58:15.961  5478  5695 I NearbyDiscovery: DiscoveryController, showNotification, itemSize=0 [CONTEXT service_id=265 ]
+10-19 20:58:15.961  5478  5695 I NearbyDiscovery: Show notifications: 0 total, no changes since last shown, no-op. [CONTEXT service_id=265 ]
+10-19 20:58:16.125  5209  5209 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Location is turned off. Turn it on in the phone's settings."
+10-19 20:58:16.126  5209  5209 D DeviceCapture: Found 1 global views to redraw
+10-19 20:58:16.147  5209  5209 I forceRedraw: FrameCommitCallback complete
+10-19 20:58:16.215  5209  5209 I DeviceCapture: got bitmap, returning
+10-19 20:58:16.216  5209  5239 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-30.png
+10-19 20:58:16.218  1621  2475 W MediaProvider: isAppCloneUserPair for user 0: false
+10-19 20:58:16.233  5478  7772 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 301 [CONTEXT service_id=218 ]
+10-19 20:58:16.235  5478  7743 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 7 uptime_millis: 7 exec_start_elapsed_seconds: 301 [CONTEXT service_id=218 ]
+10-19 20:58:16.317  5209  5239 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-30.txt
+10-19 20:58:16.320  1621  2038 W MediaProvider: isAppCloneUserPair for user 0: false
+10-19 20:58:16.323  5209  5239 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-30.txt'.
+10-19 20:58:16.335  5478  7772 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 301 [CONTEXT service_id=218 ]
+10-19 20:58:16.338  5478  7773 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 8 uptime_millis: 8 exec_start_elapsed_seconds: 301 [CONTEXT service_id=218 ]
+10-19 20:58:16.457  5209  5209 W Telemet : GPS signal lost
+10-19 20:58:16.628   519  2172 D ConnectivityService: requestNetwork for uid/pid:10132/1691 activeRequest: null callbackRequest: 147 [NetworkRequest [ REQUEST id=147, [ Transports: CELLULAR Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&NOT_VCN_MANAGED Uid: 10132 RequestorUid: 10132 RequestorPkg: com.google.android.googlequicksearchbox UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+10-19 20:58:16.629   335   368 I netd    : networkSetPermissionForNetwork(101, 0) <0.95ms>
+10-19 20:58:16.631   519   763 D ConnectivityService: NetReassign [147 : null → 101] [c 1] [a 2] [i 1]
+10-19 20:58:16.631   519   763 D ConnectivityService: reportNetworkConnectivity(100, false) by 10132
+10-19 20:58:16.632  5209  5209 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Location is turned off. Turn it on in the phone's settings."
+10-19 20:58:16.633   996  1969 D NetworkMonitor/100: Forcing reevaluation for UID 10132. Dns signal count: 0
+10-19 20:58:16.635  5209  5209 D DeviceCapture: Found 1 global views to redraw
+10-19 20:58:16.636   996  7800 D TrafficStats: tagSocket(6) with statsTag=0xffffff81, statsUid=-1
+10-19 20:58:16.636   996  7801 D TrafficStats: tagSocket(108) with statsTag=0xffffff81, statsUid=-1
+10-19 20:58:16.637   996  7800 D TrafficStats: tagSocket(68) with statsTag=0xffffff81, statsUid=-1
+10-19 20:58:16.637   996  7801 D TrafficStats: tagSocket(108) with statsTag=0xffffff81, statsUid=-1
+10-19 20:58:16.638   335  7803 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+10-19 20:58:16.638   335  7802 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+10-19 20:58:16.640   335  7804 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+10-19 20:58:16.640   335  7804 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x710f9821a0b0
+10-19 20:58:16.641   335  7805 I resolv  : ResNSendHandler::run: 0 / {100 983140 100 983140 1073 1}
+10-19 20:58:16.643   335  7803 I resolv  : res_nsend: used send_dg 75 terrno: 0
+10-19 20:58:16.648   335  7805 I resolv  : res_nsend: used send_dg 63 terrno: 0
+10-19 20:58:16.649   996   996 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+10-19 20:58:16.649   996   996 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+10-19 20:58:16.650   996  7801 D NetworkMonitor/100: PROBE_DNS connectivitycheck.gstatic.com 13ms OK 142.251.150.120,2001:4860:4826:7800::
+10-19 20:58:16.651   335  7806 I resolv  : GetAddrInfoHandler::run: {100 983140 100 983140 1073 1}
+10-19 20:58:16.652   335  7807 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-19 20:58:16.652   335  7807 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x71101821e770
+10-19 20:58:16.652   335  7807 I resolv  : doQuery: rcode=0, ancount=1, return value=75
+10-19 20:58:16.652   335  7808 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-19 20:58:16.652   335  7808 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x71101821c9b0
+10-19 20:58:16.652   335  7808 I resolv  : doQuery: rcode=0, ancount=1, return value=63
+10-19 20:58:16.653   996  7801 D TrafficStats: tagSocket(6) with statsTag=0xffffff81, statsUid=-1
+10-19 20:58:16.666   335  7802 I resolv  : res_nsend: used send_dg 256 terrno: 0
+10-19 20:58:16.666   996   996 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-19 20:58:16.667  5209  5267 D EGL_emulation: app_time_stats: avg=182.33ms min=14.13ms max=500.42ms count=6
+10-19 20:58:16.668   996   996 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-19 20:58:16.668   996   996 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-19 20:58:16.669   996   996 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-19 20:58:16.674  5209  5209 I forceRedraw: FrameCommitCallback complete
+10-19 20:58:16.682   996   996 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-19 20:58:16.682   996   996 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-19 20:58:16.683   996   996 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-19 20:58:16.683   996   996 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-19 20:58:16.684   996   996 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-19 20:58:16.684   996   996 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-19 20:58:16.684   996   996 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-19 20:58:16.685   996   996 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-19 20:58:16.685   996   996 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-19 20:58:16.685   996   996 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-19 20:58:16.686   996   996 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-19 20:58:16.694   996   996 D TrafficStats: tagSocket(68) with statsTag=0xffffffff, statsUid=-1
+10-19 20:58:16.711   996  7800 D NetworkMonitor/100: PROBE_DNS www.google.com 75ms OK 142.251.153.119,142.251.151.119,142.251.154.119,142.251.150.119,142.251.157.119,142.251.155.119,142.251.152.119,142.251.156.119,2001:4860:482b:7700::,2001:4860:4826:7700::,2001:4860:482a:7700::,2001:4860:4827:7700::,2001:4860:4829:7700::,2001:4860:482d:7700::,2001:4860:482c:7700::,2001:4860:4828:7700::
+10-19 20:58:16.718  5174  5199 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-19 20:58:16.718  5174  5199 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-19 20:58:16.718  5174  5199 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-19 20:58:16.718  5174  5199 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-19 20:58:16.718  5174  5199 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-19 20:58:16.718  5174  5199 W System  : A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+10-19 20:58:16.718  5174  5199 W System  : java.lang.Throwable: Explicit termination method 'HardwareBuffer.close' not called
+10-19 20:58:16.718  5174  5199 W System  : 	at dalvik.system.CloseGuard.openWithCallSite(CloseGuard.java:288)
+10-19 20:58:16.718  5174  5199 W System  : 	at dalvik.system.CloseGuard.open(CloseGuard.java:257)
+10-19 20:58:16.718  5174  5199 W System  : 	at android.hardware.HardwareBuffer.<init>(HardwareBuffer.java:266)
+10-19 20:58:16.720   335  7809 I resolv  : GetAddrInfoHandler::run: {100 983140 100 983140 1073 1}
+10-19 20:58:16.720   335  7810 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-19 20:58:16.721   335  7810 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x710f18222c10
+10-19 20:58:16.721   335  7810 I resolv  : doQuery: rcode=0, ancount=8, return value=256
+10-19 20:58:16.721   335  7811 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-19 20:58:16.721   335  7811 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x710f9821a0b0
+10-19 20:58:16.721   335  7811 I resolv  : doQuery: rcode=0, ancount=8, return value=160
+10-19 20:58:16.723   996  7800 D TrafficStats: tagSocket(68) with statsTag=0xffffff81, statsUid=-1
+10-19 20:58:16.725   996  7801 D NetworkMonitor/100: PROBE_HTTP http://connectivitycheck.gstatic.com/generate_204 time=74ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Connection=[close], Content-Length=[0], Cross-Origin-Resource-Policy=[cross-origin], Date=[Mon, 19 Oct 2026 20:58:16 GMT], X-Android-Received-Millis=[1792443496724], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1792443496687]}
+10-19 20:58:16.743  5209  5209 I DeviceCapture: got bitmap, returning
+10-19 20:58:16.744  5209  5239 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-op-error-31.png
+10-19 20:58:16.746  1621  5394 W MediaProvider: isAppCloneUserPair for user 0: false
+10-19 20:58:16.786  5478  7743 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 302 [CONTEXT service_id=218 ]
+10-19 20:58:16.828  5478  7773 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 57 uptime_millis: 57 exec_start_elapsed_seconds: 302 [CONTEXT service_id=218 ]
+10-19 20:58:16.880   996  7800 D NetworkMonitor/100: PROBE_HTTPS https://www.google.com/generate_204 time=160ms ret=204 request={Connection=[close], User-Agent=[Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36]} headers={null=[HTTP/1.1 204 No Content], Alt-Svc=[h3=":443"; ma=2592000,h3-29=":443"; ma=2592000], Connection=[close], Content-Length=[0], Cross-Origin-Resource-Policy=[cross-origin], Date=[Mon, 19 Oct 2026 20:58:17 GMT], X-Android-Received-Millis=[1792443496879], X-Android-Response-Source=[NETWORK 204], X-Android-Selected-Protocol=[http/1.1], X-Android-Sent-Millis=[1792443496869]}
+10-19 20:58:16.882   996  7799 D NetworkMonitor/100: isCaptivePortal: isSuccessful()=true isPortal()=false RedirectUrl=null isPartialConnectivity()=false Time=246ms
+10-19 20:58:16.882   519   763 D ConnectivityService: [100 WIFI] validation passed
+10-19 20:58:16.904  5209  5239 D FileTestStorage: openOutputFile from /sdcard/Android/media/io.github.avsessisozx.telemet/additional_test_output/view-hierarchy-31.txt
+10-19 20:58:16.905  1621  2038 W MediaProvider: isAppCloneUserPair for user 0: false
+10-19 20:58:16.909  5209  5239 W ViewHierarchyExceptionHandler: The complete view hierarchy is available in artifact file 'view-hierarchy-31.txt'.
+10-19 20:58:16.921  5478  7772 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 302 [CONTEXT service_id=218 ]
+10-19 20:58:16.923  5478  7743 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 8 uptime_millis: 8 exec_start_elapsed_seconds: 302 [CONTEXT service_id=218 ]
+10-19 20:58:17.199  5209  5209 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Location is turned off. Turn it on in the phone's settings."
+10-19 20:58:18.028  1621  5394 W MediaProvider: isAppCloneUserPair for user 0: false
+10-19 20:58:18.043  5478  7773 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:9 exec_start_elapsed_seconds: 303 [CONTEXT service_id=218 ]
+10-19 20:58:18.046  5478  7772 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:9 result: 1 elapsed_millis: 8 uptime_millis: 8 exec_start_elapsed_seconds: 303 [CONTEXT service_id=218 ]
+10-19 20:58:18.050  1630  2825 I AiAiEcho: Settings changed for uri: content://settings/secure/location_mode
+10-19 20:58:18.050  1630  1977 I AiAiEcho: Predicting[0]:
+10-19 20:58:18.050  1630  1977 I AiAiEcho: EchoTargets:
+10-19 20:58:18.050  1630  1977 I AiAiEcho: Filtered by AiAi flag check:
+10-19 20:58:18.051  1630  1977 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+10-19 20:58:18.052  1019  1316 D BtGatt.ScanManager: resume scan  [ScanClient scanModeApp 2 scanModeUsed 2 [appScanStats io.github.avsessisozx.telemet]]
+10-19 20:58:18.052  1019  1316 D BtGatt.ScanManager: handling starting scan
+10-19 20:58:18.053  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(268)] ScanFilterEnable in shim layer
+10-19 20:58:18.053  1019  1278 D BtGatt.GattService: onScanFilterEnableDisabled() - clientIf=3, status=0, action=1
+10-19 20:58:18.054  1019  1278 D BtGatt.ScanManager: callback done for scannerId - 3 status - 0
+10-19 20:58:18.054  1019  1316 D BtGatt.ScanManager: configureFilterParamter 500 10000 1 0
+10-19 20:58:18.054  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(204)] ScanFilterParamSetup in shim layer
+10-19 20:58:18.054  1019  1278 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=3, status=0, action=0, availableSpace=0
+10-19 20:58:18.054  1019  1278 D BtGatt.ScanManager: callback done for scannerId - 3 status - 0
+10-19 20:58:18.055  1019  1316 D BtGatt.ScanManager: start gattClientScanNative from startRegularScan()
+10-19 20:58:18.055  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(168)] Scan in shim layer started
+10-19 20:58:18.055  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:588 stop_scan: Scanning already stopped, return!
+10-19 20:58:18.055  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:175 register_client: Scheduled address rotation for first client registered
+10-19 20:58:18.055  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:178 register_client: Client registered
+10-19 20:58:18.055  1019  1316 D BtGatt.ScanManager: configureRegularScanParams() - queue=3
+10-19 20:58:18.056  1630  1977 I AiAiEcho: Predicting[0]:
+10-19 20:58:18.056  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(168)] Scan in shim layer stopped
+10-19 20:58:18.056  1630  1977 I AiAiEcho: EchoTargets:
+10-19 20:58:18.056  1630  1977 I AiAiEcho: Filtered by AiAi flag check:
+10-19 20:58:18.056  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:193 unregister_client: Client unregistered
+10-19 20:58:18.056  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:197 unregister_client: Cancelled address rotation alarm
+10-19 20:58:18.056  1019  1316 D BtGatt.ScanManager: Start gattClientScanNative with old scanMode -1 new scanMode 2 ( in MS: 100 / 100, in scan unit: 160 / 160 ) [ScanClient scanModeApp 2 scanModeUsed 2 [appScanStats io.github.avsessisozx.telemet]]
+10-19 20:58:18.056  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(346)] SetScanParameters in shim layer
+10-19 20:58:18.056  1019  1278 D BtGatt.GattService: onScanParamSetupCompleted : 0
+10-19 20:58:18.056  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(168)] Scan in shim layer started
+10-19 20:58:18.056  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:588 stop_scan: Scanning already stopped, return!
+10-19 20:58:18.056  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:175 register_client: Scheduled address rotation for first client registered
+10-19 20:58:18.056  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:178 register_client: Client registered
+10-19 20:58:18.056  1019  1316 D BtGatt.ScanManager: apply scan timeout (300000)to scannerId 3
+10-19 20:58:18.060  1630  1977 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+10-19 20:58:18.067  5478  5649 I NearbySharing: Location is enabled [CONTEXT service_id=194 ]
+10-19 20:58:18.068  5478  5649 I NearbySharing: Stopping scanning because Nearby Sharing is disabled. [CONTEXT service_id=194 ]
+10-19 20:58:18.068  5478  5649 I NearbySharing: Failed to stop scanning because we're not scanning. [CONTEXT service_id=194 ]
+10-19 20:58:18.069  5478  5649 I NearbySharing: Can't stop advertising FastInitiation. Not advertising. [CONTEXT service_id=194 ]
+10-19 20:58:18.069  5478  5649 I NearbySharing: Stopping Fast Init advertisement because we're not scanning in the foreground. [CONTEXT service_id=194 ]
+10-19 20:58:18.070  5478  5649 I NearbySharing: Stopping advertising because Nearby Sharing is disabled. [CONTEXT service_id=194 ]
+10-19 20:58:18.070  1630  1977 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+10-19 20:58:18.071  5478  5649 I NearbySharing: Failed to scan for fast initiation because we're already scanning with isHighPowerAllowed=false. [CONTEXT service_id=194 ]
+10-19 20:58:18.071  5478  5649 I NearbySharing: Dismissing HUN as there's no device nearby. [CONTEXT service_id=194 ]
+10-19 20:58:18.072  5478  5649 I NearbySharing: Cancelling in use notification [CONTEXT service_id=194 ]
+10-19 20:58:18.072   834   834 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+10-19 20:58:18.072   519   536 D GnssCallbackJni: gnssSetCapabilitiesCb: 65u
+10-19 20:58:18.073   519   536 D GnssCallbackJni: gnssSetSystemInfoCb: yearOfHw=2023, name=Android Studio Emulator GPS
+10-19 20:58:18.074  1630  1977 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+10-19 20:58:18.078   519   536 I GnssLocationProviderJni: Unable to initialize IGnssNi interface.
+10-19 20:58:18.080   519   536 D GnssLocationProviderJni: GnssPowerIndicationCallback::setCapabilitiesCb: 63u
+10-19 20:58:18.081   519   536 I GnssVisibilityControl: Updating non-framework location access proxy apps in the GNSS HAL to: []
+10-19 20:58:18.083  5209  5209 D BluetoothAdapter: isLeEnabled(): ON
+10-19 20:58:18.085  1019  3936 D BtGatt.GattService: stopScan() - queue size =3
+10-19 20:58:18.086  1019  3936 D ActivityAttributionService: notifyActivityAttributionInfo UID=1002 packageName=com.google.android.bluetooth deviceAddress=no_active_device_address
+10-19 20:58:18.087  1019  3936 I bt_btif : packages/modules/Bluetooth/system/btif/src/bluetooth.cc:829 get_profile_interface: get_profile_interface: id = activity_attribution
+10-19 20:58:18.087  1019  1316 D BtGatt.ScanManager: handling stopping scan  [ScanClient scanModeApp 2 scanModeUsed 2 [appScanStats io.github.avsessisozx.telemet]]
+10-19 20:58:18.087  1019  1316 D BtGatt.ScanManager: stop gattClientScanNative
+10-19 20:58:18.087  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(168)] Scan in shim layer stopped
+10-19 20:58:18.087  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:193 unregister_client: Client unregistered
+10-19 20:58:18.087  1019  1260 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:197 unregister_client: Cancelled address rotation alarm
+10-19 20:58:18.088  1019  1316 I bt_stack: [INFO:le_scanning_manager.cc(204)] ScanFilterParamSetup in shim layer
+10-19 20:58:18.089  1019  1278 D BtGatt.GattService: onScanFilterParamsConfigured() - clientIf=3, status=0, action=0, availableSpace=0
+10-19 20:58:18.089  1019  1278 D BtGatt.ScanManager: callback done for scannerId - 3 status - 0
+10-19 20:58:18.089  1019  1316 D BtGatt.ScanManager: configureRegularScanParams() - queue=2
+10-19 20:58:18.089  1019  1316 D BtGatt.ScanManager: configureRegularScanParams() - queue empty, scan stopped
+10-19 20:58:18.091  1019  3936 D BtGatt.GattService: unregisterScanner() - scannerId=3
+10-19 20:58:18.091  1019  3936 I bt_stack: [INFO:le_scanning_manager.cc(162)] Unregister in shim layer, scanner_id:3
+10-19 20:58:18.094  5478  5512 W WearableService: onGetService: Wear is not available on this device.
+10-19 20:58:18.097  5209  5209 I Telemet : GPS stopped
+10-19 20:58:18.099  1691  2105 W LocationOracle: No location returned by GMS core getLastLocation()
+10-19 20:58:18.102  5552  7767 I LocationHistory: [IntentOperation] Handling action android.location.MODE_CHANGED [CONTEXT service_id=314 ]
+10-19 20:58:18.106   971  7830 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+10-19 20:58:18.107  5552  7767 I LocationHistory: [IntentOperation] Device settings changed to ENABLED. Scheduling periodic tasks. [CONTEXT service_id=314 ]
+10-19 20:58:18.107  5552  7767 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.storevisits.StoreVisitsProcessingService.StoreVisitsProcessing is scheduled to run EVERY_6_HOURS [CONTEXT service_id=173 ]
+10-19 20:58:18.107  5552  7767 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.wifi.WifiPlaceVisitProcessingService.WifiPlaceVisit is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.107  5552  7767 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.uploads.BatchDeidentifiedDataUploadService.BatchDeidentifiedDataUpload is scheduled to run EVERY_6_HOURS [CONTEXT service_id=173 ]
+10-19 20:58:18.107  5552  7767 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.geller.GellerCleanupService.GellerCleanup is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.107  5552  7767 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.settings.LocationHistoryActiveProcessingService.LocationHistoryActiveProcessing is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.107  5552  7767 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.pulp.PulpInferenceService.PulpInference is scheduled to run EVERY_7_DAYS [CONTEXT service_id=173 ]
+10-19 20:58:18.107  5552  7767 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.pulp.PulpMddDownloadScheduleService.PulpMddRefreshDownloadTask is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.108  5552  7767 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.pulp.PulpMddMaintenanceService.PulpMddMaintenanceTask is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.108  5552  7767 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.FederatedScheduleService.FederatedLocation is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.108  5552  7767 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedTaskIdentityDataService is not available. This may cause the task to be lost.
+10-19 20:58:18.108  5552  7767 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.FederatedTaskIdentityDataService.FederatedLocation is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.108  5552  7767 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedJobHistoryService is not available. This may cause the task to be lost.
+10-19 20:58:18.108  5552  7767 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.FederatedJobHistoryService.FederatedLocation is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.108  5552  7767 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhDatabaseCleanupJob.OdlhDatabaseCleanup is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.108  5552  7767 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditMergeJob.EditMergeJob is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.108  5552  7767 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditUploadJob.EditUploadJob is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.108  5552  7767 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.historicalbusyness.HistoricalBusynessProcessingService.HistoricalBusyness is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.108  5552  7767 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhRemovedAccountsCleanupJob.OdlhRemovedAccountsCleanup is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.108  5552  7767 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhUserEditSyncJob.OdlhUserEditSync is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.108  5552  7767 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.regionfetcher.RegionMddMaintenanceService.RegionMddMaintenanceTask is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.108  5552  7767 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.regionfetcher.RegionMddDownloadScheduleService.RegionMddRefreshDownloadTask is scheduled to run EVERY_6_HOURS [CONTEXT service_id=173 ]
+10-19 20:58:18.112  1621  7588 W MediaProvider: isAppCloneUserPair for user 0: false
+10-19 20:58:18.116   519  2173 D SafetySourceDataValidator: Package com.google.android.gms has expected signature
+10-19 20:58:18.116   519  2173 D SafetySourceDataValidator: Package com.google.android.gms has expected signature
+10-19 20:58:18.118  1621  7588 I MediaProvider: Open with lower FS for /storage/emulated/0/Download/Telemet/surus_20261019_205737.fit. Uid: 10192
+10-19 20:58:18.122  1621  7588 W MediaProvider: isAppCloneUserPair for user 0: false
+10-19 20:58:18.126  1621  7588 I MediaProvider: Open with lower FS for /storage/emulated/0/Download/Telemet/surus_20261019_205737.gpx. Uid: 10192
+10-19 20:58:18.126   519   756 D WifiActiveModeWarden: Switching all client mode managers
+10-19 20:58:18.131  5209  5209 I Telemet : Ride saved: Downloads/Telemet/surus_20261019_205737.fit and .gpx (42 points, 0.0 km)
+10-19 20:58:18.133  5209  5209 I Telemet : Telemet stopped
+10-19 20:58:18.139  5552  7769 I LocationHistory: [IntentOperation] Handling action android.location.PROVIDERS_CHANGED [CONTEXT service_id=314 ]
+10-19 20:58:18.139  5552  7769 I LocationHistory: [IntentOperation] Device settings changed to ENABLED. Scheduling periodic tasks. [CONTEXT service_id=314 ]
+10-19 20:58:18.139  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.storevisits.StoreVisitsProcessingService.StoreVisitsProcessing is scheduled to run EVERY_6_HOURS [CONTEXT service_id=173 ]
+10-19 20:58:18.139  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.wifi.WifiPlaceVisitProcessingService.WifiPlaceVisit is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.140  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.uploads.BatchDeidentifiedDataUploadService.BatchDeidentifiedDataUpload is scheduled to run EVERY_6_HOURS [CONTEXT service_id=173 ]
+10-19 20:58:18.140  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.geller.GellerCleanupService.GellerCleanup is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.140  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.settings.LocationHistoryActiveProcessingService.LocationHistoryActiveProcessing is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.140  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.pulp.PulpInferenceService.PulpInference is scheduled to run EVERY_7_DAYS [CONTEXT service_id=173 ]
+10-19 20:58:18.140  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.pulp.PulpMddDownloadScheduleService.PulpMddRefreshDownloadTask is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.140  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.pulp.PulpMddMaintenanceService.PulpMddMaintenanceTask is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.140  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.FederatedScheduleService.FederatedLocation is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.140  5552  7769 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedTaskIdentityDataService is not available. This may cause the task to be lost.
+10-19 20:58:18.140  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.FederatedTaskIdentityDataService.FederatedLocation is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.140  5552  7769 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedJobHistoryService is not available. This may cause the task to be lost.
+10-19 20:58:18.140  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.FederatedJobHistoryService.FederatedLocation is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.140  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhDatabaseCleanupJob.OdlhDatabaseCleanup is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.140  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditMergeJob.EditMergeJob is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.140  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditUploadJob.EditUploadJob is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.141  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.historicalbusyness.HistoricalBusynessProcessingService.HistoricalBusyness is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.141  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhRemovedAccountsCleanupJob.OdlhRemovedAccountsCleanup is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.141  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhUserEditSyncJob.OdlhUserEditSync is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.141  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.regionfetcher.RegionMddMaintenanceService.RegionMddMaintenanceTask is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.141  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.regionfetcher.RegionMddDownloadScheduleService.RegionMddRefreshDownloadTask is scheduled to run EVERY_6_HOURS [CONTEXT service_id=173 ]
+10-19 20:58:18.152  5478  7781 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-19 20:58:18.158  5552  7769 I LocationHistory: [IntentOperation] Handling action android.location.PROVIDERS_CHANGED [CONTEXT service_id=314 ]
+10-19 20:58:18.158  5552  7769 I LocationHistory: [IntentOperation] Device settings changed to ENABLED. Scheduling periodic tasks. [CONTEXT service_id=314 ]
+10-19 20:58:18.158  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.storevisits.StoreVisitsProcessingService.StoreVisitsProcessing is scheduled to run EVERY_6_HOURS [CONTEXT service_id=173 ]
+10-19 20:58:18.158  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.wifi.WifiPlaceVisitProcessingService.WifiPlaceVisit is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.159  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.uploads.BatchDeidentifiedDataUploadService.BatchDeidentifiedDataUpload is scheduled to run EVERY_6_HOURS [CONTEXT service_id=173 ]
+10-19 20:58:18.159  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.geller.GellerCleanupService.GellerCleanup is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.159  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.settings.LocationHistoryActiveProcessingService.LocationHistoryActiveProcessing is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.160  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.pulp.PulpInferenceService.PulpInference is scheduled to run EVERY_7_DAYS [CONTEXT service_id=173 ]
+10-19 20:58:18.160  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.pulp.PulpMddDownloadScheduleService.PulpMddRefreshDownloadTask is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.160  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.pulp.PulpMddMaintenanceService.PulpMddMaintenanceTask is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.161  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.FederatedScheduleService.FederatedLocation is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.161  5552  7769 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedTaskIdentityDataService is not available. This may cause the task to be lost.
+10-19 20:58:18.161  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.FederatedTaskIdentityDataService.FederatedLocation is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.161  5552  7769 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedJobHistoryService is not available. This may cause the task to be lost.
+10-19 20:58:18.161  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.FederatedJobHistoryService.FederatedLocation is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.162  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhDatabaseCleanupJob.OdlhDatabaseCleanup is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.162  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditMergeJob.EditMergeJob is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.163  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditUploadJob.EditUploadJob is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.163  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.historicalbusyness.HistoricalBusynessProcessingService.HistoricalBusyness is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.163  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhRemovedAccountsCleanupJob.OdlhRemovedAccountsCleanup is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.163  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhUserEditSyncJob.OdlhUserEditSync is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.164  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.regionfetcher.RegionMddMaintenanceService.RegionMddMaintenanceTask is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.164  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.regionfetcher.RegionMddDownloadScheduleService.RegionMddRefreshDownloadTask is scheduled to run EVERY_6_HOURS [CONTEXT service_id=173 ]
+10-19 20:58:18.170  5478  7773 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-19 20:58:18.171  5478  5695 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-19 20:58:18.171  5478  5695 I NearbyDiscovery: DiscoveryController, showNotification, itemSize=0 [CONTEXT service_id=265 ]
+10-19 20:58:18.172  5478  5695 I NearbyDiscovery: Show notifications: 0 total, no changes since last shown, no-op. [CONTEXT service_id=265 ]
+10-19 20:58:18.176   834   906 D EGL_emulation: app_time_stats: avg=1557.38ms min=40.75ms max=3842.14ms count=3
+10-19 20:58:18.178  5478  7779 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-19 20:58:18.183  5478  5545 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 20:58:18.185  5552  7769 I LocationHistory: [IntentOperation] Handling action android.location.PROVIDERS_CHANGED [CONTEXT service_id=314 ]
+10-19 20:58:18.185  5552  7769 I LocationHistory: [IntentOperation] Device settings changed to ENABLED. Scheduling periodic tasks. [CONTEXT service_id=314 ]
+10-19 20:58:18.185  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.storevisits.StoreVisitsProcessingService.StoreVisitsProcessing is scheduled to run EVERY_6_HOURS [CONTEXT service_id=173 ]
+10-19 20:58:18.186  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.wifi.WifiPlaceVisitProcessingService.WifiPlaceVisit is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.186  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.uploads.BatchDeidentifiedDataUploadService.BatchDeidentifiedDataUpload is scheduled to run EVERY_6_HOURS [CONTEXT service_id=173 ]
+10-19 20:58:18.186  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.geller.GellerCleanupService.GellerCleanup is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.186  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.settings.LocationHistoryActiveProcessingService.LocationHistoryActiveProcessing is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.186  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.pulp.PulpInferenceService.PulpInference is scheduled to run EVERY_7_DAYS [CONTEXT service_id=173 ]
+10-19 20:58:18.186  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.pulp.PulpMddDownloadScheduleService.PulpMddRefreshDownloadTask is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.187  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.pulp.PulpMddMaintenanceService.PulpMddMaintenanceTask is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.187  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.FederatedScheduleService.FederatedLocation is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.187  5552  7769 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedTaskIdentityDataService is not available. This may cause the task to be lost.
+10-19 20:58:18.187  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.FederatedTaskIdentityDataService.FederatedLocation is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.187  5552  7769 W GmsTaskScheduler: com.google.android.gms.semanticlocationhistory.federated.FederatedJobHistoryService is not available. This may cause the task to be lost.
+10-19 20:58:18.187  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.FederatedJobHistoryService.FederatedLocation is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.187  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhDatabaseCleanupJob.OdlhDatabaseCleanup is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.187  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditMergeJob.EditMergeJob is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.187  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.edit.EditUploadJob.EditUploadJob is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.187  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.deidentifieddata.historicalbusyness.HistoricalBusynessProcessingService.HistoricalBusyness is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.187  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhRemovedAccountsCleanupJob.OdlhRemovedAccountsCleanup is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.187  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.db.OdlhUserEditSyncJob.OdlhUserEditSync is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.187  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.regionfetcher.RegionMddMaintenanceService.RegionMddMaintenanceTask is scheduled to run EVERY_DAY [CONTEXT service_id=173 ]
+10-19 20:58:18.187  5552  7769 I SemanticLocation: [Scheduler] Periodic Task com.google.android.gms.semanticlocationhistory.federated.regionfetcher.RegionMddDownloadScheduleService.RegionMddRefreshDownloadTask is scheduled to run EVERY_6_HOURS [CONTEXT service_id=173 ]
+10-19 20:58:18.207  5478  7764 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-19 20:58:18.211  5478  7770 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-19 20:58:18.213  5478  7770 I Nearby  : is blocked device type false, isAuto=false, isIot=false, isLatchsky=false, isChinaWearable=false, isTv=false, isWearable=false (supportWearOs=false), isChromeOsDevice=false (supportChromeOs=false) [CONTEXT service_id=49 ]
+10-19 20:58:18.215  5478  7773 I GCoreUlr: WorldUpdater received intent Intent { act=com.google.android.location.reporting.ACTION_UPDATE_WORLD cmp=com.google.android.gms/com.google.android.location.reporting.service.DispatchingService (has extras) } with receiverAction android.location.PROVIDERS_CHANGED
+10-19 20:58:18.217  5478  5545 W SystemServiceRegistry: No service published for: wifirtt
+10-19 20:58:18.218  1691  6407 W A       : [Download] response code: 400
+10-19 20:58:18.223  5478  7773 I GCoreUlr: WorldUpdater:android.location.PROVIDERS_CHANGED: Ensuring that reporting is stopped because of reasons: (no Google accounts)
+10-19 20:58:18.224  5478  7773 I GCoreUlr: Unbound from all signal providers.
+10-19 20:58:18.242  5478  7773 I GCoreUlr: WorldUpdater received intent Intent { act=com.google.android.location.reporting.ACTION_UPDATE_WORLD cmp=com.google.android.gms/com.google.android.location.reporting.service.DispatchingService (has extras) } with receiverAction android.location.PROVIDERS_CHANGED
+10-19 20:58:18.245  5478  7773 I GCoreUlr: WorldUpdater:android.location.PROVIDERS_CHANGED: Ensuring that reporting is stopped because of reasons: (no Google accounts)
+10-19 20:58:18.246  5478  5545 W SystemServiceRegistry: No service published for: wifirtt
+10-19 20:58:18.247  5478  7773 I GCoreUlr: Unbound from all signal providers.
+10-19 20:58:18.259  5478  7773 I GCoreUlr: WorldUpdater received intent Intent { act=com.google.android.location.reporting.ACTION_UPDATE_WORLD cmp=com.google.android.gms/com.google.android.location.reporting.service.DispatchingService (has extras) } with receiverAction android.location.PROVIDERS_CHANGED
+10-19 20:58:18.261  5478  7773 I GCoreUlr: WorldUpdater:android.location.PROVIDERS_CHANGED: Ensuring that reporting is stopped because of reasons: (no Google accounts)
+10-19 20:58:18.261  5478  7773 I GCoreUlr: Unbound from all signal providers.
+10-19 20:58:18.266  5478  7773 I GCoreUlr: DispatchingService ignoring Intent { act=android.net.wifi.WIFI_STATE_CHANGED flg=0x44000010 (has extras) } because ULR inactive
+10-19 20:58:18.287  5478  5478 I GCoreUlr: Unbound from all signal providers.
+10-19 20:58:18.291  5478  5478 I GCoreUlr: Stopping handler for UlrDispSvcFast
+10-19 20:58:18.331  5209  5267 D EGL_emulation: app_time_stats: avg=551.94ms min=21.14ms max=1533.97ms count=3
+10-19 20:58:18.336  5478  7770 I SemanticLocation: [MDD] ModelBundleMetadata: File not found [CONTEXT service_id=173 ]
+10-19 20:58:18.336  5478  7770 I SemanticLocation: java.io.FileNotFoundException: /data/user/0/com.google.android.gms/files/model_bundle_metadata.pb: open failed: ENOENT (No such file or directory)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at libcore.io.IoBridge.open(IoBridge.java:574)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at java.io.FileInputStream.<init>(FileInputStream.java:160)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at android.app.ContextImpl.openFileInput(ContextImpl.java:745)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at bzxt.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at bzxd.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):9)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at bzxd.<init>(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at cadn.j(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at cadn.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):36)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at cadn.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at com.google.android.gms.semanticlocation.service.SemanticLocationChimeraService.k(:com.google.android.gms@231818047@23.18.18 (190800-535401451):9)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at com.google.android.gms.semanticlocation.service.SemanticLocationChimeraService.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):17)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at cacs.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):68)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at java.lang.Thread.run(Thread.java:1012)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at libcore.io.Linux.open(Native Method)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:8063)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	at libcore.io.IoBridge.open(IoBridge.java:560)
+10-19 20:58:18.336  5478  7770 I SemanticLocation: 	... 22 more
+10-19 20:58:18.364  5478  7743 I GCoreUlr: WorldUpdater received intent Intent { act=com.google.android.location.reporting.ACTION_UPDATE_WORLD cmp=com.google.android.gms/com.google.android.location.reporting.service.DispatchingService (has extras) } with receiverAction com.google.android.location.internal.server.ACTION_RESTARTED
+10-19 20:58:18.371  5552  7769 I ChimeraConfigurator: Starting update, reason: 4 urgentFeatures: tflite_dynamite:-1
+10-19 20:58:18.403  5478  7770 I SemanticLocation: [MDD] ModelBundleMetadata: File not found [CONTEXT service_id=173 ]
+10-19 20:58:18.403  5478  7770 I SemanticLocation: java.io.FileNotFoundException: /data/user/0/com.google.android.gms/files/model_bundle_metadata.pb: open failed: ENOENT (No such file or directory)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	at libcore.io.IoBridge.open(IoBridge.java:574)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	at java.io.FileInputStream.<init>(FileInputStream.java:160)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	at android.app.ContextImpl.openFileInput(ContextImpl.java:745)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	at android.content.ContextWrapper.openFileInput(ContextWrapper.java:249)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	at bzxt.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	at bzxd.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):9)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	at cadb.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):8)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	at java.lang.Thread.run(Thread.java:1012)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	at libcore.io.Linux.open(Native Method)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:8063)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	at libcore.io.IoBridge.open(IoBridge.java:560)
+10-19 20:58:18.403  5478  7770 I SemanticLocation: 	... 14 more
+10-19 20:58:18.403  5478  7743 I GCoreUlr: WorldUpdater:com.google.android.location.internal.server.ACTION_RESTARTED: Ensuring that reporting is stopped because of reasons: (no Google accounts)
+10-19 20:58:18.404  5478  7743 I GCoreUlr: Unbound from all signal providers.
+10-19 20:58:18.409  5552  7769 I ChimeraConfigurator: Detected pending changes for urgent request: [tflite_dynamite]. Pending module sets: container:2318189190800,tflite_dynamite:2640104055100800+tflite_dynamite
+10-19 20:58:18.415  5552  7769 I GmsDebugLogger: [73] 1801
+10-19 20:58:18.416  5552  7769 W ZappDownloader: No successful module downloads for requested features [tflite_dynamite].
+10-19 20:58:18.416  5552  7769 I GmsDebugLogger: [30] [TfliteDynamiteDynamite.integ:264010405100800]
+10-19 20:58:18.419  5552  7769 W ChimeraConfigService: Retry attempt was throttled. [CONTEXT service_id=264 ]
+10-19 20:58:18.419  5552  7769 I GmsDebugLogger: [83] 1 [tflite_dynamite]
+10-19 20:58:18.424  5478  5478 I GCoreUlr: Unbound from all signal providers.
+10-19 20:58:18.424  5478  5478 I GCoreUlr: Stopping handler for UlrDispSvcFast
+10-19 20:58:18.432  5478  7772 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService started execution. cause:5 exec_start_elapsed_seconds: 303 [CONTEXT service_id=218 ]
+10-19 20:58:18.442   971  7830 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+10-19 20:58:18.443   971  7830 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=63
+10-19 20:58:18.444   971  7830 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+10-19 20:58:18.444   971  7830 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+10-19 20:58:18.481  5478  7772 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.ipa.base.IpaGcmTaskService finished executing. cause:5 result: 1 elapsed_millis: 96 uptime_millis: 96 exec_start_elapsed_seconds: 303 [CONTEXT service_id=218 ]
+10-19 20:58:18.581  5209  5239 I TestRunner: finished: t13_gpsIssueWarning(io.github.avsessisozx.telemet.UiFlowTest)

@@ -1,0 +1,90 @@
+10-19 20:57:04.669  5209  5239 I TestRunner: started: t09_freshInstallShowsWizard(io.github.avsessisozx.telemet.UiFlowTest)
+10-19 20:57:04.692   834   906 D EGL_emulation: app_time_stats: avg=1316.99ms min=1.32ms max=2632.67ms count=2
+10-19 20:57:04.695   519  2180 W InputManager-JNI: Input channel object 'cac805b io.github.avsessisozx.telemet/io.github.avsessisozx.telemet.ui.MainActivity (client)' was disposed without first being removed with the input manager!
+10-19 20:57:04.717  3121  3121 W binder:3121_10: type=1400 audit(0.0:203): avc:  denied  { read } for  name="u:object_r:system_adbd_prop:s0" dev="tmpfs" ino=292 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:system_adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+10-19 20:57:04.737  3121  6484 W libc    : Access denied finding property "persist.adb.tls_server.enable"
+10-19 20:57:04.738  3121  6484 W libc    : Access denied finding property "service.adb.tls.port"
+10-19 20:57:04.737  3121  3121 W binder:3121_10: type=1400 audit(0.0:204): avc:  denied  { read } for  name="u:object_r:adbd_prop:s0" dev="tmpfs" ino=60 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+10-19 20:57:04.767   335  6971 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10131 0}
+10-19 20:57:04.772  3121  6484 D TrafficStats: tagSocket(103) with statsTag=0x1809, statsUid=-1
+10-19 20:57:04.809   519  2180 I ActivityManager: Broadcasting: Intent { act=android.intent.action.CLOSE_SYSTEM_DIALOGS flg=0x400000 }
+10-19 20:57:04.827  5478  6327 W GmsUrlRequestImpl: Content-Type header is overwritten.
+10-19 20:57:04.829   519   536 I ActivityManager: Broadcast completed: result=0
+10-19 20:57:04.830   834   834 I vol.VolumeDialogImpl: mDialog.dismiss() reason: volume_controller from: com.android.systemui.volume.VolumeDialogImpl$7.onDismissRequested:3
+10-19 20:57:04.837   335  6978 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10131 0}
+10-19 20:57:04.837   335  6979 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+10-19 20:57:04.837   335  6979 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x710f182211d0
+10-19 20:57:04.837   335  6979 I resolv  : doQuery: rcode=0, ancount=8, return value=264
+10-19 20:57:04.840   335  6980 I resolv  : res_nmkquery: (QUERY, IN, A)
+10-19 20:57:04.840   335  6980 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x711038226350
+10-19 20:57:04.840   335  6980 I resolv  : doQuery: rcode=0, ancount=8, return value=168
+10-19 20:57:04.844   834   899 D SplashScreenView: Build android.window.SplashScreenView{71db649 V.E...... ......ID 0,0-0,0}
+10-19 20:57:04.844   834   899 D SplashScreenView: Icon: view: null drawable: null size: 0
+10-19 20:57:04.844   834   899 D SplashScreenView: Branding: view: android.view.View{aa70b4e G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-19 20:57:04.853   399   399 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+10-19 20:57:04.855  5478  5802 D TrafficStats: tagSocket(78) with statsTag=0x401, statsUid=10131
+10-19 20:57:04.866  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@ab49bcb in: PRE_ON_CREATE
+10-19 20:57:04.877  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@ab49bcb in: CREATED
+10-19 20:57:04.947  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.OnboardingActivity@e3f02d8 in: PRE_ON_CREATE
+10-19 20:57:04.991  1634  1634 I GsaVoiceInteractionSrv: Handling ACTION_STOP_HOTWORD
+10-19 20:57:04.992  1634  2154 E HwDetectorWithState: a: 3
+10-19 20:57:04.993  5478  6327 W GLSUser : [AppCertManager] Exception while requesting key:
+10-19 20:57:04.993  5478  6327 W GLSUser : java.util.concurrent.ExecutionException: avvw: Parse Proto Exception.
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at dlnv.s(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at dlnv.get(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at oub.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):78)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at otz.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at otu.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at otx.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at lzq.call(:com.google.android.gms@231818047@23.18.18 (190800-535401451):14)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at aced.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at java.lang.Thread.run(Thread.java:1012)
+10-19 20:57:04.993  5478  6327 W GLSUser : Caused by: avvw: Parse Proto Exception.
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at avwn.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):5)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at avxk.onSucceeded(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at jf.onSucceeded(:com.google.android.gms.dynamite_cronetdynamite@231818047@23.18.18 (190800-0):0)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at ie.run(:com.google.android.gms.dynamite_cronetdynamite@231818047@23.18.18 (190800-0):4)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	... 6 more
+10-19 20:57:04.993  5478  6327 W GLSUser : Caused by: dzfz: Protocol message contained an invalid tag (zero).
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at dzdb.k(:com.google.android.gms@231818047@23.18.18 (190800-535401451):13)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at dzha.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):47)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at dzha.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):45)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at dzfd.A(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at dzex.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at dzcx.d(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at dzcx.c(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at dzcx.n(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at avwn.h(:com.google.android.gms@231818047@23.18.18 (190800-535401451):7)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	at avwn.f(:com.google.android.gms@231818047@23.18.18 (190800-535401451):1)
+10-19 20:57:04.993  5478  6327 W GLSUser : 	... 9 more
+10-19 20:57:05.050  5478  6479 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.auth.account.be.legacy.AuthCronService finished executing. cause:5 result: 3 elapsed_millis: 640 uptime_millis: 640 exec_start_elapsed_seconds: 229 [CONTEXT service_id=218 ]
+10-19 20:57:05.062  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.OnboardingActivity@e3f02d8 in: CREATED
+10-19 20:57:05.063  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.OnboardingActivity@e3f02d8 in: STARTED
+10-19 20:57:05.064  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.OnboardingActivity@e3f02d8 in: RESUMED
+10-19 20:57:05.280   519   536 W ziparchive: Unable to open '/data/app/~~qfLb8u394HXUdHG2JjTXwA==/io.github.avsessisozx.telemet-3OgxvqJ8zWKfDTmwelEPcA==/base.dm': No such file or directory
+10-19 20:57:05.281   519   536 I ActivityTaskManager: Displayed io.github.avsessisozx.telemet/.ui.OnboardingActivity for user 0: +445ms
+10-19 20:57:05.296  5209  5209 D LifecycleMonitor: Lifecycle status change: io.github.avsessisozx.telemet.ui.MainActivity@ab49bcb in: DESTROYED
+10-19 20:57:05.303  5273  5369 D OneSearchSuggestProvider: Shut down the binder channel
+10-19 20:57:05.317  5273  5363 I IPCThreadState: oneway function results for code 2 on binder at 0x7106ebddac80 will be dropped but finished with status UNKNOWN_TRANSACTION
+10-19 20:57:05.325  1019  1316 D BtGatt.ScanManager: uid 10131 isForeground true scanMode -1
+10-19 20:57:05.325  1019  1316 D BtGatt.ScanManager: uid 10131 isForeground true scanMode -1
+10-19 20:57:05.363  5273  5306 I ImeTracker: com.google.android.apps.nexuslauncher:cebd843: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+10-19 20:57:05.364   834   898 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@4789d68
+10-19 20:57:05.365   519   595 W InputManager-JNI: Input channel object '7c8d58a Splash Screen io.github.avsessisozx.telemet (client)' was disposed without first being removed with the input manager!
+10-19 20:57:05.368   519  2164 I ImeTracker: io.github.avsessisozx.telemet:98d732a6: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+10-19 20:57:05.368   519  2164 I ImeTracker: io.github.avsessisozx.telemet:98d732a6: onCancelled at PHASE_SERVER_SHOULD_HIDE
+10-19 20:57:05.373  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+10-19 20:57:05.398   519  2180 I ImeTracker: com.google.android.apps.nexuslauncher:cebd843: onCancelled at PHASE_SERVER_CLIENT_FOCUSED
+10-19 20:57:05.398  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-19 20:57:05.400  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=io.github.avsessisozx.telemet fieldId=0 fieldName=null extras=null}, false)
+10-19 20:57:05.400  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-19 20:57:05.401  1503  1503 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-19 20:57:06.052  5209  5209 I ViewInteraction: Checking 'MatchesViewAssertion{viewMatcher=(view has effective visibility <VISIBLE> and view.getGlobalVisibleRect() to return non-empty rectangle)}' assertion on view an instance of android.widget.TextView and view.getText() with or without transformation to match: is "Welcome to Telemet"
+10-19 20:57:06.743  5209  5267 D EGL_emulation: app_time_stats: avg=353.28ms min=42.35ms max=1237.38ms count=4
+10-19 20:57:07.090  1621  2475 W MediaProvider: isAppCloneUserPair for user 0: false
+10-19 20:57:07.099  5209  5239 I TestRunner: finished: t09_freshInstallShowsWizard(io.github.avsessisozx.telemet.UiFlowTest)
