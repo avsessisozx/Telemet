@@ -75,6 +75,8 @@ Phone: Android 10 or newer with Bluetooth LE and GPS.
 3. If Android warns about unknown sources, allow installs from your browser or file manager.
 4. New versions install over the old one; your rides are kept.
 
+> **Only download from this page.** The signing key is public (open source), so an APK from anywhere else could be a tampered copy that installs over the real app.
+
 ## Quick start
 
 1. **On the camera:** make sure wireless connection is enabled. **Close DJI Mimo** on your phone — the camera talks to only one remote at a time.

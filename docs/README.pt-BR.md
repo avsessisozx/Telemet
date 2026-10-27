@@ -33,6 +33,8 @@ As câmeras DJI Osmo Action só gravam velocidade, rota e altitude no vídeo qua
 3. Se o Android avisar sobre fontes desconhecidas, permita a instalação pelo navegador ou gerenciador de arquivos.
 4. Novas versões são instaladas por cima da antiga e mantêm seus passeios.
 
+> **Baixe apenas desta página.** A chave de assinatura é pública (código aberto); um APK de outro lugar pode ser uma cópia adulterada que se instala por cima do app original.
+
 ## Início rápido
 
 1. Na **câmera**, ative a conexão sem fio. **Feche o DJI Mimo**: a câmera fala com um controle por vez.

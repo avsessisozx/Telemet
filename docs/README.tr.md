@@ -36,6 +36,8 @@ DJI Osmo Action kameralar videoya hız, rota ve yükseklik verisini ancak DJI'ni
 3. Android bilinmeyen kaynak uyarısı verirse tarayıcıya ya da dosya yöneticisine kurulum izni ver.
 4. Yeni sürümler eskisinin üzerine kurulur, sürüşlerin silinmez.
 
+> **Yalnızca bu sayfadan indirin.** İmza anahtarı herkese açıktır (açık kaynak); başka bir yerden gelen APK, gerçek uygulamanın üstüne kurulan değiştirilmiş bir kopya olabilir.
+
 ## Hızlı başlangıç
 
 1. **Kamerada** kablosuz bağlantı açık olsun. Telefonda **DJI Mimo'yu kapat**; kamera aynı anda tek kumandayla konuşur.

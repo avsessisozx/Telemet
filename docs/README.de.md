@@ -33,6 +33,8 @@ DJI Osmo Action Kameras speichern Geschwindigkeit, Route und Höhe nur dann im V
 3. Warnt Android vor unbekannten Quellen, erlaube die Installation über den Browser oder Dateimanager.
 4. Neue Versionen werden über die alte installiert; deine Fahrten bleiben erhalten.
 
+> **Laden Sie die App nur von dieser Seite herunter.** Der Signaturschlüssel ist öffentlich (Open Source); eine APK von anderswo könnte eine manipulierte Kopie sein, die sich über die echte App installiert.
+
 ## Schnellstart
 
 1. Aktiviere an der **Kamera** die Drahtlosverbindung. **Schließe DJI Mimo**: Die Kamera spricht immer nur mit einer Fernbedienung.

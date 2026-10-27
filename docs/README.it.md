@@ -33,6 +33,8 @@ Le fotocamere DJI Osmo Action registrano velocità, percorso e altitudine nel vi
 3. Se Android avvisa di origini sconosciute, consenti l'installazione dal browser o dal file manager.
 4. Le nuove versioni si installano sopra la precedente e mantengono i tuoi giri.
 
+> **Scarica solo da questa pagina.** La chiave di firma è pubblica (open source); un APK da altre fonti potrebbe essere una copia manomessa che si installa sopra l'app originale.
+
 ## Avvio rapido
 
 1. Sulla **fotocamera** attiva la connessione wireless. **Chiudi DJI Mimo**: la fotocamera parla con un solo telecomando alla volta.

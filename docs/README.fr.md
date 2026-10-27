@@ -33,6 +33,8 @@ Les caméras DJI Osmo Action n'enregistrent la vitesse, le tracé et l'altitude 
 3. Si Android signale une source inconnue, autorisez l'installation depuis le navigateur ou le gestionnaire de fichiers.
 4. Les nouvelles versions s'installent par-dessus l'ancienne et conservent vos trajets.
 
+> **Téléchargez uniquement depuis cette page.** La clé de signature est publique (open source) ; un APK provenant d'ailleurs pourrait être une copie modifiée qui s'installe par-dessus la vraie application.
+
 ## Démarrage rapide
 
 1. Sur la **caméra**, activez la connexion sans fil. **Fermez DJI Mimo** : la caméra ne parle qu'à une télécommande à la fois.
